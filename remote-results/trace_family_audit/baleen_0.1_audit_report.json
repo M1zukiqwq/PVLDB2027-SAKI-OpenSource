@@ -1,0 +1,821 @@
+{
+  "generated_at": "2026-05-19T12:26:55.753840+08:00",
+  "config": {
+    "family": "baleen",
+    "regions": [
+      "Region7",
+      "Region6",
+      "Region5"
+    ],
+    "trace_pattern": "full_0_0.1.trace",
+    "window_sec": 20,
+    "windows_per_segment": 8,
+    "tenant_count": 16,
+    "high_count": 4,
+    "low_count": 4,
+    "value_size": 1024,
+    "threads_for_qps_risk": 4,
+    "offset_bucket_bytes": 1048576,
+    "target_scale_mbps": 96.0,
+    "scaled_sustained_mbps": 70.0,
+    "sustained_min_windows": 6,
+    "min_independent_gap_windows": 8,
+    "qps_risk_thresholds_per_thread": {
+      "low_lt": 5000,
+      "mid_lt": 20000,
+      "high_ge": 20000
+    },
+    "git_sha": ""
+  },
+  "budget_contract": {
+    "future_high_budget_mbps": 11,
+    "future_mid_budget_mbps": 7,
+    "future_low_budget_mbps": 3,
+    "future_total_budget_mbps": 112,
+    "note": "Audit scale is diagnostic only and does not change the fixed 112 MB/s budget contract."
+  },
+  "input_archives": [
+    {
+      "path": "data/baleen_storage_0.1/storage_0.1.tar.gz",
+      "size_bytes": 17081636,
+      "sha256": "56750528f08f8830885639af69ff5538bf531faee046e82b43d315b96f0fdedf"
+    }
+  ],
+  "traces": [
+    {
+      "trace_id": "Region7",
+      "trace_dir": "data/baleen_storage_0.1/storage/20230325/Region7",
+      "trace_files": [
+        {
+          "path": "data/baleen_storage_0.1/storage/20230325/Region7/full_0_0.1.trace",
+          "size_bytes": 19951760
+        }
+      ],
+      "header_columns": [
+        "block_id",
+        "io_offset",
+        "io_size",
+        "op_time",
+        "op_name",
+        "user_namespace",
+        "user_name",
+        "rs_shard_id",
+        "op_count",
+        "host_name"
+      ],
+      "records_total": 277233,
+      "parse_errors": 0,
+      "duration_sec": 597645.0,
+      "min_op_time": 1679209106.0,
+      "max_op_time": 1679806751.0,
+      "op_distribution_records": {
+        "GET_PERM": 166212,
+        "GET_NOT_INIT": 56796,
+        "GET_TEMP": 12950,
+        "PUT_NOT_INIT": 14500,
+        "PUT_PERM": 20089,
+        "PUT_TEMP": 6686
+      },
+      "op_distribution_op_count": {
+        "GET_PERM": 177294,
+        "GET_NOT_INIT": 56812,
+        "GET_TEMP": 13158,
+        "PUT_NOT_INIT": 14500,
+        "PUT_PERM": 20089,
+        "PUT_TEMP": 6686
+      },
+      "write_records": 41275,
+      "read_records": 235958,
+      "other_records": 0,
+      "write_op_count": 41275.0,
+      "read_op_count": 247264.0,
+      "other_op_count": 0.0,
+      "write_record_share": 0.14888198735359787,
+      "write_op_count_share": 0.1430482534423423,
+      "total_write_mb": 235140.0296278,
+      "raw_write_mbps_over_duration": 0.3934443183291084,
+      "write_size_bytes": {
+        "p50": 7003295.0,
+        "p90": 8388608.0,
+        "p99": 25165824.0
+      },
+      "unique_tenants_users": 37,
+      "unique_write_tenants_users": 26,
+      "per_tenant_write_mb_top20": [
+        {
+          "user_name": "918076232",
+          "write_mb": 56363.859550476074
+        },
+        {
+          "user_name": "918076230",
+          "write_mb": 51553.55046367645
+        },
+        {
+          "user_name": "918076226",
+          "write_mb": 38538.03530025482
+        },
+        {
+          "user_name": "918076245",
+          "write_mb": 23152.43494606018
+        },
+        {
+          "user_name": "918076237",
+          "write_mb": 19195.22285270691
+        },
+        {
+          "user_name": "918076244",
+          "write_mb": 8216.698935508728
+        },
+        {
+          "user_name": "918076238",
+          "write_mb": 7761.299699783325
+        },
+        {
+          "user_name": "918076228",
+          "write_mb": 5849.065796852112
+        },
+        {
+          "user_name": "918076236",
+          "write_mb": 5628.177212715149
+        },
+        {
+          "user_name": "918076242",
+          "write_mb": 5580.686544418335
+        },
+        {
+          "user_name": "918076233",
+          "write_mb": 3310.4347743988037
+        },
+        {
+          "user_name": "918076246",
+          "write_mb": 3077.160224914551
+        },
+        {
+          "user_name": "918076243",
+          "write_mb": 2228.8853549957275
+        },
+        {
+          "user_name": "918076239",
+          "write_mb": 1482.5400295257568
+        },
+        {
+          "user_name": "918076240",
+          "write_mb": 1073.955722808838
+        },
+        {
+          "user_name": "918076241",
+          "write_mb": 951.6865930557251
+        },
+        {
+          "user_name": "918076247",
+          "write_mb": 619.9178094863892
+        },
+        {
+          "user_name": "918076250",
+          "write_mb": 160.46283340454102
+        },
+        {
+          "user_name": "918076259",
+          "write_mb": 144.35789966583252
+        },
+        {
+          "user_name": "918076229",
+          "write_mb": 71.97308444976807
+        }
+      ],
+      "global_write_mbps_20s": {
+        "p50": 0.33920698165893554,
+        "p95": 1.2,
+        "p99": 1.7508690919876106
+      },
+      "global_write_mbps_1s_burst": {
+        "p50": 0.0,
+        "p95": 2.9300522804260254,
+        "p99": 8.0
+      },
+      "locality": {
+        "unique_write_blocks": 37315,
+        "write_block_records": 41275,
+        "unique_block_ratio_records": 0.9040581465778316,
+        "block_bucket_count": 37315,
+        "offset_bucket_bytes": 1048576,
+        "offset_bucket_count": 231835,
+        "top1pct_block_write_byte_share": 0.0393595331255505,
+        "top1pct_offset_bucket_write_byte_share": 0.02205130591336174
+      },
+      "mapping_diagnostics": {
+        "request-as-one-put": {
+          "offered_qps_mean": 0.0690627379129751,
+          "offered_qps_p95_20s": 0.2,
+          "logical_mbps_mean_at_value_size": 6.744407999313974e-05,
+          "logical_mbps_p95_20s_at_value_size": 0.0001953125,
+          "per_thread_qps_mean": 0.017265684478243774,
+          "per_thread_qps_p95_20s": 0.05,
+          "per_thread_qps_risk": "low"
+        },
+        "64KiB-chunk": {
+          "offered_qps_mean": 6.319209564206176,
+          "offered_qps_p95_20s": 19.2,
+          "logical_mbps_mean_at_value_size": 0.006171103090045094,
+          "logical_mbps_p95_20s_at_value_size": 0.01875,
+          "per_thread_qps_mean": 1.579802391051544,
+          "per_thread_qps_p95_20s": 4.8,
+          "per_thread_qps_risk": "low"
+        },
+        "1KiB-chunk": {
+          "offered_qps_mean": 402.9145931112952,
+          "offered_qps_p95_20s": 1228.8,
+          "logical_mbps_mean_at_value_size": 0.3934712823352492,
+          "logical_mbps_p95_20s_at_value_size": 1.2,
+          "per_thread_qps_mean": 100.7286482778238,
+          "per_thread_qps_p95_20s": 307.2,
+          "per_thread_qps_risk": "low"
+        }
+      }
+    },
+    {
+      "trace_id": "Region6",
+      "trace_dir": "data/baleen_storage_0.1/storage/20230325/Region6",
+      "trace_files": [
+        {
+          "path": "data/baleen_storage_0.1/storage/20230325/Region6/full_0_0.1.trace",
+          "size_bytes": 18210254
+        }
+      ],
+      "header_columns": [
+        "block_id",
+        "io_offset",
+        "io_size",
+        "op_time",
+        "op_name",
+        "user_namespace",
+        "user_name",
+        "rs_shard_id",
+        "op_count",
+        "host_name"
+      ],
+      "records_total": 254395,
+      "parse_errors": 0,
+      "duration_sec": 597656.0,
+      "min_op_time": 1679209091.0,
+      "max_op_time": 1679806747.0,
+      "op_distribution_records": {
+        "GET_PERM": 168145,
+        "GET_NOT_INIT": 35203,
+        "PUT_TEMP": 12435,
+        "GET_TEMP": 23313,
+        "PUT_NOT_INIT": 2570,
+        "PUT_PERM": 12729
+      },
+      "op_distribution_op_count": {
+        "GET_PERM": 180663,
+        "GET_NOT_INIT": 36012,
+        "PUT_TEMP": 12435,
+        "GET_TEMP": 23747,
+        "PUT_NOT_INIT": 2570,
+        "PUT_PERM": 12729
+      },
+      "write_records": 27734,
+      "read_records": 226661,
+      "other_records": 0,
+      "write_op_count": 27734.0,
+      "read_op_count": 240422.0,
+      "other_op_count": 0.0,
+      "write_record_share": 0.10901943827512334,
+      "write_op_count_share": 0.10342487208938081,
+      "total_write_mb": 181733.45834827423,
+      "raw_write_mbps_over_duration": 0.3040770248241032,
+      "write_size_bytes": {
+        "p50": 8165381.0,
+        "p90": 8388608.0,
+        "p99": 25165824.0
+      },
+      "unique_tenants_users": 35,
+      "unique_write_tenants_users": 24,
+      "per_tenant_write_mb_top20": [
+        {
+          "user_name": "312948042",
+          "write_mb": 74801.11473178864
+        },
+        {
+          "user_name": "312948044",
+          "write_mb": 38168.88773727417
+        },
+        {
+          "user_name": "312948051",
+          "write_mb": 22775.405004501343
+        },
+        {
+          "user_name": "312948040",
+          "write_mb": 7936.742594718933
+        },
+        {
+          "user_name": "312948039",
+          "write_mb": 6657.887857437134
+        },
+        {
+          "user_name": "312948047",
+          "write_mb": 6630.864912033081
+        },
+        {
+          "user_name": "312948054",
+          "write_mb": 5465.218930244446
+        },
+        {
+          "user_name": "312948048",
+          "write_mb": 4765.1316928863525
+        },
+        {
+          "user_name": "312948057",
+          "write_mb": 4172.481378555298
+        },
+        {
+          "user_name": "312948050",
+          "write_mb": 4019.372003555298
+        },
+        {
+          "user_name": "312948053",
+          "write_mb": 2424.8554401397705
+        },
+        {
+          "user_name": "312948056",
+          "write_mb": 1003.6467552185059
+        },
+        {
+          "user_name": "312948071",
+          "write_mb": 810.0965785980225
+        },
+        {
+          "user_name": "312948061",
+          "write_mb": 794.6046380996704
+        },
+        {
+          "user_name": "312948060",
+          "write_mb": 377.29882431030273
+        },
+        {
+          "user_name": "312948072",
+          "write_mb": 345.09892559051514
+        },
+        {
+          "user_name": "312948052",
+          "write_mb": 343.80175495147705
+        },
+        {
+          "user_name": "312948068",
+          "write_mb": 108.20728588104248
+        },
+        {
+          "user_name": "312948063",
+          "write_mb": 60.82020282745361
+        },
+        {
+          "user_name": "312948045",
+          "write_mb": 39.76650905609131
+        }
+      ],
+      "global_write_mbps_20s": {
+        "p50": 0.1850599765777588,
+        "p95": 1.1504032230377195,
+        "p99": 1.6
+      },
+      "global_write_mbps_1s_burst": {
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 8.0
+      },
+      "locality": {
+        "unique_write_blocks": 25817,
+        "write_block_records": 27734,
+        "unique_block_ratio_records": 0.9308790654070815,
+        "block_bucket_count": 25817,
+        "offset_bucket_bytes": 1048576,
+        "offset_bucket_count": 183371,
+        "top1pct_block_write_byte_share": 0.03492401567641869,
+        "top1pct_offset_bucket_write_byte_share": 0.020195974057629722
+      },
+      "mapping_diagnostics": {
+        "request-as-one-put": {
+          "offered_qps_mean": 0.04640462071827272,
+          "offered_qps_p95_20s": 0.15,
+          "logical_mbps_mean_at_value_size": 4.53170124201882e-05,
+          "logical_mbps_p95_20s_at_value_size": 0.000146484375,
+          "per_thread_qps_mean": 0.01160115517956818,
+          "per_thread_qps_p95_20s": 0.0375,
+          "per_thread_qps_risk": "low"
+        },
+        "64KiB-chunk": {
+          "offered_qps_mean": 4.88119085226284,
+          "offered_qps_p95_20s": 18.45,
+          "logical_mbps_mean_at_value_size": 0.00476678794166293,
+          "logical_mbps_p95_20s_at_value_size": 0.018017578125,
+          "per_thread_qps_mean": 1.22029771306571,
+          "per_thread_qps_p95_20s": 4.6125,
+          "per_thread_qps_risk": "low"
+        },
+        "1KiB-chunk": {
+          "offered_qps_mean": 311.3915463075749,
+          "offered_qps_p95_20s": 1178.0425,
+          "logical_mbps_mean_at_value_size": 0.3040933069409911,
+          "logical_mbps_p95_20s_at_value_size": 1.15043212890625,
+          "per_thread_qps_mean": 77.84788657689373,
+          "per_thread_qps_p95_20s": 294.510625,
+          "per_thread_qps_risk": "low"
+        }
+      }
+    },
+    {
+      "trace_id": "Region5",
+      "trace_dir": "data/baleen_storage_0.1/storage/20230325/Region5",
+      "trace_files": [
+        {
+          "path": "data/baleen_storage_0.1/storage/20230325/Region5/full_0_0.1.trace",
+          "size_bytes": 16187893
+        }
+      ],
+      "header_columns": [
+        "block_id",
+        "io_offset",
+        "io_size",
+        "op_time",
+        "op_name",
+        "user_namespace",
+        "user_name",
+        "rs_shard_id",
+        "op_count",
+        "host_name"
+      ],
+      "records_total": 221903,
+      "parse_errors": 0,
+      "duration_sec": 597692.0,
+      "min_op_time": 1679209100.0,
+      "max_op_time": 1679806792.0,
+      "op_distribution_records": {
+        "GET_NOT_INIT": 32034,
+        "GET_PERM": 150146,
+        "PUT_NOT_INIT": 1185,
+        "PUT_TEMP": 8693,
+        "GET_TEMP": 16266,
+        "PUT_PERM": 13579
+      },
+      "op_distribution_op_count": {
+        "GET_NOT_INIT": 33802,
+        "GET_PERM": 165613,
+        "PUT_NOT_INIT": 1185,
+        "PUT_TEMP": 8693,
+        "GET_TEMP": 16274,
+        "PUT_PERM": 13579
+      },
+      "write_records": 23457,
+      "read_records": 198446,
+      "other_records": 0,
+      "write_op_count": 23457.0,
+      "read_op_count": 215689.0,
+      "other_op_count": 0.0,
+      "write_record_share": 0.10570835004483942,
+      "write_op_count_share": 0.09808652454985657,
+      "total_write_mb": 157639.39190101624,
+      "raw_write_mbps_over_duration": 0.263746866113343,
+      "write_size_bytes": {
+        "p50": 8166253.0,
+        "p90": 8388608.0,
+        "p99": 25165824.0
+      },
+      "unique_tenants_users": 37,
+      "unique_write_tenants_users": 22,
+      "per_tenant_write_mb_top20": [
+        {
+          "user_name": "2231479910",
+          "write_mb": 52456.52143764496
+        },
+        {
+          "user_name": "2231479906",
+          "write_mb": 28113.703665733337
+        },
+        {
+          "user_name": "2231479911",
+          "write_mb": 19505.130137443542
+        },
+        {
+          "user_name": "2231479913",
+          "write_mb": 13317.08587551117
+        },
+        {
+          "user_name": "2231479914",
+          "write_mb": 8993.148109436035
+        },
+        {
+          "user_name": "2231479918",
+          "write_mb": 7485.83327293396
+        },
+        {
+          "user_name": "2231479905",
+          "write_mb": 7212.761524200439
+        },
+        {
+          "user_name": "2231479912",
+          "write_mb": 6139.101519584656
+        },
+        {
+          "user_name": "2231479919",
+          "write_mb": 4561.022041320801
+        },
+        {
+          "user_name": "2231479916",
+          "write_mb": 4515.593486785889
+        },
+        {
+          "user_name": "2231479920",
+          "write_mb": 1944.0
+        },
+        {
+          "user_name": "2231479930",
+          "write_mb": 1142.9202213287354
+        },
+        {
+          "user_name": "2231479923",
+          "write_mb": 1071.1015691757202
+        },
+        {
+          "user_name": "2231479927",
+          "write_mb": 506.42783546447754
+        },
+        {
+          "user_name": "2231479932",
+          "write_mb": 251.78600978851318
+        },
+        {
+          "user_name": "2231479922",
+          "write_mb": 232.18256759643555
+        },
+        {
+          "user_name": "2231479937",
+          "write_mb": 128.926251411438
+        },
+        {
+          "user_name": "2231479908",
+          "write_mb": 20.52769947052002
+        },
+        {
+          "user_name": "2231479935",
+          "write_mb": 17.70312786102295
+        },
+        {
+          "user_name": "2231479939",
+          "write_mb": 14.116323471069336
+        }
+      ],
+      "global_write_mbps_20s": {
+        "p50": 0.030582237243652343,
+        "p95": 0.9574243640899655,
+        "p99": 1.5540987987518307
+      },
+      "global_write_mbps_1s_burst": {
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 8.0
+      },
+      "locality": {
+        "unique_write_blocks": 23457,
+        "write_block_records": 23457,
+        "unique_block_ratio_records": 1.0,
+        "block_bucket_count": 23457,
+        "offset_bucket_bytes": 1048576,
+        "offset_bucket_count": 165232,
+        "top1pct_block_write_byte_share": 0.03593797795889547,
+        "top1pct_offset_bucket_write_byte_share": 0.010485957729638666
+      },
+      "mapping_diagnostics": {
+        "request-as-one-put": {
+          "offered_qps_mean": 0.03924596614978952,
+          "offered_qps_p95_20s": 0.1,
+          "logical_mbps_mean_at_value_size": 3.832613881815383e-05,
+          "logical_mbps_p95_20s_at_value_size": 9.765625e-05,
+          "per_thread_qps_mean": 0.00981149153744738,
+          "per_thread_qps_p95_20s": 0.025,
+          "per_thread_qps_risk": "low"
+        },
+        "64KiB-chunk": {
+          "offered_qps_mean": 4.232803852151275,
+          "offered_qps_p95_20s": 15.35,
+          "logical_mbps_mean_at_value_size": 0.00413359751186648,
+          "logical_mbps_p95_20s_at_value_size": 0.014990234375,
+          "per_thread_qps_mean": 1.0582009630378189,
+          "per_thread_qps_p95_20s": 3.8375,
+          "per_thread_qps_risk": "low"
+        },
+        "1KiB-chunk": {
+          "offered_qps_mean": 270.0902538431165,
+          "offered_qps_p95_20s": 980.4499999999996,
+          "logical_mbps_mean_at_value_size": 0.26376001351866846,
+          "logical_mbps_p95_20s_at_value_size": 0.9574707031249996,
+          "per_thread_qps_mean": 67.52256346077912,
+          "per_thread_qps_p95_20s": 245.1124999999999,
+          "per_thread_qps_risk": "low"
+        }
+      }
+    }
+  ],
+  "combined": {
+    "records_total": 753531,
+    "duration_sec_sum_across_traces": 1792993.0,
+    "write_records": 92466,
+    "read_records": 661065,
+    "other_records": 0,
+    "write_record_share": 0.12271028000175176,
+    "write_op_count_share": 0.11618652469525947,
+    "total_write_mb": 574512.8798770905,
+    "raw_write_mbps_over_summed_duration": 0.32042115048808917,
+    "op_distribution_records": {
+      "GET_PERM": 484503,
+      "GET_NOT_INIT": 124033,
+      "GET_TEMP": 52529,
+      "PUT_NOT_INIT": 18255,
+      "PUT_PERM": 46397,
+      "PUT_TEMP": 27814
+    },
+    "op_distribution_op_count": {
+      "GET_PERM": 523570,
+      "GET_NOT_INIT": 126626,
+      "GET_TEMP": 53179,
+      "PUT_NOT_INIT": 18255,
+      "PUT_PERM": 46397,
+      "PUT_TEMP": 27814
+    },
+    "write_size_bytes": {
+      "p50": 7576114.0,
+      "p90": 8388608.0,
+      "p99": 25165824.0
+    },
+    "unique_tenants_users": 109,
+    "unique_write_tenants_users": 72,
+    "per_tenant_write_mb_top20": [
+      {
+        "user_name": "312948042",
+        "write_mb": 74801.11473178864
+      },
+      {
+        "user_name": "918076232",
+        "write_mb": 56363.859550476074
+      },
+      {
+        "user_name": "2231479910",
+        "write_mb": 52456.52143764496
+      },
+      {
+        "user_name": "918076230",
+        "write_mb": 51553.55046367645
+      },
+      {
+        "user_name": "918076226",
+        "write_mb": 38538.03530025482
+      },
+      {
+        "user_name": "312948044",
+        "write_mb": 38168.88773727417
+      },
+      {
+        "user_name": "2231479906",
+        "write_mb": 28113.703665733337
+      },
+      {
+        "user_name": "918076245",
+        "write_mb": 23152.43494606018
+      },
+      {
+        "user_name": "312948051",
+        "write_mb": 22775.405004501343
+      },
+      {
+        "user_name": "2231479911",
+        "write_mb": 19505.130137443542
+      },
+      {
+        "user_name": "918076237",
+        "write_mb": 19195.22285270691
+      },
+      {
+        "user_name": "2231479913",
+        "write_mb": 13317.08587551117
+      },
+      {
+        "user_name": "2231479914",
+        "write_mb": 8993.148109436035
+      },
+      {
+        "user_name": "918076244",
+        "write_mb": 8216.698935508728
+      },
+      {
+        "user_name": "312948040",
+        "write_mb": 7936.742594718933
+      },
+      {
+        "user_name": "918076238",
+        "write_mb": 7761.299699783325
+      },
+      {
+        "user_name": "2231479918",
+        "write_mb": 7485.83327293396
+      },
+      {
+        "user_name": "2231479905",
+        "write_mb": 7212.761524200439
+      },
+      {
+        "user_name": "312948039",
+        "write_mb": 6657.887857437134
+      },
+      {
+        "user_name": "312948047",
+        "write_mb": 6630.864912033081
+      }
+    ],
+    "global_write_mbps_20s": {
+      "p50": 0.23241701126098635,
+      "p95": 1.142501721382141,
+      "p99": 1.6008133025169382
+    },
+    "global_write_mbps_1s_burst": {
+      "p50": 0.0,
+      "p95": 4.291534423828125e-05,
+      "p99": 8.0
+    },
+    "locality": {
+      "unique_write_blocks": 86589,
+      "write_block_records": 92466,
+      "unique_block_ratio_records": 0.9364415028226591,
+      "top1pct_block_write_byte_share": 0.03693408045037248,
+      "top1pct_offset_bucket_write_byte_share": 0.021164762987743616
+    },
+    "mapping_diagnostics": {
+      "request-as-one-put": {
+        "offered_qps_mean": 0.05157075348314243,
+        "offered_qps_p95_20s": 0.15,
+        "logical_mbps_mean_at_value_size": 5.036206394838128e-05,
+        "logical_mbps_p95_20s_at_value_size": 0.000146484375,
+        "per_thread_qps_mean": 0.012892688370785608,
+        "per_thread_qps_p95_20s": 0.0375,
+        "per_thread_qps_risk": "low"
+      },
+      "64KiB-chunk": {
+        "offered_qps_mean": 5.144375912231671,
+        "offered_qps_p95_20s": 18.35,
+        "logical_mbps_mean_at_value_size": 0.005023804601788741,
+        "logical_mbps_p95_20s_at_value_size": 0.017919921875,
+        "per_thread_qps_mean": 1.2860939780579177,
+        "per_thread_qps_p95_20s": 4.5875,
+        "per_thread_qps_risk": "low"
+      },
+      "1KiB-chunk": {
+        "offered_qps_mean": 328.1305069233399,
+        "offered_qps_p95_20s": 1169.9724999999999,
+        "logical_mbps_mean_at_value_size": 0.32043994816732413,
+        "logical_mbps_p95_20s_at_value_size": 1.1425512695312499,
+        "per_thread_qps_mean": 82.03262673083498,
+        "per_thread_qps_p95_20s": 292.49312499999996,
+        "per_thread_qps_risk": "low"
+      }
+    }
+  },
+  "candidate_summary": {
+    "basic_candidate_segments": 964,
+    "scaled_candidate_segments": 297,
+    "independent_candidate_segments": 146,
+    "raw_mean_write_mbps_median_over_basic_candidates": 0.48430376648902895,
+    "global_scale": 198.2226995589032
+  },
+  "gate_a": {
+    "pass": false,
+    "checks": {
+      "tenant_axis_ge16": true,
+      "candidate_segments_ge5": true,
+      "locality_top1pct_offset_bucket_ge5pct": false
+    },
+    "notes": [
+      "Byte-write supply and KV submit-QPS risk are reported separately.",
+      "Future RocksDB smoke/n=5 must keep high/mid/low budgets at 11/7/3 MB/s, total 112 MB/s.",
+      "The 112 MB/s budget is not used as a trace-demand gate; trace demand is scaled only for audit diagnostics."
+    ],
+    "thresholds": {
+      "tenant_count_min": 16,
+      "candidate_segments_min": 5,
+      "candidate_requires_n_tenants": 16,
+      "candidate_requires_frozen_overlap_le": 2.75,
+      "candidate_requires_high_set_changes_ge": 3,
+      "global_scale_formula": "96 / median(raw_mean_write_MBps over basic candidate segments)",
+      "scaled_sustained_mbps": 70.0,
+      "sustained_min_windows": 6,
+      "locality_top1pct_offset_bucket_min_share": 0.05
+    },
+    "observed": {
+      "max_unique_write_users_in_single_trace": 26,
+      "basic_candidate_segments": 964,
+      "scaled_candidate_segments": 297,
+      "independent_candidate_segments": 146,
+      "top1pct_offset_bucket_write_byte_share": 0.021164762987743616
+    }
+  },
+  "recommended_static_smoke_candidate": null,
+  "candidate_segments_path": "results/trace_family_audit/baleen_0.1_candidate_segments.json"
+}

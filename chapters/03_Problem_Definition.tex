@@ -1,0 +1,44 @@
+\section{Problem Definition}
+
+We study a host with tenants \(T=\{1,\ldots,N\}\). Each tenant is an
+independently configured \rocksdb instance with its own memtables, WAL, SST
+files, flush path, compaction path, and foreground workload. Tenants do not
+share logical key spaces, but their background work draws from shared host
+resources. Time is divided into control windows \(w=1,2,\ldots\). In each
+window, the controller assigns tenant \(i\) a background budget \(b_i(w)\). The
+unit of this budget is harness-dependent: epoch runs change rate limits and
+background-job settings between epochs, while continuous runs keep tenants alive
+and change the rate-limiter budget through \ratecall.
+
+The aggregate budget is fixed. If \(B\) is the host budget, a valid assignment
+must satisfy \(\sum_i b_i(w)=B\), subject to the discrete budget tiers exposed by
+the implementation. Without this conservation rule, a controller could improve
+high-pressure tenants simply by spending more host capacity.
+
+The controller is online. At the start of window \(w\), it may use only
+observations from windows up to \(w-1\). The observation vector \(x_i(w-1)\)
+can include demand signals such as offered write demand and completed write
+throughput; pressure symptoms such as completion gap, write-tail latency,
+pending-compaction proxies, and L0 pressure; background-work signals such as
+compaction bytes and flush/compaction events; read-side measurements; and the
+prior assignment. It may not include the next high-pressure set, future phase
+id, or evaluator-only tier labels. SAKI also does not observe a single
+ground-truth scalar called compaction debt; it observes symptoms of deferred
+work and foreground pressure.
+
+The objective is targeted relief for tenants currently under high write
+pressure, measured by write-tail latency and write throughput, while preserving
+attribution to online reallocation under a fixed budget. Because reallocation is
+a tradeoff, collateral effects must also be visible: the evaluation reports
+mid- and low-pressure effects, total throughput, and liveness failures. Each
+decision therefore chooses \(b_i(w)\) from implementable budget levels using
+\(x_i(w-1)\), conserving \(B\) under delayed feedback.
+
+Several constraints sharpen the scope. Policies cannot read workload labels or
+future drift schedules. Continuous runs actuate only the runtime rate limiter,
+rather than every RocksDB option. Assignments occur at window boundaries, so
+very fast drift may outrun a previous-window controller. SAKI is therefore not a
+new compaction algorithm, an in-engine global scheduler, or an oracle
+classifier. The definition leaves the ranking rule open; the next section
+instantiates this online fixed-budget problem with a conserved rank-and-assign
+framework and a transparent demand-aware score family.

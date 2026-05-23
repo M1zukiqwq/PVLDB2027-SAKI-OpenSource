@@ -1,0 +1,538 @@
+{
+  "summary": {
+    "online_high_exact_epochs_after_warmup": 4,
+    "online_high_mean_write_p99_us": 29332.0347108125,
+    "online_high_overlap_mean_after_warmup": 3.142857142857143,
+    "online_high_sum_ops_per_sec": 122079.0,
+    "online_low_mean_write_p99_us": 11.7419013125,
+    "online_low_sum_ops_per_sec": 3767499.0,
+    "online_mean_write_p99_us": 7876.324991046875,
+    "online_mid_mean_write_p99_us": 1080.76167603125,
+    "online_mid_sum_ops_per_sec": 647330.0,
+    "online_overlap_checks": [
+      {
+        "assigned_high": [],
+        "correct": false,
+        "epoch": 0,
+        "overlap": 0,
+        "true_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": true,
+        "epoch": 1,
+        "overlap": 4,
+        "true_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": false,
+        "epoch": 2,
+        "overlap": 2,
+        "true_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "correct": true,
+        "epoch": 3,
+        "overlap": 4,
+        "true_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "correct": false,
+        "epoch": 4,
+        "overlap": 2,
+        "true_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "correct": true,
+        "epoch": 5,
+        "overlap": 4,
+        "true_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "correct": false,
+        "epoch": 6,
+        "overlap": 2,
+        "true_high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ],
+        "correct": true,
+        "epoch": 7,
+        "overlap": 4,
+        "true_high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      }
+    ],
+    "online_sum_compact_write_bytes": 28913299546.0,
+    "online_sum_ops_per_sec": 4536908.0,
+    "online_vs_static_biased_pct_high_mean_write_p99_us": -1.9316259974070624,
+    "online_vs_static_biased_pct_high_sum_ops_per_sec": 17.68352050898925,
+    "online_vs_static_biased_pct_low_mean_write_p99_us": -2.2218477835637813,
+    "online_vs_static_biased_pct_low_sum_ops_per_sec": 6.913191856944294,
+    "online_vs_static_biased_pct_mean_write_p99_us": -1.675238909354819,
+    "online_vs_static_biased_pct_mid_mean_write_p99_us": 1.9445654717542882,
+    "online_vs_static_biased_pct_mid_sum_ops_per_sec": -4.125961954300136,
+    "online_vs_static_biased_pct_sum_compact_write_bytes": -12.207337707343838,
+    "online_vs_static_biased_pct_sum_ops_per_sec": 5.440608681445075,
+    "online_vs_static_pct_high_mean_write_p99_us": -6.239106384549772,
+    "online_vs_static_pct_high_sum_ops_per_sec": 36.71426171678146,
+    "online_vs_static_pct_low_mean_write_p99_us": -4.170261442752633,
+    "online_vs_static_pct_low_sum_ops_per_sec": 3.251710333861445,
+    "online_vs_static_pct_mean_write_p99_us": -6.004257760138245,
+    "online_vs_static_pct_mid_mean_write_p99_us": -2.7074176394241167,
+    "online_vs_static_pct_mid_sum_ops_per_sec": -8.519721826920495,
+    "online_vs_static_pct_sum_compact_write_bytes": -20.875157057755004,
+    "online_vs_static_pct_sum_ops_per_sec": 2.050200179451842,
+    "oracle_high_mean_write_p99_us": 30646.056233,
+    "oracle_high_overlap_mean_after_warmup": 4.0,
+    "oracle_high_sum_ops_per_sec": 126550.0,
+    "oracle_low_mean_write_p99_us": 11.73487925,
+    "oracle_low_sum_ops_per_sec": 3593982.0,
+    "oracle_mean_write_p99_us": 8217.790832625,
+    "oracle_mid_mean_write_p99_us": 1106.686109125,
+    "oracle_mid_sum_ops_per_sec": 627953.0,
+    "oracle_sum_compact_write_bytes": 28421627327.0,
+    "oracle_sum_ops_per_sec": 4348485.0,
+    "static_biased_high_exact_epochs_after_warmup": 1,
+    "static_biased_high_mean_write_p99_us": 29909.7797930625,
+    "static_biased_high_overlap_mean_after_warmup": 1.1428571428571428,
+    "static_biased_high_sum_ops_per_sec": 103735.0,
+    "static_biased_low_mean_write_p99_us": 12.00871671875,
+    "static_biased_low_sum_ops_per_sec": 3523886.0,
+    "static_biased_mean_write_p99_us": 8010.520344703125,
+    "static_biased_mid_mean_write_p99_us": 1060.146434515625,
+    "static_biased_mid_sum_ops_per_sec": 675188.0,
+    "static_biased_overlap_checks": [
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": true,
+        "epoch": 0,
+        "overlap": 4,
+        "true_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": true,
+        "epoch": 1,
+        "overlap": 4,
+        "true_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": false,
+        "epoch": 2,
+        "overlap": 2,
+        "true_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": false,
+        "epoch": 3,
+        "overlap": 2,
+        "true_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": false,
+        "epoch": 4,
+        "overlap": 0,
+        "true_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": false,
+        "epoch": 5,
+        "overlap": 0,
+        "true_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": false,
+        "epoch": 6,
+        "overlap": 0,
+        "true_high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": false,
+        "epoch": 7,
+        "overlap": 0,
+        "true_high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      }
+    ],
+    "static_biased_sum_compact_write_bytes": 32933617447.0,
+    "static_biased_sum_ops_per_sec": 4302809.0,
+    "static_biased_vs_static_pct_high_mean_write_p99_us": -4.39232365270869,
+    "static_biased_vs_static_pct_high_sum_ops_per_sec": 16.171118203706815,
+    "static_biased_vs_static_pct_low_mean_write_p99_us": -1.9926881568348236,
+    "static_biased_vs_static_pct_low_sum_ops_per_sec": -3.42472379646294,
+    "static_biased_vs_static_pct_mean_write_p99_us": -4.40277586516841,
+    "static_biased_vs_static_pct_mid_mean_write_p99_us": -4.563247770639943,
+    "static_biased_vs_static_pct_mid_sum_ops_per_sec": -4.582846370282229,
+    "static_biased_vs_static_pct_sum_compact_write_bytes": -9.873056727129493,
+    "static_biased_vs_static_pct_sum_ops_per_sec": -3.2154674981403635,
+    "static_high_mean_write_p99_us": 31283.86855090625,
+    "static_high_sum_ops_per_sec": 89295.0,
+    "static_low_mean_write_p99_us": 12.252878375,
+    "static_low_sum_ops_per_sec": 3648849.0,
+    "static_mean_write_p99_us": 8379.448689226563,
+    "static_mid_mean_write_p99_us": 1110.8366638125,
+    "static_mid_sum_ops_per_sec": 707617.0,
+    "static_sum_compact_write_bytes": 36541367377.0,
+    "static_sum_ops_per_sec": 4445761.0,
+    "tier_history": [
+      {
+        "high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "low": [
+          "tenant12",
+          "tenant13",
+          "tenant14",
+          "tenant15"
+        ],
+        "mid": [
+          "tenant10",
+          "tenant11",
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "low": [
+          "tenant12",
+          "tenant13",
+          "tenant14",
+          "tenant15"
+        ],
+        "mid": [
+          "tenant10",
+          "tenant11",
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "low": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13"
+        ],
+        "mid": [
+          "tenant0",
+          "tenant1",
+          "tenant14",
+          "tenant15",
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "low": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13"
+        ],
+        "mid": [
+          "tenant0",
+          "tenant1",
+          "tenant14",
+          "tenant15",
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "low": [
+          "tenant0",
+          "tenant1",
+          "tenant14",
+          "tenant15"
+        ],
+        "mid": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13",
+          "tenant2",
+          "tenant3",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "low": [
+          "tenant0",
+          "tenant1",
+          "tenant14",
+          "tenant15"
+        ],
+        "mid": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13",
+          "tenant2",
+          "tenant3",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ],
+        "low": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "mid": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13",
+          "tenant14",
+          "tenant15",
+          "tenant4",
+          "tenant5"
+        ]
+      },
+      {
+        "high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ],
+        "low": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "mid": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13",
+          "tenant14",
+          "tenant15",
+          "tenant4",
+          "tenant5"
+        ]
+      }
+    ]
+  },
+  "trial": "realistic_big_e"
+}

@@ -1,0 +1,760 @@
+{
+  "windows": {
+    "10": {
+      "high_count": 4,
+      "indicators": {
+        "high_count": 4,
+        "max_failed_online": 0,
+        "max_failed_static": 0,
+        "windows_per_run": 16
+      },
+      "n": 3,
+      "stats": {
+        "bytes_per_write": {
+          "ci95_high": 18.639756076289817,
+          "ci95_low": -34.63725441419197,
+          "ci95_margin": 26.638505245240896,
+          "max": 3.19025905925972,
+          "mean": -7.998749168951079,
+          "min": -18.1843541532047,
+          "n": 3,
+          "sem": 6.190682139261189,
+          "stdev": 10.722575998709567
+        },
+        "compact_bytes": {
+          "ci95_high": 54.83047555370354,
+          "ci95_low": -56.044432537057425,
+          "ci95_margin": 55.437454045380484,
+          "max": 22.12689546344362,
+          "mean": -0.6069784916769422,
+          "min": -22.477606276962558,
+          "n": 3,
+          "sem": 12.883442724931555,
+          "stdev": 22.314777375985077
+        },
+        "high_p99": {
+          "ci95_high": 46.00687149746114,
+          "ci95_low": -32.47785301125813,
+          "ci95_margin": 39.242362254359634,
+          "max": 24.77461590926626,
+          "mean": 6.764509243101505,
+          "min": -4.738053954842934,
+          "n": 3,
+          "sem": 9.119768127901379,
+          "stdev": 15.79590175077249
+        },
+        "high_p999": {
+          "ci95_high": 105.1889987772744,
+          "ci95_low": -68.8267547130909,
+          "ci95_margin": 87.00787674518266,
+          "max": 58.62165054678098,
+          "mean": 18.181122032091757,
+          "min": -2.0865298546177797,
+          "n": 3,
+          "sem": 20.220282766716863,
+          "stdev": 35.02255709536299
+        },
+        "high_tput": {
+          "ci95_high": 81.42887080893,
+          "ci95_low": -34.690134698468015,
+          "ci95_margin": 58.05950275369901,
+          "max": 48.36456301555168,
+          "mean": 23.36936805523099,
+          "min": 2.062864126388861,
+          "n": 3,
+          "sem": 13.49279636386219,
+          "stdev": 23.370208838389917
+        },
+        "lag_unbounded_count": 0,
+        "low_available": true,
+        "low_p99": {
+          "ci95_high": 478.2681638003771,
+          "ci95_low": -257.30850994988566,
+          "ci95_margin": 367.7883368751314,
+          "max": 271.2802416244579,
+          "mean": 110.47982692524573,
+          "min": -20.16065241247803,
+          "n": 3,
+          "sem": 85.4725393621035,
+          "stdev": 148.04278082709402
+        },
+        "low_p999": {
+          "ci95_high": -0.6032582240726967,
+          "ci95_low": -76.34391413297794,
+          "ci95_margin": 37.87032795445263,
+          "max": -25.402863786288993,
+          "mean": -38.47358617852532,
+          "min": -55.21851948168646,
+          "n": 3,
+          "sem": 8.800912840913927,
+          "stdev": 15.243628193448268
+        },
+        "low_total_tput": {
+          "ci95_high": 26.866542582959042,
+          "ci95_low": -42.640779134691655,
+          "ci95_margin": 34.75366085882535,
+          "max": 5.457126242276857,
+          "mean": -7.887118275866306,
+          "min": -22.44234470623941,
+          "n": 3,
+          "sem": 8.076611865866917,
+          "stdev": 13.98910210469517
+        },
+        "low_write_tput": {
+          "ci95_high": 23.544244516008177,
+          "ci95_low": -40.5656569137339,
+          "ci95_margin": 32.05495071487104,
+          "max": 3.1606196821319634,
+          "mean": -8.510706198862865,
+          "min": -22.366200250449182,
+          "n": 3,
+          "sem": 7.449442415726479,
+          "stdev": 12.902812752096896
+        },
+        "max_lag_windows": {
+          "ci95_high": 0.0,
+          "ci95_low": 0.0,
+          "ci95_margin": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 3,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "overlap": {
+          "ci95_high": 3.466666666666667,
+          "ci95_low": 3.466666666666667,
+          "ci95_margin": 0.0,
+          "max": 3.466666666666667,
+          "mean": 3.466666666666667,
+          "min": 3.466666666666667,
+          "n": 3,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 29.206230109344904,
+          "ci95_low": -28.302739474017034,
+          "ci95_margin": 28.75448479168097,
+          "max": 11.351955395971906,
+          "mean": 0.4517453176639341,
+          "min": -11.695640525071305,
+          "n": 3,
+          "sem": 6.682427327836619,
+          "stdev": 11.57430364969975
+        }
+      },
+      "trials": [
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl10_a.json",
+          "change_windows": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 22.12689546344362,
+            "online_vs_static_pct_compact_output_bytes_per_write": 3.19025905925972,
+            "online_vs_static_pct_high_write_p999_us": -2.0865298546177797,
+            "online_vs_static_pct_high_write_p99_us": 24.77461590926626,
+            "online_vs_static_pct_high_write_throughput": 48.36456301555168,
+            "online_vs_static_pct_total_throughput": 11.351955395971906
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": 5.457126242276857,
+            "low_pct_write_p999_us": -25.402863786288993,
+            "low_pct_write_p99_us": -20.16065241247803,
+            "low_pct_write_throughput": 3.1606196821319634
+          },
+          "max_lag_windows": 0,
+          "overlap_after_warmup": 3.466666666666667,
+          "seed": "a",
+          "trial": "wl10_a",
+          "window_sec": 10,
+          "windows_recorded": 16.0
+        },
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl10_b.json",
+          "change_windows": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -1.4702246615118897,
+            "online_vs_static_pct_compact_output_bytes_per_write": -9.002152412908256,
+            "online_vs_static_pct_high_write_p999_us": -1.9917545958879246,
+            "online_vs_static_pct_high_write_p99_us": 0.2569657748811903,
+            "online_vs_static_pct_high_write_throughput": 19.68067702375242,
+            "online_vs_static_pct_total_throughput": 1.6989210820912009
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": -6.676136363636363,
+            "low_pct_write_p999_us": -34.799375267600524,
+            "low_pct_write_p99_us": 80.31989156375732,
+            "low_pct_write_throughput": -6.326538028271372
+          },
+          "max_lag_windows": 0,
+          "overlap_after_warmup": 3.466666666666667,
+          "seed": "b",
+          "trial": "wl10_b",
+          "window_sec": 10,
+          "windows_recorded": 16.0
+        },
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl10_c.json",
+          "change_windows": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            11,
+            13,
+            15
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -22.477606276962558,
+            "online_vs_static_pct_compact_output_bytes_per_write": -18.1843541532047,
+            "online_vs_static_pct_high_write_p999_us": 58.62165054678098,
+            "online_vs_static_pct_high_write_p99_us": -4.738053954842934,
+            "online_vs_static_pct_high_write_throughput": 2.062864126388861,
+            "online_vs_static_pct_total_throughput": -11.695640525071305
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": -22.44234470623941,
+            "low_pct_write_p999_us": -55.21851948168646,
+            "low_pct_write_p99_us": 271.2802416244579,
+            "low_pct_write_throughput": -22.366200250449182
+          },
+          "max_lag_windows": 0,
+          "overlap_after_warmup": 3.466666666666667,
+          "seed": "c",
+          "trial": "wl10_c",
+          "window_sec": 10,
+          "windows_recorded": 16.0
+        }
+      ]
+    },
+    "20": {
+      "high_count": 4,
+      "indicators": {
+        "high_count": 4,
+        "max_failed_online": 0,
+        "max_failed_static": 0,
+        "windows_per_run": 8
+      },
+      "n": 3,
+      "stats": {
+        "bytes_per_write": {
+          "ci95_high": 10.533261292418263,
+          "ci95_low": -28.65583211063917,
+          "ci95_margin": 19.594546701528717,
+          "max": -1.0637095072396305,
+          "mean": -9.061285409110454,
+          "min": -16.83333202076008,
+          "n": 3,
+          "sem": 4.553694329892799,
+          "stdev": 7.887229941512641
+        },
+        "compact_bytes": {
+          "ci95_high": 15.049175475990909,
+          "ci95_low": -19.525699005795385,
+          "ci95_margin": 17.287437240893148,
+          "max": 5.044517859823698,
+          "mean": -2.2382617649022385,
+          "min": -8.819466922141368,
+          "n": 3,
+          "sem": 4.01753131324498,
+          "stdev": 6.958568355539219
+        },
+        "high_p99": {
+          "ci95_high": -12.835514174901226,
+          "ci95_low": -40.884124857703625,
+          "ci95_margin": 14.0243053414012,
+          "max": -22.366876318413187,
+          "mean": -26.859819516302426,
+          "min": -33.19616927782707,
+          "n": 3,
+          "sem": 3.2591925032305835,
+          "stdev": 5.645087007242963
+        },
+        "high_p999": {
+          "ci95_high": -38.95699879592215,
+          "ci95_low": -78.2901122898219,
+          "ci95_margin": 19.666556746949873,
+          "max": -49.67985270959723,
+          "mean": -58.623555542872026,
+          "min": -64.73067553003821,
+          "n": 3,
+          "sem": 4.570429176609313,
+          "stdev": 7.916215546282518
+        },
+        "high_tput": {
+          "ci95_high": 24.7737470603198,
+          "ci95_low": 7.364691818281637,
+          "ci95_margin": 8.70452762101908,
+          "max": 19.288751167496894,
+          "mean": 16.069219439300717,
+          "min": 12.337590344907696,
+          "n": 3,
+          "sem": 2.0228974252891194,
+          "stdev": 3.503761119101022
+        },
+        "lag_unbounded_count": 0,
+        "low_available": true,
+        "low_p99": {
+          "ci95_high": 88.13626200982853,
+          "ci95_low": -39.01970972911631,
+          "ci95_margin": 63.57798586947242,
+          "max": 51.15987293658697,
+          "mean": 24.558276140356114,
+          "min": 0.11332783030233431,
+          "n": 3,
+          "sem": 14.77526978142515,
+          "stdev": 25.591517956965458
+        },
+        "low_p999": {
+          "ci95_high": 179.31715574279121,
+          "ci95_low": -216.3129701402204,
+          "ci95_margin": 197.8150629415058,
+          "max": 72.51599256628757,
+          "mean": -18.497907198714582,
+          "min": -75.29510258653215,
+          "n": 3,
+          "sem": 45.97142991901134,
+          "stdev": 79.62485231631963
+        },
+        "low_total_tput": {
+          "ci95_high": 2.7283254656397125,
+          "ci95_low": -7.244394737540074,
+          "ci95_margin": 4.986360101589893,
+          "max": -0.32664266830521915,
+          "mean": -2.258034635950181,
+          "min": -4.333152421412483,
+          "n": 3,
+          "sem": 1.1588101560748068,
+          "stdev": 2.0071180666483857
+        },
+        "low_write_tput": {
+          "ci95_high": 6.460292203688493,
+          "ci95_low": -10.749377437134015,
+          "ci95_margin": 8.604834820411254,
+          "max": 0.9389671361502347,
+          "mean": -2.1445426167227613,
+          "min": -5.892136681762046,
+          "n": 3,
+          "sem": 1.9997292169210446,
+          "stdev": 3.4636326050871737
+        },
+        "max_lag_windows": {
+          "ci95_high": 0.0,
+          "ci95_low": 0.0,
+          "ci95_margin": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 3,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "overlap": {
+          "ci95_high": 3.0,
+          "ci95_low": 3.0,
+          "ci95_margin": 0.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "min": 3.0,
+          "n": 3,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 3.7855286626587468,
+          "ci95_low": 2.1936747223778275,
+          "ci95_margin": 0.7959269701404597,
+          "max": 3.3178969036995762,
+          "mean": 2.989601692518287,
+          "min": 2.677776509530871,
+          "n": 3,
+          "sem": 0.18497024637240522,
+          "stdev": 0.32037786460553863
+        }
+      },
+      "trials": [
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl20_a.json",
+          "change_windows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -8.819466922141368,
+            "online_vs_static_pct_compact_output_bytes_per_write": -16.83333202076008,
+            "online_vs_static_pct_high_write_p999_us": -61.460138388980646,
+            "online_vs_static_pct_high_write_p99_us": -22.366876318413187,
+            "online_vs_static_pct_high_write_throughput": 19.288751167496894,
+            "online_vs_static_pct_total_throughput": 2.9731316643244154
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": -4.333152421412483,
+            "low_pct_write_p999_us": 72.51599256628757,
+            "low_pct_write_p99_us": 22.40162765417903,
+            "low_pct_write_throughput": -5.892136681762046
+          },
+          "max_lag_windows": 0,
+          "overlap_after_warmup": 3.0,
+          "seed": "a",
+          "trial": "wl20_a",
+          "window_sec": 20,
+          "windows_recorded": 8.0
+        },
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl20_b.json",
+          "change_windows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -2.939836232389046,
+            "online_vs_static_pct_compact_output_bytes_per_write": -9.286814699331654,
+            "online_vs_static_pct_high_write_p999_us": -49.67985270959723,
+            "online_vs_static_pct_high_write_p99_us": -25.01641295266703,
+            "online_vs_static_pct_high_write_throughput": 16.58131680549756,
+            "online_vs_static_pct_total_throughput": 3.3178969036995762
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": -0.32664266830521915,
+            "low_pct_write_p999_us": -75.29510258653215,
+            "low_pct_write_p99_us": 0.11332783030233431,
+            "low_pct_write_throughput": 0.9389671361502347
+          },
+          "max_lag_windows": 0,
+          "overlap_after_warmup": 3.0,
+          "seed": "b",
+          "trial": "wl20_b",
+          "window_sec": 20,
+          "windows_recorded": 8.0
+        },
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl20_c.json",
+          "change_windows": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 5.044517859823698,
+            "online_vs_static_pct_compact_output_bytes_per_write": -1.0637095072396305,
+            "online_vs_static_pct_high_write_p999_us": -64.73067553003821,
+            "online_vs_static_pct_high_write_p99_us": -33.19616927782707,
+            "online_vs_static_pct_high_write_throughput": 12.337590344907696,
+            "online_vs_static_pct_total_throughput": 2.677776509530871
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": -2.114308818132841,
+            "low_pct_write_p999_us": -52.71461157589916,
+            "low_pct_write_p99_us": 51.15987293658697,
+            "low_pct_write_throughput": -1.4804583045564728
+          },
+          "max_lag_windows": 0,
+          "overlap_after_warmup": 3.0,
+          "seed": "c",
+          "trial": "wl20_c",
+          "window_sec": 20,
+          "windows_recorded": 8.0
+        }
+      ]
+    },
+    "40": {
+      "high_count": 4,
+      "indicators": {
+        "high_count": 4,
+        "max_failed_online": 0,
+        "max_failed_static": 0,
+        "windows_per_run": 4
+      },
+      "n": 3,
+      "stats": {
+        "bytes_per_write": {
+          "ci95_high": 0.9466161952965191,
+          "ci95_low": -19.668115023271987,
+          "ci95_margin": 10.307365609284254,
+          "max": -5.193342332085274,
+          "mean": -9.360749413987735,
+          "min": -13.49096866804104,
+          "n": 3,
+          "sem": 2.3953905668799105,
+          "stdev": 4.14893816580722
+        },
+        "compact_bytes": {
+          "ci95_high": 1.5380080507854206,
+          "ci95_low": -4.839850105924344,
+          "ci95_margin": 3.1889290783548825,
+          "max": -0.22806768873328007,
+          "mean": -1.650921027569462,
+          "min": -2.721901423495355,
+          "n": 3,
+          "sem": 0.7410943709864938,
+          "stdev": 1.2836131037519056
+        },
+        "high_p99": {
+          "ci95_high": 30.37156648836371,
+          "ci95_low": -59.14920848284022,
+          "ci95_margin": 44.76038748560197,
+          "max": 6.3669232621254945,
+          "mean": -14.388820997238254,
+          "min": -25.99655339374951,
+          "n": 3,
+          "sem": 10.402135134929576,
+          "stdev": 18.017026560895363
+        },
+        "high_p999": {
+          "ci95_high": -16.96457104135333,
+          "ci95_low": -52.86605481671213,
+          "ci95_margin": 17.9507418876794,
+          "max": -26.574910357807845,
+          "mean": -34.91531292903273,
+          "min": -39.27792612765907,
+          "n": 3,
+          "sem": 4.17168066178931,
+          "stdev": 7.225562859171642
+        },
+        "high_tput": {
+          "ci95_high": 34.31436319357624,
+          "ci95_low": -5.380439012151047,
+          "ci95_margin": 19.847401102863646,
+          "max": 22.360618505778433,
+          "mean": 14.466962090712599,
+          "min": 6.38589740807976,
+          "n": 3,
+          "sem": 4.61245668205058,
+          "stdev": 7.989009321022171
+        },
+        "lag_unbounded_count": 3,
+        "low_available": true,
+        "low_p99": {
+          "ci95_high": 47.840527270201534,
+          "ci95_low": -120.48184497944678,
+          "ci95_margin": 84.16118612482416,
+          "max": -11.85325679599975,
+          "mean": -36.32065885462262,
+          "min": -74.98617106559777,
+          "n": 3,
+          "sem": 19.558723245369315,
+          "stdev": 33.876702392158094
+        },
+        "low_p999": {
+          "ci95_high": 2253.173012660631,
+          "ci95_low": -1077.9637657754336,
+          "ci95_margin": 1665.5683892180323,
+          "max": 1341.05948200639,
+          "mean": 587.6046234425987,
+          "min": 56.92193494343497,
+          "n": 3,
+          "sem": 387.0714360255711,
+          "stdev": 670.4273933549354
+        },
+        "low_total_tput": {
+          "ci95_high": 8.950194011176801,
+          "ci95_low": 1.080407082973946,
+          "ci95_margin": 3.9348934641014273,
+          "max": 6.811423701494196,
+          "mean": 5.015300547075373,
+          "min": 3.818689325830104,
+          "n": 3,
+          "sem": 0.9144535124567574,
+          "stdev": 1.583879944734923
+        },
+        "low_write_tput": {
+          "ci95_high": 8.73653967244368,
+          "ci95_low": 1.784702873182622,
+          "ci95_margin": 3.475918399630529,
+          "max": 6.350146300682727,
+          "mean": 5.260621272813151,
+          "min": 3.6827695840325005,
+          "n": 3,
+          "sem": 0.807789542094011,
+          "stdev": 1.3991325287296252
+        },
+        "max_lag_windows": {
+          "n": 0
+        },
+        "overlap": {
+          "ci95_high": 2.0,
+          "ci95_low": 2.0,
+          "ci95_margin": 0.0,
+          "max": 2.0,
+          "mean": 2.0,
+          "min": 2.0,
+          "n": 3,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 15.185995624252596,
+          "ci95_low": -2.3504631721873235,
+          "ci95_margin": 8.76822939821996,
+          "max": 9.885777467953288,
+          "mean": 6.4177662260326365,
+          "min": 2.830019715762586,
+          "n": 3,
+          "sem": 2.0377014636811435,
+          "stdev": 3.5294024657532077
+        }
+      },
+      "trials": [
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl40_a.json",
+          "change_windows": [
+            1,
+            2,
+            3
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -0.22806768873328007,
+            "online_vs_static_pct_compact_output_bytes_per_write": -13.49096866804104,
+            "online_vs_static_pct_high_write_p999_us": -39.27792612765907,
+            "online_vs_static_pct_high_write_p99_us": -23.53683286009074,
+            "online_vs_static_pct_high_write_throughput": 22.360618505778433,
+            "online_vs_static_pct_total_throughput": 9.885777467953288
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": 4.415788613901821,
+            "low_pct_write_p999_us": 56.92193494343497,
+            "low_pct_write_p99_us": -22.122548702270343,
+            "low_pct_write_throughput": 5.748947933724226
+          },
+          "max_lag_windows": null,
+          "overlap_after_warmup": 2.0,
+          "seed": "a",
+          "trial": "wl40_a",
+          "window_sec": 40,
+          "windows_recorded": 4.0
+        },
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl40_b.json",
+          "change_windows": [
+            1,
+            2,
+            3
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -2.721901423495355,
+            "online_vs_static_pct_compact_output_bytes_per_write": -5.193342332085274,
+            "online_vs_static_pct_high_write_p999_us": -26.574910357807845,
+            "online_vs_static_pct_high_write_p99_us": 6.3669232621254945,
+            "online_vs_static_pct_high_write_throughput": 6.38589740807976,
+            "online_vs_static_pct_total_throughput": 2.830019715762586
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": 3.818689325830104,
+            "low_pct_write_p999_us": 364.83245337797126,
+            "low_pct_write_p99_us": -11.85325679599975,
+            "low_pct_write_throughput": 3.6827695840325005
+          },
+          "max_lag_windows": null,
+          "overlap_after_warmup": 2.0,
+          "seed": "b",
+          "trial": "wl40_b",
+          "window_sec": 40,
+          "windows_recorded": 4.0
+        },
+        {
+          "analysis_path": "remote-results/embedded_continuous_analysis_wl40_c.json",
+          "change_windows": [
+            1,
+            2,
+            3
+          ],
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -2.002793970479751,
+            "online_vs_static_pct_compact_output_bytes_per_write": -9.397937241836894,
+            "online_vs_static_pct_high_write_p999_us": -38.893102301631274,
+            "online_vs_static_pct_high_write_p99_us": -25.99655339374951,
+            "online_vs_static_pct_high_write_throughput": 14.6543703582796,
+            "online_vs_static_pct_total_throughput": 6.537501494382035
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "low_collateral": {
+            "low_metrics_available": true,
+            "low_pct_total_throughput": 6.811423701494196,
+            "low_pct_write_p999_us": 1341.05948200639,
+            "low_pct_write_p99_us": -74.98617106559777,
+            "low_pct_write_throughput": 6.350146300682727
+          },
+          "max_lag_windows": null,
+          "overlap_after_warmup": 2.0,
+          "seed": "c",
+          "trial": "wl40_c",
+          "window_sec": 40,
+          "windows_recorded": 4.0
+        }
+      ]
+    }
+  },
+  "windows_sorted": [
+    10,
+    20,
+    40
+  ]
+}

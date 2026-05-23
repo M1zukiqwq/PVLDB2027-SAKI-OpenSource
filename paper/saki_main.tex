@@ -1,0 +1,117 @@
+\documentclass[sigconf,nonacm]{acmart}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{xspace}
+\usepackage{hyperref}
+\graphicspath{{../figures/evaluation/}}
+
+% paper-specific
+\newcommand\vldbdoi{XX.XX/XXX.XX}
+\newcommand\vldbpages{XXX--XXX}
+% issue-specific
+\newcommand\vldbvolume{20}
+\newcommand\vldbissue{1}
+\newcommand\vldbyear{2027}
+% should be fine as it is
+\newcommand\vldbauthors{\authors}
+\newcommand\vldbtitle{\shorttitle}
+\newcommand\vldbavailabilityurl{https://github.com/M1zukiqwq/PVLDB2027-SAKI-OpenSource}
+\newcommand\vldbpagestyle{plain}
+
+\newcommand{\rocksdb}{RocksDB\xspace}
+\newcommand{\sysname}{SAKI\xspace}
+\newcommand{\ratecall}{\texttt{RateLimiter::\allowbreak SetBytesPerSecond()}\xspace}
+\newcommand{\maxbgjobs}{\texttt{max\_\allowbreak background\_\allowbreak jobs}\xspace}
+\newcommand{\staticbiased}{\texttt{static\_\allowbreak biased}\xspace}
+\newcommand{\staticautotuned}{\texttt{static\_\allowbreak autotuned}\xspace}
+\newcommand{\epochdrift}{\textsc{Epoch-Drift16}\xspace}
+\newcommand{\runtimedrift}{\textsc{Runtime-Drift16}\xspace}
+\newcommand{\valuefourk}{\textsc{Value-4K}\xspace}
+\newcommand{\readthreex}{\textsc{Read-3x}\xspace}
+\newcommand{\fastdrift}{\textsc{Fast-Drift}\xspace}
+\newcommand{\tenantseight}{\textsc{Tenant-8}\xspace}
+\emergencystretch=3em
+\sloppy
+
+\begin{document}
+\raggedbottom
+
+\title{SAKI: Shared Adaptive KV-Instance Control under a Fixed Compaction Budget}
+
+\author{Qichu Tian}
+\affiliation{%
+  \institution{Xi'an Jiaotong University}
+}
+\email{mizukiqwq@stu.xjtu.edu.cn}
+
+\author{Heng Chen}
+\affiliation{%
+  \institution{Xi'an Jiaotong University}
+}
+\email{hengchen@xjtu.edu.cn}
+
+\author{Shipeng Zhao}
+\affiliation{%
+  \institution{Xi'an Jiaotong University}
+}
+\email{zhaoshipeng@stu.xjtu.edu.cn}
+
+\author{Bo Wang}
+\affiliation{%
+  \institution{Xi'an Jiaotong University}
+}
+\email{Aroom@stu.xjtu.edu.cn}
+
+\input{../chapters/00_Abstract}
+
+\maketitle
+
+%%% do not modify the following VLDB block %%
+%%% VLDB block start %%%
+\pagestyle{\vldbpagestyle}
+\begingroup\small\noindent\raggedright\textbf{PVLDB Reference Format:}\\
+\vldbauthors. \vldbtitle. PVLDB, \vldbvolume(\vldbissue): \vldbpages, \vldbyear.\\
+\href{https://doi.org/\vldbdoi}{doi:\vldbdoi}
+\endgroup
+\begingroup
+\renewcommand\thefootnote{}\footnote{\noindent
+This work is licensed under the Creative Commons BY-NC-ND 4.0 International License.
+Visit \url{https://creativecommons.org/licenses/by-nc-nd/4.0/} to view a copy of this license.
+For any use beyond those covered by this license, obtain permission by emailing
+\href{mailto:info@vldb.org}{info@vldb.org}. Copyright is held by the owner/author(s).
+Publication rights licensed to the VLDB Endowment. \\
+\raggedright Proceedings of the VLDB Endowment, Vol. \vldbvolume, No. \vldbissue\ %
+ISSN 2150-8097. \\
+\href{https://doi.org/\vldbdoi}{doi:\vldbdoi} \\
+}\addtocounter{footnote}{-1}\endgroup
+%%% VLDB block end %%%
+
+%%% do not modify the following VLDB block %%
+%%% VLDB block start %%%
+\ifdefempty{\vldbavailabilityurl}{}{
+\vspace{.3cm}
+\begingroup\small\noindent\raggedright\textbf{PVLDB Artifact Availability:}\\
+The source code, data, and/or other artifacts have been made available at \url{\vldbavailabilityurl}.
+\endgroup
+}
+%%% VLDB block end %%%
+
+\input{../chapters/01_Introduction}
+\input{../chapters/02_Background_Motivation}
+\input{../chapters/03_Problem_Definition}
+\input{../chapters/04_Saki_Design}
+\input{../chapters/05_Implementation}
+\input{../chapters/06_Experimental_Methodology}
+\input{../chapters/07_Evaluation}
+\input{../chapters/08_Discussion_Limitations}
+\input{../chapters/09_Related_Work}
+\input{../chapters/10_Conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{saki_refs}
+
+\end{document}

@@ -1,0 +1,1217 @@
+{
+  "aggregate_online_vs_static": {
+    "all": {
+      "compaction_cpu_per_write_us_pct": {
+        "ci95_margin": 3.654993048546847,
+        "max": -7.558528140373549,
+        "mean": -12.756609367198498,
+        "min": -14.5697400405721,
+        "n": 5,
+        "stdev": 2.9440968709798057
+      },
+      "compaction_cpu_us_pct": {
+        "ci95_margin": 3.641827490727786,
+        "max": 1.6081168280193987,
+        "mean": -2.771212062408896,
+        "min": -6.079980539220401,
+        "n": 5,
+        "stdev": 2.933492014263262
+      },
+      "online_compaction_cpu_per_write_us": {
+        "ci95_margin": 1.0693438104343342,
+        "max": 35.098451671411226,
+        "mean": 33.92935107198063,
+        "min": 32.98281789286898,
+        "n": 5,
+        "stdev": 0.8613564306375434
+      },
+      "online_compaction_cpu_us": {
+        "ci95_margin": 1269783.3210716604,
+        "max": 36457920.0,
+        "mean": 35072372.8,
+        "min": 33829157.0,
+        "n": 5,
+        "stdev": 1022810.4548312947
+      },
+      "online_read_mean_us": {
+        "ci95_margin": 0.6705828489204421,
+        "max": 50.86790823499182,
+        "mean": 50.259237096499675,
+        "min": 49.60397242160721,
+        "n": 5,
+        "stdev": 0.5401544793701657
+      },
+      "online_read_p999_us": {
+        "ci95_margin": 8.801885168996716,
+        "max": 189.2924567831061,
+        "mean": 179.76955838377302,
+        "min": 172.88821188112277,
+        "n": 5,
+        "stdev": 7.08991843228526
+      },
+      "online_read_p99_us": {
+        "ci95_margin": 3.0364925679488994,
+        "max": 118.52708415880701,
+        "mean": 116.05412179917698,
+        "min": 112.68800685868831,
+        "n": 5,
+        "stdev": 2.4458947388712677
+      },
+      "online_read_throughput": {
+        "ci95_margin": 263.33113556880204,
+        "max": 11252.2875,
+        "mean": 11016.29375,
+        "min": 10709.7875,
+        "n": 5,
+        "stdev": 212.11322756630193
+      },
+      "read_mean_us_pct": {
+        "ci95_margin": 6.549368623561912,
+        "max": 5.670886745822547,
+        "mean": 1.4237713841593445,
+        "min": -7.314432397877346,
+        "n": 5,
+        "stdev": 5.2755163731947645
+      },
+      "read_p999_us_pct": {
+        "ci95_margin": 47.206852741018544,
+        "max": 8.478147986335225,
+        "mean": -10.566550984493624,
+        "min": -78.51500701017343,
+        "n": 5,
+        "stdev": 38.02511950026648
+      },
+      "read_p99_us_pct": {
+        "ci95_margin": 2.780591565182861,
+        "max": 10.268848067760098,
+        "mean": 6.9696235046462975,
+        "min": 4.422862944940528,
+        "n": 5,
+        "stdev": 2.2397664832173687
+      },
+      "read_throughput_pct": {
+        "ci95_margin": 3.7211124681750953,
+        "max": 3.8704053180067164,
+        "mean": 0.5494617247607391,
+        "min": -2.684465040733512,
+        "n": 5,
+        "stdev": 2.9973560629544442
+      },
+      "static_compaction_cpu_per_write_us": {
+        "ci95_margin": 1.2525833928477679,
+        "max": 40.121079619811184,
+        "mean": 38.908096490971516,
+        "min": 37.96829600972675,
+        "n": 5,
+        "stdev": 1.0089559127863592
+      },
+      "static_compaction_cpu_us": {
+        "ci95_margin": 970384.2967523031,
+        "max": 37126521.0,
+        "mean": 36079570.0,
+        "min": 34980562.0,
+        "n": 5,
+        "stdev": 781644.5431687603
+      },
+      "static_read_mean_us": {
+        "ci95_margin": 2.9851138229848964,
+        "max": 53.848565090993766,
+        "mean": 49.651853870174854,
+        "min": 48.13805372651779,
+        "n": 5,
+        "stdev": 2.4045091602192015
+      },
+      "static_read_p999_us": {
+        "ci95_margin": 396.6369311163143,
+        "max": 881.0450013771875,
+        "mean": 309.58092941049546,
+        "min": 161.0015796630783,
+        "n": 5,
+        "stdev": 319.49104479934454
+      },
+      "static_read_p99_us": {
+        "ci95_margin": 2.346645631592834,
+        "max": 111.2874785877956,
+        "mean": 108.50525941767395,
+        "min": 106.71341959723922,
+        "n": 5,
+        "stdev": 1.890223037227848
+      },
+      "static_read_throughput": {
+        "ci95_margin": 216.6663500915813,
+        "max": 11237.75,
+        "mean": 10959.47625,
+        "min": 10802.39375,
+        "n": 5,
+        "stdev": 174.524743242631
+      }
+    },
+    "high": {
+      "compaction_cpu_per_write_us_pct": {
+        "ci95_margin": 6.443823815898804,
+        "max": 5.047762314820833,
+        "mean": -1.6396059745044247,
+        "min": -7.558057299173247,
+        "n": 5,
+        "stdev": 5.190500031477599
+      },
+      "compaction_cpu_us_pct": {
+        "ci95_margin": 10.860037686155055,
+        "max": 34.531436823046064,
+        "mean": 24.14370142401912,
+        "min": 14.597801086762527,
+        "n": 5,
+        "stdev": 8.747760268174435
+      },
+      "online_compaction_cpu_per_write_us": {
+        "ci95_margin": 1.4503650924243265,
+        "max": 30.262421273617914,
+        "mean": 29.104778900028446,
+        "min": 27.602616262174212,
+        "n": 5,
+        "stdev": 1.1682690701922045
+      },
+      "online_compaction_cpu_us": {
+        "ci95_margin": 969519.8639669953,
+        "max": 15242510.0,
+        "mean": 14321039.4,
+        "min": 13297726.0,
+        "n": 5,
+        "stdev": 780948.2425672011
+      },
+      "online_read_mean_us": {
+        "ci95_margin": 0.7851219316579574,
+        "max": 35.75392951937214,
+        "mean": 35.04377360133742,
+        "min": 34.10577528743566,
+        "n": 5,
+        "stdev": 0.632415709586865
+      },
+      "online_read_p999_us": {
+        "ci95_margin": 9.000383288373817,
+        "max": 199.3827748852655,
+        "mean": 190.6478792604649,
+        "min": 179.45748121561127,
+        "n": 5,
+        "stdev": 7.249808665834635
+      },
+      "online_read_p99_us": {
+        "ci95_margin": 3.252741299302275,
+        "max": 132.11256805854322,
+        "mean": 129.69576481465438,
+        "min": 125.41214230776816,
+        "n": 5,
+        "stdev": 2.6200830902236585
+      },
+      "online_read_throughput": {
+        "ci95_margin": 63.930611761596616,
+        "max": 1353.35,
+        "mean": 1284.15625,
+        "min": 1214.4875,
+        "n": 5,
+        "stdev": 51.49610725579165
+      },
+      "read_mean_us_pct": {
+        "ci95_margin": 4.358380439634571,
+        "max": 0.468676990902269,
+        "mean": -4.0402596969908435,
+        "min": -7.8135647643012724,
+        "n": 5,
+        "stdev": 3.5106754087998273
+      },
+      "read_p999_us_pct": {
+        "ci95_margin": 5.032557520920413,
+        "max": 3.5506354426588422,
+        "mean": -2.218381868582937,
+        "min": -5.952863082657852,
+        "n": 5,
+        "stdev": 4.05372504231119
+      },
+      "read_p99_us_pct": {
+        "ci95_margin": 4.169235240371814,
+        "max": 0.06876503526682443,
+        "mean": -4.499356127083832,
+        "min": -9.10378319464415,
+        "n": 5,
+        "stdev": 3.358318952326748
+      },
+      "read_throughput_pct": {
+        "ci95_margin": 6.3730139848215535,
+        "max": 34.643270199350816,
+        "mean": 26.886586022412935,
+        "min": 22.513186397758155,
+        "n": 5,
+        "stdev": 5.133462713118807
+      },
+      "static_compaction_cpu_per_write_us": {
+        "ci95_margin": 0.8832553862802195,
+        "max": 30.486528698728534,
+        "mean": 29.610451857447373,
+        "min": 28.617221242782595,
+        "n": 5,
+        "stdev": 0.7114622064896996
+      },
+      "static_compaction_cpu_us": {
+        "ci95_margin": 291819.4431249978,
+        "max": 11926391.0,
+        "mean": 11546930.8,
+        "min": 11330073.0,
+        "n": 5,
+        "stdev": 235060.55907191237
+      },
+      "static_read_mean_us": {
+        "ci95_margin": 1.0041703715436299,
+        "max": 37.37305149745873,
+        "mean": 36.54113211729063,
+        "min": 35.30940028909063,
+        "n": 5,
+        "stdev": 0.808859226139329
+      },
+      "static_read_p999_us": {
+        "ci95_margin": 10.72295359851432,
+        "max": 205.82885426123292,
+        "mean": 195.14487429919512,
+        "min": 183.99879545569812,
+        "n": 5,
+        "stdev": 8.637339036690927
+      },
+      "static_read_p99_us": {
+        "ci95_margin": 5.164834306950187,
+        "max": 142.06767730783102,
+        "mean": 135.90144038685085,
+        "min": 132.02178323274333,
+        "n": 5,
+        "stdev": 4.160273992386036
+      },
+      "static_read_throughput": {
+        "ci95_margin": 25.134255218152994,
+        "max": 1041.55625,
+        "mean": 1012.2125,
+        "min": 985.85,
+        "n": 5,
+        "stdev": 20.245642374502488
+      }
+    },
+    "low": {
+      "compaction_cpu_per_write_us_pct": {
+        "ci95_margin": 13.281131102577174,
+        "max": -22.980380018957455,
+        "mean": -33.46897210782637,
+        "min": -50.10032495135931,
+        "n": 5,
+        "stdev": 10.697950995478854
+      },
+      "compaction_cpu_us_pct": {
+        "ci95_margin": 11.618242167946162,
+        "max": -24.38427515706272,
+        "mean": -35.625532125483765,
+        "min": -49.455728378999126,
+        "n": 5,
+        "stdev": 9.358493972111726
+      },
+      "online_compaction_cpu_per_write_us": {
+        "ci95_margin": 6.8656085401197515,
+        "max": 86.68886814554506,
+        "mean": 80.76058729658375,
+        "min": 73.81849023090587,
+        "n": 5,
+        "stdev": 5.530247623418897
+      },
+      "online_compaction_cpu_us": {
+        "ci95_margin": 270534.45633914176,
+        "max": 4736333.0,
+        "mean": 4418157.8,
+        "min": 4155981.0,
+        "n": 5,
+        "stdev": 217915.50238842578
+      },
+      "online_read_mean_us": {
+        "ci95_margin": 1.0418294504910737,
+        "max": 47.90787852506898,
+        "mean": 47.09764262041036,
+        "min": 45.992979041831916,
+        "n": 5,
+        "stdev": 0.8391936139262581
+      },
+      "online_read_p999_us": {
+        "ci95_margin": 8.155305327152432,
+        "max": 153.2152189912382,
+        "mean": 144.25054068872706,
+        "min": 136.44293624255255,
+        "n": 5,
+        "stdev": 6.569098374920388
+      },
+      "online_read_p99_us": {
+        "ci95_margin": 2.606822137811817,
+        "max": 95.83596830912212,
+        "mean": 93.41487431952177,
+        "min": 91.34372368832544,
+        "n": 5,
+        "stdev": 2.0997952108784395
+      },
+      "online_read_throughput": {
+        "ci95_margin": 237.50708401909708,
+        "max": 6271.81875,
+        "mean": 6058.50875,
+        "min": 5817.15625,
+        "n": 5,
+        "stdev": 191.31195425232534
+      },
+      "read_mean_us_pct": {
+        "ci95_margin": 8.331869423362274,
+        "max": 10.805429425490077,
+        "mean": 5.704803973444202,
+        "min": -4.998527403334306,
+        "n": 5,
+        "stdev": 6.711320752986319
+      },
+      "read_p999_us_pct": {
+        "ci95_margin": 7.872638133552468,
+        "max": 20.63279158609986,
+        "mean": 12.413982858106758,
+        "min": 4.359360641764393,
+        "n": 5,
+        "stdev": 6.3414099527667105
+      },
+      "read_p99_us_pct": {
+        "ci95_margin": 6.793402124660178,
+        "max": 21.088424592491034,
+        "mean": 13.710522359353561,
+        "min": 6.695127215102957,
+        "n": 5,
+        "stdev": 5.472085356351462
+      },
+      "read_throughput_pct": {
+        "ci95_margin": 4.223698992192968,
+        "max": 0.11691023802523054,
+        "mean": -4.054862798526836,
+        "min": -8.46789003954417,
+        "n": 5,
+        "stdev": 3.402189503977245
+      },
+      "static_compaction_cpu_per_write_us": {
+        "ci95_margin": 22.370321679023412,
+        "max": 147.93380950667483,
+        "mean": 123.60385082864528,
+        "min": 98.80956696000698,
+        "n": 5,
+        "stdev": 18.01929393113602
+      },
+      "static_compaction_cpu_us": {
+        "ci95_margin": 1133938.9626182746,
+        "max": 8222457.0,
+        "mean": 6966710.8,
+        "min": 5670187.0,
+        "n": 5,
+        "stdev": 913387.8251981466
+      },
+      "static_read_mean_us": {
+        "ci95_margin": 2.9888874581111926,
+        "max": 48.86386715110919,
+        "mean": 44.674576985723704,
+        "min": 43.10731580155438,
+        "n": 5,
+        "stdev": 2.407548823282847
+      },
+      "static_read_p999_us": {
+        "ci95_margin": 4.176632903044937,
+        "max": 134.22173450550707,
+        "mean": 128.41328929189754,
+        "min": 126.21784723016565,
+        "n": 5,
+        "stdev": 3.364277769549989
+      },
+      "static_read_p99_us": {
+        "ci95_margin": 3.1699840086162645,
+        "max": 86.1295379199481,
+        "mean": 82.2425032939632,
+        "min": 79.145441549551,
+        "n": 5,
+        "stdev": 2.553422093246847
+      },
+      "static_read_throughput": {
+        "ci95_margin": 189.64762734159189,
+        "max": 6551.21875,
+        "mean": 6316.6825,
+        "min": 6203.00625,
+        "n": 5,
+        "stdev": 152.76116228650838
+      }
+    },
+    "mid": {
+      "compaction_cpu_per_write_us_pct": {
+        "ci95_margin": 7.738431897894857,
+        "max": -0.7172805940999695,
+        "mean": -8.047794509805133,
+        "min": -16.789565123465387,
+        "n": 5,
+        "stdev": 6.233306831032282
+      },
+      "compaction_cpu_us_pct": {
+        "ci95_margin": 9.198397564290833,
+        "max": 5.134003624573785,
+        "mean": -6.846397254538866,
+        "min": -15.087649767535721,
+        "n": 5,
+        "stdev": 7.409309163480835
+      },
+      "online_compaction_cpu_per_write_us": {
+        "ci95_margin": 2.5490109528871336,
+        "max": 35.87377813542875,
+        "mean": 33.52959383161632,
+        "min": 30.692112134818238,
+        "n": 5,
+        "stdev": 2.053228301890182
+      },
+      "online_compaction_cpu_us": {
+        "ci95_margin": 1464408.3921685445,
+        "max": 18188436.0,
+        "mean": 16333175.6,
+        "min": 15127252.0,
+        "n": 5,
+        "stdev": 1179580.9480223474
+      },
+      "online_read_mean_us": {
+        "ci95_margin": 0.8177112813394184,
+        "max": 61.35593941780908,
+        "mean": 60.77902796867694,
+        "min": 59.66776419355836,
+        "n": 5,
+        "stdev": 0.6586664304911366
+      },
+      "online_read_p999_us": {
+        "ci95_margin": 11.81431152447961,
+        "max": 243.76127357626493,
+        "mean": 234.4762077085421,
+        "min": 221.10344839440475,
+        "n": 5,
+        "stdev": 9.516427837210225
+      },
+      "online_read_p99_us": {
+        "ci95_margin": 4.364879702317442,
+        "max": 151.85303085022156,
+        "mean": 148.61758046171866,
+        "min": 143.0733527221724,
+        "n": 5,
+        "stdev": 3.515910564838202
+      },
+      "online_read_throughput": {
+        "ci95_margin": 104.43484731841697,
+        "max": 3802.45,
+        "mean": 3673.62875,
+        "min": 3599.65,
+        "n": 5,
+        "stdev": 84.12226866851297
+      },
+      "read_mean_us_pct": {
+        "ci95_margin": 5.086730615315065,
+        "max": 1.8838001451639397,
+        "mean": -1.7796379900745483,
+        "min": -8.787586057101768,
+        "n": 5,
+        "stdev": 4.097361469406995
+      },
+      "read_p999_us_pct": {
+        "ci95_margin": 51.32983786925418,
+        "max": 6.301252125768886,
+        "mean": -15.670016566736805,
+        "min": -89.46499311066417,
+        "n": 5,
+        "stdev": 41.346183987642405
+      },
+      "read_p99_us_pct": {
+        "ci95_margin": 2.4259884342433136,
+        "max": 2.8443316727833,
+        "mean": 1.4100322558587601,
+        "min": -1.9002598222362443,
+        "n": 5,
+        "stdev": 1.9541336641197147
+      },
+      "read_throughput_pct": {
+        "ci95_margin": 4.957707571718212,
+        "max": 5.066539562804152,
+        "mean": 1.2565073001506981,
+        "min": -3.830947058774646,
+        "n": 5,
+        "stdev": 3.9934334088354966
+      },
+      "static_compaction_cpu_per_write_us": {
+        "ci95_margin": 3.377575526015016,
+        "max": 41.22939101115412,
+        "mean": 36.553716964938026,
+        "min": 34.62596723862358,
+        "n": 5,
+        "stdev": 2.7206370588289577
+      },
+      "static_compaction_cpu_us": {
+        "ci95_margin": 1315123.1053045876,
+        "max": 19246828.0,
+        "mean": 17565928.4,
+        "min": 16377944.0,
+        "n": 5,
+        "stdev": 1059331.6506634266
+      },
+      "static_read_mean_us": {
+        "ci95_margin": 3.308731570410398,
+        "max": 66.63364392684122,
+        "mean": 61.96612129869061,
+        "min": 60.22148695905453,
+        "n": 5,
+        "stdev": 2.6651832531474358
+      },
+      "static_read_p999_us": {
+        "ci95_margin": 1159.2227870449003,
+        "max": 2313.821681721109,
+        "mean": 643.5241259248044,
+        "min": 214.56637204820277,
+        "n": 5,
+        "stdev": 933.7539455688617
+      },
+      "static_read_p99_us": {
+        "ci95_margin": 2.5231463057596235,
+        "max": 148.83099269553568,
+        "mean": 146.55135126697968,
+        "min": 143.47683635723092,
+        "n": 5,
+        "stdev": 2.0323943288386124
+      },
+      "static_read_throughput": {
+        "ci95_margin": 119.07590501786349,
+        "max": 3760.65625,
+        "mean": 3630.58125,
+        "min": 3508.34375,
+        "n": 5,
+        "stdev": 95.91564052674751
+      }
+    }
+  },
+  "notes": {
+    "cpu": "Compaction CPU/write is sum(compaction_cpu_us) / sum(write_ops).",
+    "read_latency": "Read percentiles are weighted by completed read operations.",
+    "source": "Existing raw embedded continuous traces; no RocksDB rerun."
+  },
+  "per_trial": [
+    {
+      "online_vs_static": {
+        "all": {
+          "compaction_cpu_per_write_us_pct": -7.558528140373549,
+          "compaction_cpu_us_pct": 1.6081168280193987,
+          "read_mean_us_pct": 0.3146719163880303,
+          "read_p999_us_pct": 3.9345843385625474,
+          "read_p99_us_pct": 4.422862944940528,
+          "read_throughput_pct": -2.565293319392227
+        },
+        "high": {
+          "compaction_cpu_per_write_us_pct": 5.047762314820833,
+          "compaction_cpu_us_pct": 34.531436823046064,
+          "read_mean_us_pct": -5.3057321230606265,
+          "read_p999_us_pct": -5.952863082657852,
+          "read_p99_us_pct": -9.10378319464415,
+          "read_throughput_pct": 34.643270199350816
+        },
+        "low": {
+          "compaction_cpu_per_write_us_pct": -25.54998995471608,
+          "compaction_cpu_us_pct": -30.548238819250567,
+          "read_mean_us_pct": 3.2736853387145723,
+          "read_p999_us_pct": 4.359360641764393,
+          "read_p99_us_pct": 6.695127215102957,
+          "read_throughput_pct": -8.46789003954417
+        },
+        "mid": {
+          "compaction_cpu_per_write_us_pct": -4.435784875084157,
+          "compaction_cpu_us_pct": -7.061897930539428,
+          "read_mean_us_pct": -0.7793600579074184,
+          "read_p999_us_pct": 3.3348595812006656,
+          "read_p99_us_pct": 2.8443316727833,
+          "read_throughput_pct": -2.2204565865849064
+        }
+      },
+      "per_policy": {
+        "online": {
+          "all": {
+            "compaction_cpu_per_write_us": 35.098451671411226,
+            "compaction_cpu_us": 36457920.0,
+            "read_mean_us": 49.60397242160721,
+            "read_ops": 1751915.0,
+            "read_p999_us": 179.1589860238653,
+            "read_p99_us": 116.20957124061384,
+            "read_throughput": 10949.46875,
+            "write_ops": 1038733.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 30.061750552224677,
+            "compaction_cpu_us": 15242510.0,
+            "read_mean_us": 34.874619065651906,
+            "read_ops": 216536.0,
+            "read_p999_us": 193.57614438245835,
+            "read_p99_us": 129.13414397605942,
+            "read_throughput": 1353.35,
+            "write_ops": 507040.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 86.68886814554506,
+            "compaction_cpu_us": 4736333.0,
+            "read_mean_us": 45.992979041831916,
+            "read_ops": 959435.0,
+            "read_p999_us": 140.07294397223365,
+            "read_p99_us": 91.89602005346897,
+            "read_throughput": 5996.46875,
+            "write_ops": 54636.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 34.54320343271349,
+            "compaction_cpu_us": 16479077.0,
+            "read_mean_us": 61.15708989762893,
+            "read_ops": 575944.0,
+            "read_p999_us": 238.85000277804787,
+            "read_p99_us": 151.85303085022156,
+            "read_throughput": 3599.65,
+            "write_ops": 477057.0
+          }
+        },
+        "static": {
+          "all": {
+            "compaction_cpu_per_write_us": 37.96829600972675,
+            "compaction_cpu_us": 35880913.0,
+            "read_mean_us": 49.448372280928126,
+            "read_ops": 1798040.0,
+            "read_p999_us": 172.376680162844,
+            "read_p99_us": 111.2874785877956,
+            "read_throughput": 11237.75,
+            "write_ops": 945023.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 28.617221242782595,
+            "compaction_cpu_us": 11330073.0,
+            "read_mean_us": 36.82864849958339,
+            "read_ops": 160822.0,
+            "read_p999_us": 205.82885426123292,
+            "read_p99_us": 142.06767730783102,
+            "read_throughput": 1005.1375,
+            "write_ops": 395918.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 116.43902813823249,
+            "compaction_cpu_us": 6819601.0,
+            "read_mean_us": 44.53504190441664,
+            "read_ops": 1048195.0,
+            "read_p999_us": 134.22173450550707,
+            "read_p99_us": 86.1295379199481,
+            "read_throughput": 6551.21875,
+            "write_ops": 58568.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 36.14658833074773,
+            "compaction_cpu_us": 17731239.0,
+            "read_mean_us": 61.63746770160079,
+            "read_ops": 589023.0,
+            "read_p999_us": 231.1417499825983,
+            "read_p99_us": 147.65328179035453,
+            "read_throughput": 3681.39375,
+            "write_ops": 490537.0
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t"
+    },
+    {
+      "online_vs_static": {
+        "all": {
+          "compaction_cpu_per_write_us_pct": -13.703026948431049,
+          "compaction_cpu_us_pct": -6.079980539220401,
+          "read_mean_us_pct": -7.314432397877346,
+          "read_p999_us_pct": -78.51500701017343,
+          "read_p99_us_pct": 7.837742605373735,
+          "read_throughput_pct": -2.684465040733512
+        },
+        "high": {
+          "compaction_cpu_per_write_us_pct": -7.558057299173247,
+          "compaction_cpu_us_pct": 16.02231555212302,
+          "read_mean_us_pct": -6.323793729455596,
+          "read_p999_us_pct": 0.4375437281485069,
+          "read_p99_us_pct": -5.02221674355495,
+          "read_throughput_pct": 22.513186397758155
+        },
+        "low": {
+          "compaction_cpu_per_write_us_pct": -32.501765984446884,
+          "compaction_cpu_us_pct": -35.489384739651854,
+          "read_mean_us_pct": -4.998527403334306,
+          "read_p999_us_pct": 20.63279158609986,
+          "read_p99_us_pct": 16.18879677328986,
+          "read_throughput_pct": -6.22037096931831
+        },
+        "mid": {
+          "compaction_cpu_per_write_us_pct": -6.935344943078804,
+          "compaction_cpu_us_pct": -9.580001385864993,
+          "read_mean_us_pct": -8.787586057101768,
+          "read_p999_us_pct": -89.46499311066417,
+          "read_p99_us_pct": 2.182978325668138,
+          "read_throughput_pct": -3.830947058774646
+        }
+      },
+      "per_policy": {
+        "online": {
+          "all": {
+            "compaction_cpu_per_write_us": 32.98281789286898,
+            "compaction_cpu_us": 33829157.0,
+            "read_mean_us": 49.90984820018605,
+            "read_ops": 1713566.0,
+            "read_p999_us": 189.2924567831061,
+            "read_p99_us": 118.18181733297696,
+            "read_throughput": 10709.7875,
+            "write_ops": 1025660.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 28.182339391149736,
+            "compaction_cpu_us": 13837275.0,
+            "read_mean_us": 35.009656810356226,
+            "read_ops": 204167.0,
+            "read_p999_us": 199.3827748852655,
+            "read_p99_us": 130.95949884163454,
+            "read_throughput": 1276.04375,
+            "write_ops": 490991.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 84.37682885335148,
+            "compaction_cpu_us": 4463703.0,
+            "read_mean_us": 46.42139336123213,
+            "read_ops": 930745.0,
+            "read_p999_us": 153.2152189912382,
+            "read_p99_us": 95.49851355634465,
+            "read_throughput": 5817.15625,
+            "write_ops": 52902.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 32.231719897792914,
+            "compaction_cpu_us": 15528179.0,
+            "read_mean_us": 60.77815512378728,
+            "read_ops": 578654.0,
+            "read_p999_us": 243.76127357626493,
+            "read_p99_us": 150.15876845230483,
+            "read_throughput": 3616.5875,
+            "write_ops": 481767.0
+          }
+        },
+        "static": {
+          "all": {
+            "compaction_cpu_per_write_us": 38.2201330203775,
+            "compaction_cpu_us": 36019112.0,
+            "read_mean_us": 53.848565090993766,
+            "read_ops": 1760835.0,
+            "read_p999_us": 881.0450013771875,
+            "read_p99_us": 109.59225821840207,
+            "read_throughput": 11005.21875,
+            "write_ops": 942412.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 30.486528698728534,
+            "compaction_cpu_us": 11926391.0,
+            "read_mean_us": 37.37305149745873,
+            "read_ops": 166649.0,
+            "read_p999_us": 198.51418850398142,
+            "read_p99_us": 137.88434974107255,
+            "read_throughput": 1041.55625,
+            "write_ops": 391202.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 125.00597991039167,
+            "compaction_cpu_us": 6919331.0,
+            "read_mean_us": 48.86386715110919,
+            "read_ops": 992481.0,
+            "read_p999_us": 127.00959413832608,
+            "read_p99_us": 82.19253164544207,
+            "read_throughput": 6203.00625,
+            "write_ops": 55352.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 34.633685450270036,
+            "compaction_cpu_us": 17173390.0,
+            "read_mean_us": 66.63364392684122,
+            "read_ops": 601705.0,
+            "read_p999_us": 2313.821681721109,
+            "read_p99_us": 146.95086296440948,
+            "read_throughput": 3760.65625,
+            "write_ops": 495858.0
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t_b"
+    },
+    {
+      "online_vs_static": {
+        "all": {
+          "compaction_cpu_per_write_us_pct": -13.478680470641816,
+          "compaction_cpu_us_pct": -1.514586872560824,
+          "read_mean_us_pct": 5.670886745822547,
+          "read_p999_us_pct": 8.478147986335225,
+          "read_p99_us_pct": 10.268848067760098,
+          "read_throughput_pct": 1.7766895416120259
+        },
+        "high": {
+          "compaction_cpu_per_write_us_pct": 1.8151204966912515,
+          "compaction_cpu_us_pct": 30.486358660566427,
+          "read_mean_us_pct": -1.2268848590389938,
+          "read_p999_us_pct": -4.089967292973872,
+          "read_p99_us_pct": -3.076307006654877,
+          "read_throughput_pct": 29.534056828370893
+        },
+        "low": {
+          "compaction_cpu_per_write_us_pct": -36.21239962965212,
+          "compaction_cpu_us_pct": -38.25003353245456,
+          "read_mean_us_pct": 10.56079792155773,
+          "read_p999_us_pct": 15.214028416967619,
+          "read_p99_us_pct": 21.088424592491034,
+          "read_throughput_pct": -3.8094471066725726
+        },
+        "mid": {
+          "compaction_cpu_per_write_us_pct": -11.360997013297345,
+          "compaction_cpu_us_pct": -7.636440813327973,
+          "read_mean_us_pct": 1.8838001451639397,
+          "read_p999_us_pct": 2.960810513659975,
+          "read_p99_us_pct": 1.2357788878524878,
+          "read_throughput_pct": 3.6255467883379673
+        }
+      },
+      "per_policy": {
+        "online": {
+          "all": {
+            "compaction_cpu_per_write_us": 33.18484858117396,
+            "compaction_cpu_us": 34450751.0,
+            "read_mean_us": 50.86790823499182,
+            "read_ops": 1759091.0,
+            "read_p999_us": 184.258340245047,
+            "read_p99_us": 118.52708415880701,
+            "read_throughput": 10994.31875,
+            "write_ops": 1038147.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 30.262421273617914,
+            "compaction_cpu_us": 14876280.0,
+            "read_mean_us": 35.75392951937214,
+            "read_ops": 209476.0,
+            "read_p999_us": 190.29107391777578,
+            "read_p99_us": 130.86047088926654,
+            "read_throughput": 1309.225,
+            "write_ops": 491576.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 82.81599627560522,
+            "compaction_cpu_us": 4447219.0,
+            "read_mean_us": 47.65979231276426,
+            "read_ops": 955480.0,
+            "read_p999_us": 147.9141687947419,
+            "read_p99_us": 95.83596830912212,
+            "read_throughput": 5971.75,
+            "write_ops": 53700.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 30.692112134818238,
+            "compaction_cpu_us": 15127252.0,
+            "read_mean_us": 61.35593941780908,
+            "read_ops": 594135.0,
+            "read_p999_us": 240.57957366591768,
+            "read_p99_us": 150.6702146818484,
+            "read_throughput": 3713.34375,
+            "write_ops": 492871.0
+          }
+        },
+        "static": {
+          "all": {
+            "compaction_cpu_per_write_us": 38.35453361285569,
+            "compaction_cpu_us": 34980562.0,
+            "read_mean_us": 48.13805372651779,
+            "read_ops": 1728383.0,
+            "read_p999_us": 169.8575645560041,
+            "read_p99_us": 107.48918324237162,
+            "read_throughput": 10802.39375,
+            "write_ops": 912032.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 29.722914559239136,
+            "compaction_cpu_us": 11400640.0,
+            "read_mean_us": 36.19803776396748,
+            "read_ops": 161715.0,
+            "read_p999_us": 198.40580651145532,
+            "read_p99_us": 135.01391336610703,
+            "read_throughput": 1010.71875,
+            "write_ops": 383564.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 129.83086962792038,
+            "compaction_cpu_us": 7201978.0,
+            "read_mean_us": 43.10731580155438,
+            "read_ops": 993320.0,
+            "read_p999_us": 128.38208230982966,
+            "read_p99_us": 79.145441549551,
+            "read_throughput": 6208.25,
+            "write_ops": 55472.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 34.62596723862358,
+            "compaction_cpu_us": 16377944.0,
+            "read_mean_us": 60.22148695905453,
+            "read_ops": 573348.0,
+            "read_p999_us": 233.6613051759141,
+            "read_p99_us": 148.83099269553568,
+            "read_throughput": 3583.425,
+            "write_ops": 472996.0
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t_c"
+    },
+    {
+      "online_vs_static": {
+        "all": {
+          "compaction_cpu_per_write_us_pct": -14.5697400405721,
+          "compaction_cpu_us_pct": -3.8714489525934916,
+          "read_mean_us_pct": 4.126541222698266,
+          "read_p999_us_pct": 5.662006005317047,
+          "read_p99_us_pct": 5.598721589092114,
+          "read_throughput_pct": 2.3499721243106917
+        },
+        "high": {
+          "compaction_cpu_per_write_us_pct": -1.8591427429394929,
+          "compaction_cpu_us_pct": 25.080594997597554,
+          "read_mean_us_pct": -7.8135647643012724,
+          "read_p999_us_pct": -5.0372581380903085,
+          "read_p99_us_pct": -5.363238725832009,
+          "read_throughput_pct": 24.55050108076243
+        },
+        "low": {
+          "compaction_cpu_per_write_us_pct": -22.980380018957455,
+          "compaction_cpu_us_pct": -24.38427515706272,
+          "read_mean_us_pct": 10.805429425490077,
+          "read_p999_us_pct": 13.777440032701838,
+          "read_p99_us_pct": 14.014776260169237,
+          "read_throughput_pct": -1.8935161151243607
+        },
+        "mid": {
+          "compaction_cpu_per_write_us_pct": -16.789565123465387,
+          "compaction_cpu_us_pct": -15.087649767535721,
+          "read_mean_us_pct": -1.2682417445652625,
+          "read_p999_us_pct": -1.4820119436493875,
+          "read_p99_us_pct": -1.9002598222362443,
+          "read_throughput_pct": 3.641853794970923
+        }
+      },
+      "per_policy": {
+        "online": {
+          "all": {
+            "compaction_cpu_per_write_us": 34.27554261773374,
+            "compaction_cpu_us": 34981893.0,
+            "read_mean_us": 50.168488418693165,
+            "read_ops": 1788097.0,
+            "read_p999_us": 172.88821188112277,
+            "read_p99_us": 112.68800685868831,
+            "read_throughput": 11175.60625,
+            "write_ops": 1020608.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 29.414767020975695,
+            "compaction_cpu_us": 14351406.0,
+            "read_mean_us": 34.10577528743566,
+            "read_ops": 202828.0,
+            "read_p999_us": 179.45748121561127,
+            "read_p99_us": 125.41214230776816,
+            "read_throughput": 1267.675,
+            "write_ops": 487898.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 76.10275297751114,
+            "compaction_cpu_us": 4287553.0,
+            "read_mean_us": 47.90787852506898,
+            "read_ops": 1003491.0,
+            "read_p999_us": 143.60743544286893,
+            "read_p99_us": 92.50014599034769,
+            "read_throughput": 6271.81875,
+            "write_ops": 56339.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 34.307155557328215,
+            "compaction_cpu_us": 16342934.0,
+            "read_mean_us": 59.66776419355836,
+            "read_ops": 581778.0,
+            "read_p999_us": 221.10344839440475,
+            "read_p99_us": 143.0733527221724,
+            "read_throughput": 3636.1125,
+            "write_ops": 476371.0
+          }
+        },
+        "static": {
+          "all": {
+            "compaction_cpu_per_write_us": 40.121079619811184,
+            "compaction_cpu_us": 36390742.0,
+            "read_mean_us": 48.180308141990864,
+            "read_ops": 1747042.0,
+            "read_p999_us": 163.6238212933633,
+            "read_p99_us": 106.71341959723922,
+            "read_throughput": 10919.0125,
+            "write_ops": 907023.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 29.971989080887635,
+            "compaction_cpu_us": 11473727.0,
+            "read_mean_us": 36.99652253635291,
+            "read_ops": 162848.0,
+            "read_p999_us": 188.9767267636078,
+            "read_p99_us": 132.5194782865003,
+            "read_throughput": 1017.8,
+            "write_ops": 382815.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 98.80956696000698,
+            "compaction_cpu_us": 5670187.0,
+            "read_mean_us": 43.236038859705985,
+            "read_ops": 1022859.0,
+            "read_p999_us": 126.21784723016565,
+            "read_p99_us": 81.12996317185457,
+            "read_throughput": 6392.86875,
+            "write_ops": 57385.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 41.22939101115412,
+            "compaction_cpu_us": 19246828.0,
+            "read_mean_us": 60.4342161507834,
+            "read_ops": 561335.0,
+            "read_p999_us": 224.42952069619747,
+            "read_p99_us": 145.84478252736778,
+            "read_throughput": 3508.34375,
+            "write_ops": 466823.0
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t_d"
+    },
+    {
+      "online_vs_static": {
+        "all": {
+          "compaction_cpu_per_write_us_pct": -14.473071235973983,
+          "compaction_cpu_us_pct": -3.9981607756891626,
+          "read_mean_us_pct": 4.321189433765226,
+          "read_p999_us_pct": 7.607513757490494,
+          "read_p99_us_pct": 6.719942316065014,
+          "read_throughput_pct": 3.8704053180067164
+        },
+        "high": {
+          "compaction_cpu_per_write_us_pct": -5.643712641921468,
+          "compaction_cpu_us_pct": 14.597801086762527,
+          "read_mean_us_pct": 0.468676990902269,
+          "read_p999_us_pct": 3.5506354426588422,
+          "read_p99_us_pct": 0.06876503526682443,
+          "read_throughput_pct": 23.19191560582238
+        },
+        "low": {
+          "compaction_cpu_per_write_us_pct": -50.10032495135931,
+          "compaction_cpu_us_pct": -49.455728378999126,
+          "read_mean_us_pct": 8.882634584792934,
+          "read_p999_us_pct": 8.086293613000082,
+          "read_p99_us_pct": 10.565486955714725,
+          "read_throughput_pct": 0.11691023802523054
+        },
+        "mid": {
+          "compaction_cpu_per_write_us_pct": -0.7172805940999695,
+          "compaction_cpu_us_pct": 5.134003624573785,
+          "read_mean_us_pct": 0.05319776403776825,
+          "read_p999_us_pct": 6.301252125768886,
+          "read_p99_us_pct": 2.687332215226119,
+          "read_throughput_pct": 5.066539562804152
+        }
+      },
+      "per_policy": {
+        "online": {
+          "all": {
+            "compaction_cpu_per_write_us": 34.10509459671524,
+            "compaction_cpu_us": 35642143.0,
+            "read_mean_us": 50.745968207020134,
+            "read_ops": 1800366.0,
+            "read_p999_us": 173.249796985724,
+            "read_p99_us": 114.6641294047988,
+            "read_throughput": 11252.2875,
+            "write_ops": 1045068.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 27.602616262174212,
+            "compaction_cpu_us": 13297726.0,
+            "read_mean_us": 35.47488732387118,
+            "read_ops": 194318.0,
+            "read_p999_us": 190.53192190121348,
+            "read_p99_us": 132.11256805854322,
+            "read_throughput": 1214.4875,
+            "write_ops": 481756.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 73.81849023090587,
+            "compaction_cpu_us": 4155981.0,
+            "read_mean_us": 47.50616986115454,
+            "read_ops": 997656.0,
+            "read_p999_us": 136.44293624255255,
+            "read_p99_us": 91.34372368832544,
+            "read_throughput": 6235.35,
+            "write_ops": 56300.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 35.87377813542875,
+            "compaction_cpu_us": 18188436.0,
+            "read_mean_us": 60.93619121060106,
+            "read_ops": 608392.0,
+            "read_p999_us": 228.08674012807532,
+            "read_p99_us": 147.33253560204605,
+            "read_throughput": 3802.45,
+            "write_ops": 507012.0
+          }
+        },
+        "static": {
+          "all": {
+            "compaction_cpu_per_write_us": 39.87644019208648,
+            "compaction_cpu_us": 37126521.0,
+            "read_mean_us": 48.643970110443725,
+            "read_ops": 1733281.0,
+            "read_p999_us": 161.0015796630783,
+            "read_p99_us": 107.44395744256124,
+            "read_throughput": 10833.00625,
+            "write_ops": 931039.0
+          },
+          "high": {
+            "compaction_cpu_per_write_us": 29.25360570559896,
+            "compaction_cpu_us": 11603823.0,
+            "read_mean_us": 35.30940028909063,
+            "read_ops": 157736.0,
+            "read_p999_us": 183.99879545569812,
+            "read_p99_us": 132.02178323274333,
+            "read_throughput": 985.85,
+            "write_ops": 396663.0
+          },
+          "low": {
+            "compaction_cpu_per_write_us": 147.93380950667483,
+            "compaction_cpu_us": 8222457.0,
+            "read_mean_us": 43.63062121183232,
+            "read_ops": 996491.0,
+            "read_p999_us": 126.23518827565928,
+            "read_p99_us": 82.61504218302022,
+            "read_throughput": 6228.06875,
+            "write_ops": 55582.0
+          },
+          "mid": {
+            "compaction_cpu_per_write_us": 36.13295279389466,
+            "compaction_cpu_us": 17300241.0,
+            "read_mean_us": 60.90379175517309,
+            "read_ops": 579054.0,
+            "read_p999_us": 214.56637204820277,
+            "read_p99_us": 143.47683635723092,
+            "read_throughput": 3619.0875,
+            "write_ops": 478794.0
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t_e"
+    }
+  ],
+  "trials": [
+    "embedded_demand2f_16t",
+    "embedded_demand2f_16t_b",
+    "embedded_demand2f_16t_c",
+    "embedded_demand2f_16t_d",
+    "embedded_demand2f_16t_e"
+  ]
+}

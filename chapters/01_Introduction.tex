@@ -1,0 +1,74 @@
+\section{Introduction}
+
+Modern data-serving systems often place many storage-engine tenants on one
+host. Each tenant may own a separate \rocksdb instance, data directory,
+configuration, and foreground workload, yet their flushes and compactions draw
+from the same finite background CPU and storage bandwidth. Per-instance controls are
+useful, but they do not decide how a fixed host budget should be divided
+across competing instances.
+
+This placement decision becomes a performance problem when demand drifts. Equal
+static allocation leaves capacity assigned to quiet tenants; frozen skew becomes
+stale when the high-pressure set moves; and RocksDB's per-instance auto-tuned
+rate limiter adapts within a configured ceiling but cannot move budget across
+instances. The resulting compaction-debt mismatch appears as high write-tail
+latency and lower completion rates for tenants currently creating debt.
+
+We study the host-level placement decision directly. Under a fixed aggregate
+background compaction/I/O budget, can an online controller use runtime
+observations to reallocate per-tenant budgets across co-located \rocksdb
+tenants, improving the tenants currently under write pressure without oracle
+labels, workload forecasts, or extra host capacity? The question is
+not whether more compaction capacity helps, but whether the same capacity can
+be placed better than fixed fair sharing.
+
+SAKI is an external controller for this placement problem. It observes each
+tenant over a control window, ranks tenants using offered write demand and
+compaction-pressure symptoms, and applies the next-window budget assignment
+while conserving the aggregate budget. This conserved rank-and-assign framework
+separates the placement invariant from the score instance. Its key condition is
+demand observability: when offered demand separates currently high-pressure
+tenants from the rest, a demand-aware score family tracks bounded drift within
+one control window, while pressure-only ranking can chase stale debt. SAKI sits
+outside RocksDB; in the continuous harness, it changes runtime rate-limiter
+budgets through \ratecall.
+
+The evaluation follows an attribution chain. It first asks whether SAKI improves
+the target tenants under the same aggregate budget, using both epoch-level and
+continuous \rocksdb experiments. It then tests alternative explanations,
+including static skew, tenant-local autotuning, stale-debt scoring, lower-layer
+I/O weights, and foreground throttling. Finally, ranking-margin replay,
+score-family perturbations, workload-matrix experiments, collateral measurements,
+liveness checks, and public-trace audits define where the evidence applies.
+
+In a 16-tenant epoch-level workload, five trials show that SAKI reduces
+high-pressure write P99 by 11.7\%, raises high-pressure throughput by 38.1\%,
+and lowers compaction write bytes by 21.0\% relative to equal static allocation,
+with roughly neutral total throughput. In a continuous embedded \rocksdb harness
+with runtime actuation, five trials show that SAKI reduces high-pressure write
+P99 by 27.0\%, reduces P999 by 47.1\%, raises high-pressure throughput by
+26.1\%, and lowers normalized bytes/write by 11.9\%. The tradeoff is visible:
+lower-pressure tenants may absorb part of the cost, so SAKI is a targeted
+reallocation policy.
+
+The paper makes five contributions:
+\begin{enumerate}[leftmargin=1.2em]
+\item It frames multi-tenant \rocksdb compaction as a fixed-budget host-level
+reallocation problem, distinct from single-instance compaction-policy design.
+\item It presents SAKI, a conserved rank-and-assign controller that sets
+per-tenant runtime budgets from previous-window observations without oracle
+labels, workload forecasts, or tenant application changes.
+\item It identifies the demand-observability condition that lets a
+demand-aware score family track bounded drift, and contrasts it with the
+stale-debt lag of pressure-only ranking.
+\item It provides epoch-level and continuous evidence that online reallocation
+improves high-pressure write latency and throughput under bounded drift while
+keeping total throughput close to static allocation.
+\item It separates SAKI's effect from fixed skew, per-instance local autotuning,
+score-instance choice, workload variation, and lower-layer I/O control, while
+making collateral costs and validation boundaries explicit.
+\end{enumerate}
+
+Together, these results show that shared host-level compaction budgeting is a
+practical control point for multi-tenant \rocksdb write performance under
+bounded drift.

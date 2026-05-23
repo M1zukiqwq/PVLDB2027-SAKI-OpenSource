@@ -1,0 +1,149 @@
+\section{Experimental Methodology}
+
+The experiments are organized around the fixed-budget placement claim. The
+first layer asks whether moving a host-level background budget toward tenants
+currently carrying write pressure improves their write path without extra
+capacity. The second layer narrows the mechanism: runtime actuation tests
+deployable control, stronger baselines test fixed skew and local autotuning,
+score instances test the adaptation signal, ranking replay and score-family
+perturbations test robustness, cgroups test a lower-layer control point, and
+the rate-limiter coverage microstudy checks the maintenance-I/O knob. The third
+layer reports workload coverage, tier-wise collateral cost, liveness, and trace
+qualification boundaries. Budget conservation is enforced within each
+experiment family. The epoch-level and public-trace qualification runs use an
+11/7/3\,MB/s, 112\,MB/s contract; the continuous runtime family uses an
+11/6/1\,MB/s, 96\,MB/s contract. These numbers differ because the harnesses
+expose different actuation surfaces, but every SAKI comparison holds the
+relevant family budget fixed against its baselines.
+
+\subsection{Workloads}
+
+The epoch-level anchor is \epochdrift. It uses 16 co-located tenants, three
+demand tiers, eight epochs, and gradual movement of a four-tenant
+high-pressure set. Tenants are prefilled before the measured epochs.
+
+The continuous anchor is \runtimedrift. It also uses 16 tenants and three
+tiers, but runs tenants as long-lived embedded RocksDB processes for eight
+20-second windows. The high-pressure set moves by one tenant per window, so the
+experiment tests online adaptation at a rate the controller can plausibly
+follow. The continuous anchor uses 11/6/1\,MB/s high/mid/low budgets with a
+4/8/4 split, preserving a 96\,MB/s aggregate against an all-mid static
+baseline. A window-length sensitivity bracket repeats the same anchor at 10,
+20, and 40 seconds for three static/online seed pairs per point, holding the
+160-second duration and all per-tenant budgets fixed. A score-family
+robustness ablation perturbs the demand-mode instance along anchor weight and a
+uniform residual scale ($\times 0.5$, $\times 2$, and $\times 0$ meaning
+anchor-only), with three seeds per row paired with paper-static a/b/c; results
+appear in Section~\ref{sec:evaluation}. We also replay all five continuous main
+online traces offline to measure the ranking margin and the top-\(H\)
+invariance of nearby score instances without launching additional RocksDB
+runs. A separate 360-second longer-run is a sanity check for obvious
+instability.
+
+We also run a local sensitivity sweep around \epochdrift, changing drift
+speed (\texttt{epochs\_per\_stage}=3 and 1, versus 2) and high write pressure
+(70k and 130k writes/s, versus 100k). Each new point starts with two
+\texttt{static}/SAKI screening trials; stress-side variants are promoted to
+five trials if a pre-committed rule holds (high P99 improves by at least 2\%,
+high throughput by at least 5\%, overlap $\ge$ 2.5/4, static does not hit
+capacity-boundary).
+
+Around \runtimedrift we run a controlled workload matrix that perturbs one
+axis at a time: \valuefourk uses 4\,KB values, \readthreex triples per-tier
+point-read QPS, \fastdrift moves the high-pressure set at 1.5 tenants per
+window, and \tenantseight uses a smaller 8-tenant cluster with two
+high-pressure tenants. Per-tenant budgets are preserved so the same-budget
+contract holds; for \tenantseight the aggregate scales linearly. The matrix
+uses the paper SAKI policy without changing the score instance. Every variant is
+promoted from a two-trial screen to five trials unless either policy has a
+failed tenant, and the overlap threshold is rescaled to each variant's
+high-pressure tenant count.
+The 20-second window, tier budgets, and 4/8/4 split are mechanism-isolation
+settings, not portable constants. The 4/8/4 split is chosen because the
+high-budget tier's surplus exactly matches the low-budget tier's savings,
+preserving the same aggregate budget within each experiment family;
+Section~\ref{sec:saki-design} states the general conservation rule.
+\fastdrift and \tenantseight are local sensitivity, not a parameter search.
+
+\subsection{Policies}
+
+\texttt{static} is the main fair baseline: every tenant receives the same share
+of the aggregate background budget for that experiment family. SAKI is the
+online policy: it assigns high, mid, and low tiers from previous-interval
+observations while preserving that aggregate budget. The main continuous SAKI
+policy uses the demand-aware reference score instance.
+
+\staticbiased is a frozen-skew baseline for the epoch workload. It uses the
+same high/mid/low budget tiers, but freezes the initial-stage assignment for
+all later epochs. It models an operator who pre-tunes a reasonable non-equal
+allocation and then does not adapt as the high-pressure set drifts.
+
+\staticautotuned is the strict same-budget built-in \rocksdb baseline. It uses
+exactly the same per-tenant ceilings as \texttt{static}. In the epoch
+configuration this is two background jobs and 7\,MB/s per tenant, for a 32-job
+and 112\,MB/s aggregate budget across 16 tenants. Each tenant enables
+\texttt{--rate\_limiter\_auto\_tuned=1}, so adaptation stays local to that
+RocksDB instance and remains within the configured per-instance range. This
+baseline asks whether per-instance local rate adaptation can replace the outer
+host-level placement decision; we keep the ceilings identical to \texttt{static}.
+For the sensitivity sweep, \staticautotuned is added only to the promoted
+higher-pressure point.
+
+\texttt{oracle\_tiered} is a diagnostic reference using true tier information.
+\texttt{unlimited} is a capacity reference, not a same-budget competitor.
+
+\subsection{Platform}
+\label{sec:platform}
+
+All experiments run on a single Linux machine with 80 logical cores (Ubuntu,
+kernel 6.17). Storage is a local SSD. Each RocksDB tenant writes to its own
+data directory on the same device. The epoch-level harness uses \texttt{db\_bench}
+8.9.1 from unmodified Ubuntu \texttt{.deb} archives; the continuous harness
+links against the same RocksDB version. No other major I/O-intensive processes
+run during measured trials.
+
+\subsection{Metrics and Aggregation}
+
+Primary metrics are write P99/P999 latency and write throughput for
+high-pressure tenants, the foreground symptoms SAKI is meant to improve by
+moving background service. Total throughput shows whether the host collapses
+aggregate work under the fixed budget. Tier-wise latency and throughput expose
+the redistribution cost that a targeted policy can impose on lower-pressure
+tenants. The continuous rate limiter is background-I/O control: it shapes
+RocksDB flush/compaction I/O, so foreground changes reflect maintenance
+placement rather than direct sleeps on application reads or writes.
+
+Epoch-level efficiency reports compaction write bytes. In continuous runs SAKI
+changes foreground completion, so the main compaction efficiency metric is
+normalized bytes/write; absolute compaction bytes are reported but not the main
+efficiency claim. Epoch runs execute comparable foreground work per trial, so
+absolute background bytes are directly interpretable; continuous runs may
+complete more foreground writes under SAKI and need per-write normalization.
+
+Adaptation is measured by high-set overlap (high-pressure tenants assigned the
+high-budget tier after warmup) and adaptation lag in control windows. Ranking
+robustness is measured by replaying the previous-window observations that fed
+each online decision and comparing the resulting top-\(H\) set across score
+instances using exact-match count and Jaccard similarity. Liveness is measured
+by failed tenant processes. The main epoch and continuous results aggregate
+five independent trials. Percent changes are computed relative to static within
+each trial before aggregation. The paper reports mean, range, standard
+deviation, and confidence intervals. Sensitivity rows with two trials report a
+mean and range; five-trial rows report 95\% CI half-widths. Raw and summarized
+artifacts are recorded under \texttt{remote-results/}, and figures use real
+result files from the figure data manifest.
+
+\subsection{Scope}
+
+The methodology supports a constrained claim: fixed-budget online reallocation
+in two controlled RocksDB drift regimes. The built-in local rate-limiter
+baseline is covered under the same aggregate budget because it tests whether
+tenant-local adaptation can replace the host-level rank-and-assign loop.
+OS/cgroup I/O controls are included for a different reason: they can enforce
+weights or throttles below RocksDB, but they do not observe LSM debt signals or
+decide which engine should receive compaction service. We include a 5-trial
+aligned cgroup-v2 baseline at the same scale as the epoch main result (16
+tenants, 8 epochs, 240k keys/tenant, 100k writes/high tier) as supplemental
+mechanism evidence, not as a repeated main baseline. The controller inside the
+cgroup harness uses a simplified pressure score for cross-mechanism comparison;
+it is not the main SAKI controller used in the primary RocksDB experiments.

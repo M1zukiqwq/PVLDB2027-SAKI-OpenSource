@@ -1,0 +1,18 @@
+{
+  "adaptation": {
+    "max_lag": 1,
+    "mean_overlap": 3.0
+  },
+  "drift_events": 16,
+  "duration_sec": 360,
+  "failed_tenants": 0,
+  "online_vs_static": {
+    "bytes_per_write_pct": -3.3528967127190015,
+    "compact_bytes_pct": 0.06360381751358225,
+    "high_p999_pct": -19.62320350761996,
+    "high_p99_pct": -13.907478893384345,
+    "high_write_tput_pct": 11.637668685984918,
+    "total_tput_pct": -0.7126158096570718
+  },
+  "trial": "embedded_demand2f_16t_long_a"
+}

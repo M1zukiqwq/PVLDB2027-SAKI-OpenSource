@@ -1,0 +1,32 @@
+\begin{abstract}
+Multi-tenant deployments often co-locate many \rocksdb instances on one host.
+Each tenant has an independent LSM pipeline, but flushes and compactions draw
+from a shared background I/O and compaction budget. When write pressure drifts,
+equal per-instance allocation can leave service stranded at quiet tenants while
+tenants creating compaction debt suffer high write-tail latency. We frame this
+as fixed-budget placement: moving the existing background budget toward tenants
+where compaction pressure is forming.
+
+SAKI is an external controller for this placement problem. In its conserved
+rank-and-assign framework, the controller observes per-tenant demand and
+pressure symptoms, ranks tenants without oracle labels or workload forecasts,
+and reallocates per-tenant background budgets while preserving the aggregate
+budget. A demand-observability model explains when demand-aware score instances
+track bounded drift within one window and why pressure-only ranking can suffer
+stale-debt lag. SAKI requires no changes to \rocksdb's compaction algorithm or
+tenant application code. Across five
+16-tenant epoch-level drift trials, SAKI reduces high-pressure write P99 by
+11.7\%, raises high-pressure throughput by 38.1\%, and lowers compaction write
+bytes by 21.0\% relative to equal static allocation, while keeping total
+throughput roughly neutral. In a continuous embedded \rocksdb harness with
+long-running tenants and runtime actuation through \ratecall, SAKI reduces
+high-pressure write P99 by 27.0\%, reduces P999 by 47.1\%, raises
+high-pressure throughput by 26.1\%, and lowers normalized bytes/write by
+11.9\%. Stronger baselines, ranking replay, score-family perturbations, and
+mechanism checks attribute these gains to online placement rather than extra
+capacity, static skew, score fragility, or unrelated throttling. Public-trace
+audits identify what future production traces must preserve for controller
+validation. The results show that shared
+compaction budgeting is a practical host-level control point for multi-tenant
+\rocksdb deployments under fixed background budgets.
+\end{abstract}

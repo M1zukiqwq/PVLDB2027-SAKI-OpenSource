@@ -1,0 +1,108 @@
+{
+  "agg_pct_compact": {
+    "max": -18.42825837917809,
+    "mean": -21.018062665572295,
+    "min": -24.260022979860384,
+    "n": 5,
+    "stdev": 2.0841817730234107
+  },
+  "agg_pct_high_p99": {
+    "max": -6.239106384549772,
+    "mean": -11.718705549136734,
+    "min": -17.235624821625585,
+    "n": 5,
+    "stdev": 5.02516526463666
+  },
+  "agg_pct_high_tput": {
+    "max": 42.123456237694654,
+    "mean": 38.06602945212056,
+    "min": 34.216409195555705,
+    "n": 5,
+    "stdev": 2.9502526223992005
+  },
+  "agg_pct_total_tput": {
+    "max": 2.050200179451842,
+    "mean": -1.705018803826971,
+    "min": -4.6544149348922215,
+    "n": 5,
+    "stdev": 2.5357066278938385
+  },
+  "n": 5,
+  "per_trial": [
+    {
+      "compact_bytes": 28794533795.0,
+      "high_p99_us": 25530.737063625,
+      "high_tput": 126645.0,
+      "pct_compact": -20.825774133531702,
+      "pct_high_p99": -17.235624821625585,
+      "pct_high_tput": 39.363294231573384,
+      "pct_total_tput": -3.3158020175625995,
+      "static_compact_bytes": 36368570049.0,
+      "static_high_p99_us": 30847.495687125,
+      "static_high_tput": 90874.0,
+      "static_total_tput": 4048945.0,
+      "total_tput": 3914690.0,
+      "trial": "realistic_big_a"
+    },
+    {
+      "compact_bytes": 29514981772.0,
+      "high_p99_us": 28024.213678875,
+      "high_tput": 120678.0,
+      "pct_compact": -18.42825837917809,
+      "pct_high_p99": -8.626825685174817,
+      "pct_high_tput": 34.216409195555705,
+      "pct_total_tput": -4.6544149348922215,
+      "static_compact_bytes": 36182851053.0,
+      "static_high_p99_us": 30670.06688671875,
+      "static_high_tput": 89913.0,
+      "static_total_tput": 4552989.0,
+      "total_tput": 4341074.0,
+      "trial": "realistic_big_b"
+    },
+    {
+      "compact_bytes": 29071011264.0,
+      "high_p99_us": 28292.248537125,
+      "high_tput": 122341.0,
+      "pct_compact": -20.701100777536286,
+      "pct_high_p99": -9.618186525690927,
+      "pct_high_tput": 37.91272587899762,
+      "pct_total_tput": -1.299213927938288,
+      "static_compact_bytes": 36660043896.0,
+      "static_high_p99_us": 31303.032600874998,
+      "static_high_tput": 88709.0,
+      "static_total_tput": 4471473.0,
+      "total_tput": 4413379.0,
+      "trial": "realistic_big_c"
+    },
+    {
+      "compact_bytes": 27547790396.0,
+      "high_p99_us": 25633.22391678125,
+      "high_tput": 127047.0,
+      "pct_compact": -24.260022979860384,
+      "pct_high_p99": -16.87378432864257,
+      "pct_high_tput": 42.123456237694654,
+      "pct_total_tput": -1.3058633181935875,
+      "static_compact_bytes": 36371532551.0,
+      "static_high_p99_us": 30836.51013071875,
+      "static_high_tput": 89392.0,
+      "static_total_tput": 4565026.0,
+      "total_tput": 4505413.0,
+      "trial": "realistic_big_d"
+    },
+    {
+      "compact_bytes": 28913299546.0,
+      "high_p99_us": 29332.0347108125,
+      "high_tput": 122079.0,
+      "pct_compact": -20.875157057755004,
+      "pct_high_p99": -6.239106384549772,
+      "pct_high_tput": 36.71426171678146,
+      "pct_total_tput": 2.050200179451842,
+      "static_compact_bytes": 36541367377.0,
+      "static_high_p99_us": 31283.86855090625,
+      "static_high_tput": 89295.0,
+      "static_total_tput": 4445761.0,
+      "total_tput": 4536908.0,
+      "trial": "realistic_big_e"
+    }
+  ]
+}

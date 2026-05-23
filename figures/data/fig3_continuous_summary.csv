@@ -1,0 +1,6 @@
+metric,improvement_pct,ci95_half_width_pp
+High P99,27.00053313558658,12.5
+High P999,47.1131161781649,8.8
+High tput,26.127523093202136,3.5
+Total tput,4.32586342048276,3.2
+Bytes/write,11.942695825141874,2.3

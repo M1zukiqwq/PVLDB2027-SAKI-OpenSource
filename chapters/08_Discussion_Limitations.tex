@@ -1,0 +1,100 @@
+\section{Discussion and Limitations}
+
+\subsection{Applicability Conditions}
+\label{sec:discussion-drift}
+
+SAKI applies when co-located RocksDB instances share a fixed background budget,
+write pressure drifts across tenants at window time scales, and the host can
+observe tenant-local demand and maintenance symptoms. The repeated epoch runs
+establish the main placement effect, the continuous runs show that it survives
+runtime rate-limiter actuation, and the mechanism checks rule out stale skew,
+tenant-local autotuning, pressure-only tracking, lower-layer throttling, and a
+non-maintenance actuation path. Ranking-margin replay and perturbation runs
+further show that the main continuous high-budget assignment is fixed by a
+demand-aware score family rather than by one isolated coefficient vector.
+Together, these results support the systems claim that a host-level
+rank-and-assign controller can place an existing compaction/I/O budget better
+than equal sharing.
+
+The bounded-drift condition matters. SAKI relies on previous-window
+observations remaining relevant to the next window. The main continuous
+workload moves the high-pressure set by one tenant per 20-second window, and
+\fastdrift pushes this to 1.5 tenants/window while retaining
+CI-strict high-pressure benefit with overlap 2.57/4. Abrupt reversals,
+sub-window bursts, and within-window phase changes may outrun the controller.
+The 20-second window, 4/8/4 tier split, and concrete budget levels are
+mechanism-isolation settings. In the continuous anchor, a 10/20/40-second
+window sweep keeps the 96\,MB/s budget fixed and brackets the trade-off:
+10 seconds improves assignment frequency but makes high-P99 and LOW collateral
+noisier, whereas 40 seconds reduces overlap and leaves adaptation unbounded in
+all three seeds. The conservation rule in Section~\ref{sec:saki-design}
+supports other tier counts, budget spreads, or a continuous allocator.
+
+\subsection{Deployment Assumptions}
+
+The continuous harness changes background rate limits through \ratecall. The
+measured rate-limiter coverage microstudy shows this knob shapes
+flush/compaction I/O in our configuration, so foreground latency and
+throughput changes arise indirectly from maintenance service rather than
+direct foreground throttling. RocksDB's built-in auto-tuned rate limiter
+remains useful local machinery, but it adapts within per-tenant ceilings;
+SAKI supplies the host-level loop that moves unused budget across tenants. A
+natural deployment variant is to let SAKI choose tenant ceilings while RocksDB
+autotuning adapts inside each ceiling; we did not evaluate that combined
+policy.
+
+A production deployment would need tenant inventory, periodic RocksDB
+statistics, a conserved host budget, and per-tenant runtime actuation. The
+offered-demand signal should be measured near admission, such as at a client
+proxy, RPC ingress path, tenant queue, or write-admission counter, before
+upstream backpressure, drops, or retries hide true pressure. Operators would
+likely add smoothing, hysteresis, cooldowns, minimum dwell times, and SLO-aware
+floors around the simple rank-and-assign rule. If metrics or tenant inventory are
+missing, the safe operational choice is to retain the last valid assignment or
+fall back to all-mid sharing, preserving the aggregate budget before
+re-enabling reallocation. The reference score should be treated as a
+demand-aware instance of the framework, not as a portable constant vector:
+deployments with different admission signals or maintenance dynamics should
+renormalize terms while preserving budget conservation and demand observability.
+Other LSM engines need analogous tenant-scoped maintenance signals and a
+runtime maintenance-budget knob.
+
+\subsection{Resource and Fairness Boundaries}
+
+SAKI controls one resource dimension: background I/O budget placement. CPU,
+cache, memory, device queueing, and per-level write amplification may become
+the limiting resources in other deployments. A deployment can detect this
+regime when rate-limiter traffic stops tracking flush/compaction output or
+when CPU, cache, or device-queue metrics saturate while compaction debt remains
+high. The continuous efficiency metric is therefore normalized bytes/write
+because SAKI completes more foreground writes; a full maintenance-cost
+decomposition is a separate multi-resource control problem.
+
+The policy is also a targeted reallocation. Tier-wise reporting makes the
+collateral cost explicit because shifting budget to high-pressure tenants can
+cost lower-pressure tenants. In the main continuous aggregate, LOW tenants see
+small write-tail and throughput costs while HIGH tenants improve substantially;
+the 4\,KB-value workload leaves P999 not CI-separated from zero despite a
+CI-strict P99 win.
+These results motivate SLO-aware floors and fairness policy as deployment
+layers around the same fixed-budget loop. The read-heavy variant raises
+point-read QPS around the main harness; scan-heavy workloads, range-scan SLOs,
+and read-dominant deployments require their own scoring and validation layer.
+
+\subsection{Trace Validation Boundary}
+
+The public-trace audits define the conditions required for meaningful
+controller validation. CacheLib provides real cache-front-end request traces
+and validates trace-shaped replay plumbing, but the selected segments create
+too little RocksDB maintenance stress: completed logical writes were only
+about 5--6\% of offered demand and compaction output plateaued near 30\,MB/s.
+Baleen exposes a different issue: aggregate scaled write supply can look
+adequate while too few tenants are active in each window to actuate the fixed
+all-mid budget. Across 146 independent candidates, no segment had enough
+static-actuatable supply to justify a second static smoke.
+
+The next production-trace validation layer needs storage-engine traces with
+tenant identity, drift, sustained write pressure, and actuatable supply under
+the same fixed-budget contract. Non-leveled compaction styles, longer
+deployments, and joint multi-resource control are natural extensions after
+that trace condition is met.

@@ -1,0 +1,402 @@
+\section{Evaluation}
+\label{sec:evaluation}
+
+The evaluation follows the paper's fixed-budget claim through three questions.
+First, within each harness's conserved budget contract, can RocksDB background
+service do more useful work when placed on tenants currently creating
+compaction debt? Second, is the effect online host-level placement rather than
+extra capacity, static skew, local autotuning, a stale backlog signal, or a
+lower-layer throttle? Third, what workload coverage, collateral cost, and
+trace-qualification boundary remain after the mechanism is established?
+Unless stated otherwise, percentages are online SAKI versus equal static
+allocation; negative latency or bytes/write values are improvements, and
+positive throughput values are improvements. In metric labels, ``High''
+refers to the workload's high-pressure tenants; high-set overlap measures how
+often those tenants receive SAKI's high-budget assignment. All reported
+RocksDB and cgroup runs completed with zero failed tenants.
+
+\subsection{Fixed-Budget Placement Improves High-Pressure Tenants}
+
+The epoch-level harness isolates placement by changing RocksDB settings only
+between epochs. Across five repeated 16-tenant drift trials, SAKI reduces
+high-pressure write P99 by 11.7\%, raises high-pressure throughput by
+38.1\%, and reduces compaction write bytes by 21.0\%
+(Table~\ref{tab:evaluation-epoch-main}). Total throughput remains roughly
+neutral: the mean is -1.7\%, and its CI crosses zero. All five trials improve
+high-pressure write P99, high-pressure throughput, and compaction bytes; mean
+high-set overlap is 3.14/4, so the policy places high budget near the moving
+high-pressure set without using oracle labels.
+
+\begin{table}[!t]
+  \centering
+  \caption{Epoch-level main result, \epochdrift (online vs.\ static).}
+  \label{tab:evaluation-epoch-main}
+  \small
+  \begin{tabular}{lccc}
+    \toprule
+    Metric & Mean & Range & 95\% CI \\
+    \midrule
+    High write P99 & -11.7\% & [-17.2,-6.2] & [-18.0,-5.5] \\
+    High throughput & +38.1\% & [+34.2,+42.1] & [+34.4,+41.7] \\
+    Total throughput & -1.7\% & [-4.7,+2.1] & [-4.9,+1.4] \\
+    Compact bytes & -21.0\% & [-24.3,-18.4] & [-23.6,-18.4] \\
+    Mean high overlap & 3.14/4 & [3.14,3.14] & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The continuous harness tests the stricter deployment boundary: tenants remain
+alive, workload phases drift every 20 seconds, and SAKI changes only the
+runtime rate-limiter budget through \ratecall. Table~\ref{tab:evaluation-continuous-main}
+and Figure~\ref{fig:continuous-runtime} summarize five
+\runtimedrift trials. SAKI reduces high-pressure write P99 by
+27.0\%, P999 by 47.1\%, and raises high-pressure write throughput by 26.1\%.
+Because SAKI completes more foreground writes, normalized bytes/write is the
+main continuous efficiency metric; it falls by 11.9\%, while absolute compact
+bytes change only -1.9\%. The continuous result shows the placement effect is
+not an epoch artifact: the same conserved-budget loop works while tenants stay
+alive and only the RocksDB rate-limiter budget changes.
+
+\begin{table}[!t]
+  \centering
+  \caption{Continuous main result, \runtimedrift (five trials, online vs.\
+  static).  CI half-widths in pp.}
+  \label{tab:evaluation-continuous-main}
+  \small
+  \setlength{\tabcolsep}{3.2pt}
+  \begin{tabular}{lcccc}
+    \toprule
+    Metric & Mean & Min & Max & 95\% CI \\
+    \midrule
+    High write P99 & -27.0\% & -39.2\% & -12.0\% & $\pm$12.5pp \\
+    High write P999 & -47.1\% & -54.0\% & -39.3\% & $\pm$8.8pp \\
+    High write throughput & +26.1\% & +21.5\% & +28.2\% & $\pm$3.5pp \\
+    Total throughput & +4.3\% & +1.3\% & +6.8\% & $\pm$3.2pp \\
+    Compact bytes & -1.9\% & -5.8\% & -0.1\% & $\pm$2.9pp \\
+    Bytes/write & -11.9\% & -13.5\% & -9.1\% & $\pm$2.3pp \\
+    Mean high overlap & 3.00/4 & 3.00 & 3.00 & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{fig3_continuous_summary.pdf}
+  \caption{Continuous repeated aggregate. Each bar is normalized so positive
+  means improvement over equal static; error bars show 95\% CI half-widths.}
+  \Description{Horizontal bar chart of continuous-run improvements over
+  static: high-pressure write P99, P999, high-pressure throughput, total
+  throughput, and
+  bytes/write.}
+  \label{fig:continuous-runtime}
+\end{figure}
+
+\subsection{Mechanism Checks and Alternative Controls}
+\label{sec:cgroup-baseline}
+
+A fixed-budget improvement could be an artifact of a weak baseline, a stale
+or fragile score instance, a non-maintenance throttle, or a lower-layer control
+that already does the work. The checks in this subsection separate those
+possibilities from online cross-tenant placement.
+
+\begin{table*}[!t]
+  \centering
+  \caption{Mechanism checks against stronger same-budget baselines.  Rows use
+  the comparison named at left, not all rows relative to static.}
+  \label{tab:evaluation-stronger-baselines}
+  \small
+  \setlength{\tabcolsep}{4.4pt}
+  \begin{tabular}{lcccccl}
+    \toprule
+    Comparison & High P99 & High tput & Total tput & Compact bytes & Mid tput & Overlap \\
+    \midrule
+    SAKI vs static & -11.7\% & +38.1\% & -1.7\% & -21.0\% & -9.1\% & 3.14/4 \\
+    static\_biased vs static & -6.1\% & +17.4\% & -4.2\% & -9.9\% & -10.0\% & 1.14/4 \\
+    static\_autotuned vs static & +28.8\% & -19.7\% & -1.8\% & -0.2\% & -17.3\% & 0.00/4 \\
+    SAKI vs static\_biased & -6.0\% & +17.7\% & +2.8\% & -12.3\% & +1.1\% & 3.14 vs 1.14 \\
+    SAKI vs static\_autotuned & -31.5\% & +71.9\% & +0.3\% & -20.8\% & +10.0\% & 3.14 vs 0.00 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+Could equal static allocation simply be too weak a baseline?
+Table~\ref{tab:evaluation-stronger-baselines} compares against a frozen skewed
+allocation that helps the initial phase. Once the high-pressure set drifts,
+however, its overlap falls to 1.14/4; SAKI recovers high-pressure throughput
+(+17.7\% versus frozen skew), reduces compact bytes (-12.3\%), and restores
+overlap to 3.14/4.
+
+RocksDB's local auto-tuned rate limiter addresses a different problem: each
+instance adapts within its configured ceiling, but unused budget is not moved
+across tenants. Under the same per-tenant ceilings, \staticautotuned worsens
+high-pressure P99 by 28.8\%, lowers high-pressure throughput by 19.7\%, and
+has 0.00/4 high-set overlap. The same conclusion holds on the promoted
+higher-pressure sensitivity point: \staticautotuned again worsens
+high-pressure P99 by 29.5\% and lowers high-pressure throughput by 16.2\%
+relative to static, while SAKI improves over it by 32.7\% on P99 and 59.9\%
+on throughput.
+
+A score instance that merely chases stale debt would lag the moving
+high-pressure set. Pressure mode is a backlog-only online instance: it improves
+high-pressure P99 ($-14.1\%$) but lags drift (overlap 1.86/4, max lag
+5 windows). Demand mode adds the previous-window offered write signal, raises
+overlap to 3.00/4, eliminates the 5-window lag, and raises high-pressure
+throughput from +9.8\% to +26.1\%. Hybrid mode gives larger tail reductions
+but still lags (overlap 2.29/4, max lag 2). The ablation matches the design
+prediction in Section~\ref{sec:analysis}: backlog symptoms help, but offered
+demand is what makes the rank-and-assign loop track drift rather than stale
+debt.
+
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=0.88\textwidth]{fig4_score_ablation.pdf}
+  \caption{Score-instance ablation. Demand mode gives strong high-pressure
+  benefit while satisfying adaptation checks; pressure and hybrid instances
+  improve some metrics but lag the moving high-pressure set.}
+  \Description{Bar charts comparing demand, pressure, and hybrid score instances
+  on normalized performance improvements, high-set overlap, and maximum lag.}
+  \label{fig:score-ablation}
+\end{figure*}
+
+Is the runtime actuator really a maintenance I/O knob? The four-tenant
+coverage microstudy in Section~\ref{sec:implementation} shows measured
+limiter traffic rising monotonically with the configured budget and
+compact-plus-flush output tracking it (coverage ratio 0.99--1.02) until the
+workload's maintenance demand saturates near 7.3\,MB/s. This confirms the
+continuous actuation path used by SAKI.
+
+Is the result tied to one fragile score instance?
+Section~\ref{sec:saki-design} treats the score
+$s_i = 6.00\,D/1000 + 0.60\,G/1000 + 0.05\,T + 0.02\,B + 0.02\,P + 0.30\,L$
+as an auditable reference instance, not an optimum. First, we replay the 35
+post-warmup control decisions from the five continuous main online traces using
+the previous-window observations that the controller saw. The replay exactly
+reproduces the recorded online high-budget set in all 35 decisions. The demand
+term alone also reproduces the reference top-four set in all 35 decisions;
+anchor-dominant perturbations keep exact or near-exact top-four agreement,
+while a pressure-only negative control matches only 10/35 decisions
+(Table~\ref{tab:ranking-margin}). The reference score's top-four boundary
+margin is positive in every replayed decision (mean 5.30, min 0.39), so the
+main assignment is a property of a demand-aware score family rather than an
+artifact of a single coefficient vector.
+
+\begin{table}[!t]
+  \centering
+  \caption{Ranking-margin replay on the continuous main online traces
+  (35 post-warmup decisions). Each score instance is recomputed from the
+  previous-window observations; Jaccard compares its top-four set with the
+  reference demand-mode top-four set.}
+  \label{tab:ranking-margin}
+  \small
+  \setlength{\tabcolsep}{3.2pt}
+  \begin{tabular}{lccc}
+    \toprule
+    Score instance & Exact & Jaccard & True overlap \\
+    \midrule
+    demand only & 35/35 & 1.00 [1.00,1.00] & 3.00/4 \\
+    anchor $\times 0.5$ & 31/35 & 0.95 [0.33,1.00] & 2.86/4 \\
+    anchor $\times 2$ & 35/35 & 1.00 [1.00,1.00] & 3.00/4 \\
+    residual $\times 0.5$ & 35/35 & 1.00 [1.00,1.00] & 3.00/4 \\
+    residual $\times 2$ & 31/35 & 0.95 [0.33,1.00] & 2.86/4 \\
+    pressure-only & 10/35 & 0.61 [0.14,1.00] & 2.03/4 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Second, we rerun nearby score instances on \runtimedrift by perturbing anchor
+weight ($\times 0.5$, $\times 2$) and residual scale
+($\times 0.5$, $\times 2$, $\times 0$, the last being anchor-only), with three
+seeds each paired with the published paper-static trials a/b/c.
+Table~\ref{tab:coefficient-ablation} shows that all five demand-aware
+perturbations keep the headline direction, maintain overlap at
+2.86--3.00/4, and keep max lag to 0--1 window. The \textsc{anchor-only} row,
+where the residual scale is zero, is the runtime demand-only case: it confirms
+the replay result that offered demand alone fixes the high-budget set, with
+overlap 3.00/4 and zero lag. The residuals matter in the lower bound:
+anchor-only high-throughput improvement drops as low as \(+12.6\%\), whereas
+restoring half-strength residuals raises the minimum to \(+21.3\%\). This is consistent
+with the division of labor in Section~\ref{sec:saki-design}: the demand anchor
+tracks the active high-pressure set, while bounded pressure residuals appear to
+stabilize near-boundary tenants whose maintenance state has not fully drained.
+This is the empirical counterpart of Proposition~1: nearby demand-aware
+instances keep the same placement behavior, whereas removing demand collapses
+into the pressure-only case (Figure~\ref{fig:score-ablation}). Because the
+ablation rows pair with only three static trials, row-to-row differences should
+be read as consistency checks rather than tuning claims.
+
+\begin{table*}[!t]
+  \centering
+  \caption{Score-family robustness around the demand-mode SAKI instance on
+  \runtimedrift ($n{=}3$ per row, paired with paper-static a/b/c). Each row
+  perturbs only the anchor or residual coefficients; all other settings are
+  fixed. Cells show $\mathrm{mean}\,[\min,\max]$ percent of paired static;
+  Top-4 Jaccard averages the post-warmup window-by-window high-set overlap
+  against published SAKI decisions. The \textsuperscript{*} row reproduces
+  the published $n{=}5$ main continuous result; its static pairing covers all
+  five trials, not the three used by the ablation rows.}
+  \label{tab:coefficient-ablation}
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lccccc}
+    \toprule
+    Perturbation & High P99 & High tput & Overlap & Max lag & Top-4 Jaccard \\
+    \midrule
+    anchor $\times 0.5$ (3.00)        & -30.3\% [-38.1,-23.6] & +22.4\% [+18.9,+27.1] & 2.90/4 & 1 & 0.94 [0.88,1.00] \\
+    anchor $\times 2$ (12.00)         & -27.5\% [-42.4,-18.2] & +23.7\% [+22.2,+26.2] & 3.00/4 & 0 & 1.00 [1.00,1.00] \\
+    residual $\times 0.5$             & -30.0\% [-39.8,-16.7] & +24.3\% [+21.3,+28.2] & 3.00/4 & 0 & 1.00 [1.00,1.00] \\
+    residual $\times 2$               & -35.8\% [-49.6,-25.7] & +25.0\% [+20.9,+27.1] & 2.86/4 & 1 & 0.94 [0.89,1.00] \\
+    anchor only (residual$=0$)        & -31.9\% [-40.2,-26.2] & +21.5\% [+12.6,+26.0] & 3.00/4 & 0 & 1.00 [1.00,1.00] \\
+    \midrule
+    fixed SAKI (n=5, paper main)\textsuperscript{*} & -27.0\% & +26.1\% & 3.00/4 & 0 & 1.00 (self) \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+Finally, would a lower-layer control point be equivalent?
+On the aligned epoch workload, online cgroup-v2 control improves high-pressure
+throughput by 12.5\% relative to equal cgroup throttling, but the P99 CI
+crosses zero (-4.4\%) and compaction bytes increase by 3.1\%. An oracle cgroup
+assignment can express priority when the high-pressure set is known (P99
+-9.1\%, throughput +15.4\%), so the layer is useful as an enforcement
+envelope. It does not provide the LSM-aware budget-placement signal that SAKI
+uses.
+
+\subsection{Controlled Coverage Around the Anchor Workloads}
+\label{sec:workload-matrix}
+
+The next experiments test local coverage around the controlled anchor
+workloads while preserving the same-budget contract. The epoch sensitivity
+sweep changes drift speed and high-write pressure around \epochdrift. These
+rows are local coverage checks: the promotion rule keeps capacity-boundary and
+failed-tenant cases from obscuring the comparison, while the headline claim
+rests on the repeated anchors above. All promoted points move in the headline
+direction: high-pressure P99 improves by 6.9--12.9\%, high-pressure throughput
+improves by at least 33.0\%, and compaction bytes fall by 17.6--21.3\%. The
+faster-drift point remains CI-strict on high-pressure benefit (P99 -6.9\%,
+throughput +33.9\%) with an aggregate-throughput cost (-5.0\%), matching the
+expected responsiveness limit of a previous-window controller.
+
+The continuous workload matrix changes one axis at a time around
+\runtimedrift: 4\,KB values, tripled point-read QPS, faster drift at
+1.5 tenants/window, and an 8-tenant cluster with two high-pressure tenants.
+All four variants were promoted to five trials and retain the headline
+direction: high-pressure P99 improves in every row and high-pressure
+throughput improves by 20.1--30.4\%
+(Table~\ref{tab:evaluation-workload-matrix}). Three rows are CI-strict wins
+on both primary high-pressure metrics; \readthreex remains CI-strict on high
+throughput, but its P99 confidence interval crosses zero. The matrix also
+names the trade-off rather than hiding it: \valuefourk's P999 mean is negative
+but not statistically separated from static, reflecting sparse
+heavy-compaction bursts under a conserved rate-limit ceiling rather than a P999
+regression. \readthreex is a point-read-QPS perturbation, not a scan-heavy or
+read-dominant SLO result.
+
+\begin{table*}[!t]
+  \centering
+  \caption{Local workload matrix, five trials per variant, online vs.\ static
+  (percent changes, 95\% CI half-widths in pp).  Zero failed tenants in all
+  runs.}
+  \label{tab:evaluation-workload-matrix}
+  \small
+  \setlength{\tabcolsep}{2.8pt}
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabular}{lcccccr}
+    \toprule
+    Variant & High P99 & High P999 & High tput & Total tput & Bytes/write & Overlap \\
+    \midrule
+    \valuefourk   & -28.6\%$\pm$16.2 & -7.1\%$\pm$20.6  & +20.1\%$\pm$4.7  & +0.6\%$\pm$1.5  & -9.0\%$\pm$3.0  & 3.00/4 \\
+    \readthreex   & -15.4\%$\pm$17.5 & -38.4\%$\pm$27.6 & +30.4\%$\pm$7.6  & -0.2\%$\pm$4.0  & -10.2\%$\pm$5.8 & 3.00/4 \\
+    \fastdrift    & -17.6\%$\pm$10.1 & -1.1\%$\pm$46.6  & +20.5\%$\pm$10.3 & +4.4\%$\pm$3.4  & -3.3\%$\pm$4.4  & 2.57/4 \\
+    \tenantseight & -42.2\%$\pm$12.7 & -52.6\%$\pm$16.9 & +28.7\%$\pm$5.8  & +7.0\%$\pm$1.9  & -11.3\%$\pm$3.4 & 1.57/2 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+The window length is also a mechanism setting, not a tuned constant.
+Table~\ref{tab:evaluation-window-length} repeats the continuous anchor at
+10, 20, and 40 seconds with three seed pairs each, holding duration, offered
+load, drift distance, and the 96\,MB/s aggregate budget fixed. The 20-second
+anchor is the only point with a CI-strict high-P99 win (-26.9\%); 10 seconds
+keeps high throughput positive but makes both P99 and throughput noisy and
+raises LOW P99, while 40 seconds lowers overlap to 2.00/4 and leaves
+adaptation lag unbounded in all three seeds. This supports using 20 seconds as
+a mechanism-isolation anchor and treats the other two points as responsiveness
+boundaries.
+
+\begin{table}[!t]
+  \centering
+  \caption{Window-length sensitivity around the continuous anchor (three
+  seed pairs per row, online vs.\ static; CI half-widths in pp).}
+  \label{tab:evaluation-window-length}
+  \small
+  \setlength{\tabcolsep}{3.0pt}
+  \begin{tabular}{lcccc}
+    \toprule
+    Window & High P99 & High tput & Overlap & LOW P99 \\
+    \midrule
+    10\,s & +6.8\%$\pm$39.2  & +23.4\%$\pm$58.1 & 3.47/4 & +110.5\%$\pm$367.8 \\
+    20\,s & -26.9\%$\pm$14.0 & +16.1\%$\pm$8.7  & 3.00/4 & +24.6\%$\pm$63.6 \\
+    40\,s & -14.4\%$\pm$44.8 & +14.5\%$\pm$19.8 & 2.00/4 & -36.3\%$\pm$84.2 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Collateral Cost and Liveness}
+
+SAKI is a targeted reallocation policy, not a Pareto-improvement claim.
+Tier-level accounting makes the redistribution explicit. In the continuous
+aggregate, HIGH tenants receive P99 -27.0\%, P999 -47.1\%, and write
+throughput +26.1\%; LOW tenants absorb P99 +1.4\%, P999 +2.6\%, and write
+throughput -3.0\%. The epoch-level pattern is similar: HIGH throughput rises
+by 38.1\%, while MID and LOW throughput change by -9.1\% and -1.2\%. Total
+throughput remains close to static in both harnesses, so the benefit is a
+budget-placement trade-off rather than added capacity.
+
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=0.82\textwidth]{fig8_collateral_summary.pdf}
+  \caption{Tier-wise benefit and collateral cost. Cells report SAKI's
+  improvement over static (positive is better), showing the intended
+  high-pressure benefit and the measured redistribution cost to lower tiers.}
+  \Description{Two-panel matrix for continuous and epoch runs, showing P99,
+  P999, and throughput changes by high, mid, and low tiers.}
+  \label{fig:collateral-summary}
+\end{figure*}
+
+Read-side and CPU measurements show that the bytes/write improvement does not
+hide higher compaction CPU per completed write: CPU/write falls by 12.8\%
+overall. The tier values are -1.6\% for HIGH, -8.0\% for MID, and -33.5\%
+for LOW. Read-side effects are bounded in this read-light workload (overall
+read P99 +7.0\%, read P999 -10.6\%, read throughput +0.5\%), but they are
+collateral accounting rather than evidence for read-dominant SLOs. A separate
+360-second continuous run with 16 drift events reports high P99 $-13.9\%$,
+high P999 $-19.6\%$, high write throughput $+11.6\%$, bytes/write $-3.4\%$,
+overlap $3.00/4$, max lag $1$~window, and zero tenant failures---a liveness
+and tracking sanity check at the longer horizon.
+
+\subsection{Trace Qualification Boundary}
+\label{sec:public-trace}
+
+The controlled experiments above establish the fixed-budget placement
+mechanism. Public traces become meaningful controller-validation workloads
+when they preserve tenant identity and drift, expose actuatable supply under
+the fixed budget, and create enough RocksDB maintenance stress to exercise
+compaction-budget placement. We audited two public trace families under the
+same 11/7/3\,MB/s, 112\,MB/s budget contract and use them to identify which of
+those conditions are missing.
+
+Meta CacheLib \texttt{kvcache/202401}~\cite{cachelib_trace} is useful as a
+trace-shaped replay and tracking smoke, but it records cache-front-end
+requests rather than RocksDB compaction events. Five selected drifting
+16-tenant segments completed with zero failed tenants and preserved drift, yet
+the replay failed the engine-stress gate: offered writes were 110--143\,MB/s,
+completed logical writes were only 6.7--7.3\,MB/s, compaction output plateaued
+near 29--31\,MB/s, and no segment entered the stress-pass subset. Meta
+Tectonic/Baleen storage 0.1\%~\cite{baleen_fast24} exposes the complementary
+condition. Aggregate scaled write supply initially looked sufficient, but most
+windows have only one to three active write tenants. Under the static all-mid
+policy, the actuatable supply \(\sum_i \min(7,\mathrm{traceWrite}_i)\) is far
+below the aggregate trace rate; across 146 independent candidates, zero have
+six or more windows above 70\,MB/s or mean static-actuatable supply above
+70\,MB/s. These audits are therefore trace-qualification results rather than
+controller comparisons.

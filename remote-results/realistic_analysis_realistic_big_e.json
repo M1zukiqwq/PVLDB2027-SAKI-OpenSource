@@ -1,0 +1,3834 @@
+{
+  "runs": [
+    {
+      "alloc": [
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        }
+      ],
+      "epochs": [
+        {
+          "epoch": 0,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 161.69651149999999,
+          "high_mean_write_p99_us": 29190.08933825,
+          "high_sum_ops_per_sec": 10278.0,
+          "low_mean_get_p99_us": 32.65332425,
+          "low_mean_write_p99_us": 12.390477749999999,
+          "low_sum_ops_per_sec": 6829.0,
+          "mean_write_p99_us": 7601.7703011875,
+          "mid_mean_get_p99_us": 98.838486125,
+          "mid_mean_write_p99_us": 602.300694375,
+          "mid_sum_ops_per_sec": 37199.0,
+          "sum_compact_read_bytes": 6320543801.0,
+          "sum_compact_write_bytes": 5580121823.0,
+          "sum_ops_per_sec": 54306.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "low": [
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 1,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 162.16742375,
+          "high_mean_write_p99_us": 31258.946262,
+          "high_sum_ops_per_sec": 12102.0,
+          "low_mean_get_p99_us": 33.15482475,
+          "low_mean_write_p99_us": 11.2230685,
+          "low_sum_ops_per_sec": 624915.0,
+          "mean_write_p99_us": 8233.0717864375,
+          "mid_mean_get_p99_us": 134.565180875,
+          "mid_mean_write_p99_us": 831.058907625,
+          "mid_sum_ops_per_sec": 126663.0,
+          "sum_compact_read_bytes": 3919932526.0,
+          "sum_compact_write_bytes": 3947808091.0,
+          "sum_ops_per_sec": 763680.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "low": [
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 2,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 162.885456,
+          "high_mean_write_p99_us": 31404.1638785,
+          "high_sum_ops_per_sec": 11488.0,
+          "low_mean_get_p99_us": 41.46769425,
+          "low_mean_write_p99_us": 13.003358500000001,
+          "low_sum_ops_per_sec": 534520.0,
+          "mean_write_p99_us": 8442.12514575,
+          "mid_mean_get_p99_us": 133.305975375,
+          "mid_mean_write_p99_us": 1175.666673,
+          "mid_sum_ops_per_sec": 101033.0,
+          "sum_compact_read_bytes": 4318924668.0,
+          "sum_compact_write_bytes": 4362723747.0,
+          "sum_ops_per_sec": 647041.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant2",
+              "tenant3",
+              "tenant4",
+              "tenant5"
+            ],
+            "low": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13"
+            ],
+            "mid": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 3,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 162.7598415,
+          "high_mean_write_p99_us": 32724.274097,
+          "high_sum_ops_per_sec": 10790.0,
+          "low_mean_get_p99_us": 50.65798075,
+          "low_mean_write_p99_us": 12.5473195,
+          "low_sum_ops_per_sec": 471129.0,
+          "mean_write_p99_us": 8759.51711575,
+          "mid_mean_get_p99_us": 125.249224625,
+          "mid_mean_write_p99_us": 1150.62352325,
+          "mid_sum_ops_per_sec": 98484.0,
+          "sum_compact_read_bytes": 4598664508.0,
+          "sum_compact_write_bytes": 4654962048.0,
+          "sum_ops_per_sec": 580403.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant2",
+              "tenant3",
+              "tenant4",
+              "tenant5"
+            ],
+            "low": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13"
+            ],
+            "mid": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 4,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 160.18912475,
+          "high_mean_write_p99_us": 30723.10559925,
+          "high_sum_ops_per_sec": 11337.0,
+          "low_mean_get_p99_us": 35.5474605,
+          "low_mean_write_p99_us": 13.7561485,
+          "low_sum_ops_per_sec": 508319.0,
+          "mean_write_p99_us": 8560.372837500001,
+          "mid_mean_get_p99_us": 154.53373762500001,
+          "mid_mean_write_p99_us": 1752.314801125,
+          "mid_sum_ops_per_sec": 74479.0,
+          "sum_compact_read_bytes": 4663113034.0,
+          "sum_compact_write_bytes": 4696546777.0,
+          "sum_ops_per_sec": 594135.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant2",
+              "tenant3",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 5,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 164.56811249999998,
+          "high_mean_write_p99_us": 30653.949772,
+          "high_sum_ops_per_sec": 10979.0,
+          "low_mean_get_p99_us": 47.28425125,
+          "low_mean_write_p99_us": 10.46095375,
+          "low_sum_ops_per_sec": 525321.0,
+          "mean_write_p99_us": 8215.4305108125,
+          "mid_mean_get_p99_us": 146.015750875,
+          "mid_mean_write_p99_us": 1098.65565875,
+          "mid_sum_ops_per_sec": 96248.0,
+          "sum_compact_read_bytes": 4460506451.0,
+          "sum_compact_write_bytes": 4485509784.0,
+          "sum_ops_per_sec": 632548.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant2",
+              "tenant3",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 6,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 162.83155175000002,
+          "high_mean_write_p99_us": 30635.33038925,
+          "high_sum_ops_per_sec": 11198.0,
+          "low_mean_get_p99_us": 39.18221225,
+          "low_mean_write_p99_us": 12.37999725,
+          "low_sum_ops_per_sec": 514853.0,
+          "mean_write_p99_us": 8328.449179,
+          "mid_mean_get_p99_us": 137.884523125,
+          "mid_mean_write_p99_us": 1333.04316475,
+          "mid_sum_ops_per_sec": 87083.0,
+          "sum_compact_read_bytes": 4484190190.0,
+          "sum_compact_write_bytes": 4498245853.0,
+          "sum_ops_per_sec": 613134.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15",
+              "tenant4",
+              "tenant5"
+            ]
+          }
+        },
+        {
+          "epoch": 7,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 161.0000025,
+          "high_mean_write_p99_us": 33681.089071,
+          "high_sum_ops_per_sec": 11123.0,
+          "low_mean_get_p99_us": 45.848429499999995,
+          "low_mean_write_p99_us": 12.26170325,
+          "low_sum_ops_per_sec": 462963.0,
+          "mean_write_p99_us": 8894.852637375,
+          "mid_mean_get_p99_us": 125.792194,
+          "mid_mean_write_p99_us": 943.029887625,
+          "mid_sum_ops_per_sec": 86428.0,
+          "sum_compact_read_bytes": 4283609150.0,
+          "sum_compact_write_bytes": 4315449254.0,
+          "sum_ops_per_sec": 560514.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15",
+              "tenant4",
+              "tenant5"
+            ]
+          }
+        }
+      ],
+      "policy": "static",
+      "summary": {
+        "epochs": 8.0,
+        "failed_tenants": 0.0,
+        "high_mean_get_p99_us": 162.26225303125,
+        "high_mean_write_p99_us": 31283.86855090625,
+        "high_sum_ops_per_sec": 89295.0,
+        "low_mean_get_p99_us": 40.7245221875,
+        "low_mean_write_p99_us": 12.252878375,
+        "low_sum_ops_per_sec": 3648849.0,
+        "mean_write_p99_us": 8379.448689226563,
+        "mid_mean_get_p99_us": 132.023134078125,
+        "mid_mean_write_p99_us": 1110.8366638125,
+        "mid_sum_ops_per_sec": 707617.0,
+        "policy": "static",
+        "sum_compact_read_bytes": 37049484328.0,
+        "sum_compact_write_bytes": 36541367377.0,
+        "sum_ops_per_sec": 4445761.0,
+        "tenants": 128.0,
+        "trial": "realistic_big_e"
+      },
+      "tiers": [
+        {
+          "high": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "low": [
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "low": [
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "low": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13"
+          ],
+          "mid": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "low": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13"
+          ],
+          "mid": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant2",
+            "tenant3",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant2",
+            "tenant3",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15",
+            "tenant4",
+            "tenant5"
+          ]
+        },
+        {
+          "high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15",
+            "tenant4",
+            "tenant5"
+          ]
+        }
+      ]
+    },
+    {
+      "alloc": [
+        {
+          "tenant0": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant1": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant13": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant14": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant15": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant2": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant3": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant1": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant13": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant14": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant15": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant2": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant3": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant11": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant12": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant13": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant3": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant4": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant5": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant11": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant12": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant13": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant3": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant4": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant5": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant1": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant15": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant5": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant6": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant7": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant1": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant15": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant5": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant6": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant7": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant1": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant3": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant7": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant8": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant9": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant1": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant3": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant7": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant8": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant9": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          }
+        }
+      ],
+      "epochs": [
+        {
+          "epoch": 0,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 165.420753,
+          "high_mean_write_p99_us": 24109.66670675,
+          "high_sum_ops_per_sec": 14981.0,
+          "low_mean_get_p99_us": 23.921412,
+          "low_mean_write_p99_us": 9.69893625,
+          "low_sum_ops_per_sec": 6650.0,
+          "mean_write_p99_us": 6274.7283120625,
+          "mid_mean_get_p99_us": 103.08664975,
+          "mid_mean_write_p99_us": 489.773802625,
+          "mid_sum_ops_per_sec": 33277.0,
+          "sum_compact_read_bytes": 4852033080.0,
+          "sum_compact_write_bytes": 4287590485.0,
+          "sum_ops_per_sec": 54908.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "low": [
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 1,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 163.3296085,
+          "high_mean_write_p99_us": 36393.64395125,
+          "high_sum_ops_per_sec": 14686.0,
+          "low_mean_get_p99_us": 40.68035975,
+          "low_mean_write_p99_us": 13.1945165,
+          "low_sum_ops_per_sec": 563643.0,
+          "mean_write_p99_us": 9596.6599003125,
+          "mid_mean_get_p99_us": 117.145460375,
+          "mid_mean_write_p99_us": 989.90056675,
+          "mid_sum_ops_per_sec": 93814.0,
+          "sum_compact_read_bytes": 3742518687.0,
+          "sum_compact_write_bytes": 3725077501.0,
+          "sum_ops_per_sec": 672143.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "low": [
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 2,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 164.466145,
+          "high_mean_write_p99_us": 30449.551813,
+          "high_sum_ops_per_sec": 16203.0,
+          "low_mean_get_p99_us": 35.84159625,
+          "low_mean_write_p99_us": 11.23570975,
+          "low_sum_ops_per_sec": 585036.0,
+          "mean_write_p99_us": 8310.5303903125,
+          "mid_mean_get_p99_us": 131.8622565,
+          "mid_mean_write_p99_us": 1390.66701925,
+          "mid_sum_ops_per_sec": 81542.0,
+          "sum_compact_read_bytes": 3498075168.0,
+          "sum_compact_write_bytes": 3474894548.0,
+          "sum_ops_per_sec": 682781.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant2",
+              "tenant3",
+              "tenant4",
+              "tenant5"
+            ],
+            "low": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13"
+            ],
+            "mid": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 3,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 159.940998,
+          "high_mean_write_p99_us": 27207.0287365,
+          "high_sum_ops_per_sec": 15982.0,
+          "low_mean_get_p99_us": 42.35242025,
+          "low_mean_write_p99_us": 11.06089475,
+          "low_sum_ops_per_sec": 505053.0,
+          "mean_write_p99_us": 7309.54261525,
+          "mid_mean_get_p99_us": 120.276560125,
+          "mid_mean_write_p99_us": 1010.040414875,
+          "mid_sum_ops_per_sec": 82814.0,
+          "sum_compact_read_bytes": 3494266421.0,
+          "sum_compact_write_bytes": 3557557112.0,
+          "sum_ops_per_sec": 603849.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant2",
+              "tenant3",
+              "tenant4",
+              "tenant5"
+            ],
+            "low": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13"
+            ],
+            "mid": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 4,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 166.0444415,
+          "high_mean_write_p99_us": 33414.00268475,
+          "high_sum_ops_per_sec": 16507.0,
+          "low_mean_get_p99_us": 34.19603075,
+          "low_mean_write_p99_us": 12.5142665,
+          "low_sum_ops_per_sec": 558068.0,
+          "mean_write_p99_us": 9135.4840310625,
+          "mid_mean_get_p99_us": 164.2291145,
+          "mid_mean_write_p99_us": 1557.7095865,
+          "mid_sum_ops_per_sec": 69642.0,
+          "sum_compact_read_bytes": 3511987461.0,
+          "sum_compact_write_bytes": 3465014202.0,
+          "sum_ops_per_sec": 644217.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant2",
+              "tenant3",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 5,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 166.04303825,
+          "high_mean_write_p99_us": 28741.530510999997,
+          "high_sum_ops_per_sec": 16583.0,
+          "low_mean_get_p99_us": 47.7251855,
+          "low_mean_write_p99_us": 12.9164435,
+          "low_sum_ops_per_sec": 462220.0,
+          "mean_write_p99_us": 7789.5071604375,
+          "mid_mean_get_p99_us": 144.38821000000002,
+          "mid_mean_write_p99_us": 1201.790843625,
+          "mid_sum_ops_per_sec": 87790.0,
+          "sum_compact_read_bytes": 3108508752.0,
+          "sum_compact_write_bytes": 3165569436.0,
+          "sum_ops_per_sec": 566593.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant2",
+              "tenant3",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 6,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 164.04799524999999,
+          "high_mean_write_p99_us": 38627.76824675,
+          "high_sum_ops_per_sec": 15990.0,
+          "low_mean_get_p99_us": 43.37263375,
+          "low_mean_write_p99_us": 11.42620125,
+          "low_sum_ops_per_sec": 492940.0,
+          "mean_write_p99_us": 10258.1964956875,
+          "mid_mean_get_p99_us": 144.46704725,
+          "mid_mean_write_p99_us": 1196.795767375,
+          "mid_sum_ops_per_sec": 91865.0,
+          "sum_compact_read_bytes": 3357612458.0,
+          "sum_compact_write_bytes": 3377184801.0,
+          "sum_ops_per_sec": 600795.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15",
+              "tenant4",
+              "tenant5"
+            ]
+          }
+        },
+        {
+          "epoch": 7,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 158.8967145,
+          "high_mean_write_p99_us": 26225.257213999997,
+          "high_sum_ops_per_sec": 15618.0,
+          "low_mean_get_p99_us": 53.252135,
+          "low_mean_write_p99_us": 11.832065499999999,
+          "low_sum_ops_per_sec": 420372.0,
+          "mean_write_p99_us": 7067.677755875,
+          "mid_mean_get_p99_us": 111.257890125,
+          "mid_mean_write_p99_us": 1016.810872,
+          "mid_sum_ops_per_sec": 87209.0,
+          "sum_compact_read_bytes": 3307254079.0,
+          "sum_compact_write_bytes": 3368739242.0,
+          "sum_ops_per_sec": 523199.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15",
+              "tenant4",
+              "tenant5"
+            ]
+          }
+        }
+      ],
+      "policy": "oracle_tiered",
+      "summary": {
+        "epochs": 8.0,
+        "failed_tenants": 0.0,
+        "high_mean_get_p99_us": 163.52371175,
+        "high_mean_write_p99_us": 30646.056233,
+        "high_sum_ops_per_sec": 126550.0,
+        "low_mean_get_p99_us": 40.16772165625,
+        "low_mean_write_p99_us": 11.73487925,
+        "low_sum_ops_per_sec": 3593982.0,
+        "mean_write_p99_us": 8217.790832625,
+        "mid_mean_get_p99_us": 129.589148578125,
+        "mid_mean_write_p99_us": 1106.686109125,
+        "mid_sum_ops_per_sec": 627953.0,
+        "policy": "oracle_tiered",
+        "sum_compact_read_bytes": 28872256106.0,
+        "sum_compact_write_bytes": 28421627327.0,
+        "sum_ops_per_sec": 4348485.0,
+        "tenants": 128.0,
+        "trial": "realistic_big_e"
+      },
+      "tiers": [
+        {
+          "high": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "low": [
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "low": [
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "low": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13"
+          ],
+          "mid": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "low": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13"
+          ],
+          "mid": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant2",
+            "tenant3",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant2",
+            "tenant3",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15",
+            "tenant4",
+            "tenant5"
+          ]
+        },
+        {
+          "high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15",
+            "tenant4",
+            "tenant5"
+          ]
+        }
+      ]
+    },
+    {
+      "alloc": [
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant1": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant13": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant14": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant15": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant2": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant3": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant1": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant13": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant14": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant15": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant2": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant3": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant11": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant12": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant13": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant3": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant4": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant5": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant1": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant10": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant11": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant12": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant13": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant3": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant4": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant5": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant6": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant7": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant1": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant15": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant5": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant6": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant7": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant1": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant15": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant2": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant3": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant4": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant5": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant6": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant7": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant8": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant9": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          }
+        },
+        {
+          "tenant0": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant1": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant10": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant11": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant12": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant13": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant14": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant15": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant2": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant3": {
+            "assigned_tier": "low",
+            "bg_jobs": 1,
+            "rate_limit": 5000000
+          },
+          "tenant4": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant5": {
+            "assigned_tier": "mid",
+            "bg_jobs": 2,
+            "rate_limit": 7000000
+          },
+          "tenant6": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant7": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant8": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          },
+          "tenant9": {
+            "assigned_tier": "high",
+            "bg_jobs": 3,
+            "rate_limit": 9000000
+          }
+        }
+      ],
+      "epochs": [
+        {
+          "epoch": 0,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 162.93303550000002,
+          "high_mean_write_p99_us": 29641.51245725,
+          "high_sum_ops_per_sec": 10296.0,
+          "low_mean_get_p99_us": 28.43575075,
+          "low_mean_write_p99_us": 12.099096249999999,
+          "low_sum_ops_per_sec": 6628.0,
+          "mean_write_p99_us": 7512.3333521875,
+          "mid_mean_get_p99_us": 98.263599375,
+          "mid_mean_write_p99_us": 197.860927625,
+          "mid_sum_ops_per_sec": 35525.0,
+          "sum_compact_read_bytes": 6259986589.0,
+          "sum_compact_write_bytes": 5487786320.0,
+          "sum_ops_per_sec": 52449.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "low": [
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 1,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 161.84928150000002,
+          "high_mean_write_p99_us": 29916.5147035,
+          "high_sum_ops_per_sec": 17512.0,
+          "low_mean_get_p99_us": 36.39378125,
+          "low_mean_write_p99_us": 12.453806499999999,
+          "low_sum_ops_per_sec": 573007.0,
+          "mean_write_p99_us": 7979.4874053125,
+          "mid_mean_get_p99_us": 121.73444725,
+          "mid_mean_write_p99_us": 994.490555625,
+          "mid_sum_ops_per_sec": 93536.0,
+          "sum_compact_read_bytes": 2920135421.0,
+          "sum_compact_write_bytes": 3020259978.0,
+          "sum_ops_per_sec": 684055.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "low": [
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 2,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 164.52353775,
+          "high_mean_write_p99_us": 28628.37071225,
+          "high_sum_ops_per_sec": 14746.0,
+          "low_mean_get_p99_us": 38.35083925,
+          "low_mean_write_p99_us": 11.911542,
+          "low_sum_ops_per_sec": 544041.0,
+          "mean_write_p99_us": 7928.40094075,
+          "mid_mean_get_p99_us": 135.1480295,
+          "mid_mean_write_p99_us": 1536.660754375,
+          "mid_sum_ops_per_sec": 81592.0,
+          "sum_compact_read_bytes": 3582492157.0,
+          "sum_compact_write_bytes": 3639453272.0,
+          "sum_ops_per_sec": 640379.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant2",
+              "tenant3",
+              "tenant4",
+              "tenant5"
+            ],
+            "low": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13"
+            ],
+            "mid": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 3,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 162.346313,
+          "high_mean_write_p99_us": 30326.2196235,
+          "high_sum_ops_per_sec": 16049.0,
+          "low_mean_get_p99_us": 48.1430275,
+          "low_mean_write_p99_us": 11.189329749999999,
+          "low_sum_ops_per_sec": 487207.0,
+          "mean_write_p99_us": 8031.84251675,
+          "mid_mean_get_p99_us": 117.370512125,
+          "mid_mean_write_p99_us": 894.9805568749999,
+          "mid_sum_ops_per_sec": 92481.0,
+          "sum_compact_read_bytes": 3249455062.0,
+          "sum_compact_write_bytes": 3288842611.0,
+          "sum_ops_per_sec": 595737.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant2",
+              "tenant3",
+              "tenant4",
+              "tenant5"
+            ],
+            "low": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13"
+            ],
+            "mid": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15",
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 4,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 166.92112125,
+          "high_mean_write_p99_us": 33354.1852655,
+          "high_sum_ops_per_sec": 13929.0,
+          "low_mean_get_p99_us": 32.079976,
+          "low_mean_write_p99_us": 12.0782145,
+          "low_sum_ops_per_sec": 614735.0,
+          "mean_write_p99_us": 9154.6163736875,
+          "mid_mean_get_p99_us": 155.51269375,
+          "mid_mean_write_p99_us": 1626.1010073749999,
+          "mid_sum_ops_per_sec": 73602.0,
+          "sum_compact_read_bytes": 3898697637.0,
+          "sum_compact_write_bytes": 3933477822.0,
+          "sum_ops_per_sec": 702266.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant2",
+              "tenant3",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 5,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 167.7500395,
+          "high_mean_write_p99_us": 29612.901354,
+          "high_sum_ops_per_sec": 17403.0,
+          "low_mean_get_p99_us": 39.896755999999996,
+          "low_mean_write_p99_us": 12.5084895,
+          "low_sum_ops_per_sec": 518615.0,
+          "mean_write_p99_us": 7929.479297,
+          "mid_mean_get_p99_us": 127.350225125,
+          "mid_mean_write_p99_us": 1046.25367225,
+          "mid_sum_ops_per_sec": 86479.0,
+          "sum_compact_read_bytes": 3023598471.0,
+          "sum_compact_write_bytes": 3051522049.0,
+          "sum_ops_per_sec": 622497.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant4",
+              "tenant5",
+              "tenant6",
+              "tenant7"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant14",
+              "tenant15"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant2",
+              "tenant3",
+              "tenant8",
+              "tenant9"
+            ]
+          }
+        },
+        {
+          "epoch": 6,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 166.20561075,
+          "high_mean_write_p99_us": 24721.6612875,
+          "high_sum_ops_per_sec": 15215.0,
+          "low_mean_get_p99_us": 38.3327405,
+          "low_mean_write_p99_us": 10.471203,
+          "low_sum_ops_per_sec": 558701.0,
+          "mean_write_p99_us": 6855.3222266875,
+          "mid_mean_get_p99_us": 143.897505625,
+          "mid_mean_write_p99_us": 1344.578208125,
+          "mid_sum_ops_per_sec": 92976.0,
+          "sum_compact_read_bytes": 3406379889.0,
+          "sum_compact_write_bytes": 3435417990.0,
+          "sum_ops_per_sec": 666892.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15",
+              "tenant4",
+              "tenant5"
+            ]
+          }
+        },
+        {
+          "epoch": 7,
+          "failed_tenants": 0.0,
+          "high_mean_get_p99_us": 168.97970575,
+          "high_mean_write_p99_us": 28454.912283,
+          "high_sum_ops_per_sec": 16929.0,
+          "low_mean_get_p99_us": 48.93801675,
+          "low_mean_write_p99_us": 11.223529,
+          "low_sum_ops_per_sec": 464565.0,
+          "mean_write_p99_us": 7619.117816,
+          "mid_mean_get_p99_us": 120.202957125,
+          "mid_mean_write_p99_us": 1005.167726,
+          "mid_sum_ops_per_sec": 91139.0,
+          "sum_compact_read_bytes": 3012364079.0,
+          "sum_compact_write_bytes": 3056539504.0,
+          "sum_ops_per_sec": 572633.0,
+          "tenants": 16.0,
+          "tiers": {
+            "high": [
+              "tenant6",
+              "tenant7",
+              "tenant8",
+              "tenant9"
+            ],
+            "low": [
+              "tenant0",
+              "tenant1",
+              "tenant2",
+              "tenant3"
+            ],
+            "mid": [
+              "tenant10",
+              "tenant11",
+              "tenant12",
+              "tenant13",
+              "tenant14",
+              "tenant15",
+              "tenant4",
+              "tenant5"
+            ]
+          }
+        }
+      ],
+      "policy": "online",
+      "summary": {
+        "epochs": 8.0,
+        "failed_tenants": 0.0,
+        "high_mean_get_p99_us": 165.18858062500001,
+        "high_mean_write_p99_us": 29332.0347108125,
+        "high_sum_ops_per_sec": 122079.0,
+        "low_mean_get_p99_us": 38.821361,
+        "low_mean_write_p99_us": 11.7419013125,
+        "low_sum_ops_per_sec": 3767499.0,
+        "mean_write_p99_us": 7876.324991046875,
+        "mid_mean_get_p99_us": 127.434996234375,
+        "mid_mean_write_p99_us": 1080.76167603125,
+        "mid_sum_ops_per_sec": 647330.0,
+        "policy": "online",
+        "sum_compact_read_bytes": 29353109305.0,
+        "sum_compact_write_bytes": 28913299546.0,
+        "sum_ops_per_sec": 4536908.0,
+        "tenants": 128.0,
+        "trial": "realistic_big_e"
+      },
+      "tiers": [
+        {
+          "high": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "low": [
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "low": [
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "low": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13"
+          ],
+          "mid": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "low": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13"
+          ],
+          "mid": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15",
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant2",
+            "tenant3",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant14",
+            "tenant15"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant2",
+            "tenant3",
+            "tenant8",
+            "tenant9"
+          ]
+        },
+        {
+          "high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15",
+            "tenant4",
+            "tenant5"
+          ]
+        },
+        {
+          "high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "low": [
+            "tenant0",
+            "tenant1",
+            "tenant2",
+            "tenant3"
+          ],
+          "mid": [
+            "tenant10",
+            "tenant11",
+            "tenant12",
+            "tenant13",
+            "tenant14",
+            "tenant15",
+            "tenant4",
+            "tenant5"
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "online_high_alloc_history": [
+      {
+        "assigned_high": [],
+        "correct": false,
+        "epoch": 0,
+        "overlap": 0,
+        "true_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": true,
+        "epoch": 1,
+        "overlap": 4,
+        "true_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant0",
+          "tenant1",
+          "tenant2",
+          "tenant3"
+        ],
+        "correct": false,
+        "epoch": 2,
+        "overlap": 2,
+        "true_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "correct": true,
+        "epoch": 3,
+        "overlap": 4,
+        "true_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "correct": false,
+        "epoch": 4,
+        "overlap": 2,
+        "true_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "correct": true,
+        "epoch": 5,
+        "overlap": 4,
+        "true_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "correct": false,
+        "epoch": 6,
+        "overlap": 2,
+        "true_high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      },
+      {
+        "assigned_high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ],
+        "correct": true,
+        "epoch": 7,
+        "overlap": 4,
+        "true_high": [
+          "tenant6",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ]
+      }
+    ],
+    "online_high_exact_epochs_after_warmup": 4,
+    "online_high_mean_write_p99_us": 29332.0347108125,
+    "online_high_overlap_mean_after_warmup": 3.142857142857143,
+    "online_high_sum_ops_per_sec": 122079.0,
+    "online_low_mean_write_p99_us": 11.7419013125,
+    "online_low_sum_ops_per_sec": 3767499.0,
+    "online_mean_write_p99_us": 7876.324991046875,
+    "online_mid_mean_write_p99_us": 1080.76167603125,
+    "online_mid_sum_ops_per_sec": 647330.0,
+    "online_sum_compact_write_bytes": 28913299546.0,
+    "online_sum_ops_per_sec": 4536908.0,
+    "online_vs_oracle_pct_high_mean_write_p99_us": -4.2877344875865235,
+    "online_vs_oracle_pct_high_sum_ops_per_sec": -3.532990912682734,
+    "online_vs_oracle_pct_low_mean_write_p99_us": 0.05983923950473575,
+    "online_vs_oracle_pct_low_sum_ops_per_sec": 4.827987452357858,
+    "online_vs_oracle_pct_mean_write_p99_us": -4.155202396031915,
+    "online_vs_oracle_pct_mid_mean_write_p99_us": -2.3425281007861445,
+    "online_vs_oracle_pct_mid_sum_ops_per_sec": 3.085740493317175,
+    "online_vs_oracle_pct_sum_compact_write_bytes": 1.7299228272299554,
+    "online_vs_oracle_pct_sum_ops_per_sec": 4.333072322889466,
+    "online_vs_static_pct_high_mean_write_p99_us": -6.239106384549772,
+    "online_vs_static_pct_high_sum_ops_per_sec": 36.71426171678146,
+    "online_vs_static_pct_low_mean_write_p99_us": -4.170261442752633,
+    "online_vs_static_pct_low_sum_ops_per_sec": 3.251710333861445,
+    "online_vs_static_pct_mean_write_p99_us": -6.004257760138245,
+    "online_vs_static_pct_mid_mean_write_p99_us": -2.7074176394241167,
+    "online_vs_static_pct_mid_sum_ops_per_sec": -8.519721826920495,
+    "online_vs_static_pct_sum_compact_write_bytes": -20.875157057755004,
+    "online_vs_static_pct_sum_ops_per_sec": 2.050200179451842,
+    "oracle_high_mean_write_p99_us": 30646.056233,
+    "oracle_high_sum_ops_per_sec": 126550.0,
+    "oracle_low_mean_write_p99_us": 11.73487925,
+    "oracle_low_sum_ops_per_sec": 3593982.0,
+    "oracle_mean_write_p99_us": 8217.790832625,
+    "oracle_mid_mean_write_p99_us": 1106.686109125,
+    "oracle_mid_sum_ops_per_sec": 627953.0,
+    "oracle_sum_compact_write_bytes": 28421627327.0,
+    "oracle_sum_ops_per_sec": 4348485.0,
+    "oracle_vs_static_pct_high_mean_write_p99_us": -2.0387897899148184,
+    "oracle_vs_static_pct_high_sum_ops_per_sec": 41.72126098885715,
+    "oracle_vs_static_pct_low_mean_write_p99_us": -4.227570935959767,
+    "oracle_vs_static_pct_low_sum_ops_per_sec": -1.5036796535016934,
+    "oracle_vs_static_pct_mean_write_p99_us": -1.9292182886614768,
+    "oracle_vs_static_pct_mid_mean_write_p99_us": -0.3736422124612769,
+    "oracle_vs_static_pct_mid_sum_ops_per_sec": -11.258067570451246,
+    "oracle_vs_static_pct_sum_compact_write_bytes": -22.220679281724845,
+    "oracle_vs_static_pct_sum_ops_per_sec": -2.188061841381037,
+    "static_high_mean_write_p99_us": 31283.86855090625,
+    "static_high_sum_ops_per_sec": 89295.0,
+    "static_low_mean_write_p99_us": 12.252878375,
+    "static_low_sum_ops_per_sec": 3648849.0,
+    "static_mean_write_p99_us": 8379.448689226563,
+    "static_mid_mean_write_p99_us": 1110.8366638125,
+    "static_mid_sum_ops_per_sec": 707617.0,
+    "static_sum_compact_write_bytes": 36541367377.0,
+    "static_sum_ops_per_sec": 4445761.0
+  }
+}

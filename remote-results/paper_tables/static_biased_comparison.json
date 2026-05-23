@@ -1,0 +1,26 @@
+{
+  "online": {
+    "compact_bytes_per_write": 4257.673492610709,
+    "high_p999_us": 23344.282715367623,
+    "high_p99_us": 12034.006946197538,
+    "high_write_tput": 3169.0,
+    "mean_overlap": 3.0,
+    "total_tput": 17441.55
+  },
+  "static": {
+    "compact_bytes_per_write": 4682.693446614527,
+    "high_p999_us": 50225.00654933597,
+    "high_p99_us": 19805.503096600813,
+    "high_write_tput": 2474.4875,
+    "mean_overlap": 0.0,
+    "total_tput": 17144.14375
+  },
+  "static_biased": {
+    "compact_bytes_per_write": 4777.752317110746,
+    "high_p999_us": 31382.909531628044,
+    "high_p99_us": 10108.47405127837,
+    "high_write_tput": 2089.81875,
+    "mean_overlap": 0.8571428571428571,
+    "total_tput": 17088.8625
+  }
+}

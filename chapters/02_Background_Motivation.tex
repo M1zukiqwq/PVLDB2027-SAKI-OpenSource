@@ -1,0 +1,56 @@
+\section{Background and Motivation}
+
+SAKI targets co-located \rocksdb instances whose background work shares finite
+host resources. RocksDB exposes useful local controls, but not the host-wide
+placement decision: how that fixed service budget should be placed across
+instances as tenants' write pressure changes at different times.
+
+\subsection{LSM Background Work}
+
+The log-structured merge-tree makes foreground writes inexpensive by buffering
+updates and later merging them into on-disk components~\cite{oneil1996lsm}.
+Compaction rewrites sorted files, removes obsolete entries, controls level
+sizes, and bounds read cost. This design gives high write throughput but turns
+recent foreground writes into future CPU and I/O demand. That deferred demand
+becomes a host-level problem when several engines share one finite background
+budget; surveys and recent microbenchmarks emphasize compaction, amplification,
+and buffering as central LSM tradeoffs~\cite{luo2020lsmsurvey,
+kaushik2024lsmbuffer}.
+
+RocksDB exposes per-instance background jobs, rate limiters, statistics,
+properties, and event listeners~\cite{rocksdb}. SAKI uses them as the
+measurement and actuation surface for the host-level placement problem.
+
+\subsection{From Tenant-Local State to Host-Level Debt}
+
+We use \emph{compaction debt} as an operational term for deferred background
+work and its foreground consequences. Pending compaction bytes, L0 files,
+flush/compaction events, write-tail latency, and completion gaps are observable
+but incomplete symptoms that help identify tenants currently creating deferred
+maintenance.
+
+The cross-tenant aspect is the key. Under a fixed aggregate budget, equal
+allocation leaves capacity assigned to quiet tenants whenever only a subset is
+write-heavy. Frozen skew helps only while the workload resembles the phase it was
+tuned for. Section~\ref{sec:evaluation} tests this mismatch between where the
+budget sits and where debt is being created.
+
+Compaction service has delayed effects: too little service may surface later as
+L0 pressure, flush backlog, write slowdown, or tail latency; too much service
+for a quiet tenant consumes capacity that could reduce risk elsewhere. The
+evaluation therefore reports high-pressure latency and throughput together with
+total throughput and collateral impact on lower-pressure tenants.
+
+\subsection{Why Existing Directions Do Not Settle the Question}
+
+Prior LSM work changes single-engine policies or storage layout: Monkey,
+Dostoevsky, WiscKey, PebblesDB, and SILK improve what an engine does given an
+assigned service budget~\cite{dayan2017monkey,dayan2018dostoevsky,
+lu2016wisckey,raju2017pebblesdb,balmau2019silk}. SAKI asks where a fixed host
+budget should be placed across independent engines.
+
+CaaS-LSM treats compaction as a service and DFlush offloads flush work to
+DPUs~\cite{yu2024caaslsm,ding2025dflush}. SAKI shares the resource-management
+view, but targets co-located RocksDB instances on one host, standard runtime
+controls, and a conserved aggregate budget. The next section formalizes that
+host-level allocation question.

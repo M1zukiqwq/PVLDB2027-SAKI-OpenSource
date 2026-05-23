@@ -1,0 +1,140 @@
+{
+  "aggregates": {
+    "adaptation_max_lag": {
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 5,
+      "stdev": 0.0
+    },
+    "failed_tenants_total": 0,
+    "gate_pass_count": 5,
+    "mean_high_overlap_after_warmup": {
+      "max": 3.0,
+      "mean": 3.0,
+      "min": 3.0,
+      "n": 5,
+      "stdev": 0.0
+    },
+    "online_vs_static_pct_compact_output_bytes": {
+      "max": -0.0602688477828455,
+      "mean": -1.8511050556037212,
+      "min": -5.825419278734152,
+      "n": 5,
+      "stdev": 2.3336926899091988
+    },
+    "online_vs_static_pct_compact_output_bytes_per_write": {
+      "max": -9.07639927424881,
+      "mean": -11.942695825141874,
+      "min": -13.505965883464931,
+      "n": 5,
+      "stdev": 1.8729613625420904
+    },
+    "online_vs_static_pct_high_write_p999_us": {
+      "max": -39.26707008155327,
+      "mean": -47.1131161781649,
+      "min": -54.04107021019517,
+      "n": 5,
+      "stdev": 7.100894289118137
+    },
+    "online_vs_static_pct_high_write_p99_us": {
+      "max": -11.985476681856767,
+      "mean": -27.00053313558658,
+      "min": -39.239074677871145,
+      "n": 5,
+      "stdev": 10.104317684006672
+    },
+    "online_vs_static_pct_high_write_throughput": {
+      "max": 28.160098445109544,
+      "mean": 26.127523093202136,
+      "min": 21.452215104509357,
+      "n": 5,
+      "stdev": 2.8232831218007184
+    },
+    "online_vs_static_pct_total_throughput": {
+      "max": 6.79775702618305,
+      "mean": 4.32586342048276,
+      "min": 1.3309549589807979,
+      "n": 5,
+      "stdev": 2.5811309954580866
+    },
+    "trial_count": 5
+  },
+  "per_trial": [
+    {
+      "adaptation_max_lag": 0,
+      "compare": {
+        "online_vs_static_pct_compact_output_bytes": -0.0602688477828455,
+        "online_vs_static_pct_compact_output_bytes_per_write": -9.07639927424881,
+        "online_vs_static_pct_high_write_p999_us": -53.520597966599446,
+        "online_vs_static_pct_high_write_p99_us": -39.239074677871145,
+        "online_vs_static_pct_high_write_throughput": 28.066922948691385,
+        "online_vs_static_pct_total_throughput": 1.7347395958459577
+      },
+      "failed_tenants": 0,
+      "gate_pass": true,
+      "mean_high_overlap_after_warmup": 3.0,
+      "trial": "embedded_demand2f_16t"
+    },
+    {
+      "adaptation_max_lag": 0,
+      "compare": {
+        "online_vs_static_pct_compact_output_bytes": -5.825419278734152,
+        "online_vs_static_pct_compact_output_bytes_per_write": -13.469127228623911,
+        "online_vs_static_pct_high_write_p999_us": -39.26707008155327,
+        "online_vs_static_pct_high_write_p99_us": -11.985476681856767,
+        "online_vs_static_pct_high_write_throughput": 25.508305172263952,
+        "online_vs_static_pct_total_throughput": 1.3309549589807979
+      },
+      "failed_tenants": 0,
+      "gate_pass": true,
+      "mean_high_overlap_after_warmup": 3.0,
+      "trial": "embedded_demand2f_16t_b"
+    },
+    {
+      "adaptation_max_lag": 0,
+      "compare": {
+        "online_vs_static_pct_compact_output_bytes": -1.5456452887853278,
+        "online_vs_static_pct_compact_output_bytes_per_write": -13.505965883464931,
+        "online_vs_static_pct_high_write_p999_us": -48.61172720678819,
+        "online_vs_static_pct_high_write_p99_us": -25.654828311763612,
+        "online_vs_static_pct_high_write_throughput": 28.160098445109544,
+        "online_vs_static_pct_total_throughput": 5.939331506600284
+      },
+      "failed_tenants": 0,
+      "gate_pass": true,
+      "mean_high_overlap_after_warmup": 3.0,
+      "trial": "embedded_demand2f_16t_c"
+    },
+    {
+      "adaptation_max_lag": 0,
+      "compare": {
+        "online_vs_static_pct_compact_output_bytes": -1.5923298897672233,
+        "online_vs_static_pct_compact_output_bytes_per_write": -12.544267567573774,
+        "online_vs_static_pct_high_write_p999_us": -40.12511542568845,
+        "online_vs_static_pct_high_write_p99_us": -25.68171291514018,
+        "online_vs_static_pct_high_write_throughput": 27.450073795436445,
+        "online_vs_static_pct_total_throughput": 5.826534014803706
+      },
+      "failed_tenants": 0,
+      "gate_pass": true,
+      "mean_high_overlap_after_warmup": 3.0,
+      "trial": "embedded_demand2f_16t_d"
+    },
+    {
+      "adaptation_max_lag": 0,
+      "compare": {
+        "online_vs_static_pct_compact_output_bytes": -0.2318619729490577,
+        "online_vs_static_pct_compact_output_bytes_per_write": -11.11771917179794,
+        "online_vs_static_pct_high_write_p999_us": -54.04107021019517,
+        "online_vs_static_pct_high_write_p99_us": -32.44157309130119,
+        "online_vs_static_pct_high_write_throughput": 21.452215104509357,
+        "online_vs_static_pct_total_throughput": 6.79775702618305
+      },
+      "failed_tenants": 0,
+      "gate_pass": true,
+      "mean_high_overlap_after_warmup": 3.0,
+      "trial": "embedded_demand2f_16t_e"
+    }
+  ]
+}

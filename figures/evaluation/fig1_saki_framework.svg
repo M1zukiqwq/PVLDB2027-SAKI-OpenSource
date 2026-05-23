@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="fig-title fig-desc">
+  <title id="fig-title">SAKI host-level conserved rank-and-assign framework</title>
+  <desc id="fig-desc">SAKI external controller running a 4-step conserved rank-and-assign loop above a pool of co-located RocksDB engine instances partitioned into high, mid, and low budget tiers.</desc>
+
+  <defs>
+    <marker id="ah-flow" viewBox="0 0 7 7" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#0072B2"/>
+    </marker>
+    <marker id="ah-obs" viewBox="0 0 7 7" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#009E73"/>
+    </marker>
+    <marker id="ah-bud" viewBox="0 0 7 7" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#D55E00"/>
+    </marker>
+
+    <!-- Cylindrical database stack icons (top ellipse + sides + bottom arc + 2 internal layer arcs => 3 layers) -->
+    <symbol id="tnt-h" viewBox="0 0 20 26" width="20" height="26">
+      <path d="M 2,4 L 2,21 A 8,2.5 0 0 0 18,21 L 18,4 Z" fill="#ffffff"/>
+      <ellipse cx="10" cy="4" rx="8" ry="2.5" fill="#ffffff" stroke="#D55E00" stroke-width="1.2"/>
+      <line x1="2" y1="4" x2="2" y2="21" stroke="#D55E00" stroke-width="1.2"/>
+      <line x1="18" y1="4" x2="18" y2="21" stroke="#D55E00" stroke-width="1.2"/>
+      <path d="M 2,21 A 8,2.5 0 0 0 18,21" fill="none" stroke="#D55E00" stroke-width="1.2"/>
+      <path d="M 2,9.5 A 8,2.5 0 0 0 18,9.5" fill="none" stroke="#D55E00" stroke-width="0.8" opacity="0.55"/>
+      <path d="M 2,15 A 8,2.5 0 0 0 18,15" fill="none" stroke="#D55E00" stroke-width="0.8" opacity="0.55"/>
+    </symbol>
+    <symbol id="tnt-m" viewBox="0 0 20 26" width="20" height="26">
+      <path d="M 2,4 L 2,21 A 8,2.5 0 0 0 18,21 L 18,4 Z" fill="#ffffff"/>
+      <ellipse cx="10" cy="4" rx="8" ry="2.5" fill="#ffffff" stroke="#666666" stroke-width="1.2"/>
+      <line x1="2" y1="4" x2="2" y2="21" stroke="#666666" stroke-width="1.2"/>
+      <line x1="18" y1="4" x2="18" y2="21" stroke="#666666" stroke-width="1.2"/>
+      <path d="M 2,21 A 8,2.5 0 0 0 18,21" fill="none" stroke="#666666" stroke-width="1.2"/>
+      <path d="M 2,9.5 A 8,2.5 0 0 0 18,9.5" fill="none" stroke="#666666" stroke-width="0.8" opacity="0.55"/>
+      <path d="M 2,15 A 8,2.5 0 0 0 18,15" fill="none" stroke="#666666" stroke-width="0.8" opacity="0.55"/>
+    </symbol>
+    <symbol id="tnt-l" viewBox="0 0 20 26" width="20" height="26">
+      <path d="M 2,4 L 2,21 A 8,2.5 0 0 0 18,21 L 18,4 Z" fill="#ffffff"/>
+      <ellipse cx="10" cy="4" rx="8" ry="2.5" fill="#ffffff" stroke="#2a83b6" stroke-width="1.2"/>
+      <line x1="2" y1="4" x2="2" y2="21" stroke="#2a83b6" stroke-width="1.2"/>
+      <line x1="18" y1="4" x2="18" y2="21" stroke="#2a83b6" stroke-width="1.2"/>
+      <path d="M 2,21 A 8,2.5 0 0 0 18,21" fill="none" stroke="#2a83b6" stroke-width="1.2"/>
+      <path d="M 2,9.5 A 8,2.5 0 0 0 18,9.5" fill="none" stroke="#2a83b6" stroke-width="0.8" opacity="0.55"/>
+      <path d="M 2,15 A 8,2.5 0 0 0 18,15" fill="none" stroke="#2a83b6" stroke-width="0.8" opacity="0.55"/>
+    </symbol>
+
+    <style>
+      .ctrl-name   { font: 600 17px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #ffffff; }
+      .badge-num   { font: 600 11px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #ffffff; }
+      .step-name   { font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #0a4d75; }
+      .step-text   { font: 400 12.5px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #333; }
+      .step-tier   { font: 500 12.5px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+      .loop-head   { font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      .loop-sub    { font: 400 11.5px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #666; font-style: italic; }
+      .center-note { font: 400 12.5px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #888; font-style: italic; }
+      .bar-name    { font: 600 14px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #ffffff; letter-spacing: 0.5px; }
+      .engine-lbl  { font: 400 10px 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: italic; letter-spacing: 0.4px; }
+      .tier-bud    { font: 600 17px 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #1a1a1a; }
+
+      .canvas      { fill: #ffffff; }
+      .host        { fill: #fbfbfb; stroke: #c8c8c8; stroke-width: 1.3; stroke-dasharray: 6 4; }
+      .ctrl-body   { fill: #ffffff; stroke: #0072B2; stroke-width: 1.8; }
+      .ctrl-header { fill: #0072B2; }
+      .step-box    { fill: #F3F8FC; stroke: #0072B2; stroke-width: 1.2; }
+      .step-arrow  { stroke: #0072B2; stroke-width: 1.3; fill: none; marker-end: url(#ah-flow); }
+
+      .obs-arrow   { stroke: #009E73; stroke-width: 1.8; fill: none; marker-end: url(#ah-obs); }
+      .bud-arrow   { stroke: #D55E00; stroke-width: 1.8; fill: none; marker-end: url(#ah-bud); }
+
+      .outer-tier  { fill: #f5f5f5; stroke: #b8b8b8; stroke-width: 1.2; }
+      .card-high   { fill: #FCE9DA; stroke: #D55E00; stroke-width: 1.5; }
+      .card-mid    { fill: #EFEFEF; stroke: #888888; stroke-width: 1.5; }
+      .card-low    { fill: #DDF0FA; stroke: #56B4E9; stroke-width: 1.5; }
+
+      .engine-frame-high { fill: #ffffff; stroke: #D55E00; stroke-width: 1.0; stroke-dasharray: 3 2; }
+      .engine-frame-mid  { fill: #ffffff; stroke: #666666; stroke-width: 1.0; stroke-dasharray: 3 2; }
+      .engine-frame-low  { fill: #ffffff; stroke: #2a83b6; stroke-width: 1.0; stroke-dasharray: 3 2; }
+
+      .mini-bar    { fill: #0072B2; opacity: 0.75; }
+      .mini-line   { fill: none; stroke: #0072B2; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.78; }
+      .mini-shield { fill: none; stroke: #0072B2; stroke-width: 1.2; stroke-linejoin: round; opacity: 0.85; }
+      .mini-check  { fill: none; stroke: #0072B2; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; opacity: 0.95; }
+    </style>
+  </defs>
+
+  <rect class="canvas" x="0" y="0" width="1200" height="470"/>
+
+  <!-- Host frame -->
+  <rect class="host" x="30" y="12" width="1140" height="454" rx="14"/>
+
+  <!-- ============ Controller ============ -->
+  <rect class="ctrl-body"   x="110" y="28" width="980" height="178" rx="10"/>
+  <path class="ctrl-header" d="M110,38 a10,10 0 0 1 10,-10 h960 a10,10 0 0 1 10,10 v22 h-980 z"/>
+  <text class="ctrl-name"   x="600" y="49" text-anchor="middle">SAKI External Controller</text>
+
+  <!-- Step 1: Score · sparkline glyph (time-series demand signal) -->
+  <g transform="translate(126, 74)">
+    <rect class="step-box" x="0" y="0" width="220" height="118" rx="8"/>
+    <circle cx="20" cy="22" r="13" fill="#0072B2"/>
+    <text class="badge-num" x="20" y="26" text-anchor="middle">1</text>
+    <text class="step-name" x="42" y="27">Score</text>
+    <g transform="translate(190, 14)">
+      <polyline class="mini-line" points="0,14 4,6 8,11 12,4 16,10 20,3"/>
+      <circle cx="20" cy="3" r="1.4" fill="#0072B2" opacity="0.85"/>
+    </g>
+    <text class="step-text" x="14" y="66">Rate each tenant from</text>
+    <text class="step-text" x="14" y="86">demand &amp; pressure signals</text>
+  </g>
+
+  <!-- Step 2: Rank · sorted bar chart (descending) -->
+  <g transform="translate(368, 74)">
+    <rect class="step-box" x="0" y="0" width="220" height="118" rx="8"/>
+    <circle cx="20" cy="22" r="13" fill="#0072B2"/>
+    <text class="badge-num" x="20" y="26" text-anchor="middle">2</text>
+    <text class="step-name" x="42" y="27">Rank</text>
+    <g transform="translate(192, 14)">
+      <rect class="mini-bar" x="0"  y="2"  width="3" height="18"/>
+      <rect class="mini-bar" x="5"  y="6"  width="3" height="14"/>
+      <rect class="mini-bar" x="10" y="10" width="3" height="10"/>
+      <rect class="mini-bar" x="15" y="14" width="3" height="6"/>
+    </g>
+    <text class="step-text" x="14" y="66">Sort tenants by score</text>
+    <text class="step-text" x="14" y="86">top-H · middle · bottom-L</text>
+  </g>
+
+  <!-- Step 3: Assign budget tier · the inline H/M/L swatches already serve as the glyph -->
+  <g transform="translate(610, 74)">
+    <rect class="step-box" x="0" y="0" width="220" height="118" rx="8"/>
+    <circle cx="20" cy="22" r="13" fill="#0072B2"/>
+    <text class="badge-num" x="20" y="26" text-anchor="middle">3</text>
+    <text class="step-name" x="42" y="27">Assign budget tier</text>
+    <rect x="14" y="50" width="14" height="14" fill="#D55E00"/>
+    <text class="step-tier" x="34" y="62">HIGH:   11 MB/s</text>
+    <rect x="14" y="72" width="14" height="14" fill="#888888"/>
+    <text class="step-tier" x="34" y="84">MID:    6 MB/s</text>
+    <rect x="14" y="94" width="14" height="14" fill="#56B4E9"/>
+    <text class="step-tier" x="34" y="106">LOW:    1 MB/s</text>
+  </g>
+
+  <!-- Step 4: Check & actuate · shield + checkmark badge -->
+  <g transform="translate(852, 74)">
+    <rect class="step-box" x="0" y="0" width="220" height="118" rx="8"/>
+    <circle cx="20" cy="22" r="13" fill="#0072B2"/>
+    <text class="badge-num" x="20" y="26" text-anchor="middle">4</text>
+    <text class="step-name" x="42" y="27">Check &amp; actuate</text>
+    <g transform="translate(190, 11)">
+      <path class="mini-shield" d="M 10,2 L 18,4 V 11 Q 18,17 10,21 Q 2,17 2,11 V 4 Z"/>
+      <path class="mini-check"  d="M 6,11 L 9,14 L 14,8"/>
+    </g>
+    <text class="step-text" x="14" y="66">Verify total budget conserved</text>
+    <text class="step-text" x="14" y="86">push per-tenant rate limit</text>
+  </g>
+
+  <path class="step-arrow" d="M348,133 L366,133"/>
+  <path class="step-arrow" d="M590,133 L608,133"/>
+  <path class="step-arrow" d="M832,133 L850,133"/>
+
+  <!-- ============ Loop arrows ============ -->
+  <path class="obs-arrow" d="M250,284 L250,216"/>
+  <text class="loop-head" x="262" y="241" fill="#009E73">observations</text>
+  <text class="loop-sub"  x="262" y="257">per-tenant metrics</text>
+
+  <path class="bud-arrow" d="M950,216 L950,284"/>
+  <text class="loop-head" x="938" y="241" text-anchor="end" fill="#D55E00">budgets</text>
+  <text class="loop-sub"  x="938" y="257" text-anchor="end">rate-limiter update</text>
+
+  <text class="center-note" x="600" y="250" text-anchor="middle">one full cycle per control window</text>
+
+  <!-- ============ Outer tier frame + 3 tier cards (cylindrical engine icons) ============ -->
+  <rect class="outer-tier" x="50" y="302" width="1100" height="150" rx="12"/>
+
+  <!-- HIGH card -->
+  <rect class="card-high" x="100" y="314" width="320" height="120" rx="8"/>
+  <path d="M108,314 h304 a8,8 0 0 1 8,8 v14 h-320 v-14 a8,8 0 0 1 8,-8 z" fill="#D55E00"/>
+  <text class="bar-name" x="260" y="330" text-anchor="middle">HIGH-BUDGET TIER</text>
+  <rect class="engine-frame-high" x="118" y="342" width="284" height="52" rx="6"/>
+  <text class="engine-lbl" x="125" y="356" fill="#8a3c00">RocksDB engine instances</text>
+  <use href="#tnt-h" x="211" y="362"/>
+  <use href="#tnt-h" x="237" y="362"/>
+  <use href="#tnt-h" x="263" y="362"/>
+  <use href="#tnt-h" x="289" y="362"/>
+  <text class="tier-bud" x="260" y="418" text-anchor="middle">11 MB/s each</text>
+
+  <!-- MID card -->
+  <rect class="card-mid" x="440" y="314" width="320" height="120" rx="8"/>
+  <path d="M448,314 h304 a8,8 0 0 1 8,8 v14 h-320 v-14 a8,8 0 0 1 8,-8 z" fill="#888888"/>
+  <text class="bar-name" x="600" y="330" text-anchor="middle">MID-BUDGET TIER</text>
+  <rect class="engine-frame-mid" x="458" y="342" width="284" height="52" rx="6"/>
+  <text class="engine-lbl" x="465" y="356" fill="#444444">RocksDB engine instances</text>
+  <use href="#tnt-m" x="506" y="362"/>
+  <use href="#tnt-m" x="530" y="362"/>
+  <use href="#tnt-m" x="554" y="362"/>
+  <use href="#tnt-m" x="578" y="362"/>
+  <use href="#tnt-m" x="602" y="362"/>
+  <use href="#tnt-m" x="626" y="362"/>
+  <use href="#tnt-m" x="650" y="362"/>
+  <use href="#tnt-m" x="674" y="362"/>
+  <text class="tier-bud" x="600" y="418" text-anchor="middle">6 MB/s each</text>
+
+  <!-- LOW card -->
+  <rect class="card-low" x="780" y="314" width="320" height="120" rx="8"/>
+  <path d="M788,314 h304 a8,8 0 0 1 8,8 v14 h-320 v-14 a8,8 0 0 1 8,-8 z" fill="#56B4E9"/>
+  <text class="bar-name" x="940" y="330" text-anchor="middle">LOW-BUDGET TIER</text>
+  <rect class="engine-frame-low" x="798" y="342" width="284" height="52" rx="6"/>
+  <text class="engine-lbl" x="805" y="356" fill="#1f4f6c">RocksDB engine instances</text>
+  <use href="#tnt-l" x="891" y="362"/>
+  <use href="#tnt-l" x="917" y="362"/>
+  <use href="#tnt-l" x="943" y="362"/>
+  <use href="#tnt-l" x="969" y="362"/>
+  <text class="tier-bud" x="940" y="418" text-anchor="middle">1 MB/s each</text>
+</svg>

@@ -1,0 +1,101 @@
+\section{Implementation}
+\label{sec:implementation}
+
+SAKI is implemented as an external Python controller plus two experiment
+harnesses around unmodified \rocksdb instances. The implementation separates
+the paper's two control questions and realizes the conserved rank-and-assign
+framework from Section~\ref{sec:saki-design}. The epoch harness asks whether a
+fixed budget can be placed better between workload phases; the continuous
+harness asks whether the same placement loop can actuate a live RocksDB rate
+limiter while tenants keep running. In both paths, the controller chooses high,
+mid, and low budget assignments, the harness applies them through ordinary
+RocksDB-facing APIs, and the measurement path records per-tenant behavior at
+the same granularity used by the controller.
+
+\subsection{Epoch Harness}
+
+The epoch-level path uses \texttt{db\_bench} as the tenant process. A trial
+creates one database directory per tenant, runs a prefill phase, and then
+executes a sequence of workload epochs. Each epoch assigns tenants to high,
+mid, and low demand tiers, launches one \texttt{db\_bench} process per tenant,
+parses the logs, and uses the resulting observations for the next epoch's
+allocation decision. Because every epoch is a fresh invocation, this harness
+can vary both \texttt{max\_background\_jobs} and
+\texttt{rate\_limiter\_bytes\_per\_sec} at epoch boundaries. The driver checks
+that the resulting job and rate-limit settings match the static fair-share
+budget before launch.
+
+The parser extracts per-tenant runtime, exit status, operation rate, latency
+histograms where available, compaction read/write bytes, flush bytes, keys and
+bytes written, and compaction CPU time. It stores these rows with the epoch,
+workload tier, assigned budget tier, background-job count, rate limit, and
+workload parameters. This path gives clean mechanism evidence for budget
+placement under drift because all policies run comparable foreground work under
+the same aggregate budget. It does not by itself prove in-process runtime
+control; that is the role of the continuous harness.
+
+\subsection{Continuous Harness}
+
+The continuous path is a custom C++ embedded RocksDB harness. Each tenant is a
+long-running process linked against RocksDB. The Python driver writes one
+control file per tenant, advances through fixed-length windows, computes the
+current workload tier and policy assignment, validates the aggregate byte
+budget, and atomically updates the control file. Tenant processes keep running
+while their offered write/read rates, hot-key range, reported workload tier,
+assigned budget tier, and byte budget are refreshed. Before each refresh the
+driver checks that the next assignment preserves the aggregate byte budget.
+Control files are written atomically, and a tenant keeps using its last
+installed budget until it observes a newer value. Thus a missed or delayed
+update does not create extra host budget in the harness; a production
+controller would additionally fall back to all-mid allocation when tenant
+inventory or metrics are incomplete.
+
+Runtime actuation uses RocksDB's rate limiter. At startup, each tenant creates
+a \texttt{NewGenericRateLimiter} with the initial budget and installs it before
+opening the database. During the run, a control thread rereads the budget and
+calls \ratecall on the same rate-limiter object. This is the main continuous
+actuation path. Background-job count is a launch-time option and remains fixed
+for the tenant process. Diagnostic userspace throttling exists in the harness
+but is not the mechanism used for the reported continuous result.
+
+The rate limiter is a RocksDB-facing background-I/O control rather than an
+application-level admission throttle. In the reported setup it is installed as
+the database rate limiter and therefore shapes the I/O issued by flush and
+compaction work that uses RocksDB's rate-limited paths. SAKI does not directly
+sleep foreground write calls or read calls. Foreground write latency changes
+indirectly because background service changes the accumulation and draining of
+LSM maintenance work. This distinction makes the continuous result a
+maintenance-placement result rather than a foreground-throttling result:
+SAKI changes the maintenance budget available to each tenant, not the offered
+foreground workload. In the five main continuous trials, rate-limiter,
+compaction, and flush byte deltas are larger in high-budget windows than in
+low-budget windows. As an internal-validity check on this actuation path, we
+also ran a homogeneous four-tenant static microstudy that sweeps the per-tenant
+limiter budget \(B \in \{1,3,6,11\}\)\,MB/s with three seeds per point.
+Dropping the first window, measured rate-limiter traffic is monotone in \(B\):
+1.00, 2.96, 5.70, and 7.28\,MB/s. Compact-plus-flush output moves with the
+limiter (coverage ratio 0.99--1.02); the 11\,MB/s point saturates at about
+7.3\,MB/s because this workload cannot generate more maintenance I/O. A
+two-seed no-rate-limiter sanity run reports zero limiter bytes while
+background maintenance continues near 8\,MB/s. The microstudy shows that the
+continuous knob controls background-maintenance I/O rather than foreground
+throttling.
+
+The embedded harness records per-window write and read operation counts,
+throughput, and latency percentiles. A custom \texttt{EventListener} accumulates
+compaction input/output bytes, compaction CPU time, compaction count, flush
+bytes, and flush count. At window boundaries the harness emits deltas, together
+with RocksDB properties such as pending compaction bytes, L0 files, memtable
+bytes, delayed-write rate, and write-stop status. These measurements feed both
+the online score and the post-run analysis.
+
+\subsection{Analysis}
+
+The analysis scripts consume JSON payloads produced by the drivers. For
+continuous runs, the analyzer merges tenant metrics, allocation history,
+process exit codes, commands, run parameters, and summary counters. It computes
+write P99/P999 and throughput for high-pressure tenants, total throughput,
+compaction output bytes, bytes/write, high-set overlap, adaptation lag, and
+failed-tenant counts. The same pipeline emits the paper-table summaries and the
+time-series data used for the evaluation figures. This keeps the manuscript
+numbers tied to generated artifacts rather than manual transcription.

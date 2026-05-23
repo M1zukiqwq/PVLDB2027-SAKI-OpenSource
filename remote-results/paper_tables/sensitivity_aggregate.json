@@ -1,0 +1,835 @@
+{
+  "autotuned_promotion_target": "press_high",
+  "baseline_static_high_stall_p99_us": 20981.139787257813,
+  "capacity_boundary_rule": {
+    "fallback_stall_p99_us": 500000.0,
+    "stall_p99_ratio_vs_baseline": 2.0
+  },
+  "promote_rule": {
+    "high_p99_max_pct": -2.0,
+    "high_tput_min_pct": 5.0,
+    "overlap_min": 2.5
+  },
+  "variants": [
+    {
+      "indicators": {
+        "max_failed_online": 0.0,
+        "max_failed_static": 0.0,
+        "max_static_high_stall_p99": 0.0,
+        "max_static_total_stall_count": 0.0
+      },
+      "n": 5,
+      "name": "baseline",
+      "pattern": "remote-results/realistic_analysis_realistic_big_*.json",
+      "stats": {
+        "compact_bytes": {
+          "ci95_high": -18.43062406346766,
+          "ci95_low": -23.605501267676928,
+          "ci95_margin": 2.587438602104632,
+          "max": -18.42825837917809,
+          "mean": -21.018062665572295,
+          "min": -24.260022979860384,
+          "n": 5,
+          "range": 5.831764600682295,
+          "sem": 0.9320744243892767,
+          "stdev": 2.0841817730234107
+        },
+        "high_p99": {
+          "ci95_high": -5.480139049817204,
+          "ci95_low": -17.957272048456264,
+          "ci95_margin": 6.23856649931953,
+          "max": -6.239106384549772,
+          "mean": -11.718705549136734,
+          "min": -17.235624821625585,
+          "n": 5,
+          "range": 10.996518437075814,
+          "sem": 2.247322225979658,
+          "stdev": 5.02516526463666
+        },
+        "high_tput": {
+          "ci95_high": 41.72866465024076,
+          "ci95_low": 34.40339425400036,
+          "ci95_margin": 3.662635198120201,
+          "max": 42.123456237694654,
+          "mean": 38.06602945212056,
+          "min": 34.216409195555705,
+          "n": 5,
+          "range": 7.907047042138949,
+          "sem": 1.319393082896326,
+          "stdev": 2.9502526223992005
+        },
+        "mid_tput": {
+          "ci95_high": -5.314790112126062,
+          "ci95_low": -12.85619941142772,
+          "ci95_margin": 3.770704649650829,
+          "max": -5.402669423281209,
+          "mean": -9.085494761776891,
+          "min": -13.137556498758277,
+          "n": 5,
+          "range": 7.734887075477069,
+          "sem": 1.3583230005946791,
+          "stdev": 3.03730256473119
+        },
+        "overlap": {
+          "ci95_high": 3.142857142857143,
+          "ci95_low": 3.142857142857143,
+          "ci95_margin": 0.0,
+          "max": 3.142857142857143,
+          "mean": 3.142857142857143,
+          "min": 3.142857142857143,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 1.4429720756381224,
+          "ci95_low": -4.853009683292064,
+          "ci95_margin": 3.1479908794650933,
+          "max": 2.050200179451842,
+          "mean": -1.705018803826971,
+          "min": -4.6544149348922215,
+          "n": 5,
+          "range": 6.7046151143440635,
+          "sem": 1.1340024781934774,
+          "stdev": 2.5357066278938385
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -17.235624821625585,
+            "online_vs_static_pct_high_sum_ops_per_sec": 39.363294231573384,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -10.997462063131179,
+            "online_vs_static_pct_sum_compact_write_bytes": -20.825774133531702,
+            "online_vs_static_pct_sum_ops_per_sec": -3.3158020175625995
+          },
+          "epochs": null,
+          "epochs_per_stage": null,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_realistic_big_a.json",
+          "static_high_stall_p99_us": 0.0,
+          "static_total_stall_count": 0.0,
+          "trial": "realistic_big_a",
+          "value_size": null,
+          "writes_high": null
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -8.626825685174817,
+            "online_vs_static_pct_high_sum_ops_per_sec": 34.216409195555705,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -13.137556498758277,
+            "online_vs_static_pct_sum_compact_write_bytes": -18.42825837917809,
+            "online_vs_static_pct_sum_ops_per_sec": -4.6544149348922215
+          },
+          "epochs": null,
+          "epochs_per_stage": null,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_realistic_big_b.json",
+          "static_high_stall_p99_us": 0.0,
+          "static_total_stall_count": 0.0,
+          "trial": "realistic_big_b",
+          "value_size": null,
+          "writes_high": null
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -9.618186525690927,
+            "online_vs_static_pct_high_sum_ops_per_sec": 37.91272587899762,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -5.402669423281209,
+            "online_vs_static_pct_sum_compact_write_bytes": -20.701100777536286,
+            "online_vs_static_pct_sum_ops_per_sec": -1.299213927938288
+          },
+          "epochs": null,
+          "epochs_per_stage": null,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_realistic_big_c.json",
+          "static_high_stall_p99_us": 0.0,
+          "static_total_stall_count": 0.0,
+          "trial": "realistic_big_c",
+          "value_size": null,
+          "writes_high": null
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -16.87378432864257,
+            "online_vs_static_pct_high_sum_ops_per_sec": 42.123456237694654,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -7.370063996793297,
+            "online_vs_static_pct_sum_compact_write_bytes": -24.260022979860384,
+            "online_vs_static_pct_sum_ops_per_sec": -1.3058633181935875
+          },
+          "epochs": null,
+          "epochs_per_stage": null,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_realistic_big_d.json",
+          "static_high_stall_p99_us": 0.0,
+          "static_total_stall_count": 0.0,
+          "trial": "realistic_big_d",
+          "value_size": null,
+          "writes_high": null
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -6.239106384549772,
+            "online_vs_static_pct_high_sum_ops_per_sec": 36.71426171678146,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -8.519721826920495,
+            "online_vs_static_pct_sum_compact_write_bytes": -20.875157057755004,
+            "online_vs_static_pct_sum_ops_per_sec": 2.050200179451842
+          },
+          "epochs": null,
+          "epochs_per_stage": null,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_realistic_big_e.json",
+          "static_high_stall_p99_us": 0.0,
+          "static_total_stall_count": 0.0,
+          "trial": "realistic_big_e",
+          "value_size": null,
+          "writes_high": null
+        }
+      ],
+      "verdict": "baseline"
+    },
+    {
+      "indicators": {
+        "max_failed_online": 0.0,
+        "max_failed_static": 0.0,
+        "max_static_high_stall_p99": 21062.98864240625,
+        "max_static_total_stall_count": 793080.0
+      },
+      "n": 2,
+      "name": "drift_slow",
+      "pattern": "remote-results/realistic_analysis_sens_drift_slow_*.json",
+      "stats": {
+        "compact_bytes": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": -19.779673735482174,
+          "mean": -21.269609678118073,
+          "min": -22.759545620753975,
+          "n": 2,
+          "range": 2.979871885271802,
+          "sem": 1.4899359426359007,
+          "stdev": 2.1070876171428328
+        },
+        "high_p99": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": -0.6737496501342543,
+          "mean": -7.671079315018133,
+          "min": -14.668408979902011,
+          "n": 2,
+          "range": 13.994659329767757,
+          "sem": 6.997329664883878,
+          "stdev": 9.895718512474366
+        },
+        "high_tput": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": 40.88707011524389,
+          "mean": 37.59807167645448,
+          "min": 34.30907323766508,
+          "n": 2,
+          "range": 6.577996877578805,
+          "sem": 3.2889984387894025,
+          "stdev": 4.651346198759909
+        },
+        "mid_tput": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": -7.1695224052005875,
+          "mean": -7.782327399846624,
+          "min": -8.39513239449266,
+          "n": 2,
+          "range": 1.2256099892920718,
+          "sem": 0.6128049946460359,
+          "stdev": 0.8666371345183959
+        },
+        "overlap": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": 3.4285714285714284,
+          "mean": 3.4285714285714284,
+          "min": 3.4285714285714284,
+          "n": 2,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": 1.7424631428255148,
+          "mean": 1.1172911363980171,
+          "min": 0.4921191299705193,
+          "n": 2,
+          "range": 1.2503440128549954,
+          "sem": 0.6251720064274977,
+          "stdev": 0.884126730305767
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -14.668408979902011,
+            "online_vs_static_pct_high_sum_ops_per_sec": 40.88707011524389,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -8.39513239449266,
+            "online_vs_static_pct_sum_compact_write_bytes": -22.759545620753975,
+            "online_vs_static_pct_sum_ops_per_sec": 0.4921191299705193
+          },
+          "epochs": 8,
+          "epochs_per_stage": 3,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.4285714285714284,
+          "path": "remote-results/realistic_analysis_sens_drift_slow_a.json",
+          "static_high_stall_p99_us": 21062.98864240625,
+          "static_total_stall_count": 772362.0,
+          "trial": "sens_drift_slow_a",
+          "value_size": 512,
+          "writes_high": 100000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -0.6737496501342543,
+            "online_vs_static_pct_high_sum_ops_per_sec": 34.30907323766508,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -7.1695224052005875,
+            "online_vs_static_pct_sum_compact_write_bytes": -19.779673735482174,
+            "online_vs_static_pct_sum_ops_per_sec": 1.7424631428255148
+          },
+          "epochs": 8,
+          "epochs_per_stage": 3,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.4285714285714284,
+          "path": "remote-results/realistic_analysis_sens_drift_slow_b.json",
+          "static_high_stall_p99_us": 20495.19001140625,
+          "static_total_stall_count": 793080.0,
+          "trial": "sens_drift_slow_b",
+          "value_size": 512,
+          "writes_high": 100000
+        }
+      ],
+      "verdict": "promote"
+    },
+    {
+      "indicators": {
+        "max_failed_online": 0.0,
+        "max_failed_static": 0.0,
+        "max_static_high_stall_p99": 21300.12933975,
+        "max_static_total_stall_count": 776965.0
+      },
+      "n": 5,
+      "name": "drift_fast",
+      "pattern": "remote-results/realistic_analysis_sens_drift_fast_*.json",
+      "stats": {
+        "compact_bytes": {
+          "ci95_high": -16.383519532772503,
+          "ci95_low": -21.57228341883708,
+          "ci95_margin": 2.594381943032287,
+          "max": -16.424493557145432,
+          "mean": -18.977901475804792,
+          "min": -22.0071229375667,
+          "n": 5,
+          "range": 5.582629380421267,
+          "sem": 0.9345756278934753,
+          "stdev": 2.0897746340843595
+        },
+        "high_p99": {
+          "ci95_high": -1.8954962653877274,
+          "ci95_low": -11.877636906245899,
+          "ci95_margin": 4.991070320429086,
+          "max": -2.013109873571243,
+          "mean": -6.886566585816813,
+          "min": -12.597375862955818,
+          "n": 5,
+          "range": 10.584265989384576,
+          "sem": 1.7979359943908813,
+          "stdev": 4.0203071026516914
+        },
+        "high_tput": {
+          "ci95_high": 36.88461372620933,
+          "ci95_low": 30.983285143766853,
+          "ci95_margin": 2.95066429122124,
+          "max": 37.47108799404272,
+          "mean": 33.933949434988094,
+          "min": 31.297684379601126,
+          "n": 5,
+          "range": 6.173403614441593,
+          "sem": 1.0629194132641355,
+          "stdev": 2.376760062662799
+        },
+        "mid_tput": {
+          "ci95_high": -5.196255066749076,
+          "ci95_low": -11.835885824258929,
+          "ci95_margin": 3.3198153787549267,
+          "max": -4.847288348853437,
+          "mean": -8.516070445504003,
+          "min": -11.360713788424418,
+          "n": 5,
+          "range": 6.513425439570981,
+          "sem": 1.195898911655233,
+          "stdev": 2.674111260679117
+        },
+        "overlap": {
+          "ci95_high": 3.142857142857143,
+          "ci95_low": 3.142857142857143,
+          "ci95_margin": 0.0,
+          "max": 3.142857142857143,
+          "mean": 3.142857142857143,
+          "min": 3.142857142857143,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": -0.6443081843380556,
+          "ci95_low": -9.43513345291295,
+          "ci95_margin": 4.395412634287447,
+          "max": 0.2641959912258798,
+          "mean": -5.0397208186255025,
+          "min": -8.429323496825532,
+          "n": 5,
+          "range": 8.693519488051411,
+          "sem": 1.5833618999594552,
+          "stdev": 3.5405048412925635
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -4.972168227678921,
+            "online_vs_static_pct_high_sum_ops_per_sec": 31.297684379601126,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -8.149736011162222,
+            "online_vs_static_pct_sum_compact_write_bytes": -16.424493557145432,
+            "online_vs_static_pct_sum_ops_per_sec": -8.429323496825532
+          },
+          "epochs": 8,
+          "epochs_per_stage": 1,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_drift_fast_a.json",
+          "static_high_stall_p99_us": 20856.1251645625,
+          "static_total_stall_count": 749031.0,
+          "trial": "sens_drift_fast_a",
+          "value_size": 512,
+          "writes_high": 100000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -8.84681712487348,
+            "online_vs_static_pct_high_sum_ops_per_sec": 34.241249521062,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -10.873225339759177,
+            "online_vs_static_pct_sum_compact_write_bytes": -19.747282402789192,
+            "online_vs_static_pct_sum_ops_per_sec": 0.2641959912258798
+          },
+          "epochs": 8,
+          "epochs_per_stage": 1,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_drift_fast_b.json",
+          "static_high_stall_p99_us": 21300.12933975,
+          "static_total_stall_count": 756754.0,
+          "trial": "sens_drift_fast_b",
+          "value_size": 512,
+          "writes_high": 100000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -12.597375862955818,
+            "online_vs_static_pct_high_sum_ops_per_sec": 37.47108799404272,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -4.847288348853437,
+            "online_vs_static_pct_sum_compact_write_bytes": -22.0071229375667,
+            "online_vs_static_pct_sum_ops_per_sec": -4.382718792216575
+          },
+          "epochs": 8,
+          "epochs_per_stage": 1,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_drift_fast_c.json",
+          "static_high_stall_p99_us": 21186.458476,
+          "static_total_stall_count": 776965.0,
+          "trial": "sens_drift_fast_c",
+          "value_size": 512,
+          "writes_high": 100000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -2.013109873571243,
+            "online_vs_static_pct_high_sum_ops_per_sec": 32.255051982537466,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -7.349388739320764,
+            "online_vs_static_pct_sum_compact_write_bytes": -17.905106630481413,
+            "online_vs_static_pct_sum_ops_per_sec": -4.483874997588759
+          },
+          "epochs": 8,
+          "epochs_per_stage": 1,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_drift_fast_d.json",
+          "static_high_stall_p99_us": 21109.382651625,
+          "static_total_stall_count": 762265.0,
+          "trial": "sens_drift_fast_d",
+          "value_size": 512,
+          "writes_high": 100000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -6.003361840004601,
+            "online_vs_static_pct_high_sum_ops_per_sec": 34.40467329769718,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -11.360713788424418,
+            "online_vs_static_pct_sum_compact_write_bytes": -18.805501851041235,
+            "online_vs_static_pct_sum_ops_per_sec": -8.166882797722524
+          },
+          "epochs": 8,
+          "epochs_per_stage": 1,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_drift_fast_e.json",
+          "static_high_stall_p99_us": 20367.29718825,
+          "static_total_stall_count": 766212.0,
+          "trial": "sens_drift_fast_e",
+          "value_size": 512,
+          "writes_high": 100000
+        }
+      ],
+      "verdict": "promote"
+    },
+    {
+      "indicators": {
+        "max_failed_online": 0.0,
+        "max_failed_static": 0.0,
+        "max_static_high_stall_p99": 19027.6684641875,
+        "max_static_total_stall_count": 543357.0
+      },
+      "n": 2,
+      "name": "press_low",
+      "pattern": "remote-results/realistic_analysis_sens_press_low_*.json",
+      "stats": {
+        "compact_bytes": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": -15.522171650709868,
+          "mean": -19.020469684260082,
+          "min": -22.518767717810295,
+          "n": 2,
+          "range": 6.996596067100427,
+          "sem": 3.498298033550213,
+          "stdev": 4.9473405242698405
+        },
+        "high_p99": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": -8.514276539399471,
+          "mean": -10.043069430579017,
+          "min": -11.571862321758564,
+          "n": 2,
+          "range": 3.0575857823590926,
+          "sem": 1.528792891179546,
+          "stdev": 2.1620396407656894
+        },
+        "high_tput": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": 35.223959132665364,
+          "mean": 33.033796080681164,
+          "min": 30.84363302869696,
+          "n": 2,
+          "range": 4.380326103968404,
+          "sem": 2.190163051984202,
+          "stdev": 3.0973582919245084
+        },
+        "mid_tput": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": -3.327925095462922,
+          "mean": -9.21372128749259,
+          "min": -15.099517479522257,
+          "n": 2,
+          "range": 11.771592384059336,
+          "sem": 5.885796192029667,
+          "stdev": 8.323772800132273
+        },
+        "overlap": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": 3.142857142857143,
+          "mean": 3.142857142857143,
+          "min": 3.142857142857143,
+          "n": 2,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": null,
+          "ci95_low": null,
+          "ci95_margin": null,
+          "max": 1.9943320885037203,
+          "mean": -0.4484999767802662,
+          "min": -2.8913320420642528,
+          "n": 2,
+          "range": 4.885664130567973,
+          "sem": 2.4428320652839863,
+          "stdev": 3.4546862373244918
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -8.514276539399471,
+            "online_vs_static_pct_high_sum_ops_per_sec": 30.84363302869696,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -15.099517479522257,
+            "online_vs_static_pct_sum_compact_write_bytes": -15.522171650709868,
+            "online_vs_static_pct_sum_ops_per_sec": 1.9943320885037203
+          },
+          "epochs": 8,
+          "epochs_per_stage": 2,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_press_low_a.json",
+          "static_high_stall_p99_us": 18682.10074559375,
+          "static_total_stall_count": 519645.0,
+          "trial": "sens_press_low_a",
+          "value_size": 512,
+          "writes_high": 70000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -11.571862321758564,
+            "online_vs_static_pct_high_sum_ops_per_sec": 35.223959132665364,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -3.327925095462922,
+            "online_vs_static_pct_sum_compact_write_bytes": -22.518767717810295,
+            "online_vs_static_pct_sum_ops_per_sec": -2.8913320420642528
+          },
+          "epochs": 8,
+          "epochs_per_stage": 2,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_press_low_b.json",
+          "static_high_stall_p99_us": 19027.6684641875,
+          "static_total_stall_count": 543357.0,
+          "trial": "sens_press_low_b",
+          "value_size": 512,
+          "writes_high": 70000
+        }
+      ],
+      "verdict": "promote"
+    },
+    {
+      "indicators": {
+        "max_failed_online": 0.0,
+        "max_failed_static": 0.0,
+        "max_static_high_stall_p99": 22981.2044405,
+        "max_static_total_stall_count": 1217031.0
+      },
+      "n": 5,
+      "name": "press_high",
+      "pattern": "remote-results/realistic_analysis_sens_press_high_*.json",
+      "stats": {
+        "compact_bytes": {
+          "ci95_high": -16.79865641178026,
+          "ci95_low": -18.44427246007228,
+          "ci95_margin": 0.8228080241460085,
+          "max": -16.836795374086254,
+          "mean": -17.62146443592627,
+          "min": -18.545503634982417,
+          "n": 5,
+          "range": 1.708708260896163,
+          "sem": 0.29640058506700595,
+          "stdev": 0.6627718567805344
+        },
+        "high_p99": {
+          "ci95_high": -8.967064204633036,
+          "ci95_low": -16.88881600737965,
+          "ci95_margin": 3.960875901373306,
+          "max": -8.106641397317011,
+          "mean": -12.927940106006343,
+          "min": -17.013188770360703,
+          "n": 5,
+          "range": 8.906547373043692,
+          "sem": 1.4268284947310181,
+          "stdev": 3.1904855064522573
+        },
+        "high_tput": {
+          "ci95_high": 35.620650003379176,
+          "ci95_low": 32.200278400635646,
+          "ci95_margin": 1.7101858013717635,
+          "max": 35.890313061920786,
+          "mean": 33.91046420200741,
+          "min": 32.266863081331785,
+          "n": 5,
+          "range": 3.623449980589001,
+          "sem": 0.6160611676411252,
+          "stdev": 1.3775546491434496
+        },
+        "mid_tput": {
+          "ci95_high": 2.784536959147343,
+          "ci95_low": -11.080143278799497,
+          "ci95_margin": 6.93234011897342,
+          "max": 5.743462199961984,
+          "mean": -4.147803159826077,
+          "min": -7.315735535730469,
+          "n": 5,
+          "range": 13.059197735692454,
+          "sem": 2.4972406768636244,
+          "stdev": 5.583999909644651
+        },
+        "overlap": {
+          "ci95_high": 3.142857142857143,
+          "ci95_low": 3.142857142857143,
+          "ci95_margin": 0.0,
+          "max": 3.142857142857143,
+          "mean": 3.142857142857143,
+          "min": 3.142857142857143,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 2.6438954083315185,
+          "ci95_low": -2.5275030778743615,
+          "ci95_margin": 2.58569924310294,
+          "max": 2.609566218440037,
+          "mean": 0.0581961652285784,
+          "min": -2.7522529673228155,
+          "n": 5,
+          "range": 5.361819185762853,
+          "sem": 0.9314478541437105,
+          "stdev": 2.082780719361646
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -13.759839351869024,
+            "online_vs_static_pct_high_sum_ops_per_sec": 33.93764181476831,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -7.315735535730469,
+            "online_vs_static_pct_sum_compact_write_bytes": -16.836795374086254,
+            "online_vs_static_pct_sum_ops_per_sec": 2.609566218440037
+          },
+          "epochs": 8,
+          "epochs_per_stage": 2,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_press_high_a.json",
+          "static_high_stall_p99_us": 22981.2044405,
+          "static_total_stall_count": 1189616.0,
+          "trial": "sens_press_high_a",
+          "value_size": 512,
+          "writes_high": 130000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -17.013188770360703,
+            "online_vs_static_pct_high_sum_ops_per_sec": 35.890313061920786,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -7.271281233189264,
+            "online_vs_static_pct_sum_compact_write_bytes": -17.21775528461566,
+            "online_vs_static_pct_sum_ops_per_sec": 1.3365324431462549
+          },
+          "epochs": 8,
+          "epochs_per_stage": 2,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_press_high_b.json",
+          "static_high_stall_p99_us": 22566.11615921875,
+          "static_total_stall_count": 1206164.0,
+          "trial": "sens_press_high_b",
+          "value_size": 512,
+          "writes_high": 130000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -13.087335655644614,
+            "online_vs_static_pct_high_sum_ops_per_sec": 34.40054892018561,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -5.392887824550314,
+            "online_vs_static_pct_sum_compact_write_bytes": -17.541981489028498,
+            "online_vs_static_pct_sum_ops_per_sec": 0.17713831248644352
+          },
+          "epochs": 8,
+          "epochs_per_stage": 2,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_press_high_c.json",
+          "static_high_stall_p99_us": 22702.7162976875,
+          "static_total_stall_count": 1217031.0,
+          "trial": "sens_press_high_c",
+          "value_size": 512,
+          "writes_high": 130000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -12.672695354840371,
+            "online_vs_static_pct_high_sum_ops_per_sec": 33.056954131830565,
+            "online_vs_static_pct_mid_sum_ops_per_sec": 5.743462199961984,
+            "online_vs_static_pct_sum_compact_write_bytes": -18.545503634982417,
+            "online_vs_static_pct_sum_ops_per_sec": -1.080003180607028
+          },
+          "epochs": 8,
+          "epochs_per_stage": 2,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_press_high_d.json",
+          "static_high_stall_p99_us": 22077.73760778125,
+          "static_total_stall_count": 1195395.0,
+          "trial": "sens_press_high_d",
+          "value_size": 512,
+          "writes_high": 130000
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_high_mean_write_p99_us": -8.106641397317011,
+            "online_vs_static_pct_high_sum_ops_per_sec": 32.266863081331785,
+            "online_vs_static_pct_mid_sum_ops_per_sec": -6.502573405622325,
+            "online_vs_static_pct_sum_compact_write_bytes": -17.965286396918533,
+            "online_vs_static_pct_sum_ops_per_sec": -2.7522529673228155
+          },
+          "epochs": 8,
+          "epochs_per_stage": 2,
+          "failed_online": 0.0,
+          "failed_static": 0.0,
+          "overlap_after_warmup": 3.142857142857143,
+          "path": "remote-results/realistic_analysis_sens_press_high_e.json",
+          "static_high_stall_p99_us": 22675.421114875,
+          "static_total_stall_count": 1214888.0,
+          "trial": "sens_press_high_e",
+          "value_size": 512,
+          "writes_high": 130000
+        }
+      ],
+      "verdict": "promote"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+\section{Conclusion}
+
+SAKI addresses multi-tenant \rocksdb compaction-debt mismatch with an external
+conserved rank-and-assign controller that reallocates per-tenant background
+budgets from previous-window observations while preserving the aggregate host
+budget. A demand-observability model explains why demand-aware score instances
+track bounded drift and why pressure-only ranking can chase stale debt.
+Repeated epoch and continuous runs show
+high-pressure write-tail and throughput gains; stronger baselines, score
+ablations, ranking-margin replay, cgroup-v2, and rate-limiter coverage checks
+tie those gains to host-level placement of a real maintenance-I/O knob.
+Workload variants, collateral accounting, and trace qualification define the
+current evidence boundary. For bounded write-heavy drift under fixed shared
+maintenance budgets, SAKI shows that shared compaction budgeting is not merely
+a configuration detail but a host-level control point.

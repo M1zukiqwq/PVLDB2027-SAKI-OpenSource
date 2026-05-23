@@ -1,0 +1,484 @@
+{
+  "gate": {
+    "online_success_gate": {
+      "adaptation_ok": true,
+      "bytes_ok": false,
+      "liveness_ok": true,
+      "p99_ok": false,
+      "pass": false,
+      "rule": "Pass if online improves high-tier P99 >=15% or high-tier write throughput >=20%, lowers compaction bytes, keeps total throughput loss ideally <5%, and converges within 1-2 windows.",
+      "throughput_ok": false,
+      "total_throughput_ok": true
+    }
+  },
+  "notes": {
+    "actuation": "By default the tenant harness changes RocksDB RateLimiter::SetBytesPerSecond while the process runs; the LD_PRELOAD userspace write throttle is optional diagnostic machinery. max_background_jobs remains process-launch fixed.",
+    "continuous_processes": "Each tenant is one long-running embedded RocksDB process for the workload phase.",
+    "latency": "Per-window write P99/P999 are measured by the custom harness, not stock db_bench whole-run output.",
+    "runtime_control": "Workload mix/rate/hot range and budget files are changed while tenants continue running."
+  },
+  "online_vs_static": {
+    "online_vs_static_pct_compact_output_bytes": 6.2962694452636745,
+    "online_vs_static_pct_compact_output_bytes_per_write": -0.6905981641482672,
+    "online_vs_static_pct_high_compact_output_bytes": 11.322272630231746,
+    "online_vs_static_pct_high_compact_output_bytes_per_write": -4.4059770809043535,
+    "online_vs_static_pct_high_total_throughput": 14.596620080307924,
+    "online_vs_static_pct_high_write_p999_us": 12.348138839099509,
+    "online_vs_static_pct_high_write_p99_us": -5.199954966581226,
+    "online_vs_static_pct_high_write_throughput": 16.45317273073384,
+    "online_vs_static_pct_mean_high_pending_compaction_bytes": -19.707985147817435,
+    "online_vs_static_pct_total_throughput": 5.727980963033172
+  },
+  "per_policy": {
+    "online": {
+      "adaptation_lag": {
+        "change_windows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "lags_windows": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "max_lag_windows": 1
+      },
+      "compact_output_bytes": 4306493825.0,
+      "compact_output_bytes_per_write": 4458.86205929006,
+      "exact_high_windows_after_warmup": 0,
+      "failed_tenants": 0.0,
+      "flush_output_bytes": 935647449.0,
+      "high_compact_output_bytes": 1473281313.0,
+      "high_compact_output_bytes_per_write": 3792.6106172820437,
+      "high_flush_output_bytes": 353011654.0,
+      "high_total_throughput": 3444.3375,
+      "high_write_mean_us": 2942.0080253230058,
+      "high_write_p999_us": 34062.35137118012,
+      "high_write_p99_us": 11567.382046074123,
+      "high_write_throughput": 2427.88125,
+      "mean_high_overlap_after_warmup": 2.5714285714285716,
+      "mean_high_pending_compaction_bytes": 12141179.78125,
+      "mean_pending_compaction_bytes": 11930845.296875,
+      "total_throughput": 16861.4125,
+      "total_write_throughput": 6036.425,
+      "windows_recorded": 8.0
+    },
+    "static": {
+      "adaptation_lag": {
+        "change_windows": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "lags_windows": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "max_lag_windows": null
+      },
+      "compact_output_bytes": 4051406364.0,
+      "compact_output_bytes_per_write": 4489.869012261399,
+      "exact_high_windows_after_warmup": 0,
+      "failed_tenants": 0.0,
+      "flush_output_bytes": 878739272.0,
+      "high_compact_output_bytes": 1323438049.0,
+      "high_compact_output_bytes_per_write": 3967.413967389838,
+      "high_flush_output_bytes": 296281504.0,
+      "high_total_throughput": 3005.61875,
+      "high_write_mean_us": 3483.6947567548123,
+      "high_write_p999_us": 30318.572005863713,
+      "high_write_p99_us": 12201.873999106652,
+      "high_write_throughput": 2084.85625,
+      "mean_high_overlap_after_warmup": 0.0,
+      "mean_high_pending_compaction_bytes": 15121279.25,
+      "mean_pending_compaction_bytes": 13250249.7421875,
+      "total_throughput": 15947.91875,
+      "total_write_throughput": 5639.65,
+      "windows_recorded": 8.0
+    }
+  },
+  "policies": [
+    "static",
+    "online"
+  ],
+  "trial": "wm_driftfast_c",
+  "window_series": {
+    "online": [
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 138701485.0,
+        "high_overlap": 0,
+        "high_write_ops": 121028.0,
+        "high_write_p999_us": 2249.6510890041973,
+        "high_write_p99_us": 2199.0,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 138701485.0,
+        "total_write_ops": 293254.0,
+        "true_high": [
+          "tenant1",
+          "tenant2",
+          "tenant3",
+          "tenant4"
+        ],
+        "window": 0
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [
+          "tenant1",
+          "tenant2",
+          "tenant3",
+          "tenant4"
+        ],
+        "high_budget": 9750000.0,
+        "high_compact_output_bytes": 215060504.0,
+        "high_overlap": 3,
+        "high_write_ops": 65927.0,
+        "high_write_p999_us": 43587.519377493285,
+        "high_write_p99_us": 8440.532300878243,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 731964943.0,
+        "total_write_ops": 106331.0,
+        "true_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "window": 1
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "high_budget": 8500000.0,
+        "high_compact_output_bytes": 50763003.0,
+        "high_overlap": 2,
+        "high_write_ops": 28729.0,
+        "high_write_p999_us": 10709.076925754463,
+        "high_write_p99_us": 9584.314490584427,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 360399947.0,
+        "total_write_ops": 125928.0,
+        "true_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "window": 2
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "high_budget": 9750000.0,
+        "high_compact_output_bytes": 292865677.0,
+        "high_overlap": 3,
+        "high_write_ops": 36737.0,
+        "high_write_p999_us": 25087.970247978876,
+        "high_write_p99_us": 14081.448212973297,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 469356307.0,
+        "total_write_ops": 102320.0,
+        "true_high": [
+          "tenant5",
+          "tenant6",
+          "tenant7",
+          "tenant8"
+        ],
+        "window": 3
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [
+          "tenant5",
+          "tenant6",
+          "tenant7",
+          "tenant8"
+        ],
+        "high_budget": 8500000.0,
+        "high_compact_output_bytes": 205943540.0,
+        "high_overlap": 2,
+        "high_write_ops": 22449.0,
+        "high_write_p999_us": 59069.46193594369,
+        "high_write_p99_us": 30503.641632143972,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 653006144.0,
+        "total_write_ops": 56529.0,
+        "true_high": [
+          "tenant10",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ],
+        "window": 4
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [
+          "tenant10",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ],
+        "high_budget": 9750000.0,
+        "high_compact_output_bytes": 169209950.0,
+        "high_overlap": 3,
+        "high_write_ops": 50907.0,
+        "high_write_p999_us": 50833.55124049738,
+        "high_write_p99_us": 23543.463433319583,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 754941602.0,
+        "total_write_ops": 102958.0,
+        "true_high": [
+          "tenant10",
+          "tenant11",
+          "tenant8",
+          "tenant9"
+        ],
+        "window": 5
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [
+          "tenant10",
+          "tenant11",
+          "tenant8",
+          "tenant9"
+        ],
+        "high_budget": 8500000.0,
+        "high_compact_output_bytes": 305556432.0,
+        "high_overlap": 2,
+        "high_write_ops": 30058.0,
+        "high_write_p999_us": 138472.27899394504,
+        "high_write_p99_us": 13160.842371415263,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 779944371.0,
+        "total_write_ops": 87177.0,
+        "true_high": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13"
+        ],
+        "window": 6
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13"
+        ],
+        "high_budget": 9750000.0,
+        "high_compact_output_bytes": 95180722.0,
+        "high_overlap": 3,
+        "high_write_ops": 32626.0,
+        "high_write_p999_us": 23928.105621283637,
+        "high_write_p99_us": 18369.624655182983,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 418179026.0,
+        "total_write_ops": 91331.0,
+        "true_high": [
+          "tenant11",
+          "tenant12",
+          "tenant13",
+          "tenant14"
+        ],
+        "window": 7
+      }
+    ],
+    "static": [
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 94303903.0,
+        "high_overlap": 0,
+        "high_write_ops": 111438.0,
+        "high_write_p999_us": 3307.0188086649077,
+        "high_write_p99_us": 2739.731168901093,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 98036404.0,
+        "total_write_ops": 289155.0,
+        "true_high": [
+          "tenant1",
+          "tenant2",
+          "tenant3",
+          "tenant4"
+        ],
+        "window": 0
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 138376205.0,
+        "high_overlap": 0,
+        "high_write_ops": 58799.0,
+        "high_write_p999_us": 8621.565009609007,
+        "high_write_p99_us": 7867.047075630538,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 293700707.0,
+        "total_write_ops": 100659.0,
+        "true_high": [
+          "tenant2",
+          "tenant3",
+          "tenant4",
+          "tenant5"
+        ],
+        "window": 1
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 288525870.0,
+        "high_overlap": 0,
+        "high_write_ops": 20173.0,
+        "high_write_p999_us": 160059.20279581618,
+        "high_write_p99_us": 11889.992911317107,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 736424787.0,
+        "total_write_ops": 121833.0,
+        "true_high": [
+          "tenant4",
+          "tenant5",
+          "tenant6",
+          "tenant7"
+        ],
+        "window": 2
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 40187255.0,
+        "high_overlap": 0,
+        "high_write_ops": 2588.0,
+        "high_write_p999_us": 36999.0,
+        "high_write_p99_us": 19999.0,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 339042765.0,
+        "total_write_ops": 58390.0,
+        "true_high": [
+          "tenant5",
+          "tenant6",
+          "tenant7",
+          "tenant8"
+        ],
+        "window": 3
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 164600903.0,
+        "high_overlap": 0,
+        "high_write_ops": 28787.0,
+        "high_write_p999_us": 40216.18136658909,
+        "high_write_p99_us": 20987.571230069127,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 953814859.0,
+        "total_write_ops": 100125.0,
+        "true_high": [
+          "tenant10",
+          "tenant7",
+          "tenant8",
+          "tenant9"
+        ],
+        "window": 4
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 156519286.0,
+        "high_overlap": 0,
+        "high_write_ops": 42540.0,
+        "high_write_p999_us": 50548.50634696756,
+        "high_write_p99_us": 22604.782792665726,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 340496313.0,
+        "total_write_ops": 71097.0,
+        "true_high": [
+          "tenant10",
+          "tenant11",
+          "tenant8",
+          "tenant9"
+        ],
+        "window": 5
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 330938138.0,
+        "high_overlap": 0,
+        "high_write_ops": 38657.0,
+        "high_write_p999_us": 31165.184649610677,
+        "high_write_p99_us": 18428.914375145512,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 959846842.0,
+        "total_write_ops": 96323.0,
+        "true_high": [
+          "tenant10",
+          "tenant11",
+          "tenant12",
+          "tenant13"
+        ],
+        "window": 6
+      },
+      {
+        "alive_tenants": 0,
+        "assigned_high": [],
+        "high_budget": 6000000.0,
+        "high_compact_output_bytes": 109986489.0,
+        "high_overlap": 0,
+        "high_write_ops": 30595.0,
+        "high_write_p999_us": 45781.807648308546,
+        "high_write_p99_us": 23944.513972871384,
+        "total_budget": 96000000.0,
+        "total_compact_output_bytes": 330043687.0,
+        "total_write_ops": 64762.0,
+        "true_high": [
+          "tenant11",
+          "tenant12",
+          "tenant13",
+          "tenant14"
+        ],
+        "window": 7
+      }
+    ]
+  }
+}

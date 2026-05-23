@@ -1,0 +1,19 @@
+mode,metric,mean
+demand,High P99,27.00053313558658
+demand,High P999,47.1131161781649
+demand,High write tput,26.127523093202136
+demand,Bytes/write,11.942695825141874
+demand,Overlap,3.0
+demand,Max lag,0.0
+pressure,High P99,14.135461728449197
+pressure,High P999,7.083764618828534
+pressure,High write tput,9.805123871552814
+pressure,Bytes/write,7.664751320562292
+pressure,Overlap,1.8571428571428572
+pressure,Max lag,5.0
+hybrid,High P99,35.23108264603162
+hybrid,High P999,66.61492430740334
+hybrid,High write tput,15.63765825197322
+hybrid,Bytes/write,10.237291194401475
+hybrid,Overlap,2.2857142857142856
+hybrid,Max lag,2.0

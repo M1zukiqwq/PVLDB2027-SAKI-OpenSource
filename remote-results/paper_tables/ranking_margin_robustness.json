@@ -1,0 +1,3178 @@
+{
+  "aggregate": {
+    "configs": {
+      "anchor_double": {
+        "exact_windows": 35,
+        "jaccard_vs_reference": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "n": 35
+        },
+        "true_overlap": {
+          "max": 3.0,
+          "mean": 3.0,
+          "min": 3.0,
+          "n": 35
+        }
+      },
+      "anchor_half": {
+        "exact_windows": 31,
+        "jaccard_vs_reference": {
+          "max": 1.0,
+          "mean": 0.9466666666666667,
+          "min": 0.3333333333333333,
+          "n": 35
+        },
+        "true_overlap": {
+          "max": 3.0,
+          "mean": 2.857142857142857,
+          "min": 1.0,
+          "n": 35
+        }
+      },
+      "demand_only": {
+        "exact_windows": 35,
+        "jaccard_vs_reference": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "n": 35
+        },
+        "true_overlap": {
+          "max": 3.0,
+          "mean": 3.0,
+          "min": 3.0,
+          "n": 35
+        }
+      },
+      "pressure_only": {
+        "exact_windows": 10,
+        "jaccard_vs_reference": {
+          "max": 1.0,
+          "mean": 0.6108843537414965,
+          "min": 0.14285714285714285,
+          "n": 35
+        },
+        "true_overlap": {
+          "max": 3.0,
+          "mean": 2.0285714285714285,
+          "min": 1.0,
+          "n": 35
+        }
+      },
+      "residual_double": {
+        "exact_windows": 31,
+        "jaccard_vs_reference": {
+          "max": 1.0,
+          "mean": 0.9466666666666667,
+          "min": 0.3333333333333333,
+          "n": 35
+        },
+        "true_overlap": {
+          "max": 3.0,
+          "mean": 2.857142857142857,
+          "min": 1.0,
+          "n": 35
+        }
+      },
+      "residual_half": {
+        "exact_windows": 35,
+        "jaccard_vs_reference": {
+          "max": 1.0,
+          "mean": 1.0,
+          "min": 1.0,
+          "n": 35
+        },
+        "true_overlap": {
+          "max": 3.0,
+          "mean": 3.0,
+          "min": 3.0,
+          "n": 35
+        }
+      }
+    },
+    "decision_count": 35,
+    "high_count": 4,
+    "reference_margin": {
+      "max": 8.236612589416502,
+      "mean": 5.303902418818882,
+      "min": 0.3934392396545423,
+      "n": 35
+    },
+    "reference_matches_recorded": {
+      "exact_windows": 35,
+      "jaccard_vs_recorded": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0,
+        "n": 35
+      }
+    },
+    "reference_true_overlap": {
+      "max": 3.0,
+      "mean": 3.0,
+      "min": 3.0,
+      "n": 35
+    },
+    "trial_count": 5
+  },
+  "inputs": {
+    "notes": "Post-warmup decision w is replayed from window_records[w-1].",
+    "results_dir": "${SAKI_RUN_ROOT}/results",
+    "trials": [
+      "embedded_demand2f_16t",
+      "embedded_demand2f_16t_b",
+      "embedded_demand2f_16t_c",
+      "embedded_demand2f_16t_d",
+      "embedded_demand2f_16t_e"
+    ]
+  },
+  "trials": [
+    {
+      "decisions": [
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "reference_margin": 8.080009943389891,
+          "true_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "true_overlap": 3,
+          "window": 1
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant8"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "reference_margin": 4.600630187530516,
+          "true_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "true_overlap": 3,
+          "window": 2
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.3333333333333333,
+              "top": [
+                "tenant0",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "reference_margin": 6.609831044311523,
+          "true_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "true_overlap": 3,
+          "window": 3
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "reference_margin": 4.905600004119872,
+          "true_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "true_overlap": 3,
+          "window": 4
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.14285714285714285,
+              "top": [
+                "tenant11",
+                "tenant12",
+                "tenant4",
+                "tenant8"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "reference_margin": 5.893681594543457,
+          "true_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 5
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant13",
+                "tenant6",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 6.303735172424316,
+          "true_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 6
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant10",
+                "tenant12",
+                "tenant7",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant10",
+                "tenant12",
+                "tenant7",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 2.330357132263181,
+          "true_high": [
+            "tenant10",
+            "tenant11",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 7
+        }
+      ],
+      "high_count": 4,
+      "path": "${SAKI_RUN_ROOT}/results/embedded_continuous_online_embedded_demand2f_16t.json",
+      "trial": "embedded_demand2f_16t"
+    },
+    {
+      "decisions": [
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "reference_margin": 8.13714492767334,
+          "true_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "true_overlap": 3,
+          "window": 1
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant8"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "reference_margin": 4.484972082824706,
+          "true_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "true_overlap": 3,
+          "window": 2
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.3333333333333333,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "reference_margin": 6.5437300625610355,
+          "true_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "true_overlap": 3,
+          "window": 3
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant7"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "reference_margin": 5.335404509582517,
+          "true_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "true_overlap": 3,
+          "window": 4
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.14285714285714285,
+              "top": [
+                "tenant10",
+                "tenant11",
+                "tenant4",
+                "tenant8"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "reference_margin": 5.322713746032715,
+          "true_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 5
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant13",
+                "tenant6",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 6.231950203552243,
+          "true_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 6
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 0.3333333333333333,
+              "top": [
+                "tenant10",
+                "tenant12",
+                "tenant5",
+                "tenant7"
+              ],
+              "true_overlap": 1
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 0.3333333333333333,
+              "top": [
+                "tenant10",
+                "tenant12",
+                "tenant5",
+                "tenant7"
+              ],
+              "true_overlap": 1
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 2.463306427764893,
+          "true_high": [
+            "tenant10",
+            "tenant11",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 7
+        }
+      ],
+      "high_count": 4,
+      "path": "${SAKI_RUN_ROOT}/results/embedded_continuous_online_embedded_demand2f_16t_b.json",
+      "trial": "embedded_demand2f_16t_b"
+    },
+    {
+      "decisions": [
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "reference_margin": 8.157266682128906,
+          "true_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "true_overlap": 3,
+          "window": 1
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant15",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 2
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant15",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 2
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "reference_margin": 0.3934392396545423,
+          "true_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "true_overlap": 3,
+          "window": 2
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.3333333333333333,
+              "top": [
+                "tenant0",
+                "tenant3",
+                "tenant4",
+                "tenant9"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "reference_margin": 5.583855685729983,
+          "true_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "true_overlap": 3,
+          "window": 3
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "reference_margin": 4.596518762054442,
+          "true_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "true_overlap": 3,
+          "window": 4
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.14285714285714285,
+              "top": [
+                "tenant10",
+                "tenant11",
+                "tenant4",
+                "tenant8"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "reference_margin": 5.406879461364747,
+          "true_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 5
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 5.306665715332031,
+          "true_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 6
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant10",
+                "tenant12",
+                "tenant7",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant10",
+                "tenant6",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant10",
+                "tenant12",
+                "tenant7",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 1.3276965898132325,
+          "true_high": [
+            "tenant10",
+            "tenant11",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 7
+        }
+      ],
+      "high_count": 4,
+      "path": "${SAKI_RUN_ROOT}/results/embedded_continuous_online_embedded_demand2f_16t_c.json",
+      "trial": "embedded_demand2f_16t_c"
+    },
+    {
+      "decisions": [
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "reference_margin": 8.236612589416502,
+          "true_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "true_overlap": 3,
+          "window": 1
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant8"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "reference_margin": 4.54587772277832,
+          "true_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "true_overlap": 3,
+          "window": 2
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.3333333333333333,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant9"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "reference_margin": 5.962023069305419,
+          "true_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "true_overlap": 3,
+          "window": 3
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant1",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "reference_margin": 5.452092100067137,
+          "true_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "true_overlap": 3,
+          "window": 4
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.14285714285714285,
+              "top": [
+                "tenant10",
+                "tenant11",
+                "tenant4",
+                "tenant8"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "reference_margin": 5.603363217315675,
+          "true_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 5
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant13",
+                "tenant6",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 5.47723720169067,
+          "true_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 6
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 3.835523254852294,
+          "true_high": [
+            "tenant10",
+            "tenant11",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 7
+        }
+      ],
+      "high_count": 4,
+      "path": "${SAKI_RUN_ROOT}/results/embedded_continuous_online_embedded_demand2f_16t_d.json",
+      "trial": "embedded_demand2f_16t_d"
+    },
+    {
+      "decisions": [
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant1",
+            "tenant2",
+            "tenant3",
+            "tenant4"
+          ],
+          "reference_margin": 8.219873999786376,
+          "true_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "true_overlap": 3,
+          "window": 1
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant1",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant2",
+                "tenant3",
+                "tenant4",
+                "tenant5"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant2",
+            "tenant3",
+            "tenant4",
+            "tenant5"
+          ],
+          "reference_margin": 4.132597746124265,
+          "true_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "true_overlap": 3,
+          "window": 2
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.3333333333333333,
+              "top": [
+                "tenant0",
+                "tenant2",
+                "tenant3",
+                "tenant4"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant3",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant3",
+            "tenant4",
+            "tenant5",
+            "tenant6"
+          ],
+          "reference_margin": 5.544125695343018,
+          "true_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "true_overlap": 3,
+          "window": 3
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant10",
+                "tenant4",
+                "tenant5",
+                "tenant6"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant4",
+                "tenant5",
+                "tenant6",
+                "tenant7"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant4",
+            "tenant5",
+            "tenant6",
+            "tenant7"
+          ],
+          "reference_margin": 4.663064297027587,
+          "true_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "true_overlap": 3,
+          "window": 4
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.14285714285714285,
+              "top": [
+                "tenant11",
+                "tenant12",
+                "tenant4",
+                "tenant8"
+              ],
+              "true_overlap": 1
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant5",
+                "tenant6",
+                "tenant7",
+                "tenant8"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant5",
+            "tenant6",
+            "tenant7",
+            "tenant8"
+          ],
+          "reference_margin": 5.535532777557371,
+          "true_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 5
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 0.6,
+              "top": [
+                "tenant13",
+                "tenant6",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 2
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant6",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant6",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 4.178138468627928,
+          "true_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 6
+        },
+        {
+          "configs": {
+            "anchor_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "anchor_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "demand_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "pressure_only": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_double": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            },
+            "residual_half": {
+              "jaccard_vs_reference": 1.0,
+              "top": [
+                "tenant10",
+                "tenant7",
+                "tenant8",
+                "tenant9"
+              ],
+              "true_overlap": 3
+            }
+          },
+          "recorded_high": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "recorded_jaccard": 1.0,
+          "reference": [
+            "tenant10",
+            "tenant7",
+            "tenant8",
+            "tenant9"
+          ],
+          "reference_margin": 6.235133344116209,
+          "true_high": [
+            "tenant10",
+            "tenant11",
+            "tenant8",
+            "tenant9"
+          ],
+          "true_overlap": 3,
+          "window": 7
+        }
+      ],
+      "high_count": 4,
+      "path": "${SAKI_RUN_ROOT}/results/embedded_continuous_online_embedded_demand2f_16t_e.json",
+      "trial": "embedded_demand2f_16t_e"
+    }
+  ]
+}

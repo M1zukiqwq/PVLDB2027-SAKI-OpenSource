@@ -1,0 +1,984 @@
+{
+  "labels": [
+    {
+      "label": "anchor_half",
+      "n": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "per_seed": [
+        {
+          "label": "anchor_half",
+          "seed": 1,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -38.096041156535144,
+          "high_p999_pct": -52.75823510602058,
+          "high_tput_pct": 18.87234225268867,
+          "total_tput_pct": 2.500234227212422,
+          "bytes_per_write_pct": -11.365417177329535,
+          "compact_bytes_pct": -5.361766175119051,
+          "overlap_after_warmup": 2.857142857142857,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            null
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 0.9428571428571428,
+          "min_jaccard_vs_saki": 0.6,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_half_seed1.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_half_seed1.json"
+        },
+        {
+          "label": "anchor_half",
+          "seed": 2,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -29.11517696004553,
+          "high_p999_pct": -17.483396196736184,
+          "high_tput_pct": 21.231486546592308,
+          "total_tput_pct": 5.998896882156902,
+          "bytes_per_write_pct": -16.331649055663217,
+          "compact_bytes_pct": -7.8472855734542195,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_half_seed2.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_half_seed2.json"
+        },
+        {
+          "label": "anchor_half",
+          "seed": 3,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -23.63426070690693,
+          "high_p999_pct": -25.110205781906757,
+          "high_tput_pct": 27.09977995849454,
+          "total_tput_pct": 8.515252337227288,
+          "bytes_per_write_pct": -14.208201235855386,
+          "compact_bytes_pct": -1.228037689329004,
+          "overlap_after_warmup": 2.857142857142857,
+          "max_lag_windows": 1,
+          "lags_windows": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 0.8775510204081634,
+          "min_jaccard_vs_saki": 0.14285714285714285,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_half_seed3.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_half_seed3.json"
+        }
+      ],
+      "stats": {
+        "high_p99_pct": {
+          "n": 3,
+          "mean": -30.28182627449587,
+          "min": -38.096041156535144,
+          "max": -23.63426070690693,
+          "range": 14.461780449628215
+        },
+        "high_p999_pct": {
+          "n": 3,
+          "mean": -31.783945694887837,
+          "min": -52.75823510602058,
+          "max": -17.483396196736184,
+          "range": 35.2748389092844
+        },
+        "high_tput_pct": {
+          "n": 3,
+          "mean": 22.40120291925851,
+          "min": 18.87234225268867,
+          "max": 27.09977995849454,
+          "range": 8.227437705805869
+        },
+        "total_tput_pct": {
+          "n": 3,
+          "mean": 5.671461148865537,
+          "min": 2.500234227212422,
+          "max": 8.515252337227288,
+          "range": 6.015018110014866
+        },
+        "bytes_per_write_pct": {
+          "n": 3,
+          "mean": -13.968422489616046,
+          "min": -16.331649055663217,
+          "max": -11.365417177329535,
+          "range": 4.966231878333682
+        },
+        "compact_bytes_pct": {
+          "n": 3,
+          "mean": -4.812363145967425,
+          "min": -7.8472855734542195,
+          "max": -1.228037689329004,
+          "range": 6.619247884125215
+        },
+        "overlap_after_warmup": {
+          "n": 3,
+          "mean": 2.904761904761905,
+          "min": 2.857142857142857,
+          "max": 3.0,
+          "range": 0.1428571428571428
+        },
+        "mean_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 0.9401360544217687,
+          "min": 0.8775510204081634,
+          "max": 1.0,
+          "range": 0.12244897959183665
+        },
+        "min_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 0.580952380952381,
+          "min": 0.14285714285714285,
+          "max": 1.0,
+          "range": 0.8571428571428572
+        },
+        "max_lag_seedwise": 1,
+        "max_failed_static": 0,
+        "max_failed_online": 0,
+        "high_count": 4
+      },
+      "missing": []
+    },
+    {
+      "label": "anchor_double",
+      "n": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "per_seed": [
+        {
+          "label": "anchor_double",
+          "seed": 1,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -42.42318434372385,
+          "high_p999_pct": -59.36970081180763,
+          "high_tput_pct": 22.82568612692527,
+          "total_tput_pct": 0.8399005053839534,
+          "bytes_per_write_pct": -9.838995981805454,
+          "compact_bytes_pct": -2.552446849259913,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_double_seed1.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_double_seed1.json"
+        },
+        {
+          "label": "anchor_double",
+          "seed": 2,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -18.182613176841418,
+          "high_p999_pct": -44.238124779187295,
+          "high_tput_pct": 22.247330023875147,
+          "total_tput_pct": 4.501919358460396,
+          "bytes_per_write_pct": -17.327840117490524,
+          "compact_bytes_pct": -9.14011962726542,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_double_seed2.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_double_seed2.json"
+        },
+        {
+          "label": "anchor_double",
+          "seed": 3,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -21.7911545240087,
+          "high_p999_pct": -46.61678694263363,
+          "high_tput_pct": 26.16199643345047,
+          "total_tput_pct": 4.487400654821298,
+          "bytes_per_write_pct": -9.152350019634804,
+          "compact_bytes_pct": 0.7894408403243964,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_double_seed3.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_double_seed3.json"
+        }
+      ],
+      "stats": {
+        "high_p99_pct": {
+          "n": 3,
+          "mean": -27.465650681524654,
+          "min": -42.42318434372385,
+          "max": -18.182613176841418,
+          "range": 24.24057116688243
+        },
+        "high_p999_pct": {
+          "n": 3,
+          "mean": -50.07487084454285,
+          "min": -59.36970081180763,
+          "max": -44.238124779187295,
+          "range": 15.131576032620337
+        },
+        "high_tput_pct": {
+          "n": 3,
+          "mean": 23.745004194750294,
+          "min": 22.247330023875147,
+          "max": 26.16199643345047,
+          "range": 3.9146664095753216
+        },
+        "total_tput_pct": {
+          "n": 3,
+          "mean": 3.2764068395552157,
+          "min": 0.8399005053839534,
+          "max": 4.501919358460396,
+          "range": 3.662018853076442
+        },
+        "bytes_per_write_pct": {
+          "n": 3,
+          "mean": -12.106395372976927,
+          "min": -17.327840117490524,
+          "max": -9.152350019634804,
+          "range": 8.17549009785572
+        },
+        "compact_bytes_pct": {
+          "n": 3,
+          "mean": -3.634375212066979,
+          "min": -9.14011962726542,
+          "max": 0.7894408403243964,
+          "range": 9.929560467589816
+        },
+        "overlap_after_warmup": {
+          "n": 3,
+          "mean": 3.0,
+          "min": 3.0,
+          "max": 3.0,
+          "range": 0.0
+        },
+        "mean_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "range": 0.0
+        },
+        "min_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "range": 0.0
+        },
+        "max_lag_seedwise": 0,
+        "max_failed_static": 0,
+        "max_failed_online": 0,
+        "high_count": 4
+      },
+      "missing": []
+    },
+    {
+      "label": "residual_half",
+      "n": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "per_seed": [
+        {
+          "label": "residual_half",
+          "seed": 1,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -33.53735297359231,
+          "high_p999_pct": -53.00354582383121,
+          "high_tput_pct": 21.34810743638834,
+          "total_tput_pct": 1.2464533260811126,
+          "bytes_per_write_pct": -12.427377752127805,
+          "compact_bytes_pct": -6.085050198312853,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_residual_half_seed1.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_residual_half_seed1.json"
+        },
+        {
+          "label": "residual_half",
+          "seed": 2,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -39.81606266650556,
+          "high_p999_pct": -48.24218312097676,
+          "high_tput_pct": 28.153997167703647,
+          "total_tput_pct": 5.739579106163809,
+          "bytes_per_write_pct": -17.936938098769513,
+          "compact_bytes_pct": -7.738572963618101,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_residual_half_seed2.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_residual_half_seed2.json"
+        },
+        {
+          "label": "residual_half",
+          "seed": 3,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -16.741260084361333,
+          "high_p999_pct": 8.373684235628048,
+          "high_tput_pct": 23.41173832789313,
+          "total_tput_pct": 4.526712656911895,
+          "bytes_per_write_pct": -11.90733758874895,
+          "compact_bytes_pct": -1.8859897517299367,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_residual_half_seed3.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_residual_half_seed3.json"
+        }
+      ],
+      "stats": {
+        "high_p99_pct": {
+          "n": 3,
+          "mean": -30.031558574819737,
+          "min": -39.81606266650556,
+          "max": -16.741260084361333,
+          "range": 23.074802582144226
+        },
+        "high_p999_pct": {
+          "n": 3,
+          "mean": -30.95734823639331,
+          "min": -53.00354582383121,
+          "max": 8.373684235628048,
+          "range": 61.37723005945926
+        },
+        "high_tput_pct": {
+          "n": 3,
+          "mean": 24.304614310661705,
+          "min": 21.34810743638834,
+          "max": 28.153997167703647,
+          "range": 6.8058897313153075
+        },
+        "total_tput_pct": {
+          "n": 3,
+          "mean": 3.8375816963856058,
+          "min": 1.2464533260811126,
+          "max": 5.739579106163809,
+          "range": 4.493125780082696
+        },
+        "bytes_per_write_pct": {
+          "n": 3,
+          "mean": -14.090551146548757,
+          "min": -17.936938098769513,
+          "max": -11.90733758874895,
+          "range": 6.029600510020563
+        },
+        "compact_bytes_pct": {
+          "n": 3,
+          "mean": -5.236537637886964,
+          "min": -7.738572963618101,
+          "max": -1.8859897517299367,
+          "range": 5.852583211888165
+        },
+        "overlap_after_warmup": {
+          "n": 3,
+          "mean": 3.0,
+          "min": 3.0,
+          "max": 3.0,
+          "range": 0.0
+        },
+        "mean_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "range": 0.0
+        },
+        "min_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "range": 0.0
+        },
+        "max_lag_seedwise": 0,
+        "max_failed_static": 0,
+        "max_failed_online": 0,
+        "high_count": 4
+      },
+      "missing": []
+    },
+    {
+      "label": "residual_double",
+      "n": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "per_seed": [
+        {
+          "label": "residual_double",
+          "seed": 1,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -49.6133682793419,
+          "high_p999_pct": -65.93441048662419,
+          "high_tput_pct": 27.05459211250813,
+          "total_tput_pct": 6.037593741011417,
+          "bytes_per_write_pct": -15.613012048262734,
+          "compact_bytes_pct": -6.431841917764572,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_residual_double_seed1.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_residual_double_seed1.json"
+        },
+        {
+          "label": "residual_double",
+          "seed": 2,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -25.742570725020393,
+          "high_p999_pct": -54.83600022488062,
+          "high_tput_pct": 27.13713120076075,
+          "total_tput_pct": 6.336120968598125,
+          "bytes_per_write_pct": -17.170772456149926,
+          "compact_bytes_pct": -8.005796457764875,
+          "overlap_after_warmup": 2.857142857142857,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            null
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 0.9428571428571428,
+          "min_jaccard_vs_saki": 0.6,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_residual_double_seed2.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_residual_double_seed2.json"
+        },
+        {
+          "label": "residual_double",
+          "seed": 3,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -31.96879655899988,
+          "high_p999_pct": -44.52175332960041,
+          "high_tput_pct": 20.936010678791533,
+          "total_tput_pct": 4.886959057572381,
+          "bytes_per_write_pct": -8.170201033133974,
+          "compact_bytes_pct": 0.17544533340429416,
+          "overlap_after_warmup": 2.7142857142857144,
+          "max_lag_windows": 1,
+          "lags_windows": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            null
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 0.8857142857142858,
+          "min_jaccard_vs_saki": 0.6,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_residual_double_seed3.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_residual_double_seed3.json"
+        }
+      ],
+      "stats": {
+        "high_p99_pct": {
+          "n": 3,
+          "mean": -35.774911854454054,
+          "min": -49.6133682793419,
+          "max": -25.742570725020393,
+          "range": 23.870797554321506
+        },
+        "high_p999_pct": {
+          "n": 3,
+          "mean": -55.09738801370174,
+          "min": -65.93441048662419,
+          "max": -44.52175332960041,
+          "range": 21.41265715702378
+        },
+        "high_tput_pct": {
+          "n": 3,
+          "mean": 25.042577997353472,
+          "min": 20.936010678791533,
+          "max": 27.13713120076075,
+          "range": 6.201120521969216
+        },
+        "total_tput_pct": {
+          "n": 3,
+          "mean": 5.7535579223939735,
+          "min": 4.886959057572381,
+          "max": 6.336120968598125,
+          "range": 1.4491619110257439
+        },
+        "bytes_per_write_pct": {
+          "n": 3,
+          "mean": -13.651328512515546,
+          "min": -17.170772456149926,
+          "max": -8.170201033133974,
+          "range": 9.000571423015952
+        },
+        "compact_bytes_pct": {
+          "n": 3,
+          "mean": -4.754064347375051,
+          "min": -8.005796457764875,
+          "max": 0.17544533340429416,
+          "range": 8.18124179116917
+        },
+        "overlap_after_warmup": {
+          "n": 3,
+          "mean": 2.857142857142857,
+          "min": 2.7142857142857144,
+          "max": 3.0,
+          "range": 0.2857142857142856
+        },
+        "mean_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 0.942857142857143,
+          "min": 0.8857142857142858,
+          "max": 1.0,
+          "range": 0.11428571428571421
+        },
+        "min_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 0.7333333333333334,
+          "min": 0.6,
+          "max": 1.0,
+          "range": 0.4
+        },
+        "max_lag_seedwise": 1,
+        "max_failed_static": 0,
+        "max_failed_online": 0,
+        "high_count": 4
+      },
+      "missing": []
+    },
+    {
+      "label": "anchor_only",
+      "n": 3,
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "per_seed": [
+        {
+          "label": "anchor_only",
+          "seed": 1,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -40.20716684155647,
+          "high_p999_pct": -47.283325368663824,
+          "high_tput_pct": 12.631403472436212,
+          "total_tput_pct": -0.5925128223449437,
+          "bytes_per_write_pct": -6.651315706118918,
+          "compact_bytes_pct": -3.3807339986150833,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_only_seed1.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_only_seed1.json"
+        },
+        {
+          "label": "anchor_only",
+          "seed": 2,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -26.166988342391452,
+          "high_p999_pct": -55.58944396190321,
+          "high_tput_pct": 25.677527211006097,
+          "total_tput_pct": 4.459784843930268,
+          "bytes_per_write_pct": -18.479483986479018,
+          "compact_bytes_pct": -9.053015825995669,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_only_seed2.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_only_seed2.json"
+        },
+        {
+          "label": "anchor_only",
+          "seed": 3,
+          "high_count": 4,
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_p99_pct": -29.209658281946556,
+          "high_p999_pct": -57.20391194116367,
+          "high_tput_pct": 26.046500714352756,
+          "total_tput_pct": 8.347854409250056,
+          "bytes_per_write_pct": -15.5956713219328,
+          "compact_bytes_pct": -4.667082446471974,
+          "overlap_after_warmup": 3.0,
+          "max_lag_windows": 0,
+          "lags_windows": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "windows_compared_for_jaccard": 7,
+          "mean_jaccard_vs_saki": 1.0,
+          "min_jaccard_vs_saki": 1.0,
+          "raw_path": "results/embedded_continuous_online_coef_ablation_anchor_only_seed3.json",
+          "analysis_path": "results/embedded_continuous_analysis_coef_ablation_anchor_only_seed3.json"
+        }
+      ],
+      "stats": {
+        "high_p99_pct": {
+          "n": 3,
+          "mean": -31.86127115529816,
+          "min": -40.20716684155647,
+          "max": -26.166988342391452,
+          "range": 14.04017849916502
+        },
+        "high_p999_pct": {
+          "n": 3,
+          "mean": -53.35889375724357,
+          "min": -57.20391194116367,
+          "max": -47.283325368663824,
+          "range": 9.920586572499843
+        },
+        "high_tput_pct": {
+          "n": 3,
+          "mean": 21.451810465931686,
+          "min": 12.631403472436212,
+          "max": 26.046500714352756,
+          "range": 13.415097241916545
+        },
+        "total_tput_pct": {
+          "n": 3,
+          "mean": 4.0717088102784595,
+          "min": -0.5925128223449437,
+          "max": 8.347854409250056,
+          "range": 8.940367231595
+        },
+        "bytes_per_write_pct": {
+          "n": 3,
+          "mean": -13.575490338176913,
+          "min": -18.479483986479018,
+          "max": -6.651315706118918,
+          "range": 11.8281682803601
+        },
+        "compact_bytes_pct": {
+          "n": 3,
+          "mean": -5.700277423694242,
+          "min": -9.053015825995669,
+          "max": -3.3807339986150833,
+          "range": 5.672281827380585
+        },
+        "overlap_after_warmup": {
+          "n": 3,
+          "mean": 3.0,
+          "min": 3.0,
+          "max": 3.0,
+          "range": 0.0
+        },
+        "mean_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "range": 0.0
+        },
+        "min_jaccard_vs_saki": {
+          "n": 3,
+          "mean": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "range": 0.0
+        },
+        "max_lag_seedwise": 0,
+        "max_failed_static": 0,
+        "max_failed_online": 0,
+        "high_count": 4
+      },
+      "missing": []
+    }
+  ],
+  "main_continuous_ref": {
+    "aggregates": {
+      "adaptation_max_lag": {
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "n": 5,
+        "stdev": 0.0
+      },
+      "failed_tenants_total": 0,
+      "gate_pass_count": 5,
+      "mean_high_overlap_after_warmup": {
+        "max": 3.0,
+        "mean": 3.0,
+        "min": 3.0,
+        "n": 5,
+        "stdev": 0.0
+      },
+      "online_vs_static_pct_compact_output_bytes": {
+        "max": -0.0602688477828455,
+        "mean": -1.8511050556037212,
+        "min": -5.825419278734152,
+        "n": 5,
+        "stdev": 2.3336926899091988
+      },
+      "online_vs_static_pct_compact_output_bytes_per_write": {
+        "max": -9.07639927424881,
+        "mean": -11.942695825141874,
+        "min": -13.505965883464931,
+        "n": 5,
+        "stdev": 1.8729613625420904
+      },
+      "online_vs_static_pct_high_write_p999_us": {
+        "max": -39.26707008155327,
+        "mean": -47.1131161781649,
+        "min": -54.04107021019517,
+        "n": 5,
+        "stdev": 7.100894289118137
+      },
+      "online_vs_static_pct_high_write_p99_us": {
+        "max": -11.985476681856767,
+        "mean": -27.00053313558658,
+        "min": -39.239074677871145,
+        "n": 5,
+        "stdev": 10.104317684006672
+      },
+      "online_vs_static_pct_high_write_throughput": {
+        "max": 28.160098445109544,
+        "mean": 26.127523093202136,
+        "min": 21.452215104509357,
+        "n": 5,
+        "stdev": 2.8232831218007184
+      },
+      "online_vs_static_pct_total_throughput": {
+        "max": 6.79775702618305,
+        "mean": 4.32586342048276,
+        "min": 1.3309549589807979,
+        "n": 5,
+        "stdev": 2.5811309954580866
+      },
+      "trial_count": 5
+    },
+    "per_trial": [
+      {
+        "adaptation_max_lag": 0,
+        "compare": {
+          "online_vs_static_pct_compact_output_bytes": -0.0602688477828455,
+          "online_vs_static_pct_compact_output_bytes_per_write": -9.07639927424881,
+          "online_vs_static_pct_high_write_p999_us": -53.520597966599446,
+          "online_vs_static_pct_high_write_p99_us": -39.239074677871145,
+          "online_vs_static_pct_high_write_throughput": 28.066922948691385,
+          "online_vs_static_pct_total_throughput": 1.7347395958459577
+        },
+        "failed_tenants": 0,
+        "gate_pass": true,
+        "mean_high_overlap_after_warmup": 3.0,
+        "trial": "embedded_demand2f_16t"
+      },
+      {
+        "adaptation_max_lag": 0,
+        "compare": {
+          "online_vs_static_pct_compact_output_bytes": -5.825419278734152,
+          "online_vs_static_pct_compact_output_bytes_per_write": -13.469127228623911,
+          "online_vs_static_pct_high_write_p999_us": -39.26707008155327,
+          "online_vs_static_pct_high_write_p99_us": -11.985476681856767,
+          "online_vs_static_pct_high_write_throughput": 25.508305172263952,
+          "online_vs_static_pct_total_throughput": 1.3309549589807979
+        },
+        "failed_tenants": 0,
+        "gate_pass": true,
+        "mean_high_overlap_after_warmup": 3.0,
+        "trial": "embedded_demand2f_16t_b"
+      },
+      {
+        "adaptation_max_lag": 0,
+        "compare": {
+          "online_vs_static_pct_compact_output_bytes": -1.5456452887853278,
+          "online_vs_static_pct_compact_output_bytes_per_write": -13.505965883464931,
+          "online_vs_static_pct_high_write_p999_us": -48.61172720678819,
+          "online_vs_static_pct_high_write_p99_us": -25.654828311763612,
+          "online_vs_static_pct_high_write_throughput": 28.160098445109544,
+          "online_vs_static_pct_total_throughput": 5.939331506600284
+        },
+        "failed_tenants": 0,
+        "gate_pass": true,
+        "mean_high_overlap_after_warmup": 3.0,
+        "trial": "embedded_demand2f_16t_c"
+      },
+      {
+        "adaptation_max_lag": 0,
+        "compare": {
+          "online_vs_static_pct_compact_output_bytes": -1.5923298897672233,
+          "online_vs_static_pct_compact_output_bytes_per_write": -12.544267567573774,
+          "online_vs_static_pct_high_write_p999_us": -40.12511542568845,
+          "online_vs_static_pct_high_write_p99_us": -25.68171291514018,
+          "online_vs_static_pct_high_write_throughput": 27.450073795436445,
+          "online_vs_static_pct_total_throughput": 5.826534014803706
+        },
+        "failed_tenants": 0,
+        "gate_pass": true,
+        "mean_high_overlap_after_warmup": 3.0,
+        "trial": "embedded_demand2f_16t_d"
+      },
+      {
+        "adaptation_max_lag": 0,
+        "compare": {
+          "online_vs_static_pct_compact_output_bytes": -0.2318619729490577,
+          "online_vs_static_pct_compact_output_bytes_per_write": -11.11771917179794,
+          "online_vs_static_pct_high_write_p999_us": -54.04107021019517,
+          "online_vs_static_pct_high_write_p99_us": -32.44157309130119,
+          "online_vs_static_pct_high_write_throughput": 21.452215104509357,
+          "online_vs_static_pct_total_throughput": 6.79775702618305
+        },
+        "failed_tenants": 0,
+        "gate_pass": true,
+        "mean_high_overlap_after_warmup": 3.0,
+        "trial": "embedded_demand2f_16t_e"
+      }
+    ]
+  }
+}

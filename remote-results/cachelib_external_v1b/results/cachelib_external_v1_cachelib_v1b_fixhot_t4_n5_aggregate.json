@@ -1,0 +1,4622 @@
+{
+  "config": {
+    "tag": "cachelib_v1b_fixhot_t4_n5",
+    "policies": [
+      "static",
+      "static_biased",
+      "online"
+    ],
+    "warmup_windows": [
+      0
+    ],
+    "engine_stress_mbps_gate": 60.0,
+    "engine_stress_pending_mib_gate": 32.0,
+    "schedule_path": "<remote-root>/results/cachelib_trace_qualification/selected_segments.json",
+    "segments": [
+      3501,
+      6858,
+      7475,
+      13360,
+      20695
+    ]
+  },
+  "per_segment": [
+    {
+      "segment_id": 3501,
+      "per_policy": {
+        "static": {
+          "policy": "static",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg3501_static",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 29.609846307142856,
+            "max_pending_p95_bytes": 24828660.25,
+            "bytes_per_write": 4507.879622873362,
+            "total_compact_output_bytes": 4145378483.0,
+            "total_write_ops": 919585.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 110.41761748114287,
+            "completed_write_mbps": 6.726107428571428,
+            "completion_ratio": 0.06091516536951284,
+            "rate_limiter_actual_mbps": 37.19507113571429,
+            "compaction_write_amp": 4.402226194212267,
+            "pending_compaction_bytes": {
+              "mean": 12617083.517857144,
+              "p95": 22025353.0,
+              "max": 25597165.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                111.908258816,
+                166.903781376,
+                79.653860352,
+                130.170182656,
+                82.89020620800001,
+                82.192528384,
+                119.20450457599999
+              ],
+              "completed_write_mbps": [
+                6.832179200000001,
+                8.4401152,
+                5.8941952,
+                7.233792,
+                6.3945216,
+                6.454528,
+                5.8334208
+              ],
+              "completion_ratio": [
+                0.06105160845397028,
+                0.05056874763661675,
+                0.07399760882840883,
+                0.05557180494335405,
+                0.07714447692353363,
+                0.07852937641539288,
+                0.04893624465576169
+              ],
+              "rate_limiter_actual_mbps": [
+                36.0085707,
+                38.154247850000004,
+                37.2781366,
+                36.16587655,
+                37.3203826,
+                38.13190855,
+                37.306375100000004
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 36899.0,
+            "p999_us_mean": 902499.3571428572,
+            "write_ops_total": 412556.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 138595.7857142857,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 131369.2857142857,
+          "overlap_after_warmup_mean": 0.0,
+          "overlap_after_warmup_per_window": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "static_biased": {
+          "policy": "static_biased",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg3501_static_biased",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 29.41463307857143,
+            "max_pending_p95_bytes": 24103266.5,
+            "bytes_per_write": 4337.682865196352,
+            "total_compact_output_bytes": 4118048631.0,
+            "total_write_ops": 949366.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 110.41761748114287,
+            "completed_write_mbps": 6.943934171428571,
+            "completion_ratio": 0.06288791888318418,
+            "rate_limiter_actual_mbps": 37.66334858571429,
+            "compaction_write_amp": 4.236018423043313,
+            "pending_compaction_bytes": {
+              "mean": 12636091.419642856,
+              "p95": 22398513.25,
+              "max": 24567311.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                111.908258816,
+                166.903781376,
+                79.653860352,
+                130.170182656,
+                82.89020620800001,
+                82.192528384,
+                119.20450457599999
+              ],
+              "completed_write_mbps": [
+                7.891097599999999,
+                8.1499648,
+                6.555392,
+                7.0697472,
+                6.1016064000000005,
+                7.2532992,
+                5.586432
+              ],
+              "completion_ratio": [
+                0.07051398782796338,
+                0.048830318479362665,
+                0.08229848460615635,
+                0.05431157163452079,
+                0.07361070359372703,
+                0.0882476709575461,
+                0.04686426926457561
+              ],
+              "rate_limiter_actual_mbps": [
+                37.966350649999995,
+                38.55225645,
+                37.37996975,
+                37.76859325,
+                38.26308825,
+                36.7418252,
+                36.971356549999996
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 29263.285714285714,
+            "p999_us_mean": 884785.0357142857,
+            "write_ops_total": 428367.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 191915.5357142857,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 135623.7142857143,
+          "overlap_after_warmup_mean": 2.4285714285714284,
+          "overlap_after_warmup_per_window": [
+            3,
+            3,
+            2,
+            2,
+            3,
+            2,
+            2
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "online": {
+          "policy": "online",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg3501_online",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 30.57328795,
+            "max_pending_p95_bytes": 24245609.0,
+            "bytes_per_write": 4557.162628641516,
+            "total_compact_output_bytes": 4280260313.0,
+            "total_write_ops": 939238.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 110.41761748114287,
+            "completed_write_mbps": 6.869855085714285,
+            "completion_ratio": 0.06221701973317365,
+            "rate_limiter_actual_mbps": 37.39095739285714,
+            "compaction_write_amp": 4.45035412953273,
+            "pending_compaction_bytes": {
+              "mean": 12951860.035714285,
+              "p95": 22212284.649999995,
+              "max": 24564149.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                111.908258816,
+                166.903781376,
+                79.653860352,
+                130.170182656,
+                82.89020620800001,
+                82.192528384,
+                119.20450457599999
+              ],
+              "completed_write_mbps": [
+                7.202816,
+                7.9925248,
+                6.2951424000000005,
+                7.2604672,
+                6.8000256,
+                6.632806400000001,
+                5.9052032
+              ],
+              "completion_ratio": [
+                0.06436357849015324,
+                0.0478870204983222,
+                0.07903122801808987,
+                0.05577673052197519,
+                0.08203653858619195,
+                0.08069841055395947,
+                0.049538423241674394
+              ],
+              "rate_limiter_actual_mbps": [
+                36.961354899999996,
+                37.465908299999995,
+                38.3570209,
+                38.45263505,
+                37.36733565,
+                36.403119,
+                36.729327950000005
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 29950.178571428572,
+            "p999_us_mean": 1140785.142857143,
+            "write_ops_total": 440474.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 146475.9642857143,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 134176.85714285713,
+          "overlap_after_warmup_mean": 2.5714285714285716,
+          "overlap_after_warmup_per_window": [
+            3,
+            2,
+            3,
+            3,
+            2,
+            2,
+            3
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        }
+      },
+      "engine_stress_pass": false
+    },
+    {
+      "segment_id": 6858,
+      "per_policy": {
+        "static": {
+          "policy": "static",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg6858_static",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 29.118983521428568,
+            "max_pending_p95_bytes": 26180471.5,
+            "bytes_per_write": 4508.230609220697,
+            "total_compact_output_bytes": 4076657693.0,
+            "total_write_ops": 904270.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 129.5911276251429,
+            "completed_write_mbps": 6.614089142857143,
+            "completion_ratio": 0.051038132502320296,
+            "rate_limiter_actual_mbps": 36.891951985714286,
+            "compaction_write_amp": 4.402568954317087,
+            "pending_compaction_bytes": {
+              "mean": 14416421.464285715,
+              "p95": 25540218.95,
+              "max": 26514677.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                132.6913536,
+                83.95107532799999,
+                103.443403776,
+                186.26612736,
+                128.511950848,
+                113.32809113600001,
+                158.94589132800002
+              ],
+              "completed_write_mbps": [
+                7.468544,
+                7.503872,
+                5.6222208,
+                7.5716608,
+                6.6872832,
+                6.0682752,
+                5.376768
+              ],
+              "completion_ratio": [
+                0.056285084124727776,
+                0.08938386995856921,
+                0.054350694145511254,
+                0.040649692498121844,
+                0.05203627488239995,
+                0.05354608146287165,
+                0.03382766270380985
+              ],
+              "rate_limiter_actual_mbps": [
+                37.01685655,
+                37.34472035,
+                36.067933700000005,
+                36.5241017,
+                37.70833925,
+                36.231798700000006,
+                37.34991365
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 43352.607142857145,
+            "p999_us_mean": 1052749.4642857143,
+            "write_ops_total": 384251.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 37083.25,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 129181.42857142857,
+          "overlap_after_warmup_mean": 0.0,
+          "overlap_after_warmup_per_window": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "static_biased": {
+          "policy": "static_biased",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg6858_static_biased",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 30.058076607142855,
+            "max_pending_p95_bytes": 26583018.25,
+            "bytes_per_write": 4543.460853276038,
+            "total_compact_output_bytes": 4208130725.0,
+            "total_write_ops": 926195.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 129.5911276251429,
+            "completed_write_mbps": 6.7744548571428576,
+            "completion_ratio": 0.05227560699015399,
+            "rate_limiter_actual_mbps": 37.72444564285714,
+            "compaction_write_amp": 4.4369734895273805,
+            "pending_compaction_bytes": {
+              "mean": 14477205.705357144,
+              "p95": 25152931.04999998,
+              "max": 27861877.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                132.6913536,
+                83.95107532799999,
+                103.443403776,
+                186.26612736,
+                128.511950848,
+                113.32809113600001,
+                158.94589132800002
+              ],
+              "completed_write_mbps": [
+                8.887552,
+                5.6459264000000005,
+                7.0810112,
+                7.0846464000000005,
+                6.1981696,
+                5.7081344000000005,
+                6.815744
+              ],
+              "completion_ratio": [
+                0.06697913435107199,
+                0.06725257988585798,
+                0.0684529988527202,
+                0.03803507648122931,
+                0.048230297331109735,
+                0.05036822153079346,
+                0.04288090710023489
+              ],
+              "rate_limiter_actual_mbps": [
+                38.18069885,
+                37.305944700000005,
+                37.877340350000004,
+                37.647103,
+                36.79569635,
+                37.114380600000004,
+                39.149955649999995
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 32020.464285714286,
+            "p999_us_mean": 1218606.7142857143,
+            "write_ops_total": 394348.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 128328.42857142857,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 132313.57142857142,
+          "overlap_after_warmup_mean": 2.142857142857143,
+          "overlap_after_warmup_per_window": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "online": {
+          "policy": "online",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg6858_online",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 29.473944021428572,
+            "max_pending_p95_bytes": 26318389.0,
+            "bytes_per_write": 4273.64327859684,
+            "total_compact_output_bytes": 4126352163.0,
+            "total_write_ops": 965535.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 129.5911276251429,
+            "completed_write_mbps": 7.0621988571428576,
+            "completion_ratio": 0.054496005911539504,
+            "rate_limiter_actual_mbps": 37.98085869285715,
+            "compaction_write_amp": 4.1734797642547266,
+            "pending_compaction_bytes": {
+              "mean": 14175614.3125,
+              "p95": 25432612.349999983,
+              "max": 26381947.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                132.6913536,
+                83.95107532799999,
+                103.443403776,
+                186.26612736,
+                128.511950848,
+                113.32809113600001,
+                158.94589132800002
+              ],
+              "completed_write_mbps": [
+                7.8918656,
+                7.4899968,
+                6.4636416,
+                7.3196032,
+                7.2924672,
+                6.542336,
+                6.435481599999999
+              ],
+              "completion_ratio": [
+                0.05947535680275101,
+                0.08921859274269331,
+                0.062484811636676206,
+                0.039296480276595144,
+                0.056745440030128456,
+                0.05772916436180711,
+                0.04048850552997164
+              ],
+              "rate_limiter_actual_mbps": [
+                38.837214700000004,
+                38.04261795,
+                37.5101566,
+                38.1002729,
+                36.9373234,
+                37.69676329999999,
+                38.741662
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 26889.571428571428,
+            "p999_us_mean": 1119392.392857143,
+            "write_ops_total": 441950.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 35172.46428571428,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 137933.57142857142,
+          "overlap_after_warmup_mean": 2.857142857142857,
+          "overlap_after_warmup_per_window": [
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "max_lag_after_warmup": 1,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        }
+      },
+      "engine_stress_pass": false
+    },
+    {
+      "segment_id": 7475,
+      "per_policy": {
+        "static": {
+          "policy": "static",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg7475_static",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 29.15377332857143,
+            "max_pending_p95_bytes": 25536129.5,
+            "bytes_per_write": 4655.086076581709,
+            "total_compact_output_bytes": 4081528266.0,
+            "total_write_ops": 876789.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 118.65570947657145,
+            "completed_write_mbps": 6.413085257142857,
+            "completion_ratio": 0.054047843845298656,
+            "rate_limiter_actual_mbps": 36.94197057142858,
+            "compaction_write_amp": 4.545982496661825,
+            "pending_compaction_bytes": {
+              "mean": 13416990.38392857,
+              "p95": 24665492.699999996,
+              "max": 25979576.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                109.255066624,
+                191.31737088,
+                115.51949312,
+                120.681682944,
+                89.75447859200001,
+                86.838482944,
+                117.223391232
+              ],
+              "completed_write_mbps": [
+                6.602956799999999,
+                6.3822848,
+                5.8864128,
+                7.3571328,
+                5.7897472,
+                6.8062208,
+                6.0668416
+              ],
+              "completion_ratio": [
+                0.06043616103154279,
+                0.03335967231121507,
+                0.05095601305907115,
+                0.0609631272992268,
+                0.06450649918338505,
+                0.0783779330229567,
+                0.051754530697657
+              ],
+              "rate_limiter_actual_mbps": [
+                36.3909308,
+                37.0664115,
+                36.832911200000005,
+                37.550095950000006,
+                34.8561754,
+                38.92238775,
+                36.9748814
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 33361.67857142857,
+            "p999_us_mean": 577127.75,
+            "write_ops_total": 349500.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 106601.32142857143,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 125255.57142857143,
+          "overlap_after_warmup_mean": 0.0,
+          "overlap_after_warmup_per_window": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "static_biased": {
+          "policy": "static_biased",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg7475_static_biased",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 31.04853170714286,
+            "max_pending_p95_bytes": 24672306.5,
+            "bytes_per_write": 4641.313637159599,
+            "total_compact_output_bytes": 4346794439.0,
+            "total_write_ops": 936544.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 118.65570947657145,
+            "completed_write_mbps": 6.8501504,
+            "completion_ratio": 0.0577313171883445,
+            "rate_limiter_actual_mbps": 37.65706492142857,
+            "compaction_write_amp": 4.532532848788671,
+            "pending_compaction_bytes": {
+              "mean": 12585066.214285715,
+              "p95": 24165931.849999998,
+              "max": 25703117.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                109.255066624,
+                191.31737088,
+                115.51949312,
+                120.681682944,
+                89.75447859200001,
+                86.838482944,
+                117.223391232
+              ],
+              "completed_write_mbps": [
+                7.1873536,
+                7.215104,
+                6.0783616,
+                6.803302400000001,
+                6.8050432,
+                6.9261312,
+                6.9357568
+              ],
+              "completion_ratio": [
+                0.0657850827617468,
+                0.03771274906618662,
+                0.05261762699811957,
+                0.05637394370077637,
+                0.0758184249605406,
+                0.079758777044349,
+                0.059167003505923625
+              ],
+              "rate_limiter_actual_mbps": [
+                37.980261649999996,
+                38.759353450000006,
+                36.539731950000004,
+                37.154120049999996,
+                36.887472700000004,
+                38.921837700000005,
+                37.35667695
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 31020.428571428572,
+            "p999_us_mean": 914856.4642857143,
+            "write_ops_total": 411412.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 315886.89285714284,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 133792.0,
+          "overlap_after_warmup_mean": 2.2857142857142856,
+          "overlap_after_warmup_per_window": [
+            3,
+            2,
+            2,
+            3,
+            2,
+            2,
+            2
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "online": {
+          "policy": "online",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg7475_online",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 30.639993785714285,
+            "max_pending_p95_bytes": 26157914.75,
+            "bytes_per_write": 4673.54995282433,
+            "total_compact_output_bytes": 4289599130.0,
+            "total_write_ops": 917846.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 118.65570947657145,
+            "completed_write_mbps": 6.713387885714286,
+            "completion_ratio": 0.05657871766414952,
+            "rate_limiter_actual_mbps": 37.46489126428571,
+            "compaction_write_amp": 4.56401362580501,
+            "pending_compaction_bytes": {
+              "mean": 13234274.473214285,
+              "p95": 24645486.949999996,
+              "max": 26491730.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                109.255066624,
+                191.31737088,
+                115.51949312,
+                120.681682944,
+                89.75447859200001,
+                86.838482944,
+                117.223391232
+              ],
+              "completed_write_mbps": [
+                6.9280256,
+                6.857728,
+                6.0820992,
+                7.1307776,
+                7.367270400000001,
+                6.228633599999999,
+                6.3991808
+              ],
+              "completion_ratio": [
+                0.06341148117041305,
+                0.03584477441048138,
+                0.05264998171072307,
+                0.05908748888850762,
+                0.08208248229583787,
+                0.07172665146645517,
+                0.054589623561864094
+              ],
+              "rate_limiter_actual_mbps": [
+                37.5447589,
+                37.8663991,
+                36.5397067,
+                38.139056200000006,
+                37.7540859,
+                36.73802245,
+                37.6722096
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 33809.71428571428,
+            "p999_us_mean": 1038785.1785714285,
+            "write_ops_total": 381786.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 109676.64285714286,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 131120.85714285713,
+          "overlap_after_warmup_mean": 2.7142857142857144,
+          "overlap_after_warmup_per_window": [
+            3,
+            3,
+            3,
+            3,
+            2,
+            2,
+            3
+          ],
+          "max_lag_after_warmup": 3,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        }
+      },
+      "engine_stress_pass": false
+    },
+    {
+      "segment_id": 13360,
+      "per_policy": {
+        "static": {
+          "policy": "static",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg13360_static",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 28.720820571428572,
+            "max_pending_p95_bytes": 26281630.0,
+            "bytes_per_write": 4198.976685317577,
+            "total_compact_output_bytes": 4020914880.0,
+            "total_write_ops": 957594.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 127.62533493028572,
+            "completed_write_mbps": 7.004116114285714,
+            "completion_ratio": 0.05488029565690585,
+            "rate_limiter_actual_mbps": 37.318399992857145,
+            "compaction_write_amp": 4.100563169255446,
+            "pending_compaction_bytes": {
+              "mean": 12898922.035714285,
+              "p95": 23993552.9,
+              "max": 27740854.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                176.751321088,
+                108.197167104,
+                137.51411712,
+                88.612301824,
+                109.180793856,
+                123.498462208,
+                149.623181312
+              ],
+              "completed_write_mbps": [
+                9.41184,
+                6.016614400000001,
+                7.1149568,
+                8.0992768,
+                6.6645504,
+                5.7917952,
+                5.9297792000000005
+              ],
+              "completion_ratio": [
+                0.053249050372382124,
+                0.055607873672115476,
+                0.05173982823735268,
+                0.09140126859684362,
+                0.061041417309989195,
+                0.04689771108441234,
+                0.039631420398921986
+              ],
+              "rate_limiter_actual_mbps": [
+                37.58418995,
+                37.945060549999994,
+                36.1835102,
+                37.82238335,
+                38.603114299999994,
+                36.399217549999996,
+                36.69132405
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 34534.71428571428,
+            "p999_us_mean": 911320.8214285715,
+            "write_ops_total": 419504.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 247433.5,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 136799.14285714287,
+          "overlap_after_warmup_mean": 0.0,
+          "overlap_after_warmup_per_window": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "static_biased": {
+          "policy": "static_biased",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg13360_static_biased",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 30.59611835,
+            "max_pending_p95_bytes": 25525743.75,
+            "bytes_per_write": 4345.148994422815,
+            "total_compact_output_bytes": 4283456569.0,
+            "total_write_ops": 985802.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 127.62533493028572,
+            "completed_write_mbps": 7.210437485714285,
+            "completion_ratio": 0.05649691332565691,
+            "rate_limiter_actual_mbps": 37.66936187142857,
+            "compaction_write_amp": 4.24330956486603,
+            "pending_compaction_bytes": {
+              "mean": 12206237.1875,
+              "p95": 24552362.95,
+              "max": 25733211.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                176.751321088,
+                108.197167104,
+                137.51411712,
+                88.612301824,
+                109.180793856,
+                123.498462208,
+                149.623181312
+              ],
+              "completed_write_mbps": [
+                9.6363008,
+                6.7298304,
+                6.3217152,
+                8.3601408,
+                6.0659712,
+                6.134272,
+                7.224832
+              ],
+              "completion_ratio": [
+                0.05451897468535655,
+                0.06219969136096911,
+                0.045971390664446714,
+                0.09434514878763386,
+                0.05555895854723762,
+                0.04967083711267972,
+                0.048286849247874915
+              ],
+              "rate_limiter_actual_mbps": [
+                37.910773649999996,
+                36.707904649999996,
+                37.1982338,
+                38.636125,
+                37.8139811,
+                37.86038,
+                37.5581349
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 29749.0,
+            "p999_us_mean": 893545.75,
+            "write_ops_total": 456462.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 241436.9642857143,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 140828.85714285713,
+          "overlap_after_warmup_mean": 2.5714285714285716,
+          "overlap_after_warmup_per_window": [
+            2,
+            3,
+            3,
+            3,
+            2,
+            2,
+            3
+          ],
+          "max_lag_after_warmup": 3,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "online": {
+          "policy": "online",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg13360_online",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 29.31493032142857,
+            "max_pending_p95_bytes": 25441455.5,
+            "bytes_per_write": 4086.156105851418,
+            "total_compact_output_bytes": 4104090245.0,
+            "total_write_ops": 1004389.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 127.62533493028572,
+            "completed_write_mbps": 7.346388114285714,
+            "completion_ratio": 0.05756214562178127,
+            "rate_limiter_actual_mbps": 37.0977325,
+            "compaction_write_amp": 3.9903868221205254,
+            "pending_compaction_bytes": {
+              "mean": 13060257.839285715,
+              "p95": 24756751.599999994,
+              "max": 25945852.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                176.751321088,
+                108.197167104,
+                137.51411712,
+                88.612301824,
+                109.180793856,
+                123.498462208,
+                149.623181312
+              ],
+              "completed_write_mbps": [
+                9.3361152,
+                6.813030400000001,
+                7.228928,
+                8.638208,
+                6.6699264000000005,
+                5.6226304,
+                7.115878400000001
+              ],
+              "completion_ratio": [
+                0.05282062472026325,
+                0.06296865788964012,
+                0.05256862459940578,
+                0.09748316906558908,
+                0.06109065673947246,
+                0.04552793856275059,
+                0.04755866261900752
+              ],
+              "rate_limiter_actual_mbps": [
+                38.33942145,
+                37.245743450000006,
+                36.10484625,
+                37.09348625,
+                37.679389,
+                36.967999899999995,
+                36.253241200000005
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 31327.571428571428,
+            "p999_us_mean": 945463.6785714285,
+            "write_ops_total": 466428.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 162300.92857142858,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 143484.14285714287,
+          "overlap_after_warmup_mean": 3.2857142857142856,
+          "overlap_after_warmup_per_window": [
+            2,
+            4,
+            4,
+            4,
+            3,
+            3,
+            3
+          ],
+          "max_lag_after_warmup": 1,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        }
+      },
+      "engine_stress_pass": false
+    },
+    {
+      "segment_id": 20695,
+      "per_policy": {
+        "static": {
+          "policy": "static",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg20695_static",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 28.71996887142857,
+            "max_pending_p95_bytes": 25074634.0,
+            "bytes_per_write": 4296.883283622603,
+            "total_compact_output_bytes": 4020795642.0,
+            "total_write_ops": 935747.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 142.77893953828573,
+            "completed_write_mbps": 6.844320914285714,
+            "completion_ratio": 0.047936487947162765,
+            "rate_limiter_actual_mbps": 36.88439474285715,
+            "compaction_write_amp": 4.196175081662698,
+            "pending_compaction_bytes": {
+              "mean": 12051790.05357143,
+              "p95": 23940274.099999998,
+              "max": 27961168.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                105.788368896,
+                115.610345472,
+                150.06154444799998,
+                172.190029824,
+                129.189513216,
+                178.59725516799998,
+                148.015519744
+              ],
+              "completed_write_mbps": [
+                7.758950400000001,
+                5.2856832,
+                7.8405632,
+                7.7314048,
+                6.1476864,
+                7.2030208,
+                5.9429376
+              ],
+              "completion_ratio": [
+                0.07334407819093783,
+                0.04571981147898355,
+                0.05224898376756977,
+                0.04490042081938469,
+                0.047586574536598036,
+                0.04033108343812103,
+                0.04015077344780195
+              ],
+              "rate_limiter_actual_mbps": [
+                36.305411549999995,
+                35.9274111,
+                37.094086700000005,
+                37.9310515,
+                36.36640225,
+                36.20975325,
+                38.356646850000004
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 27770.428571428572,
+            "p999_us_mean": 1080835.142857143,
+            "write_ops_total": 409172.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 197595.2857142857,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 133678.14285714287,
+          "overlap_after_warmup_mean": 0.0,
+          "overlap_after_warmup_per_window": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "static_biased": {
+          "policy": "static_biased",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg20695_static_biased",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 30.94779245,
+            "max_pending_p95_bytes": 24693812.75,
+            "bytes_per_write": 4370.059320247436,
+            "total_compact_output_bytes": 4332690943.0,
+            "total_write_ops": 991449.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 142.77893953828573,
+            "completed_write_mbps": 7.251741257142856,
+            "completion_ratio": 0.0507899924218048,
+            "rate_limiter_actual_mbps": 38.03865795714286,
+            "compaction_write_amp": 4.267636054929136,
+            "pending_compaction_bytes": {
+              "mean": 11343723.401785715,
+              "p95": 22862586.599999987,
+              "max": 25194950.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                105.788368896,
+                115.610345472,
+                150.06154444799998,
+                172.190029824,
+                129.189513216,
+                178.59725516799998,
+                148.015519744
+              ],
+              "completed_write_mbps": [
+                8.646656,
+                5.645056,
+                7.5656704,
+                8.0804352,
+                6.727424,
+                5.964134400000001,
+                8.1328128
+              ],
+              "completion_ratio": [
+                0.08173541278909861,
+                0.04882829453500069,
+                0.05041711670921587,
+                0.04692742784387242,
+                0.052074071900495525,
+                0.03339432285445683,
+                0.05494567606198387
+              ],
+              "rate_limiter_actual_mbps": [
+                37.18606815,
+                37.6682124,
+                38.696983700000004,
+                38.1195658,
+                37.73267265,
+                36.93640775,
+                39.93069525
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 29545.464285714286,
+            "p999_us_mean": 984820.8214285715,
+            "write_ops_total": 447967.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 128449.57142857143,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 141635.57142857142,
+          "overlap_after_warmup_mean": 2.2857142857142856,
+          "overlap_after_warmup_per_window": [
+            2,
+            2,
+            2,
+            3,
+            2,
+            3,
+            2
+          ],
+          "max_lag_after_warmup": 6,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        },
+        "online": {
+          "policy": "online",
+          "trial": "cachelib_v1b_fixhot_t4_n5_seg20695_online",
+          "failed_tenants": 0,
+          "engine_stress": {
+            "mean_compact_output_mbps": 29.047530707142858,
+            "max_pending_p95_bytes": 24722184.25,
+            "bytes_per_write": 4306.290767637491,
+            "total_compact_output_bytes": 4066654299.0,
+            "total_write_ops": 944352.0,
+            "engine_pass": false
+          },
+          "diagnostics": {
+            "offered_write_mbps": 142.77893953828573,
+            "completed_write_mbps": 6.907260342857143,
+            "completion_ratio": 0.04837730526080132,
+            "rate_limiter_actual_mbps": 37.155964342857146,
+            "compaction_write_amp": 4.205362077770987,
+            "pending_compaction_bytes": {
+              "mean": 12101936.36607143,
+              "p95": 22897573.44999998,
+              "max": 25852840.0
+            },
+            "l0_files": {
+              "mean": 0.0,
+              "p95": 0.0,
+              "max": 0.0
+            },
+            "per_window": {
+              "offered_write_mbps": [
+                105.788368896,
+                115.610345472,
+                150.06154444799998,
+                172.190029824,
+                129.189513216,
+                178.59725516799998,
+                148.015519744
+              ],
+              "completed_write_mbps": [
+                7.576064,
+                5.1359744,
+                8.572672,
+                7.4683392,
+                5.8075648,
+                6.1378048,
+                7.6524032
+              ],
+              "completion_ratio": [
+                0.07161528322123946,
+                0.044424868544691756,
+                0.05712770737855922,
+                0.0433726575669543,
+                0.044953840721498585,
+                0.03436673645530772,
+                0.051700005602353064
+              ],
+              "rate_limiter_actual_mbps": [
+                37.2321033,
+                35.72885035,
+                39.30737165,
+                37.28289355,
+                35.423476,
+                37.9980131,
+                37.11904245
+              ]
+            }
+          },
+          "high_tier": {
+            "p99_us_mean": 26628.928571428572,
+            "p999_us_mean": 1113928.0357142857,
+            "write_ops_total": 423484.0,
+            "windows_observed": 28
+          },
+          "low_tier": {
+            "p99_us_mean": 184979.07142857142,
+            "windows_observed": 28
+          },
+          "total_write_ops_mean_per_window": 134907.42857142858,
+          "overlap_after_warmup_mean": 2.2857142857142856,
+          "overlap_after_warmup_per_window": [
+            2,
+            3,
+            3,
+            2,
+            2,
+            2,
+            2
+          ],
+          "max_lag_after_warmup": 1,
+          "schedule_replay": {
+            "windows": 8,
+            "true_high_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ],
+            "true_low_set_size_per_window": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          }
+        }
+      },
+      "engine_stress_pass": false
+    }
+  ],
+  "all_selected_summary": {
+    "high_p99_us": {
+      "static": {
+        "n": 5,
+        "mean": 35183.68571428572,
+        "ci95_lo": 28150.733794729036,
+        "ci95_hi": 42216.6376338424,
+        "values": [
+          36899.0,
+          43352.607142857145,
+          33361.67857142857,
+          34534.71428571428,
+          27770.428571428572
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 30319.728571428575,
+        "ci95_lo": 28873.972119650192,
+        "ci95_hi": 31765.48502320696,
+        "values": [
+          29263.285714285714,
+          32020.464285714286,
+          31020.428571428572,
+          29749.0,
+          29545.464285714286
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 29721.192857142858,
+        "ci95_lo": 25949.04538381307,
+        "ci95_hi": 33493.340330472645,
+        "values": [
+          29950.178571428572,
+          26889.571428571428,
+          33809.71428571428,
+          31327.571428571428,
+          26628.928571428572
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": -13.772195886579317,
+        "ci95_lo_pct": -32.93766173648268,
+        "ci95_hi_pct": 5.39326996332405,
+        "pairs": [
+          [
+            29950.178571428572,
+            36899.0
+          ],
+          [
+            26889.571428571428,
+            43352.607142857145
+          ],
+          [
+            33809.71428571428,
+            33361.67857142857
+          ],
+          [
+            31327.571428571428,
+            34534.71428571428
+          ],
+          [
+            26628.928571428572,
+            27770.428571428572
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -1.8499569039638377,
+        "ci95_lo_pct": -15.041248725784659,
+        "ci95_hi_pct": 11.341334917856983,
+        "pairs": [
+          [
+            29950.178571428572,
+            29263.285714285714
+          ],
+          [
+            26889.571428571428,
+            32020.464285714286
+          ],
+          [
+            33809.71428571428,
+            31020.428571428572
+          ],
+          [
+            31327.571428571428,
+            29749.0
+          ],
+          [
+            26628.928571428572,
+            29545.464285714286
+          ]
+        ]
+      }
+    },
+    "high_p999_us": {
+      "static": {
+        "n": 5,
+        "mean": 904906.5071428571,
+        "ci95_lo": 656385.2902658777,
+        "ci95_hi": 1153427.7240198364,
+        "values": [
+          902499.3571428572,
+          1052749.4642857143,
+          577127.75,
+          911320.8214285715,
+          1080835.142857143
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 979322.9571428571,
+        "ci95_lo": 806253.1937310789,
+        "ci95_hi": 1152392.7205546354,
+        "values": [
+          884785.0357142857,
+          1218606.7142857143,
+          914856.4642857143,
+          893545.75,
+          984820.8214285715
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 1071670.8857142858,
+        "ci95_lo": 971870.8511079651,
+        "ci95_hi": 1171470.9203206066,
+        "values": [
+          1140785.142857143,
+          1119392.392857143,
+          1038785.1785714285,
+          945463.6785714285,
+          1113928.0357142857
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 23.90676022749528,
+        "ci95_lo_pct": -16.805384897618108,
+        "ci95_hi_pct": 64.61890535260866,
+        "pairs": [
+          [
+            1140785.142857143,
+            902499.3571428572
+          ],
+          [
+            1119392.392857143,
+            1052749.4642857143
+          ],
+          [
+            1038785.1785714285,
+            577127.75
+          ],
+          [
+            945463.6785714285,
+            911320.8214285715
+          ],
+          [
+            1113928.0357142857,
+            1080835.142857143
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": 10.651652796497984,
+        "ci95_lo_pct": -6.065257299655574,
+        "ci95_hi_pct": 27.368562892651543,
+        "pairs": [
+          [
+            1140785.142857143,
+            884785.0357142857
+          ],
+          [
+            1119392.392857143,
+            1218606.7142857143
+          ],
+          [
+            1038785.1785714285,
+            914856.4642857143
+          ],
+          [
+            945463.6785714285,
+            893545.75
+          ],
+          [
+            1113928.0357142857,
+            984820.8214285715
+          ]
+        ]
+      }
+    },
+    "high_write_ops_total": {
+      "static": {
+        "n": 5,
+        "mean": 394996.6,
+        "ci95_lo": 359363.65984909836,
+        "ci95_hi": 430629.5401509016,
+        "values": [
+          412556.0,
+          384251.0,
+          349500.0,
+          419504.0,
+          409172.0
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 427711.2,
+        "ci95_lo": 395962.06577404647,
+        "ci95_hi": 459460.33422595356,
+        "values": [
+          428367.0,
+          394348.0,
+          411412.0,
+          456462.0,
+          447967.0
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 430824.4,
+        "ci95_lo": 391845.78025535756,
+        "ci95_hi": 469803.0197446425,
+        "values": [
+          440474.0,
+          441950.0,
+          381786.0,
+          466428.0,
+          423484.0
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 9.140840366882859,
+        "ci95_lo_pct": 3.722795636070156,
+        "ci95_hi_pct": 14.558885097695562,
+        "pairs": [
+          [
+            440474.0,
+            412556.0
+          ],
+          [
+            441950.0,
+            384251.0
+          ],
+          [
+            381786.0,
+            349500.0
+          ],
+          [
+            466428.0,
+            419504.0
+          ],
+          [
+            423484.0,
+            409172.0
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": 0.8828562716250771,
+        "ci95_lo_pct": -8.658947587152879,
+        "ci95_hi_pct": 10.424660130403032,
+        "pairs": [
+          [
+            440474.0,
+            428367.0
+          ],
+          [
+            441950.0,
+            394348.0
+          ],
+          [
+            381786.0,
+            411412.0
+          ],
+          [
+            466428.0,
+            456462.0
+          ],
+          [
+            423484.0,
+            447967.0
+          ]
+        ]
+      }
+    },
+    "total_write_ops_mean_per_window": {
+      "static": {
+        "n": 5,
+        "mean": 131256.7142857143,
+        "ci95_lo": 125812.81515709872,
+        "ci95_hi": 136700.61341432986,
+        "values": [
+          131369.2857142857,
+          129181.42857142857,
+          125255.57142857143,
+          136799.14285714287,
+          133678.14285714287
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 136838.74285714288,
+        "ci95_lo": 131639.14259875007,
+        "ci95_hi": 142038.34311553568,
+        "values": [
+          135623.7142857143,
+          132313.57142857142,
+          133792.0,
+          140828.85714285713,
+          141635.57142857142
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 136324.57142857142,
+        "ci95_lo": 130516.55987292422,
+        "ci95_hi": 142132.5829842186,
+        "values": [
+          134176.85714285713,
+          137933.57142857142,
+          131120.85714285713,
+          143484.14285714287,
+          134907.42857142858
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 3.880241036376643,
+        "ci95_lo_pct": 0.979302925198041,
+        "ci95_hi_pct": 6.781179147555244,
+        "pairs": [
+          [
+            134176.85714285713,
+            131369.2857142857
+          ],
+          [
+            137933.57142857142,
+            129181.42857142857
+          ],
+          [
+            131120.85714285713,
+            125255.57142857143
+          ],
+          [
+            143484.14285714287,
+            136799.14285714287
+          ],
+          [
+            134907.42857142858,
+            133678.14285714287
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -0.3361341694202558,
+        "ci95_lo_pct": -4.668864983292226,
+        "ci95_hi_pct": 3.9965966444517145,
+        "pairs": [
+          [
+            134176.85714285713,
+            135623.7142857143
+          ],
+          [
+            137933.57142857142,
+            132313.57142857142
+          ],
+          [
+            131120.85714285713,
+            133792.0
+          ],
+          [
+            143484.14285714287,
+            140828.85714285713
+          ],
+          [
+            134907.42857142858,
+            141635.57142857142
+          ]
+        ]
+      }
+    },
+    "low_p99_us": {
+      "static": {
+        "n": 5,
+        "mean": 145461.82857142857,
+        "ci95_lo": 44567.84796482223,
+        "ci95_hi": 246355.80917803492,
+        "values": [
+          138595.7857142857,
+          37083.25,
+          106601.32142857143,
+          247433.5,
+          197595.2857142857
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 201203.47857142857,
+        "ci95_lo": 102155.91394409044,
+        "ci95_hi": 300251.0431987667,
+        "values": [
+          191915.5357142857,
+          128328.42857142857,
+          315886.89285714284,
+          241436.9642857143,
+          128449.57142857143
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 127721.0142857143,
+        "ci95_lo": 55021.50897566235,
+        "ci95_hi": 200420.51959576624,
+        "values": [
+          146475.9642857143,
+          35172.46428571428,
+          109676.64285714286,
+          162300.92857142858,
+          184979.07142857142
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": -7.4746405640860845,
+        "ci95_lo_pct": -27.225302329012436,
+        "ci95_hi_pct": 12.276021200840269,
+        "pairs": [
+          [
+            146475.9642857143,
+            138595.7857142857
+          ],
+          [
+            35172.46428571428,
+            37083.25
+          ],
+          [
+            109676.64285714286,
+            106601.32142857143
+          ],
+          [
+            162300.92857142858,
+            247433.5
+          ],
+          [
+            184979.07142857142,
+            197595.2857142857
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -30.063294268265206,
+        "ci95_lo_pct": -87.57323906641497,
+        "ci95_hi_pct": 27.44665052988456,
+        "pairs": [
+          [
+            146475.9642857143,
+            191915.5357142857
+          ],
+          [
+            35172.46428571428,
+            128328.42857142857
+          ],
+          [
+            109676.64285714286,
+            315886.89285714284
+          ],
+          [
+            162300.92857142858,
+            241436.9642857143
+          ],
+          [
+            184979.07142857142,
+            128449.57142857143
+          ]
+        ]
+      }
+    },
+    "mean_compact_output_mbps": {
+      "static": {
+        "n": 5,
+        "mean": 29.06467852,
+        "ci95_lo": 28.606361901585757,
+        "ci95_hi": 29.522995138414245,
+        "values": [
+          29.609846307142856,
+          29.118983521428568,
+          29.15377332857143,
+          28.720820571428572,
+          28.71996887142857
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 30.41303043857143,
+        "ci95_lo": 29.569623579078197,
+        "ci95_hi": 31.25643729806466,
+        "values": [
+          29.41463307857143,
+          30.058076607142855,
+          31.04853170714286,
+          30.59611835,
+          30.94779245
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 29.80993735714286,
+        "ci95_lo": 28.886967412233957,
+        "ci95_hi": 30.732907302051764,
+        "values": [
+          30.57328795,
+          29.473944021428572,
+          30.639993785714285,
+          29.31493032142857,
+          29.047530707142858
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 2.555951990271402,
+        "ci95_lo_pct": 0.4993980052044491,
+        "ci95_hi_pct": 4.612505975338355,
+        "pairs": [
+          [
+            30.57328795,
+            29.609846307142856
+          ],
+          [
+            29.473944021428572,
+            29.118983521428568
+          ],
+          [
+            30.639993785714285,
+            29.15377332857143
+          ],
+          [
+            29.31493032142857,
+            28.720820571428572
+          ],
+          [
+            29.047530707142858,
+            28.71996887142857
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -1.929549202366164,
+        "ci95_lo_pct": -6.6424152124601985,
+        "ci95_hi_pct": 2.783316807727871,
+        "pairs": [
+          [
+            30.57328795,
+            29.41463307857143
+          ],
+          [
+            29.473944021428572,
+            30.058076607142855
+          ],
+          [
+            30.639993785714285,
+            31.04853170714286
+          ],
+          [
+            29.31493032142857,
+            30.59611835
+          ],
+          [
+            29.047530707142858,
+            30.94779245
+          ]
+        ]
+      }
+    },
+    "max_pending_p95_mib": {
+      "static": {
+        "n": 5,
+        "mean": 24.395279932022095,
+        "ci95_lo": 23.62920614269769,
+        "ci95_hi": 25.1613537213465,
+        "values": [
+          23.678455591201782,
+          24.96764326095581,
+          24.353150844573975,
+          25.064115524291992,
+          23.913034439086914
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 23.952130842208863,
+        "ci95_lo": 22.810250005941434,
+        "ci95_hi": 25.094011678476292,
+        "values": [
+          22.986666202545166,
+          25.351541757583618,
+          23.52934503555298,
+          24.34324622154236,
+          23.54985499382019
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 24.20149850845337,
+        "ci95_lo": 23.141046331668225,
+        "ci95_hi": 25.261950685238514,
+        "values": [
+          23.122414588928223,
+          25.09917163848877,
+          24.946131467819214,
+          24.26286268234253,
+          23.57691216468811
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": -0.797799171014858,
+        "ci95_lo_pct": -3.62426541853514,
+        "ci95_hi_pct": 2.0286670765054247,
+        "pairs": [
+          [
+            23.122414588928223,
+            23.678455591201782
+          ],
+          [
+            25.09917163848877,
+            24.96764326095581
+          ],
+          [
+            24.946131467819214,
+            24.353150844573975
+          ],
+          [
+            24.26286268234253,
+            25.064115524291992
+          ],
+          [
+            23.57691216468811,
+            23.913034439086914
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": 1.0802228359181665,
+        "ci95_lo_pct": -2.4248186890635894,
+        "ci95_hi_pct": 4.585264360899923,
+        "pairs": [
+          [
+            23.122414588928223,
+            22.986666202545166
+          ],
+          [
+            25.09917163848877,
+            25.351541757583618
+          ],
+          [
+            24.946131467819214,
+            23.52934503555298
+          ],
+          [
+            24.26286268234253,
+            24.34324622154236
+          ],
+          [
+            23.57691216468811,
+            23.54985499382019
+          ]
+        ]
+      }
+    },
+    "bytes_per_write": {
+      "static": {
+        "n": 5,
+        "mean": 4433.4112555231895,
+        "ci95_lo": 4206.285376418314,
+        "ci95_hi": 4660.537134628065,
+        "values": [
+          4507.879622873362,
+          4508.230609220697,
+          4655.086076581709,
+          4198.976685317577,
+          4296.883283622603
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 4447.533134060448,
+        "ci95_lo": 4277.19347151741,
+        "ci95_hi": 4617.872796603486,
+        "values": [
+          4337.682865196352,
+          4543.460853276038,
+          4641.313637159599,
+          4345.148994422815,
+          4370.059320247436
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 4379.360546710319,
+        "ci95_lo": 4087.7846156487217,
+        "ci95_hi": 4670.9364777719165,
+        "values": [
+          4557.162628641516,
+          4273.64327859684,
+          4673.54995282433,
+          4086.156105851418,
+          4306.290767637491
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": -1.236310717227171,
+        "ci95_lo_pct": -4.524092266023715,
+        "ci95_hi_pct": 2.051470831569373,
+        "pairs": [
+          [
+            4557.162628641516,
+            4507.879622873362
+          ],
+          [
+            4273.64327859684,
+            4508.230609220697
+          ],
+          [
+            4673.54995282433,
+            4655.086076581709
+          ],
+          [
+            4086.156105851418,
+            4198.976685317577
+          ],
+          [
+            4306.290767637491,
+            4296.883283622603
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -1.520784456652973,
+        "ci95_lo_pct": -7.3253552402053685,
+        "ci95_hi_pct": 4.283786326899422,
+        "pairs": [
+          [
+            4557.162628641516,
+            4337.682865196352
+          ],
+          [
+            4273.64327859684,
+            4543.460853276038
+          ],
+          [
+            4673.54995282433,
+            4641.313637159599
+          ],
+          [
+            4086.156105851418,
+            4345.148994422815
+          ],
+          [
+            4306.290767637491,
+            4370.059320247436
+          ]
+        ]
+      }
+    },
+    "offered_write_mbps": {
+      "static": {
+        "n": 5,
+        "mean": 125.81374581028572,
+        "ci95_lo": 110.6896845951629,
+        "ci95_hi": 140.93780702540855,
+        "values": [
+          110.41761748114287,
+          129.5911276251429,
+          118.65570947657145,
+          127.62533493028572,
+          142.77893953828573
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 125.81374581028572,
+        "ci95_lo": 110.6896845951629,
+        "ci95_hi": 140.93780702540855,
+        "values": [
+          110.41761748114287,
+          129.5911276251429,
+          118.65570947657145,
+          127.62533493028572,
+          142.77893953828573
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 125.81374581028572,
+        "ci95_lo": 110.6896845951629,
+        "ci95_hi": 140.93780702540855,
+        "values": [
+          110.41761748114287,
+          129.5911276251429,
+          118.65570947657145,
+          127.62533493028572,
+          142.77893953828573
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 0.0,
+        "ci95_lo_pct": 0.0,
+        "ci95_hi_pct": 0.0,
+        "pairs": [
+          [
+            110.41761748114287,
+            110.41761748114287
+          ],
+          [
+            129.5911276251429,
+            129.5911276251429
+          ],
+          [
+            118.65570947657145,
+            118.65570947657145
+          ],
+          [
+            127.62533493028572,
+            127.62533493028572
+          ],
+          [
+            142.77893953828573,
+            142.77893953828573
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": 0.0,
+        "ci95_lo_pct": 0.0,
+        "ci95_hi_pct": 0.0,
+        "pairs": [
+          [
+            110.41761748114287,
+            110.41761748114287
+          ],
+          [
+            129.5911276251429,
+            129.5911276251429
+          ],
+          [
+            118.65570947657145,
+            118.65570947657145
+          ],
+          [
+            127.62533493028572,
+            127.62533493028572
+          ],
+          [
+            142.77893953828573,
+            142.77893953828573
+          ]
+        ]
+      }
+    },
+    "completed_write_mbps": {
+      "static": {
+        "n": 5,
+        "mean": 6.720343771428571,
+        "ci95_lo": 6.4416161360434545,
+        "ci95_hi": 6.999071406813688,
+        "values": [
+          6.726107428571428,
+          6.614089142857143,
+          6.413085257142857,
+          7.004116114285714,
+          6.844320914285714
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 7.006143634285715,
+        "ci95_lo": 6.739924101056003,
+        "ci95_hi": 7.272363167515428,
+        "values": [
+          6.943934171428571,
+          6.7744548571428576,
+          6.8501504,
+          7.210437485714285,
+          7.251741257142856
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 6.979818057142857,
+        "ci95_lo": 6.682447865493721,
+        "ci95_hi": 7.277188248791994,
+        "values": [
+          6.869855085714285,
+          7.0621988571428576,
+          6.713387885714286,
+          7.346388114285714,
+          6.907260342857143
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 3.88024103637665,
+        "ci95_lo_pct": 0.9793029251980419,
+        "ci95_hi_pct": 6.7811791475552585,
+        "pairs": [
+          [
+            6.869855085714285,
+            6.726107428571428
+          ],
+          [
+            7.0621988571428576,
+            6.614089142857143
+          ],
+          [
+            6.713387885714286,
+            6.413085257142857
+          ],
+          [
+            7.346388114285714,
+            7.004116114285714
+          ],
+          [
+            6.907260342857143,
+            6.844320914285714
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -0.33613416942025814,
+        "ci95_lo_pct": -4.6688649832922255,
+        "ci95_hi_pct": 3.9965966444517096,
+        "pairs": [
+          [
+            6.869855085714285,
+            6.943934171428571
+          ],
+          [
+            7.0621988571428576,
+            6.7744548571428576
+          ],
+          [
+            6.713387885714286,
+            6.8501504
+          ],
+          [
+            7.346388114285714,
+            7.210437485714285
+          ],
+          [
+            6.907260342857143,
+            7.251741257142856
+          ]
+        ]
+      }
+    },
+    "completion_ratio": {
+      "static": {
+        "n": 5,
+        "mean": 0.05376358506424008,
+        "ci95_lo": 0.047749968776439645,
+        "ci95_hi": 0.05977720135204052,
+        "values": [
+          0.06091516536951284,
+          0.051038132502320296,
+          0.054047843845298656,
+          0.05488029565690585,
+          0.047936487947162765
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 0.05603634976182888,
+        "ci95_lo": 0.05009232231050023,
+        "ci95_hi": 0.06198037721315752,
+        "values": [
+          0.06288791888318418,
+          0.05227560699015399,
+          0.0577313171883445,
+          0.05649691332565691,
+          0.0507899924218048
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 0.055846238838289056,
+        "ci95_lo": 0.04958711879835426,
+        "ci95_hi": 0.062105358878223854,
+        "values": [
+          0.06221701973317365,
+          0.054496005911539504,
+          0.05657871766414952,
+          0.05756214562178127,
+          0.04837730526080132
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 3.880241036376649,
+        "ci95_lo_pct": 0.9793029251980463,
+        "ci95_hi_pct": 6.781179147555251,
+        "pairs": [
+          [
+            0.06221701973317365,
+            0.06091516536951284
+          ],
+          [
+            0.054496005911539504,
+            0.051038132502320296
+          ],
+          [
+            0.05657871766414952,
+            0.054047843845298656
+          ],
+          [
+            0.05756214562178127,
+            0.05488029565690585
+          ],
+          [
+            0.04837730526080132,
+            0.047936487947162765
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -0.33613416942025565,
+        "ci95_lo_pct": -4.668864983292221,
+        "ci95_hi_pct": 3.9965966444517096,
+        "pairs": [
+          [
+            0.06221701973317365,
+            0.06288791888318418
+          ],
+          [
+            0.054496005911539504,
+            0.05227560699015399
+          ],
+          [
+            0.05657871766414952,
+            0.0577313171883445
+          ],
+          [
+            0.05756214562178127,
+            0.05649691332565691
+          ],
+          [
+            0.04837730526080132,
+            0.0507899924218048
+          ]
+        ]
+      }
+    },
+    "rate_limiter_actual_mbps": {
+      "static": {
+        "n": 5,
+        "mean": 37.046357685714284,
+        "ci95_lo": 36.80033102152584,
+        "ci95_hi": 37.292384349902726,
+        "values": [
+          37.19507113571429,
+          36.891951985714286,
+          36.94197057142858,
+          37.318399992857145,
+          36.88439474285715
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 37.75057579571428,
+        "ci95_lo": 37.547887217039815,
+        "ci95_hi": 37.95326437438875,
+        "values": [
+          37.66334858571429,
+          37.72444564285714,
+          37.65706492142857,
+          37.66936187142857,
+          38.03865795714286
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 37.41808083857143,
+        "ci95_lo": 36.983136503954505,
+        "ci95_hi": 37.85302517318835,
+        "values": [
+          37.39095739285714,
+          37.98085869285715,
+          37.46489126428571,
+          37.0977325,
+          37.155964342857146
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 1.007747516603694,
+        "ci95_lo_pct": -0.611760509292131,
+        "ci95_hi_pct": 2.627255542499519,
+        "pairs": [
+          [
+            37.39095739285714,
+            37.19507113571429
+          ],
+          [
+            37.98085869285715,
+            36.891951985714286
+          ],
+          [
+            37.46489126428571,
+            36.94197057142858
+          ],
+          [
+            37.0977325,
+            37.318399992857145
+          ],
+          [
+            37.155964342857146,
+            36.88439474285715
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -0.8783721160811154,
+        "ci95_lo_pct": -2.276794796480141,
+        "ci95_hi_pct": 0.5200505643179104,
+        "pairs": [
+          [
+            37.39095739285714,
+            37.66334858571429
+          ],
+          [
+            37.98085869285715,
+            37.72444564285714
+          ],
+          [
+            37.46489126428571,
+            37.65706492142857
+          ],
+          [
+            37.0977325,
+            37.66936187142857
+          ],
+          [
+            37.155964342857146,
+            38.03865795714286
+          ]
+        ]
+      }
+    },
+    "compaction_write_amp": {
+      "static": {
+        "n": 5,
+        "mean": 4.329503179221865,
+        "ci95_lo": 4.1077005629085095,
+        "ci95_hi": 4.55130579553522,
+        "values": [
+          4.402226194212267,
+          4.402568954317087,
+          4.545982496661825,
+          4.100563169255446,
+          4.196175081662698
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 4.343294076230906,
+        "ci95_lo": 4.176946749528721,
+        "ci95_hi": 4.509641402933092,
+        "values": [
+          4.236018423043313,
+          4.4369734895273805,
+          4.532532848788671,
+          4.24330956486603,
+          4.267636054929136
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 4.276719283896796,
+        "ci95_lo": 3.9919771637194548,
+        "ci95_hi": 4.561461404074137,
+        "values": [
+          4.45035412953273,
+          4.1734797642547266,
+          4.56401362580501,
+          3.9903868221205254,
+          4.205362077770987
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": -1.236310717227171,
+        "ci95_lo_pct": -4.524092266023715,
+        "ci95_hi_pct": 2.051470831569373,
+        "pairs": [
+          [
+            4.45035412953273,
+            4.402226194212267
+          ],
+          [
+            4.1734797642547266,
+            4.402568954317087
+          ],
+          [
+            4.56401362580501,
+            4.545982496661825
+          ],
+          [
+            3.9903868221205254,
+            4.100563169255446
+          ],
+          [
+            4.205362077770987,
+            4.196175081662698
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -1.520784456652973,
+        "ci95_lo_pct": -7.3253552402053685,
+        "ci95_hi_pct": 4.283786326899422,
+        "pairs": [
+          [
+            4.45035412953273,
+            4.236018423043313
+          ],
+          [
+            4.1734797642547266,
+            4.4369734895273805
+          ],
+          [
+            4.56401362580501,
+            4.532532848788671
+          ],
+          [
+            3.9903868221205254,
+            4.24330956486603
+          ],
+          [
+            4.205362077770987,
+            4.267636054929136
+          ]
+        ]
+      }
+    },
+    "pending_compaction_bytes_mean_mib": {
+      "static": {
+        "n": 5,
+        "mean": 12.474290362426213,
+        "ci95_lo": 11.414688411332776,
+        "ci95_hi": 13.533892313519651,
+        "values": [
+          12.032588498932975,
+          13.748570884977068,
+          12.79543913262231,
+          12.301370654787336,
+          11.493482640811376
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 12.063660417284286,
+        "ci95_lo": 10.707740087063398,
+        "ci95_hi": 13.419580747505174,
+        "values": [
+          12.050715846674782,
+          13.806539254529136,
+          12.002054418836321,
+          11.64077490568161,
+          10.818217660699572
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 12.497700314862389,
+        "ci95_lo": 11.62075193733964,
+        "ci95_hi": 13.374648692385136,
+        "values": [
+          12.35185626574925,
+          13.518919289112091,
+          12.621187661375318,
+          12.455232466970172,
+          11.541305891105107
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": 0.2576053800055885,
+        "ci95_lo_pct": -1.988276407839753,
+        "ci95_hi_pct": 2.5034871678509303,
+        "pairs": [
+          [
+            12.35185626574925,
+            12.032588498932975
+          ],
+          [
+            13.518919289112091,
+            13.748570884977068
+          ],
+          [
+            12.621187661375318,
+            12.79543913262231
+          ],
+          [
+            12.455232466970172,
+            12.301370654787336
+          ],
+          [
+            11.541305891105107,
+            11.493482640811376
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": 3.850973242114877,
+        "ci95_lo_pct": -0.822002593763481,
+        "ci95_hi_pct": 8.523949077993235,
+        "pairs": [
+          [
+            12.35185626574925,
+            12.050715846674782
+          ],
+          [
+            13.518919289112091,
+            13.806539254529136
+          ],
+          [
+            12.621187661375318,
+            12.002054418836321
+          ],
+          [
+            12.455232466970172,
+            11.64077490568161
+          ],
+          [
+            11.541305891105107,
+            10.818217660699572
+          ]
+        ]
+      }
+    },
+    "pending_compaction_bytes_p95_mib": {
+      "static": {
+        "n": 5,
+        "mean": 22.919634180068968,
+        "ci95_lo": 21.38590552520987,
+        "ci95_hi": 24.453362834928065,
+        "values": [
+          21.005013465881348,
+          24.3570508480072,
+          23.522846889495845,
+          22.882035160064696,
+          22.83122453689575
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 22.72268785476684,
+        "ci95_lo": 21.35091242215659,
+        "ci95_hi": 24.09446328737709,
+        "values": [
+          21.360886812210083,
+          23.98770432472227,
+          23.046428537368772,
+          23.41495795249939,
+          21.80346164703368
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 22.877637672424306,
+        "ci95_lo": 21.26159967437875,
+        "ci95_hi": 24.493675670469862,
+        "values": [
+          21.183285379409785,
+          24.254429197311385,
+          23.5037679195404,
+          23.60987815856933,
+          21.83682770729063
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": -0.1656589914285402,
+        "ci95_lo_pct": -3.5573081292594715,
+        "ci95_hi_pct": 3.225990146402391,
+        "pairs": [
+          [
+            21.183285379409785,
+            21.005013465881348
+          ],
+          [
+            24.254429197311385,
+            24.3570508480072
+          ],
+          [
+            23.5037679195404,
+            23.522846889495845
+          ],
+          [
+            23.60987815856933,
+            22.882035160064696
+          ],
+          [
+            21.83682770729063,
+            22.83122453689575
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": 0.6500815852811566,
+        "ci95_lo_pct": -0.6621444769582974,
+        "ci95_hi_pct": 1.9623076475206105,
+        "pairs": [
+          [
+            21.183285379409785,
+            21.360886812210083
+          ],
+          [
+            24.254429197311385,
+            23.98770432472227
+          ],
+          [
+            23.5037679195404,
+            23.046428537368772
+          ],
+          [
+            23.60987815856933,
+            23.41495795249939
+          ],
+          [
+            21.83682770729063,
+            21.80346164703368
+          ]
+        ]
+      }
+    },
+    "pending_compaction_bytes_max_mib": {
+      "static": {
+        "n": 5,
+        "mean": 25.519073486328125,
+        "ci95_lo": 24.27362717510581,
+        "ci95_hi": 26.76451979755044,
+        "values": [
+          24.41135883331299,
+          25.28636646270752,
+          24.77605438232422,
+          26.455739974975586,
+          26.665847778320312
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 24.616330337524413,
+        "ci95_lo": 23.148268877876536,
+        "ci95_hi": 26.08439179717229,
+        "values": [
+          23.429213523864746,
+          26.57115650177002,
+          24.512402534484863,
+          24.541102409362793,
+          24.02777671813965
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 24.649909591674806,
+        "ci95_lo": 23.74100721279368,
+        "ci95_hi": 25.558811970555933,
+        "values": [
+          23.42619800567627,
+          25.159785270690918,
+          25.264482498168945,
+          24.743892669677734,
+          24.655189514160156
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": -3.3151386016870887,
+        "ci95_lo_pct": -8.288602848554795,
+        "ci95_hi_pct": 1.6583256451806188,
+        "pairs": [
+          [
+            23.42619800567627,
+            24.41135883331299
+          ],
+          [
+            25.159785270690918,
+            25.28636646270752
+          ],
+          [
+            25.264482498168945,
+            24.77605438232422
+          ],
+          [
+            24.743892669677734,
+            26.455739974975586
+          ],
+          [
+            24.655189514160156,
+            26.665847778320312
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": 0.236230116627219,
+        "ci95_lo_pct": -3.9208115563663544,
+        "ci95_hi_pct": 4.393271789620792,
+        "pairs": [
+          [
+            23.42619800567627,
+            23.429213523864746
+          ],
+          [
+            25.159785270690918,
+            26.57115650177002
+          ],
+          [
+            25.264482498168945,
+            24.512402534484863
+          ],
+          [
+            24.743892669677734,
+            24.541102409362793
+          ],
+          [
+            24.655189514160156,
+            24.02777671813965
+          ]
+        ]
+      }
+    },
+    "l0_files_mean": {
+      "static": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    },
+    "l0_files_p95": {
+      "static": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    },
+    "l0_files_max": {
+      "static": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    },
+    "overlap_after_warmup_mean": {
+      "static": {
+        "n": 5,
+        "mean": 0.0,
+        "ci95_lo": 0.0,
+        "ci95_hi": 0.0,
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 2.3428571428571425,
+        "ci95_lo": 2.140644597575234,
+        "ci95_hi": 2.545069688139051,
+        "values": [
+          2.4285714285714284,
+          2.142857142857143,
+          2.2857142857142856,
+          2.5714285714285716,
+          2.2857142857142856
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 2.742857142857143,
+        "ci95_lo": 2.283792525112205,
+        "ci95_hi": 3.201921760602081,
+        "values": [
+          2.5714285714285716,
+          2.857142857142857,
+          2.7142857142857144,
+          3.2857142857142856,
+          2.2857142857142856
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": [
+          [
+            2.5714285714285716,
+            0.0
+          ],
+          [
+            2.857142857142857,
+            0.0
+          ],
+          [
+            2.7142857142857144,
+            0.0
+          ],
+          [
+            3.2857142857142856,
+            0.0
+          ],
+          [
+            2.2857142857142856,
+            0.0
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": 17.148692810457522,
+        "ci95_lo_pct": -0.3917208081182366,
+        "ci95_hi_pct": 34.68910642903328,
+        "pairs": [
+          [
+            2.5714285714285716,
+            2.4285714285714284
+          ],
+          [
+            2.857142857142857,
+            2.142857142857143
+          ],
+          [
+            2.7142857142857144,
+            2.2857142857142856
+          ],
+          [
+            3.2857142857142856,
+            2.5714285714285716
+          ],
+          [
+            2.2857142857142856,
+            2.2857142857142856
+          ]
+        ]
+      }
+    },
+    "max_lag_after_warmup": {
+      "static": {
+        "n": 5,
+        "mean": 6.0,
+        "ci95_lo": 6.0,
+        "ci95_hi": 6.0,
+        "values": [
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      "static_biased": {
+        "n": 5,
+        "mean": 5.4,
+        "ci95_lo": 3.734400000000001,
+        "ci95_hi": 7.0656,
+        "values": [
+          6,
+          6,
+          6,
+          3,
+          6
+        ]
+      },
+      "online": {
+        "n": 5,
+        "mean": 2.4,
+        "ci95_lo": -0.3199134103864405,
+        "ci95_hi": 5.11991341038644,
+        "values": [
+          6,
+          1,
+          3,
+          1,
+          1
+        ]
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 5,
+        "mean_pct": -60.0,
+        "ci95_lo_pct": -105.33189017310735,
+        "ci95_hi_pct": -14.668109826892653,
+        "pairs": [
+          [
+            6,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 5,
+        "mean_pct": -56.66666666666667,
+        "ci95_lo_pct": -99.57260823916013,
+        "ci95_hi_pct": -13.760725094173218,
+        "pairs": [
+          [
+            6,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ]
+        ]
+      }
+    }
+  },
+  "stress_pass_subset_summary": {
+    "high_p99_us": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "high_p999_us": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "high_write_ops_total": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "total_write_ops_mean_per_window": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "low_p99_us": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "mean_compact_output_mbps": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "max_pending_p95_mib": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "bytes_per_write": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "offered_write_mbps": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "completed_write_mbps": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "completion_ratio": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "rate_limiter_actual_mbps": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "compaction_write_amp": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "pending_compaction_bytes_mean_mib": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "pending_compaction_bytes_p95_mib": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "pending_compaction_bytes_max_mib": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "l0_files_mean": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "l0_files_p95": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "l0_files_max": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "overlap_after_warmup_mean": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "max_lag_after_warmup": {
+      "static": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "static_biased": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online": {
+        "n": 0,
+        "mean": NaN,
+        "ci95_lo": NaN,
+        "ci95_hi": NaN,
+        "values": []
+      },
+      "online_vs_static_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "online_vs_static_biased_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    }
+  },
+  "n_stress": 0,
+  "acceptance_gate": {
+    "high_p999_no_strict_regression": true,
+    "total_tput_no_strict_regression_3pct": true,
+    "bytes_per_write_no_strict_regression": true,
+    "benefit_at_least_one": false,
+    "adaptation_overlap_improves": false,
+    "details": {
+      "high_p99_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "high_p999_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "high_write_throughput_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "total_throughput_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "bytes_per_write_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      },
+      "overlap_after_warmup_pct": {
+        "n_pairs": 0,
+        "mean_pct": NaN,
+        "ci95_lo_pct": NaN,
+        "ci95_hi_pct": NaN,
+        "pairs": []
+      }
+    },
+    "acceptance_pass": false
+  },
+  "headline_verdict": "smoke_supplement_only_n_stress=0"
+}

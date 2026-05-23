@@ -1,0 +1,793 @@
+{
+  "promote_rule": {
+    "high_p99_max_pct": -2.0,
+    "high_tput_min_pct": 5.0,
+    "overlap_fraction_min": 0.625
+  },
+  "variants": [
+    {
+      "high_count": 4,
+      "indicators": {
+        "max_failed_online": 0,
+        "max_failed_static": 0
+      },
+      "n": 5,
+      "name": "wm_value4k",
+      "pattern": "remote-results/embedded_continuous_analysis_wm_value4k_*.json",
+      "stats": {
+        "bytes_per_write": {
+          "ci95_high": -6.007461572390264,
+          "ci95_low": -11.99006784366737,
+          "ci95_margin": 2.9913031356385527,
+          "max": -6.730470254475613,
+          "mean": -8.998764708028817,
+          "min": -12.85471498672315,
+          "n": 5,
+          "range": 6.124244732247537,
+          "sem": 1.077558766440401,
+          "stdev": 2.409494651511556
+        },
+        "compact_bytes": {
+          "ci95_high": 2.246623483019037,
+          "ci95_low": -4.026356688576851,
+          "ci95_margin": 3.136490085797944,
+          "max": 2.9005701937153376,
+          "mean": -0.8898666027789071,
+          "min": -4.118324065401433,
+          "n": 5,
+          "range": 7.01889425911677,
+          "sem": 1.1298595409934957,
+          "stdev": 2.526442738688167
+        },
+        "high_p99": {
+          "ci95_high": -12.374068188551714,
+          "ci95_low": -44.75503893746625,
+          "ci95_margin": 16.19048537445727,
+          "max": -11.592234969203911,
+          "mean": -28.564553563008985,
+          "min": -45.4668891934063,
+          "n": 5,
+          "range": 33.87465422420239,
+          "sem": 5.832307411548008,
+          "stdev": 13.04143583789719
+        },
+        "high_p999": {
+          "ci95_high": 13.493905507158978,
+          "ci95_low": -27.743387574544826,
+          "ci95_margin": 20.618646540851902,
+          "max": 12.519792971035937,
+          "mean": -7.124741033692925,
+          "min": -28.88921128326789,
+          "n": 5,
+          "range": 41.409004254303824,
+          "sem": 7.427466333159908,
+          "stdev": 16.608319621536655
+        },
+        "high_tput": {
+          "ci95_high": 24.797659299154258,
+          "ci95_low": 15.452938288131225,
+          "ci95_margin": 4.672360505511516,
+          "max": 24.44799728692029,
+          "mean": 20.12529879364274,
+          "min": 16.385566025648494,
+          "n": 5,
+          "range": 8.062431261271797,
+          "sem": 1.683126983253428,
+          "stdev": 3.7635863493188153
+        },
+        "overlap": {
+          "ci95_high": 3.0,
+          "ci95_low": 3.0,
+          "ci95_margin": 0.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "min": 3.0,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "overlap_fraction": {
+          "ci95_high": 0.75,
+          "ci95_low": 0.75,
+          "ci95_margin": 0.0,
+          "max": 0.75,
+          "mean": 0.75,
+          "min": 0.75,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 2.050692933169343,
+          "ci95_low": -0.9506264440175208,
+          "ci95_margin": 1.5006596885934318,
+          "max": 2.2604504839931456,
+          "mean": 0.550033244575911,
+          "min": -0.46445610580756996,
+          "n": 5,
+          "range": 2.7249065898007157,
+          "sem": 0.5405834613088731,
+          "stdev": 1.208781366998768
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -1.2686682662583015,
+            "online_vs_static_pct_compact_output_bytes_per_write": -9.018087439154046,
+            "online_vs_static_pct_high_write_p999_us": -11.57827712125561,
+            "online_vs_static_pct_high_write_p99_us": -25.02759651127913,
+            "online_vs_static_pct_high_write_throughput": 17.79911115258547,
+            "online_vs_static_pct_total_throughput": 2.2604504839931456
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_value4k_a.json",
+          "trial": "wm_value4k_a"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -0.44245858196378673,
+            "online_vs_static_pct_compact_output_bytes_per_write": -9.174454222246643,
+            "online_vs_static_pct_high_write_p999_us": 12.519792971035937,
+            "online_vs_static_pct_high_write_p99_us": -36.98438863462748,
+            "online_vs_static_pct_high_write_throughput": 16.385566025648494,
+            "online_vs_static_pct_total_throughput": -0.46445610580756996
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_value4k_b.json",
+          "trial": "wm_value4k_b"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -4.118324065401433,
+            "online_vs_static_pct_compact_output_bytes_per_write": -12.85471498672315,
+            "online_vs_static_pct_high_write_p999_us": -28.88921128326789,
+            "online_vs_static_pct_high_write_p99_us": -11.592234969203911,
+            "online_vs_static_pct_high_write_throughput": 18.07659768514908,
+            "online_vs_static_pct_total_throughput": 1.3826499675444877
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_value4k_c.json",
+          "trial": "wm_value4k_c"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -1.520452293986352,
+            "online_vs_static_pct_compact_output_bytes_per_write": -6.730470254475613,
+            "online_vs_static_pct_high_write_p999_us": -13.895489348242169,
+            "online_vs_static_pct_high_write_p99_us": -23.75165850652809,
+            "online_vs_static_pct_high_write_throughput": 23.91722181791038,
+            "online_vs_static_pct_total_throughput": -0.09503571610965443
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_value4k_d.json",
+          "trial": "wm_value4k_d"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 2.9005701937153376,
+            "online_vs_static_pct_compact_output_bytes_per_write": -7.216096637544632,
+            "online_vs_static_pct_high_write_p999_us": 6.219479613265105,
+            "online_vs_static_pct_high_write_p99_us": -45.4668891934063,
+            "online_vs_static_pct_high_write_throughput": 24.44799728692029,
+            "online_vs_static_pct_total_throughput": -0.3334424067408541
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_value4k_e.json",
+          "trial": "wm_value4k_e"
+        }
+      ],
+      "verdict": "ci-strict-win"
+    },
+    {
+      "high_count": 4,
+      "indicators": {
+        "max_failed_online": 0,
+        "max_failed_static": 0
+      },
+      "n": 5,
+      "name": "wm_readheavy",
+      "pattern": "remote-results/embedded_continuous_analysis_wm_readheavy_*.json",
+      "stats": {
+        "bytes_per_write": {
+          "ci95_high": -4.478059252034634,
+          "ci95_low": -16.019396990347282,
+          "ci95_margin": 5.7706688691563235,
+          "max": -5.580979491389271,
+          "mean": -10.248728121190958,
+          "min": -16.645487641928945,
+          "n": 5,
+          "range": 11.064508150539673,
+          "sem": 2.0787712064684163,
+          "stdev": 4.648273727332629
+        },
+        "compact_bytes": {
+          "ci95_high": 2.8403292927046526,
+          "ci95_low": -3.3739829049228676,
+          "ci95_margin": 3.10715609881376,
+          "max": 1.8250355342832747,
+          "mean": -0.2668268061091075,
+          "min": -3.5667842977342197,
+          "n": 5,
+          "range": 5.391819832017495,
+          "sem": 1.119292542800346,
+          "stdev": 2.5028142124101667
+        },
+        "high_p99": {
+          "ci95_high": 2.043118399773107,
+          "ci95_low": -32.8839805033366,
+          "ci95_margin": 17.463549451554854,
+          "max": 4.823735155190669,
+          "mean": -15.420431051781748,
+          "min": -28.13124838258841,
+          "n": 5,
+          "range": 32.95498353777908,
+          "sem": 6.290903981107657,
+          "stdev": 14.066888941680773
+        },
+        "high_p999": {
+          "ci95_high": -10.838486010638288,
+          "ci95_low": -66.04942034129304,
+          "ci95_margin": 27.60546716532738,
+          "max": -13.880570379063272,
+          "mean": -38.44395317596567,
+          "min": -59.800455973683874,
+          "n": 5,
+          "range": 45.9198855946206,
+          "sem": 9.944332552351362,
+          "stdev": 22.236203577921632
+        },
+        "high_tput": {
+          "ci95_high": 38.03189498415696,
+          "ci95_low": 22.744466138389996,
+          "ci95_margin": 7.643714422883486,
+          "max": 39.51273514858122,
+          "mean": 30.38818056127348,
+          "min": 22.536459076747402,
+          "n": 5,
+          "range": 16.97627607183382,
+          "sem": 2.7534994318744546,
+          "stdev": 6.157011905678332
+        },
+        "overlap": {
+          "ci95_high": 3.0,
+          "ci95_low": 3.0,
+          "ci95_margin": 0.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "min": 3.0,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "overlap_fraction": {
+          "ci95_high": 0.75,
+          "ci95_low": 0.75,
+          "ci95_margin": 0.0,
+          "max": 0.75,
+          "mean": 0.75,
+          "min": 0.75,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 3.864656442625807,
+          "ci95_low": -4.205478946562933,
+          "ci95_margin": 4.03506769459437,
+          "max": 4.8259666300113695,
+          "mean": -0.17041125196856308,
+          "min": -3.273160059054315,
+          "n": 5,
+          "range": 8.099126689065685,
+          "sem": 1.4535546450267904,
+          "stdev": 3.25024699529048
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 1.8250355342832747,
+            "online_vs_static_pct_compact_output_bytes_per_write": -5.580979491389271,
+            "online_vs_static_pct_high_write_p999_us": -13.880570379063272,
+            "online_vs_static_pct_high_write_p99_us": -7.1580304025579995,
+            "online_vs_static_pct_high_write_throughput": 22.536459076747402,
+            "online_vs_static_pct_total_throughput": -3.273160059054315
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_readheavy_a.json",
+          "trial": "wm_readheavy_a"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 0.9301941830193566,
+            "online_vs_static_pct_compact_output_bytes_per_write": -6.563360892068781,
+            "online_vs_static_pct_high_write_p999_us": -50.94067108495204,
+            "online_vs_static_pct_high_write_p99_us": -28.13124838258841,
+            "online_vs_static_pct_high_write_throughput": 28.50588137148578,
+            "online_vs_static_pct_total_throughput": -2.564882829612597
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_readheavy_b.json",
+          "trial": "wm_readheavy_b"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -3.5667842977342197,
+            "online_vs_static_pct_compact_output_bytes_per_write": -13.254686883100561,
+            "online_vs_static_pct_high_write_p999_us": -59.800455973683874,
+            "online_vs_static_pct_high_write_p99_us": -19.637395646124805,
+            "online_vs_static_pct_high_write_throughput": 31.91753212575581,
+            "online_vs_static_pct_total_throughput": -0.8704278680377335
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_readheavy_c.json",
+          "trial": "wm_readheavy_c"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -2.3055240392608836,
+            "online_vs_static_pct_compact_output_bytes_per_write": -16.645487641928945,
+            "online_vs_static_pct_high_write_p999_us": -14.838331315225176,
+            "online_vs_static_pct_high_write_p99_us": 4.823735155190669,
+            "online_vs_static_pct_high_write_throughput": 39.51273514858122,
+            "online_vs_static_pct_total_throughput": 4.8259666300113695
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_readheavy_d.json",
+          "trial": "wm_readheavy_d"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 1.7829445891469347,
+            "online_vs_static_pct_compact_output_bytes_per_write": -9.199125697467233,
+            "online_vs_static_pct_high_write_p999_us": -52.75973712690397,
+            "online_vs_static_pct_high_write_p99_us": -26.999215982828197,
+            "online_vs_static_pct_high_write_throughput": 29.468295083797187,
+            "online_vs_static_pct_total_throughput": 1.0304478668504609
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 3.0,
+          "overlap_fraction": 0.75,
+          "path": "remote-results/embedded_continuous_analysis_wm_readheavy_e.json",
+          "trial": "wm_readheavy_e"
+        }
+      ],
+      "verdict": "ci-strict-partial"
+    },
+    {
+      "high_count": 4,
+      "indicators": {
+        "max_failed_online": 0,
+        "max_failed_static": 0
+      },
+      "n": 5,
+      "name": "wm_driftfast",
+      "pattern": "remote-results/embedded_continuous_analysis_wm_driftfast_*.json",
+      "stats": {
+        "bytes_per_write": {
+          "ci95_high": 1.0705593142437007,
+          "ci95_low": -7.682768044929039,
+          "ci95_margin": 4.37666367958637,
+          "max": 0.2568081861689876,
+          "mean": -3.3061043653426694,
+          "min": -8.042567802981823,
+          "n": 5,
+          "range": 8.29937598915081,
+          "sem": 1.5766079537414879,
+          "stdev": 3.525402558432811
+        },
+        "compact_bytes": {
+          "ci95_high": 6.557367047744855,
+          "ci95_low": 3.241506429703594,
+          "ci95_margin": 1.6579303090206305,
+          "max": 6.339656322553143,
+          "mean": 4.899436738724225,
+          "min": 3.439432516855597,
+          "n": 5,
+          "range": 2.900223805697546,
+          "sem": 0.5972371430189591,
+          "stdev": 1.3354628504781567
+        },
+        "high_p99": {
+          "ci95_high": -7.4803386792388125,
+          "ci95_low": -27.701748939478527,
+          "ci95_margin": 10.110705130119857,
+          "max": -5.199954966581226,
+          "mean": -17.59104380935867,
+          "min": -25.198938085316268,
+          "n": 5,
+          "range": 19.99898311873504,
+          "sem": 3.642184845144041,
+          "stdev": 8.144172900361621
+        },
+        "high_p999": {
+          "ci95_high": 45.49386310170551,
+          "ci95_low": -47.62705165320843,
+          "ci95_margin": 46.56045737745697,
+          "max": 41.077393077155364,
+          "mean": -1.0665942757514622,
+          "min": -42.08344162980223,
+          "n": 5,
+          "range": 83.16083470695759,
+          "sem": 16.77249905527989,
+          "stdev": 37.50444804015684
+        },
+        "high_tput": {
+          "ci95_high": 30.84727213781236,
+          "ci95_low": 10.203652563574002,
+          "ci95_margin": 10.32180978711918,
+          "max": 30.391906574127397,
+          "mean": 20.525462350693182,
+          "min": 12.9366641320392,
+          "n": 5,
+          "range": 17.4552424420882,
+          "sem": 3.7182311913253536,
+          "stdev": 8.314217699863518
+        },
+        "overlap": {
+          "ci95_high": 2.5714285714285716,
+          "ci95_low": 2.5714285714285716,
+          "ci95_margin": 0.0,
+          "max": 2.5714285714285716,
+          "mean": 2.5714285714285716,
+          "min": 2.5714285714285716,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "overlap_fraction": {
+          "ci95_high": 0.6428571428571429,
+          "ci95_low": 0.6428571428571429,
+          "ci95_margin": 0.0,
+          "max": 0.6428571428571429,
+          "mean": 0.6428571428571429,
+          "min": 0.6428571428571429,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 7.755460704398358,
+          "ci95_low": 1.002103282068663,
+          "ci95_margin": 3.3766787111648475,
+          "max": 7.107855137910195,
+          "mean": 4.378781993233511,
+          "min": -0.11313812491883135,
+          "n": 5,
+          "range": 7.220993262829026,
+          "sem": 1.216382821024801,
+          "stdev": 2.7199146744744156
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 3.439432516855597,
+            "online_vs_static_pct_compact_output_bytes_per_write": -8.042567802981823,
+            "online_vs_static_pct_high_write_p999_us": -42.08344162980223,
+            "online_vs_static_pct_high_write_p99_us": -17.466090317850423,
+            "online_vs_static_pct_high_write_throughput": 28.61216411150995,
+            "online_vs_static_pct_total_throughput": 7.107855137910195
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 2.5714285714285716,
+          "overlap_fraction": 0.6428571428571429,
+          "path": "remote-results/embedded_continuous_analysis_wm_driftfast_a.json",
+          "trial": "wm_driftfast_a"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 4.330760568394941,
+            "online_vs_static_pct_compact_output_bytes_per_write": -5.858055916244811,
+            "online_vs_static_pct_high_write_p999_us": 22.33940637557771,
+            "online_vs_static_pct_high_write_p99_us": -25.198938085316268,
+            "online_vs_static_pct_high_write_throughput": 30.391906574127397,
+            "online_vs_static_pct_total_throughput": 4.759770534009253
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 2.5714285714285716,
+          "overlap_fraction": 0.6428571428571429,
+          "path": "remote-results/embedded_continuous_analysis_wm_driftfast_b.json",
+          "trial": "wm_driftfast_b"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 6.2962694452636745,
+            "online_vs_static_pct_compact_output_bytes_per_write": -0.6905981641482672,
+            "online_vs_static_pct_high_write_p999_us": 12.348138839099509,
+            "online_vs_static_pct_high_write_p99_us": -5.199954966581226,
+            "online_vs_static_pct_high_write_throughput": 16.45317273073384,
+            "online_vs_static_pct_total_throughput": 5.727980963033172
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 2.5714285714285716,
+          "overlap_fraction": 0.6428571428571429,
+          "path": "remote-results/embedded_continuous_analysis_wm_driftfast_c.json",
+          "trial": "wm_driftfast_c"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 4.091064840553767,
+            "online_vs_static_pct_compact_output_bytes_per_write": -2.196108129507432,
+            "online_vs_static_pct_high_write_p999_us": -39.01446804078766,
+            "online_vs_static_pct_high_write_p99_us": -15.471798538281838,
+            "online_vs_static_pct_high_write_throughput": 12.9366641320392,
+            "online_vs_static_pct_total_throughput": -0.11313812491883135
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 2.5714285714285716,
+          "overlap_fraction": 0.6428571428571429,
+          "path": "remote-results/embedded_continuous_analysis_wm_driftfast_d.json",
+          "trial": "wm_driftfast_d"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 6.339656322553143,
+            "online_vs_static_pct_compact_output_bytes_per_write": 0.2568081861689876,
+            "online_vs_static_pct_high_write_p999_us": 41.077393077155364,
+            "online_vs_static_pct_high_write_p99_us": -24.61843713876359,
+            "online_vs_static_pct_high_write_throughput": 14.233404205055514,
+            "online_vs_static_pct_total_throughput": 4.411441456133763
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 4,
+          "overlap_after_warmup": 2.5714285714285716,
+          "overlap_fraction": 0.6428571428571429,
+          "path": "remote-results/embedded_continuous_analysis_wm_driftfast_e.json",
+          "trial": "wm_driftfast_e"
+        }
+      ],
+      "verdict": "ci-strict-win"
+    },
+    {
+      "high_count": 2,
+      "indicators": {
+        "max_failed_online": 0,
+        "max_failed_static": 0
+      },
+      "n": 5,
+      "name": "wm_8t_2high",
+      "pattern": "remote-results/embedded_continuous_analysis_wm_8t_2high_*.json",
+      "stats": {
+        "bytes_per_write": {
+          "ci95_high": -7.966032453657481,
+          "ci95_low": -14.679644691797122,
+          "ci95_margin": 3.3568061190698204,
+          "max": -8.475803749075409,
+          "mean": -11.322838572727301,
+          "min": -14.710812475969758,
+          "n": 5,
+          "range": 6.23500872689435,
+          "sem": 1.209224106293163,
+          "stdev": 2.703907301702944
+        },
+        "compact_bytes": {
+          "ci95_high": 3.4179627140900237,
+          "ci95_low": -0.32741264008026727,
+          "ci95_margin": 1.8726876770851455,
+          "max": 3.337848103860645,
+          "mean": 1.5452750370048782,
+          "min": -0.7546662133575358,
+          "n": 5,
+          "range": 4.092514317218181,
+          "sem": 0.6745993073073291,
+          "stdev": 1.5084499087134584
+        },
+        "high_p99": {
+          "ci95_high": -29.58997386325359,
+          "ci95_low": -54.89566514395577,
+          "ci95_margin": 12.652845640351087,
+          "max": -28.786797576236268,
+          "mean": -42.24281950360468,
+          "min": -56.17136727366222,
+          "n": 5,
+          "range": 27.384569697425952,
+          "sem": 4.5579415130947725,
+          "stdev": 10.19186706074816
+        },
+        "high_p999": {
+          "ci95_high": -35.69957693874764,
+          "ci95_low": -69.49636748825745,
+          "ci95_margin": 16.898395274754904,
+          "max": -34.746785684983195,
+          "mean": -52.597972213502544,
+          "min": -71.11089231572161,
+          "n": 5,
+          "range": 36.36410663073842,
+          "sem": 6.0873181825485965,
+          "stdev": 13.611657256849137
+        },
+        "high_tput": {
+          "ci95_high": 34.46343564617674,
+          "ci95_low": 22.885382735323297,
+          "ci95_margin": 5.789026455426724,
+          "max": 33.822048056606555,
+          "mean": 28.67440919075002,
+          "min": 21.842186025567123,
+          "n": 5,
+          "range": 11.979862031039431,
+          "sem": 2.085384169822307,
+          "stdev": 4.663060762924644
+        },
+        "overlap": {
+          "ci95_high": 1.5714285714285714,
+          "ci95_low": 1.5714285714285714,
+          "ci95_margin": 0.0,
+          "max": 1.5714285714285714,
+          "mean": 1.5714285714285714,
+          "min": 1.5714285714285714,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "overlap_fraction": {
+          "ci95_high": 0.7857142857142857,
+          "ci95_low": 0.7857142857142857,
+          "ci95_margin": 0.0,
+          "max": 0.7857142857142857,
+          "mean": 0.7857142857142857,
+          "min": 0.7857142857142857,
+          "n": 5,
+          "range": 0.0,
+          "sem": 0.0,
+          "stdev": 0.0
+        },
+        "total_tput": {
+          "ci95_high": 8.886984093752847,
+          "ci95_low": 5.07440872229941,
+          "ci95_margin": 1.906287685726719,
+          "max": 9.111399274977696,
+          "mean": 6.9806964080261285,
+          "min": 5.717429148387995,
+          "n": 5,
+          "range": 3.393970126589701,
+          "sem": 0.6867030568179824,
+          "stdev": 1.535514715401909
+        }
+      },
+      "trials": [
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": -0.7546662133575358,
+            "online_vs_static_pct_compact_output_bytes_per_write": -14.710812475969758,
+            "online_vs_static_pct_high_write_p999_us": -50.58173368865092,
+            "online_vs_static_pct_high_write_p99_us": -39.40953653694733,
+            "online_vs_static_pct_high_write_throughput": 32.15845233171966,
+            "online_vs_static_pct_total_throughput": 9.111399274977696
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 2,
+          "overlap_after_warmup": 1.5714285714285714,
+          "overlap_fraction": 0.7857142857142857,
+          "path": "remote-results/embedded_continuous_analysis_wm_8t_2high_a.json",
+          "trial": "wm_8t_2high_a"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 3.337848103860645,
+            "online_vs_static_pct_compact_output_bytes_per_write": -8.93702640021951,
+            "online_vs_static_pct_high_write_p999_us": -34.746785684983195,
+            "online_vs_static_pct_high_write_p99_us": -28.786797576236268,
+            "online_vs_static_pct_high_write_throughput": 27.63062982503205,
+            "online_vs_static_pct_total_throughput": 5.7269175063531765
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 2,
+          "overlap_after_warmup": 1.5714285714285714,
+          "overlap_fraction": 0.7857142857142857,
+          "path": "remote-results/embedded_continuous_analysis_wm_8t_2high_b.json",
+          "trial": "wm_8t_2high_b"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 1.5387969724898416,
+            "online_vs_static_pct_compact_output_bytes_per_write": -13.309842224092918,
+            "online_vs_static_pct_high_write_p999_us": -47.16240118826669,
+            "online_vs_static_pct_high_write_p99_us": -39.57523963449022,
+            "online_vs_static_pct_high_write_throughput": 33.822048056606555,
+            "online_vs_static_pct_total_throughput": 8.081857808321372
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 2,
+          "overlap_after_warmup": 1.5714285714285714,
+          "overlap_fraction": 0.7857142857142857,
+          "path": "remote-results/embedded_continuous_analysis_wm_8t_2high_c.json",
+          "trial": "wm_8t_2high_c"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 2.2851969211758307,
+            "online_vs_static_pct_compact_output_bytes_per_write": -8.475803749075409,
+            "online_vs_static_pct_high_write_p999_us": -71.11089231572161,
+            "online_vs_static_pct_high_write_p99_us": -56.17136727366222,
+            "online_vs_static_pct_high_write_throughput": 21.842186025567123,
+            "online_vs_static_pct_total_throughput": 6.265878302090401
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 2,
+          "overlap_after_warmup": 1.5714285714285714,
+          "overlap_fraction": 0.7857142857142857,
+          "path": "remote-results/embedded_continuous_analysis_wm_8t_2high_d.json",
+          "trial": "wm_8t_2high_d"
+        },
+        {
+          "compare": {
+            "online_vs_static_pct_compact_output_bytes": 1.3191994008556096,
+            "online_vs_static_pct_compact_output_bytes_per_write": -11.180708014278904,
+            "online_vs_static_pct_high_write_p999_us": -59.3880481898903,
+            "online_vs_static_pct_high_write_p99_us": -47.27115649668734,
+            "online_vs_static_pct_high_write_throughput": 27.918729714824725,
+            "online_vs_static_pct_total_throughput": 5.717429148387995
+          },
+          "failed_online": 0,
+          "failed_static": 0,
+          "high_count": 2,
+          "overlap_after_warmup": 1.5714285714285714,
+          "overlap_fraction": 0.7857142857142857,
+          "path": "remote-results/embedded_continuous_analysis_wm_8t_2high_e.json",
+          "trial": "wm_8t_2high_e"
+        }
+      ],
+      "verdict": "ci-strict-win"
+    }
+  ]
+}

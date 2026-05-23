@@ -1,0 +1,89 @@
+{
+  "budget_contract": "high/mid/low = 11/7/3 MB/s; 16-tenant aggregate = 112 MB/s",
+  "generated_at": "2026-05-19T06:27:53.515873+00:00",
+  "recommendation": "Keep the controlled RocksDB workload matrix as the main externality extension; report CacheLib and Baleen as qualification negatives.",
+  "rows": [
+    {
+      "candidate_screen": "5 selected drifting 16-tenant segments",
+      "compact_output_mbps_mean": 29.81,
+      "compact_output_mbps_range": [
+        29.048,
+        30.64
+      ],
+      "completed_write_mbps_mean": 6.98,
+      "completed_write_mbps_range": [
+        6.713,
+        7.346
+      ],
+      "completion_ratio_mean": 0.0558,
+      "offered_write_mbps_mean": 125.814,
+      "offered_write_mbps_range": [
+        110.418,
+        142.779
+      ],
+      "paper_use": "trace-shaped plumbing and tracking sanity check, not production-trace validation",
+      "pending_p95_mib_mean": 22.878,
+      "pending_p95_mib_range": [
+        21.183,
+        24.254
+      ],
+      "qualification_status": "negative_smoke_only",
+      "rocksdb_status": "n=5 trace-shaped replay ran; stress-pass subset n=0",
+      "stop_reason": "failed pre-registered engine-stress gate after replay; cache request stream did not become sustained RocksDB compaction pressure",
+      "stress_gate": "mean compact >=60 MB/s or pending p95 >=32 MiB",
+      "stress_pass_segments": 0,
+      "trace_family": "Meta CacheLib kvcache/202401",
+      "trace_role": "cache-front-end key-value request stream",
+      "tracking_signal": {
+        "online_max_lag": 2.4,
+        "online_overlap_after_warmup": 2.74,
+        "static_biased_max_lag": 5.4,
+        "static_biased_overlap_after_warmup": 2.34
+      }
+    },
+    {
+      "aggregate_scaled_candidates": 297,
+      "candidate_screen": "146 independent segments after aggregate supply/drift screen",
+      "diagnostic_smoke": {
+        "compact_output_mbps": 11.275,
+        "completed_logical_write_mbps": 1.099,
+        "completion_ratio": 0.0123,
+        "offered_write_mbps": 89.127,
+        "pending_p95_mib": 10.417,
+        "rate_limiter_actual_mbps": 12.707,
+        "segment_id": "Region6_w83982457"
+      },
+      "max_active_write_tenants_any_window": 6,
+      "max_single_window_oracle_tiered_actuatable_mbps": 58.0,
+      "max_single_window_static_actuatable_mbps": 42.0,
+      "median_active_write_tenants_distribution": {
+        "max": 3.0,
+        "min": 1.0,
+        "p50": 1.5,
+        "p95": 2.5
+      },
+      "paper_use": "trace-family qualification negative, not controller comparison",
+      "qualification_status": "stop_before_second_smoke",
+      "rocksdb_status": "one static-only diagnostic smoke failed Gate B; no n=5 and no second smoke recommended",
+      "segment_locality_pass": 146,
+      "static_actuatable_mean_mbps_distribution": {
+        "max": 20.588,
+        "min": 7.0,
+        "p50": 11.325,
+        "p95": 15.66
+      },
+      "stop_reason": "aggregate scaled trace supply is concentrated in too few active tenant/windows to use the fixed per-tenant caps",
+      "stress_gate": "static all-mid actuatable mean >=70 MB/s and >=6/8 windows >=70 MB/s",
+      "stress_pass_segments": 0,
+      "trace_family": "Meta Tectonic/Baleen storage_0.1 Region5-7",
+      "trace_role": "storage/flash-cache block trace with user axis"
+    }
+  ],
+  "source_artifacts": [
+    "remote-results/cachelib_external_v1b/results/cachelib_external_v1_cachelib_v1b_fixhot_t4_n5_aggregate.json",
+    "remote-results/trace_family_audit/baleen_0.1_audit_report.json",
+    "remote-results/trace_family_audit/baleen_0.1_static_actuatable_addendum.json",
+    "remote-results/baleen_static_smoke/results/baleen_static_smoke_Region6_w83982457_summary.json"
+  ],
+  "verdict": "No current public trace result should be promoted to production-trace validation."
+}

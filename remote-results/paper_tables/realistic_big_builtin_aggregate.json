@@ -1,0 +1,489 @@
+{
+  "aggregates": {
+    "builtin_vs_static": {
+      "builtin_vs_static_pct_high_mean_write_p99_us": {
+        "ci95_high": 32.39654011564388,
+        "ci95_low": 25.29226364351249,
+        "max": 31.432725918017685,
+        "mean": 28.844401879578186,
+        "min": 24.348384624460316,
+        "n": 5,
+        "sem": 1.279588701752772,
+        "stdev": 2.8612473203599027
+      },
+      "builtin_vs_static_pct_high_sum_ops_per_sec": {
+        "ci95_high": -17.829617119570287,
+        "ci95_low": -21.513028793002434,
+        "max": -17.07605767171313,
+        "mean": -19.67132295628636,
+        "min": -20.855250126548846,
+        "n": 5,
+        "sem": 0.6634387019870585,
+        "stdev": 1.4834940365472875
+      },
+      "builtin_vs_static_pct_low_mean_write_p99_us": {
+        "ci95_high": 6.749105749759023,
+        "ci95_low": -13.540294419769468,
+        "max": 3.534174658522604,
+        "mean": -3.395594335005223,
+        "min": -17.586514012643928,
+        "n": 5,
+        "sem": 3.654430866269541,
+        "stdev": 8.171555836052137
+      },
+      "builtin_vs_static_pct_low_sum_ops_per_sec": {
+        "ci95_high": 9.643523864987666,
+        "ci95_low": -5.82634142531055,
+        "max": 12.969120279514524,
+        "mean": 1.9085912198385582,
+        "min": -2.0721151741013544,
+        "n": 5,
+        "sem": 2.786359022027777,
+        "stdev": 6.230488182973944
+      },
+      "builtin_vs_static_pct_mid_mean_write_p99_us": {
+        "ci95_high": 8.479256250911977,
+        "ci95_low": -6.110870608429142,
+        "max": 9.779744957189614,
+        "mean": 1.1841928212414174,
+        "min": -6.3701824621560394,
+        "n": 5,
+        "sem": 2.6279046936853603,
+        "stdev": 5.876173533471228
+      },
+      "builtin_vs_static_pct_mid_sum_ops_per_sec": {
+        "ci95_high": -14.06584393492533,
+        "ci95_low": -20.610137541825775,
+        "max": -12.934052566050235,
+        "mean": -17.337990738375552,
+        "min": -19.32030878231904,
+        "n": 5,
+        "sem": 1.1787272346722706,
+        "stdev": 2.635714223657544
+      },
+      "builtin_vs_static_pct_sum_compact_write_bytes": {
+        "ci95_high": 2.307261204934818,
+        "ci95_low": -2.7678044368185617,
+        "max": 1.5905822046941285,
+        "mean": -0.23027161594187176,
+        "min": -3.6560835109808565,
+        "n": 5,
+        "sem": 0.9140968374916031,
+        "stdev": 2.043982666648803
+      },
+      "builtin_vs_static_pct_sum_ops_per_sec": {
+        "ci95_high": 3.8255541468972325,
+        "ci95_low": -7.39724303671086,
+        "max": 6.176892993113021,
+        "mean": -1.7858444449068138,
+        "min": -5.1156064730224475,
+        "n": 5,
+        "sem": 2.0213971872492964,
+        "stdev": 4.519981520216298
+      }
+    },
+    "online_vs_builtin": {
+      "online_vs_builtin_pct_high_mean_write_p99_us": {
+        "ci95_high": -26.459188462891085,
+        "ci95_low": -36.46579529342463,
+        "max": -27.315651307198202,
+        "mean": -31.462491878157856,
+        "min": -36.37996221834868,
+        "n": 5,
+        "sem": 1.8023427288424976,
+        "stdev": 4.030160860444296
+      },
+      "online_vs_builtin_pct_high_sum_ops_per_sec": {
+        "ci95_high": 78.13246922387854,
+        "ci95_low": 65.7198758118784,
+        "max": 77.9444514475398,
+        "mean": 71.92617251787847,
+        "min": 66.31231223066571,
+        "n": 5,
+        "sem": 2.2356976606628525,
+        "stdev": 4.999171946379396
+      },
+      "online_vs_builtin_pct_low_mean_write_p99_us": {
+        "ci95_high": 16.40039359277173,
+        "ci95_low": -7.138119383388285,
+        "max": 20.505741956136074,
+        "mean": 4.631137104691724,
+        "min": -3.3867148864290355,
+        "n": 5,
+        "sem": 4.23964570896254,
+        "stdev": 9.48013600575553
+      },
+      "online_vs_builtin_pct_low_sum_ops_per_sec": {
+        "ci95_high": 5.424692581313894,
+        "ci95_low": -10.930174240604895,
+        "max": 3.6928137764643814,
+        "mean": -2.752740829645501,
+        "min": -13.8809444022336,
+        "n": 5,
+        "sem": 2.9457613151871023,
+        "stdev": 6.5869225462475445
+      },
+      "online_vs_builtin_pct_mid_mean_write_p99_us": {
+        "ci95_high": 6.924589191369822,
+        "ci95_low": -5.609444249159525,
+        "max": 8.704701899430605,
+        "mean": 0.6575724711051492,
+        "min": -4.778152098079998,
+        "n": 5,
+        "sem": 2.257570864648658,
+        "stdev": 5.0480819173773765
+      },
+      "online_vs_builtin_pct_mid_sum_ops_per_sec": {
+        "ci95_high": 13.494215753442312,
+        "ci95_low": 6.518645535570699,
+        "max": 14.325771309489522,
+        "mean": 10.006430644506505,
+        "min": 6.693173298300789,
+        "n": 5,
+        "sem": 1.2564067395301894,
+        "stdev": 2.809410876978376
+      },
+      "online_vs_builtin_pct_sum_compact_write_bytes": {
+        "ci95_high": -17.573431151105602,
+        "ci95_low": -24.04626352296969,
+        "max": -17.69184592832921,
+        "mean": -20.809847337037645,
+        "min": -24.799091762577234,
+        "n": 5,
+        "sem": 1.1658559747593815,
+        "stdev": 2.6069332115362562
+      },
+      "online_vs_builtin_pct_sum_ops_per_sec": {
+        "ci95_high": 7.076773733180683,
+        "ci95_low": -6.552386100292453,
+        "max": 5.684285264372143,
+        "mean": 0.26219381644411477,
+        "min": -8.940452807647468,
+        "n": 5,
+        "sem": 2.454819854732193,
+        "stdev": 5.489144067697343
+      }
+    },
+    "online_vs_static": {
+      "online_vs_static_pct_high_mean_write_p99_us": {
+        "ci95_high": -5.480139049817204,
+        "ci95_low": -17.957272048456264,
+        "max": -6.239106384549772,
+        "mean": -11.718705549136734,
+        "min": -17.235624821625585,
+        "n": 5,
+        "sem": 2.247322225979658,
+        "stdev": 5.02516526463666
+      },
+      "online_vs_static_pct_high_sum_ops_per_sec": {
+        "ci95_high": 41.72866465024076,
+        "ci95_low": 34.40339425400036,
+        "max": 42.123456237694654,
+        "mean": 38.06602945212056,
+        "min": 34.216409195555705,
+        "n": 5,
+        "sem": 1.319393082896326,
+        "stdev": 2.9502526223992005
+      },
+      "online_vs_static_pct_sum_compact_write_bytes": {
+        "ci95_high": -18.43062406346766,
+        "ci95_low": -23.605501267676928,
+        "max": -18.42825837917809,
+        "mean": -21.018062665572295,
+        "min": -24.260022979860384,
+        "n": 5,
+        "sem": 0.9320744243892767,
+        "stdev": 2.0841817730234107
+      },
+      "online_vs_static_pct_sum_ops_per_sec": {
+        "ci95_high": 1.4429720756381224,
+        "ci95_low": -4.853009683292064,
+        "max": 2.050200179451842,
+        "mean": -1.705018803826971,
+        "min": -4.6544149348922215,
+        "n": 5,
+        "sem": 1.1340024781934774,
+        "stdev": 2.5357066278938385
+      }
+    },
+    "overlap": {
+      "builtin_overlap": {
+        "ci95_high": 0.0,
+        "ci95_low": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "n": 5,
+        "sem": 0.0,
+        "stdev": 0.0
+      },
+      "online_overlap": {
+        "ci95_high": 3.142857142857143,
+        "ci95_low": 3.142857142857143,
+        "max": 3.142857142857143,
+        "mean": 3.142857142857143,
+        "min": 3.142857142857143,
+        "n": 5,
+        "sem": 0.0,
+        "stdev": 0.0
+      }
+    },
+    "static_biased_vs_builtin": {
+      "static_biased_vs_builtin_pct_high_mean_write_p99_us": {
+        "ci95_high": -24.559245293892186,
+        "ci95_low": -29.544630346820835,
+        "max": -23.976133086589837,
+        "mean": -27.05193782035651,
+        "min": -29.24662795630667,
+        "n": 5,
+        "sem": 0.897943993683114,
+        "stdev": 2.0078638098630845
+      },
+      "static_biased_vs_builtin_pct_high_sum_ops_per_sec": {
+        "ci95_high": 49.3938304135118,
+        "ci95_low": 42.88843756206396,
+        "max": 48.884647002271116,
+        "mean": 46.14113398778788,
+        "min": 42.52117290412039,
+        "n": 5,
+        "sem": 1.1717206144538612,
+        "stdev": 2.6200469445566563
+      },
+      "static_biased_vs_builtin_pct_sum_compact_write_bytes": {
+        "ci95_high": -6.989972813416091,
+        "ci95_low": -12.32846910247785,
+        "max": -6.523977751132291,
+        "mean": -9.659220957946971,
+        "min": -12.293606883683411,
+        "n": 5,
+        "sem": 0.9615447206523344,
+        "stdev": 2.150079358784666
+      },
+      "static_biased_vs_builtin_pct_sum_ops_per_sec": {
+        "ci95_high": 0.32952745193486477,
+        "ci95_low": -5.21073661934537,
+        "max": 0.2311031641170233,
+        "mean": -2.4406045837052526,
+        "min": -5.221224844026617,
+        "n": 5,
+        "sem": 0.9978861799856331,
+        "stdev": 2.231341332255466
+      }
+    },
+    "trial_count": 5
+  },
+  "failed_tenants": {
+    "builtin_failed_tenants": 0,
+    "online_failed_tenants": 0,
+    "static_failed_tenants": 0
+  },
+  "per_trial": [
+    {
+      "builtin_failed_tenants": 0,
+      "builtin_overlap": 0.0,
+      "builtin_vs_static": {
+        "builtin_vs_static_pct_high_mean_write_p99_us": 30.091678760751243,
+        "builtin_vs_static_pct_high_sum_ops_per_sec": -20.855250126548846,
+        "builtin_vs_static_pct_low_mean_write_p99_us": -17.586514012643928,
+        "builtin_vs_static_pct_low_sum_ops_per_sec": 12.969120279514524,
+        "builtin_vs_static_pct_mid_mean_write_p99_us": 1.5080796953330313,
+        "builtin_vs_static_pct_mid_sum_ops_per_sec": -19.32030878231904,
+        "builtin_vs_static_pct_sum_compact_write_bytes": 0.6213215221152563,
+        "builtin_vs_static_pct_sum_ops_per_sec": 6.176892993113021
+      },
+      "online_failed_tenants": 0,
+      "online_overlap": 3.142857142857143,
+      "online_vs_builtin": {
+        "online_vs_builtin_pct_high_mean_write_p99_us": -36.37996221834868,
+        "online_vs_builtin_pct_high_sum_ops_per_sec": 76.08659380996079,
+        "online_vs_builtin_pct_low_mean_write_p99_us": 20.505741956136074,
+        "online_vs_builtin_pct_low_sum_ops_per_sec": -13.8809444022336,
+        "online_vs_builtin_pct_mid_mean_write_p99_us": -0.7972524178641326,
+        "online_vs_builtin_pct_mid_sum_ops_per_sec": 10.31591295600287,
+        "online_vs_builtin_pct_sum_compact_write_bytes": -21.314663066647526,
+        "online_vs_builtin_pct_sum_ops_per_sec": -8.940452807647468
+      },
+      "online_vs_static": {
+        "online_vs_static_pct_high_mean_write_p99_us": -17.235624821625585,
+        "online_vs_static_pct_high_sum_ops_per_sec": 39.363294231573384,
+        "online_vs_static_pct_sum_compact_write_bytes": -20.825774133531702,
+        "online_vs_static_pct_sum_ops_per_sec": -3.3158020175625995
+      },
+      "static_biased_vs_builtin": {
+        "static_biased_vs_builtin_pct_high_mean_write_p99_us": -26.869527733031763,
+        "static_biased_vs_builtin_pct_high_sum_ops_per_sec": 45.34634743194016,
+        "static_biased_vs_builtin_pct_sum_compact_write_bytes": -9.137954759402197,
+        "static_biased_vs_builtin_pct_sum_ops_per_sec": -0.5720341545701789
+      },
+      "static_failed_tenants": 0,
+      "trial": "realistic_big_a"
+    },
+    {
+      "builtin_failed_tenants": 0,
+      "builtin_overlap": 0.0,
+      "builtin_vs_static": {
+        "builtin_vs_static_pct_high_mean_write_p99_us": 31.432725918017685,
+        "builtin_vs_static_pct_high_sum_ops_per_sec": -20.177282484179152,
+        "builtin_vs_static_pct_low_mean_write_p99_us": -1.2550322386225516,
+        "builtin_vs_static_pct_low_sum_ops_per_sec": -2.0721151741013544,
+        "builtin_vs_static_pct_mid_mean_write_p99_us": 2.252226144017967,
+        "builtin_vs_static_pct_mid_sum_ops_per_sec": -18.586690398283327,
+        "builtin_vs_static_pct_sum_compact_write_bytes": 1.5905822046941285,
+        "builtin_vs_static_pct_sum_ops_per_sec": -5.1156064730224475
+      },
+      "online_failed_tenants": 0,
+      "online_overlap": 3.142857142857143,
+      "online_vs_builtin": {
+        "online_vs_builtin_pct_high_mean_write_p99_us": -30.47913015832906,
+        "online_vs_builtin_pct_high_sum_ops_per_sec": 68.1431218737373,
+        "online_vs_builtin_pct_low_mean_write_p99_us": 3.492907830716131,
+        "online_vs_builtin_pct_low_sum_ops_per_sec": -1.8724778401053153,
+        "online_vs_builtin_pct_mid_mean_write_p99_us": 8.704701899430605,
+        "online_vs_builtin_pct_mid_sum_ops_per_sec": 6.693173298300789,
+        "online_vs_builtin_pct_sum_compact_write_bytes": -19.705409841570155,
+        "online_vs_builtin_pct_sum_ops_per_sec": 0.48605626382498823
+      },
+      "online_vs_static": {
+        "online_vs_static_pct_high_mean_write_p99_us": -8.626825685174817,
+        "online_vs_static_pct_high_sum_ops_per_sec": 34.216409195555705,
+        "online_vs_static_pct_sum_compact_write_bytes": -18.42825837917809,
+        "online_vs_static_pct_sum_ops_per_sec": -4.6544149348922215
+      },
+      "static_biased_vs_builtin": {
+        "static_biased_vs_builtin_pct_high_mean_write_p99_us": -29.24662795630667,
+        "static_biased_vs_builtin_pct_high_sum_ops_per_sec": 48.884647002271116,
+        "static_biased_vs_builtin_pct_sum_compact_write_bytes": -12.293606883683411,
+        "static_biased_vs_builtin_pct_sum_ops_per_sec": -3.3748017395990253
+      },
+      "static_failed_tenants": 0,
+      "trial": "realistic_big_b"
+    },
+    {
+      "builtin_failed_tenants": 0,
+      "builtin_overlap": 0.0,
+      "builtin_vs_static": {
+        "builtin_vs_static_pct_high_mean_write_p99_us": 24.348384624460316,
+        "builtin_vs_static_pct_high_sum_ops_per_sec": -17.07605767171313,
+        "builtin_vs_static_pct_low_mean_write_p99_us": 3.534174658522604,
+        "builtin_vs_static_pct_low_sum_ops_per_sec": -0.9034354880582925,
+        "builtin_vs_static_pct_mid_mean_write_p99_us": -6.3701824621560394,
+        "builtin_vs_static_pct_mid_sum_ops_per_sec": -12.934052566050235,
+        "builtin_vs_static_pct_sum_compact_write_bytes": -3.6560835109808565,
+        "builtin_vs_static_pct_sum_ops_per_sec": -3.108662402747372
+      },
+      "online_failed_tenants": 0,
+      "online_overlap": 3.142857142857143,
+      "online_vs_builtin": {
+        "online_vs_builtin_pct_high_mean_write_p99_us": -27.315651307198202,
+        "online_vs_builtin_pct_high_sum_ops_per_sec": 66.31231223066571,
+        "online_vs_builtin_pct_low_mean_write_p99_us": -1.8376294351563922,
+        "online_vs_builtin_pct_low_sum_ops_per_sec": -0.5650403384925681,
+        "online_vs_builtin_pct_mid_mean_write_p99_us": 1.6355241893999783,
+        "online_vs_builtin_pct_mid_sum_ops_per_sec": 8.650205234925522,
+        "online_vs_builtin_pct_sum_compact_write_bytes": -17.69184592832921,
+        "online_vs_builtin_pct_sum_ops_per_sec": 1.8675028332567796
+      },
+      "online_vs_static": {
+        "online_vs_static_pct_high_mean_write_p99_us": -9.618186525690927,
+        "online_vs_static_pct_high_sum_ops_per_sec": 37.91272587899762,
+        "online_vs_static_pct_sum_compact_write_bytes": -20.701100777536286,
+        "online_vs_static_pct_sum_ops_per_sec": -1.299213927938288
+      },
+      "static_biased_vs_builtin": {
+        "static_biased_vs_builtin_pct_high_mean_write_p99_us": -23.976133086589837,
+        "static_biased_vs_builtin_pct_high_sum_ops_per_sec": 42.52117290412039,
+        "static_biased_vs_builtin_pct_sum_compact_write_bytes": -6.523977751132291,
+        "static_biased_vs_builtin_pct_sum_ops_per_sec": -5.221224844026617
+      },
+      "static_failed_tenants": 0,
+      "trial": "realistic_big_c"
+    },
+    {
+      "builtin_failed_tenants": 0,
+      "builtin_overlap": 0.0,
+      "builtin_vs_static": {
+        "builtin_vs_static_pct_high_mean_write_p99_us": 27.749903421324003,
+        "builtin_vs_static_pct_high_sum_ops_per_sec": -20.13043672811885,
+        "builtin_vs_static_pct_low_mean_write_p99_us": -0.8595868190415551,
+        "builtin_vs_static_pct_low_sum_ops_per_sec": -0.025219099264509656,
+        "builtin_vs_static_pct_mid_mean_write_p99_us": 9.779744957189614,
+        "builtin_vs_static_pct_mid_sum_ops_per_sec": -18.977204402627958,
+        "builtin_vs_static_pct_sum_compact_write_bytes": 0.7168381278254156,
+        "builtin_vs_static_pct_sum_ops_per_sec": -3.4432224482401637
+      },
+      "online_failed_tenants": 0,
+      "online_overlap": 3.142857142857143,
+      "online_vs_builtin": {
+        "online_vs_builtin_pct_high_mean_write_p99_us": -34.93050605509733,
+        "online_vs_builtin_pct_high_sum_ops_per_sec": 77.9444514475398,
+        "online_vs_builtin_pct_low_mean_write_p99_us": 4.38138005819184,
+        "online_vs_builtin_pct_low_sum_ops_per_sec": -1.138055343860403,
+        "online_vs_builtin_pct_mid_mean_write_p99_us": -4.778152098079998,
+        "online_vs_builtin_pct_mid_sum_ops_per_sec": 14.325771309489522,
+        "online_vs_builtin_pct_sum_compact_write_bytes": -24.799091762577234,
+        "online_vs_builtin_pct_sum_ops_per_sec": 2.213577528414131
+      },
+      "online_vs_static": {
+        "online_vs_static_pct_high_mean_write_p99_us": -16.87378432864257,
+        "online_vs_static_pct_high_sum_ops_per_sec": 42.123456237694654,
+        "online_vs_static_pct_sum_compact_write_bytes": -24.260022979860384,
+        "online_vs_static_pct_sum_ops_per_sec": -1.3058633181935875
+      },
+      "static_biased_vs_builtin": {
+        "static_biased_vs_builtin_pct_high_mean_write_p99_us": -28.374273671471084,
+        "static_biased_vs_builtin_pct_high_sum_ops_per_sec": 48.52584842500385,
+        "static_biased_vs_builtin_pct_sum_compact_write_bytes": -10.851289001381296,
+        "static_biased_vs_builtin_pct_sum_ops_per_sec": -3.266065344447464
+      },
+      "static_failed_tenants": 0,
+      "trial": "realistic_big_d"
+    },
+    {
+      "builtin_failed_tenants": 0,
+      "builtin_overlap": 0.0,
+      "builtin_vs_static": {
+        "builtin_vs_static_pct_high_mean_write_p99_us": 30.599316673337682,
+        "builtin_vs_static_pct_high_sum_ops_per_sec": -20.11758777087183,
+        "builtin_vs_static_pct_low_mean_write_p99_us": -0.8110132632406832,
+        "builtin_vs_static_pct_low_sum_ops_per_sec": -0.4253944188975757,
+        "builtin_vs_static_pct_mid_mean_write_p99_us": -1.2489042281774851,
+        "builtin_vs_static_pct_mid_sum_ops_per_sec": -16.871697542597197,
+        "builtin_vs_static_pct_sum_compact_write_bytes": -0.4240164233633025,
+        "builtin_vs_static_pct_sum_ops_per_sec": -3.438623893637107
+      },
+      "online_failed_tenants": 0,
+      "online_overlap": 3.142857142857143,
+      "online_vs_builtin": {
+        "online_vs_builtin_pct_high_mean_write_p99_us": -28.207209651816008,
+        "online_vs_builtin_pct_high_sum_ops_per_sec": 71.14438322748875,
+        "online_vs_builtin_pct_low_mean_write_p99_us": -3.3867148864290355,
+        "online_vs_builtin_pct_low_sum_ops_per_sec": 3.6928137764643814,
+        "online_vs_builtin_pct_mid_mean_write_p99_us": -1.4769592173607067,
+        "online_vs_builtin_pct_mid_sum_ops_per_sec": 10.047090423813815,
+        "online_vs_builtin_pct_sum_compact_write_bytes": -20.5382260860641,
+        "online_vs_builtin_pct_sum_ops_per_sec": 5.684285264372143
+      },
+      "online_vs_static": {
+        "online_vs_static_pct_high_mean_write_p99_us": -6.239106384549772,
+        "online_vs_static_pct_high_sum_ops_per_sec": 36.71426171678146,
+        "online_vs_static_pct_sum_compact_write_bytes": -20.875157057755004,
+        "online_vs_static_pct_sum_ops_per_sec": 2.050200179451842
+      },
+      "static_biased_vs_builtin": {
+        "static_biased_vs_builtin_pct_high_mean_write_p99_us": -26.793126654383208,
+        "static_biased_vs_builtin_pct_high_sum_ops_per_sec": 45.42765417560388,
+        "static_biased_vs_builtin_pct_sum_compact_write_bytes": -9.489276394135661,
+        "static_biased_vs_builtin_pct_sum_ops_per_sec": 0.2311031641170233
+      },
+      "static_failed_tenants": 0,
+      "trial": "realistic_big_e"
+    }
+  ],
+  "trial_ids": [
+    "realistic_big_a",
+    "realistic_big_b",
+    "realistic_big_c",
+    "realistic_big_d",
+    "realistic_big_e"
+  ]
+}

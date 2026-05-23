@@ -1,0 +1,865 @@
+{
+  "aggregate": {
+    "all": {
+      "compact_bytes_pct": {
+        "max": -0.0602688477828455,
+        "mean": -1.8511050556037212,
+        "min": -5.825419278734152,
+        "n": 5,
+        "stdev": 2.3336926899091988
+      },
+      "compact_bytes_per_write_pct": {
+        "max": -9.07639927424881,
+        "mean": -11.942695825141874,
+        "min": -13.505965883464931,
+        "n": 5,
+        "stdev": 1.8729613625420904
+      },
+      "total_throughput_pct": {
+        "max": 6.79775702618305,
+        "mean": 4.32586342048276,
+        "min": 1.3309549589807979,
+        "n": 5,
+        "stdev": 2.5811309954580866
+      },
+      "write_p999_pct": {
+        "max": -4.6069131239494725,
+        "mean": -29.15077654692052,
+        "min": -46.620944826797874,
+        "n": 5,
+        "stdev": 15.81336338260539
+      },
+      "write_p99_pct": {
+        "max": -6.858991088483142,
+        "mean": -21.214294948992034,
+        "min": -30.788584981816992,
+        "n": 5,
+        "stdev": 9.577779224850229
+      },
+      "write_throughput_pct": {
+        "max": 13.827913932844464,
+        "mean": 11.469582810391252,
+        "min": 8.833503817863104,
+        "n": 5,
+        "stdev": 2.0395008401588353
+      }
+    },
+    "high": {
+      "compact_bytes_pct": {
+        "max": 34.06297304346164,
+        "mean": 26.306604661759927,
+        "min": 16.536889724126894,
+        "n": 5,
+        "stdev": 8.088775416685674
+      },
+      "compact_bytes_per_write_pct": {
+        "max": 4.605859912693709,
+        "mean": 0.09225011375757342,
+        "min": -7.148065170526781,
+        "n": 5,
+        "stdev": 4.856806208702561
+      },
+      "total_throughput_pct": {
+        "max": 29.966591227502974,
+        "mean": 26.33592868857766,
+        "min": 21.947189659432993,
+        "n": 5,
+        "stdev": 3.180072458859862
+      },
+      "write_p999_pct": {
+        "max": -39.26707008155327,
+        "mean": -47.1131161781649,
+        "min": -54.04107021019517,
+        "n": 5,
+        "stdev": 7.100894289118137
+      },
+      "write_p99_pct": {
+        "max": -11.985476681856767,
+        "mean": -27.00053313558658,
+        "min": -39.239074677871145,
+        "n": 5,
+        "stdev": 10.104317684006672
+      },
+      "write_throughput_pct": {
+        "max": 28.160098445109544,
+        "mean": 26.127523093202136,
+        "min": 21.452215104509357,
+        "n": 5,
+        "stdev": 2.8232831218007184
+      }
+    },
+    "low": {
+      "compact_bytes_pct": {
+        "max": -22.62983185847095,
+        "mean": -35.264938951114324,
+        "min": -43.94404835190728,
+        "n": 5,
+        "stdev": 7.833510605064042
+      },
+      "compact_bytes_per_write_pct": {
+        "max": -21.19336341075197,
+        "mean": -33.190305183319175,
+        "min": -44.65893597683322,
+        "n": 5,
+        "stdev": 8.55076441393181
+      },
+      "total_throughput_pct": {
+        "max": 0.17897997572412075,
+        "mean": -3.9976686971345914,
+        "min": -8.375054099206421,
+        "n": 5,
+        "stdev": 3.377350404355839
+      },
+      "write_p999_pct": {
+        "max": 179.8219579147226,
+        "mean": 2.572553603666815,
+        "min": -75.01621584385738,
+        "n": 5,
+        "stdev": 102.6638107136564
+      },
+      "write_p99_pct": {
+        "max": 47.11036705189561,
+        "mean": 1.4414645762682439,
+        "min": -44.67862686752389,
+        "n": 5,
+        "stdev": 41.791843239620995
+      },
+      "write_throughput_pct": {
+        "max": 1.2917851102875066,
+        "mean": -2.9730353285954783,
+        "min": -6.713563720803166,
+        "n": 5,
+        "stdev": 2.9859707690209873
+      }
+    },
+    "mid": {
+      "compact_bytes_pct": {
+        "max": 6.732339667137039,
+        "mean": -5.518763261298247,
+        "min": -12.003033472833739,
+        "n": 5,
+        "stdev": 7.161990117656362
+      },
+      "compact_bytes_per_write_pct": {
+        "max": 0.7920992769149575,
+        "mean": -6.726208190012697,
+        "min": -13.766774415085441,
+        "n": 5,
+        "stdev": 6.1084560361999385
+      },
+      "total_throughput_pct": {
+        "max": 5.440857287625435,
+        "mean": 1.27994245482803,
+        "min": -3.384042647210226,
+        "n": 5,
+        "stdev": 3.9536790655184872
+      },
+      "write_p999_pct": {
+        "max": 13.849159405013515,
+        "mean": -4.508730969459995,
+        "min": -28.55267756952638,
+        "n": 5,
+        "stdev": 18.566057641034515
+      },
+      "write_p99_pct": {
+        "max": -7.05057027103986,
+        "mean": -17.754086401875924,
+        "min": -29.010521012509173,
+        "n": 5,
+        "stdev": 9.607212321385983
+      },
+      "write_throughput_pct": {
+        "max": 5.8935575633779775,
+        "mean": 1.310212173712555,
+        "min": -2.8417409822973627,
+        "n": 5,
+        "stdev": 3.9880253055944554
+      }
+    }
+  },
+  "per_trial": [
+    {
+      "deltas_vs_static": {
+        "online": {
+          "all": {
+            "compact_bytes_pct": -0.0602688477828455,
+            "compact_bytes_per_write_pct": -9.07639927424881,
+            "total_throughput_pct": 1.7347395958459577,
+            "write_p999_pct": -46.620944826797874,
+            "write_p99_pct": -28.568773569884787,
+            "write_throughput_pct": 9.916160770690237
+          },
+          "high": {
+            "compact_bytes_pct": 33.570840690214034,
+            "compact_bytes_per_write_pct": 4.297688751159981,
+            "total_throughput_pct": 29.966591227502974,
+            "write_p999_pct": -53.520597966599446,
+            "write_p99_pct": -39.239074677871145,
+            "write_throughput_pct": 28.066922948691385
+          },
+          "low": {
+            "compact_bytes_pct": -34.71902398546402,
+            "compact_bytes_per_write_pct": -30.020934855784777,
+            "total_throughput_pct": -8.375054099206421,
+            "write_p999_pct": -53.62654305248298,
+            "write_p99_pct": 47.11036705189561,
+            "write_throughput_pct": -6.713563720803166
+          },
+          "mid": {
+            "compact_bytes_pct": -6.6597353156007815,
+            "compact_bytes_per_write_pct": -4.022258519440786,
+            "total_throughput_pct": -2.4601689577235115,
+            "write_p999_pct": -28.55267756952638,
+            "write_p99_pct": -22.63533469848696,
+            "write_throughput_pct": -2.7480088148294626
+          }
+        },
+        "static_biased": {
+          "all": {
+            "compact_bytes_pct": -0.8343240471202625,
+            "compact_bytes_per_write_pct": 2.0300041328766563,
+            "total_throughput_pct": -0.32244975780723956,
+            "write_p999_pct": -40.418086874952536,
+            "write_p99_pct": -31.87112107438367,
+            "write_throughput_pct": -2.8073390806361327
+          },
+          "high": {
+            "compact_bytes_pct": -1.2130351347088972,
+            "compact_bytes_per_write_pct": 16.970483551313727,
+            "total_throughput_pct": -14.541437654919717,
+            "write_p999_pct": -37.51536995659593,
+            "write_p99_pct": -48.961286153779795,
+            "write_throughput_pct": -15.545390712218197
+          },
+          "low": {
+            "compact_bytes_pct": -5.741652095175359,
+            "compact_bytes_per_write_pct": -5.397602260478627,
+            "total_throughput_pct": -1.239922187496332,
+            "write_p999_pct": -53.11178216214181,
+            "write_p99_pct": -88.78645808562727,
+            "write_throughput_pct": -0.3636798251605003
+          },
+          "mid": {
+            "compact_bytes_pct": 1.322605045622231,
+            "compact_bytes_per_write_pct": -5.466705382299778,
+            "total_throughput_pct": 7.951017081033019,
+            "write_p999_pct": -34.13911389580597,
+            "write_p99_pct": -13.906078303919179,
+            "write_throughput_pct": 7.181925114721214
+          }
+        }
+      },
+      "online_vs_static_biased": {
+        "all": {
+          "compact_bytes_per_write_pct": -10.885428753547115,
+          "write_p99_pct": 4.847206583429052,
+          "write_throughput_pct": 13.09100885907677
+        },
+        "high": {
+          "compact_bytes_per_write_pct": -10.834181765688198,
+          "write_p99_pct": 19.04869998331405,
+          "write_throughput_pct": 51.63994485167673
+        },
+        "low": {
+          "compact_bytes_per_write_pct": -26.02823309310207,
+          "write_p99_pct": 1211.8992034384792,
+          "write_throughput_pct": -6.373061434324387
+        },
+        "mid": {
+          "compact_bytes_per_write_pct": 1.52797685587966,
+          "write_p99_pct": -10.13922495641775,
+          "write_throughput_pct": -9.264560156875575
+        }
+      },
+      "per_tier": {
+        "online": {
+          "all": {
+            "compact_bytes_per_write": 4257.673492610709,
+            "compact_output_bytes": 4422585960.0,
+            "total_throughput": 17441.55,
+            "write_ops": 1038733.0,
+            "write_p999_us": 34629.646242104565,
+            "write_p99_us": 12466.991163272949,
+            "write_throughput": 6492.08125
+          },
+          "high": {
+            "compact_bytes_per_write": 3514.916941464184,
+            "compact_output_bytes": 1782203486.0,
+            "total_throughput": 4522.35,
+            "write_ops": 507040.0,
+            "write_p999_us": 23344.282715367623,
+            "write_p99_us": 12034.006946197538,
+            "write_throughput": 3169.0
+          },
+          "low": {
+            "compact_bytes_per_write": 10421.800186690094,
+            "compact_output_bytes": 569405475.0,
+            "total_throughput": 6337.94375,
+            "write_ops": 54636.0,
+            "write_p999_us": 140342.7001061571,
+            "write_p99_us": 13706.653634965956,
+            "write_throughput": 341.475
+          },
+          "mid": {
+            "compact_bytes_per_write": 4341.152103417411,
+            "compact_output_bytes": 2070976999.0,
+            "total_throughput": 6581.25625,
+            "write_ops": 477057.0,
+            "write_p999_us": 34517.27457934796,
+            "write_p99_us": 12785.213343478872,
+            "write_throughput": 2981.60625
+          }
+        },
+        "static": {
+          "all": {
+            "compact_bytes_per_write": 4682.693446614527,
+            "compact_output_bytes": 4425253009.0,
+            "total_throughput": 17144.14375,
+            "write_ops": 945023.0,
+            "write_p999_us": 64874.97039754588,
+            "write_p99_us": 17453.138895032185,
+            "write_throughput": 5906.39375
+          },
+          "high": {
+            "compact_bytes_per_write": 3370.081335023919,
+            "compact_output_bytes": 1334275862.0,
+            "total_throughput": 3479.625,
+            "write_ops": 395918.0,
+            "write_p999_us": 50225.00654933597,
+            "write_p99_us": 19805.503096600813,
+            "write_throughput": 2474.4875
+          },
+          "low": {
+            "compact_bytes_per_write": 14892.739943313754,
+            "compact_output_bytes": 872237993.0,
+            "total_throughput": 6917.26875,
+            "write_ops": 58568.0,
+            "write_p999_us": 302635.8381368666,
+            "write_p99_us": 9317.25881027182,
+            "write_throughput": 366.05
+          },
+          "mid": {
+            "compact_bytes_per_write": 4523.082160978683,
+            "compact_output_bytes": 2218739154.0,
+            "total_throughput": 6747.25,
+            "write_ops": 490537.0,
+            "write_p999_us": 48311.50196417396,
+            "write_p99_us": 16525.90791112597,
+            "write_throughput": 3065.85625
+          }
+        },
+        "static_biased": {
+          "all": {
+            "compact_bytes_per_write": 4777.752317110746,
+            "compact_output_bytes": 4388332059.0,
+            "total_throughput": 17088.8625,
+            "write_ops": 918493.0,
+            "write_p999_us": 38653.74850216605,
+            "write_p99_us": 11890.62786651613,
+            "write_throughput": 5740.58125
+          },
+          "high": {
+            "compact_bytes_per_write": 3942.0004336500474,
+            "compact_output_bytes": 1318090627.0,
+            "total_throughput": 2973.6375,
+            "write_ops": 334371.0,
+            "write_p999_us": 31382.909531628044,
+            "write_p99_us": 10108.47405127837,
+            "write_throughput": 2089.81875
+          },
+          "low": {
+            "compact_bytes_per_write": 14088.889075486248,
+            "compact_output_bytes": 822157122.0,
+            "total_throughput": 6831.5,
+            "write_ops": 58355.0,
+            "write_p999_us": 141900.5510410419,
+            "write_p99_us": 1044.7947219604148,
+            "write_throughput": 364.71875
+          },
+          "mid": {
+            "compact_bytes_per_write": 4275.81858503862,
+            "compact_output_bytes": 2248084310.0,
+            "total_throughput": 7283.725,
+            "write_ops": 525767.0,
+            "write_p999_us": 31818.38328385007,
+            "write_p99_us": 14227.80221657122,
+            "write_throughput": 3286.04375
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t"
+    },
+    {
+      "deltas_vs_static": {
+        "online": {
+          "all": {
+            "compact_bytes_pct": -5.825419278734152,
+            "compact_bytes_per_write_pct": -13.469127228623911,
+            "total_throughput_pct": 1.3309549589807979,
+            "write_p999_pct": -26.549655323645105,
+            "write_p99_pct": -6.858991088483142,
+            "write_throughput_pct": 8.833503817863104
+          },
+          "high": {
+            "compact_bytes_pct": 16.536889724126894,
+            "compact_bytes_per_write_pct": -7.148065170526781,
+            "total_throughput_pct": 24.61356168582651,
+            "write_p999_pct": -39.26707008155327,
+            "write_p99_pct": -11.985476681856767,
+            "write_throughput_pct": 25.508305172263952
+          },
+          "low": {
+            "compact_bytes_pct": -37.67566140189965,
+            "compact_bytes_per_write_pct": -34.78929359793485,
+            "total_throughput_pct": -6.1255944410989205,
+            "write_p999_pct": -1.5617310308241472,
+            "write_p99_pct": 37.51511698143281,
+            "write_throughput_pct": -4.426217661511779
+          },
+          "mid": {
+            "compact_bytes_pct": -7.110577797898923,
+            "compact_bytes_per_write_pct": -4.393694225031114,
+            "total_throughput_pct": -3.384042647210226,
+            "write_p999_pct": -18.801156025295413,
+            "write_p99_pct": -7.05057027103986,
+            "write_throughput_pct": -2.8417409822973627
+          }
+        }
+      },
+      "online_vs_static_biased": {},
+      "per_tier": {
+        "online": {
+          "all": {
+            "compact_bytes_per_write": 4196.035923210421,
+            "compact_output_bytes": 4303706205.0,
+            "total_throughput": 17120.1625,
+            "write_ops": 1025660.0,
+            "write_p999_us": 34797.062599691904,
+            "write_p99_us": 13399.584231616715,
+            "write_throughput": 6410.375
+          },
+          "high": {
+            "compact_bytes_per_write": 3405.009307706251,
+            "compact_output_bytes": 1671828925.0,
+            "total_throughput": 4344.7375,
+            "write_ops": 490991.0,
+            "write_p999_us": 24370.285441077333,
+            "write_p99_us": 13122.379768671932,
+            "write_throughput": 3068.69375
+          },
+          "low": {
+            "compact_bytes_per_write": 10812.20872556803,
+            "compact_output_bytes": 571987466.0,
+            "total_throughput": 6147.79375,
+            "write_ops": 52902.0,
+            "write_p999_us": 103746.3545801671,
+            "write_p99_us": 19567.886582737894,
+            "write_throughput": 330.6375
+          },
+          "mid": {
+            "compact_bytes_per_write": 4275.697202174495,
+            "compact_output_bytes": 2059889814.0,
+            "total_throughput": 6627.63125,
+            "write_ops": 481767.0,
+            "write_p999_us": 37852.27040664886,
+            "write_p99_us": 13004.765502826054,
+            "write_throughput": 3011.04375
+          }
+        },
+        "static": {
+          "all": {
+            "compact_bytes_per_write": 4849.177858516233,
+            "compact_output_bytes": 4569923404.0,
+            "total_throughput": 16895.29375,
+            "write_ops": 942412.0,
+            "write_p999_us": 47374.948004694335,
+            "write_p99_us": 14386.342158206813,
+            "write_throughput": 5890.075
+          },
+          "high": {
+            "compact_bytes_per_write": 3667.1387774091136,
+            "compact_output_bytes": 1434592024.0,
+            "total_throughput": 3486.56875,
+            "write_ops": 391202.0,
+            "write_p999_us": 40126.971436751344,
+            "write_p99_us": 14909.334589291466,
+            "write_throughput": 2445.0125
+          },
+          "low": {
+            "compact_bytes_per_write": 16580.41956930192,
+            "compact_output_bytes": 917759384.0,
+            "total_throughput": 6548.95625,
+            "write_ops": 55352.0,
+            "write_p999_us": 105392.29881485764,
+            "write_p99_us": 14229.625812978755,
+            "write_throughput": 345.95
+          },
+          "mid": {
+            "compact_bytes_per_write": 4472.191627441727,
+            "compact_output_bytes": 2217571996.0,
+            "total_throughput": 6859.76875,
+            "write_ops": 495858.0,
+            "write_p999_us": 46616.7602317599,
+            "write_p99_us": 13991.226778634205,
+            "write_throughput": 3099.1125
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t_b"
+    },
+    {
+      "deltas_vs_static": {
+        "online": {
+          "all": {
+            "compact_bytes_pct": -1.5456452887853278,
+            "compact_bytes_per_write_pct": -13.505965883464931,
+            "total_throughput_pct": 5.939331506600284,
+            "write_p999_pct": -38.40830729339194,
+            "write_p99_pct": -22.355928737046202,
+            "write_throughput_pct": 13.827913932844464
+          },
+          "high": {
+            "compact_bytes_pct": 34.06297304346164,
+            "compact_bytes_per_write_pct": 4.605859912693709,
+            "total_throughput_pct": 28.567577331971332,
+            "write_p999_pct": -48.61172720678819,
+            "write_p99_pct": -25.654828311763612,
+            "write_throughput_pct": 28.160098445109544
+          },
+          "low": {
+            "compact_bytes_pct": -37.35612915782971,
+            "compact_bytes_per_write_pct": -35.28899807529106,
+            "total_throughput_pct": -3.7769166812866586,
+            "write_p999_pct": -75.01621584385738,
+            "write_p99_pct": 4.0964588024714805,
+            "write_throughput_pct": -3.1944043841938248
+          },
+          "mid": {
+            "compact_bytes_pct": -8.552809387294829,
+            "compact_bytes_per_write_pct": -12.2404130674211,
+            "total_throughput_pct": 3.886102467257433,
+            "write_p999_pct": 13.849159405013515,
+            "write_p99_pct": -21.720185916905688,
+            "write_throughput_pct": 4.201938282776176
+          }
+        }
+      },
+      "online_vs_static_biased": {},
+      "per_tier": {
+        "online": {
+          "all": {
+            "compact_bytes_per_write": 4130.7088080975045,
+            "compact_output_bytes": 4288282957.0,
+            "total_throughput": 17482.7375,
+            "write_ops": 1038147.0,
+            "write_p999_us": 37732.62278270804,
+            "write_p99_us": 11419.534293312989,
+            "write_throughput": 6488.41875
+          },
+          "high": {
+            "compact_bytes_per_write": 3624.0204851335297,
+            "compact_output_bytes": 1781481494.0,
+            "total_throughput": 4381.575,
+            "write_ops": 491576.0,
+            "write_p999_us": 23000.562920077464,
+            "write_p99_us": 12017.219445212948,
+            "write_throughput": 3072.35
+          },
+          "low": {
+            "compact_bytes_per_write": 10574.344134078212,
+            "compact_output_bytes": 567842280.0,
+            "total_throughput": 6307.375,
+            "write_ops": 53700.0,
+            "write_p999_us": 86084.60562383612,
+            "write_p99_us": 6211.428603351956,
+            "write_throughput": 335.625
+          },
+          "mid": {
+            "compact_bytes_per_write": 3934.0094730669894,
+            "compact_output_bytes": 1938959183.0,
+            "total_throughput": 6793.7875,
+            "write_ops": 492871.0,
+            "write_p999_us": 47157.85896106689,
+            "write_p99_us": 11390.860663337871,
+            "write_throughput": 3080.44375
+          }
+        },
+        "static": {
+          "all": {
+            "compact_bytes_per_write": 4775.715285209291,
+            "compact_output_bytes": 4355605163.0,
+            "total_throughput": 16502.59375,
+            "write_ops": 912032.0,
+            "write_p999_us": 61262.51954536683,
+            "write_p99_us": 14707.541873530754,
+            "write_throughput": 5700.2
+          },
+          "high": {
+            "compact_bytes_per_write": 3464.4526493622966,
+            "compact_output_bytes": 1328839316.0,
+            "total_throughput": 3407.99375,
+            "write_ops": 383564.0,
+            "write_p999_us": 44758.38877214754,
+            "write_p99_us": 16164.088631884119,
+            "write_throughput": 2397.275
+          },
+          "low": {
+            "compact_bytes_per_write": 16340.875306460917,
+            "compact_output_bytes": 906461035.0,
+            "total_throughput": 6554.95,
+            "write_ops": 55472.0,
+            "write_p999_us": 344561.91698514565,
+            "write_p99_us": 5966.99318575137,
+            "write_throughput": 346.7
+          },
+          "mid": {
+            "compact_bytes_per_write": 4482.7119299106125,
+            "compact_output_bytes": 2120304812.0,
+            "total_throughput": 6539.65,
+            "write_ops": 472996.0,
+            "write_p999_us": 41421.350150952654,
+            "write_p99_us": 14551.466168847093,
+            "write_throughput": 2956.225
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t_c"
+    },
+    {
+      "deltas_vs_static": {
+        "online": {
+          "all": {
+            "compact_bytes_pct": -1.5923298897672233,
+            "compact_bytes_per_write_pct": -12.544267567573774,
+            "total_throughput_pct": 5.826534014803706,
+            "write_p999_pct": -4.6069131239494725,
+            "write_p99_pct": -17.499196367729045,
+            "write_throughput_pct": 12.522835694353946
+          },
+          "high": {
+            "compact_bytes_pct": 28.128042278767285,
+            "compact_bytes_per_write_pct": 0.5319482862120791,
+            "total_throughput_pct": 26.584723538154503,
+            "write_p999_pct": -40.12511542568845,
+            "write_p99_pct": -25.68171291514018,
+            "write_throughput_pct": 27.450073795436445
+          },
+          "low": {
+            "compact_bytes_pct": -22.62983185847095,
+            "compact_bytes_per_write_pct": -21.19336341075197,
+            "total_throughput_pct": -1.8897582398050758,
+            "write_p999_pct": 179.8219579147226,
+            "write_p99_pct": -36.83599308693479,
+            "write_throughput_pct": -1.8227759867561273
+          },
+          "mid": {
+            "compact_bytes_pct": -12.003033472833739,
+            "compact_bytes_per_write_pct": -13.766774415085441,
+            "total_throughput_pct": 2.9169641241910202,
+            "write_p999_pct": 10.949842678119378,
+            "write_p99_pct": -8.353820110437942,
+            "write_throughput_pct": 2.0453148195354465
+          }
+        }
+      },
+      "online_vs_static_biased": {},
+      "per_tier": {
+        "online": {
+          "all": {
+            "compact_bytes_per_write": 4358.688044773312,
+            "compact_output_bytes": 4448511888.0,
+            "total_throughput": 17554.40625,
+            "write_ops": 1020608.0,
+            "write_p999_us": 47209.86832848655,
+            "write_p99_us": 12324.316648507556,
+            "write_throughput": 6378.8
+          },
+          "high": {
+            "compact_bytes_per_write": 3595.5934293643345,
+            "compact_output_bytes": 1754282843.0,
+            "total_throughput": 4317.0375,
+            "write_ops": 487898.0,
+            "write_p999_us": 26096.35097704848,
+            "write_p99_us": 12479.515177352643,
+            "write_throughput": 3049.3625
+          },
+          "low": {
+            "compact_bytes_per_write": 10189.113704538597,
+            "compact_output_bytes": 574044477.0,
+            "total_throughput": 6623.9375,
+            "write_ops": 56339.0,
+            "write_p999_us": 106238.81384121125,
+            "write_p99_us": 5948.891123378122,
+            "write_throughput": 352.11875
+          },
+          "mid": {
+            "compact_bytes_per_write": 4450.7003323040235,
+            "compact_output_bytes": 2120184568.0,
+            "total_throughput": 6613.43125,
+            "write_ops": 476371.0,
+            "write_p999_us": 61853.10044692057,
+            "write_p99_us": 12919.365563814757,
+            "write_throughput": 2977.31875
+          }
+        },
+        "static": {
+          "all": {
+            "compact_bytes_per_write": 4983.879184982079,
+            "compact_output_bytes": 4520493050.0,
+            "total_throughput": 16587.90625,
+            "write_ops": 907023.0,
+            "write_p999_us": 49489.82140585189,
+            "write_p99_us": 14938.420119445704,
+            "write_throughput": 5668.89375
+          },
+          "high": {
+            "compact_bytes_per_write": 3576.56793751551,
+            "compact_output_bytes": 1369163855.0,
+            "total_throughput": 3410.39375,
+            "write_ops": 382815.0,
+            "write_p999_us": 43584.803816464875,
+            "write_p99_us": 16791.984404999803,
+            "write_throughput": 2392.59375
+          },
+          "low": {
+            "compact_bytes_per_write": 12929.258429903284,
+            "compact_output_bytes": 741945495.0,
+            "total_throughput": 6751.525,
+            "write_ops": 57385.0,
+            "write_p999_us": 37966.575115448286,
+            "write_p99_us": 9418.166158403765,
+            "write_throughput": 358.65625
+          },
+          "mid": {
+            "compact_bytes_per_write": 5161.23605734936,
+            "compact_output_bytes": 2409383700.0,
+            "total_throughput": 6425.9875,
+            "write_ops": 466823.0,
+            "write_p999_us": 55748.70495883879,
+            "write_p99_us": 14097.003911546775,
+            "write_throughput": 2917.64375
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t_d"
+    },
+    {
+      "deltas_vs_static": {
+        "online": {
+          "all": {
+            "compact_bytes_pct": -0.2318619729490577,
+            "compact_bytes_per_write_pct": -11.11771917179794,
+            "total_throughput_pct": 6.79775702618305,
+            "write_p999_pct": -29.568062166818205,
+            "write_p99_pct": -30.788584981816992,
+            "write_throughput_pct": 12.24749983620451
+          },
+          "high": {
+            "compact_bytes_pct": 19.234277572229786,
+            "compact_bytes_per_write_pct": -1.826181210751121,
+            "total_throughput_pct": 21.947189659432993,
+            "write_p999_pct": -54.04107021019517,
+            "write_p99_pct": -32.44157309130119,
+            "write_throughput_pct": 21.452215104509357
+          },
+          "low": {
+            "compact_bytes_pct": -43.94404835190728,
+            "compact_bytes_per_write_pct": -44.65893597683322,
+            "total_throughput_pct": 0.17897997572412075,
+            "write_p999_pct": -36.754699969224006,
+            "write_p99_pct": -44.67862686752389,
+            "write_throughput_pct": 1.2917851102875066
+          },
+          "mid": {
+            "compact_bytes_pct": 6.732339667137039,
+            "compact_bytes_per_write_pct": 0.7920992769149575,
+            "total_throughput_pct": 5.440857287625435,
+            "write_p999_pct": 0.01117666438892572,
+            "write_p99_pct": -29.010521012509173,
+            "write_throughput_pct": 5.8935575633779775
+          }
+        }
+      },
+      "online_vs_static_biased": {},
+      "per_tier": {
+        "online": {
+          "all": {
+            "compact_bytes_per_write": 4262.743548745153,
+            "compact_output_bytes": 4454856875.0,
+            "total_throughput": 17783.9625,
+            "write_ops": 1045068.0,
+            "write_p999_us": 42541.543991395774,
+            "write_p99_us": 11307.979781219978,
+            "write_throughput": 6531.675
+          },
+          "high": {
+            "compact_bytes_per_write": 3339.3634765316883,
+            "compact_output_bytes": 1608758391.0,
+            "total_throughput": 4225.4625,
+            "write_ops": 481756.0,
+            "write_p999_us": 20388.536396017902,
+            "write_p99_us": 12391.5586604007,
+            "write_throughput": 3010.975
+          },
+          "low": {
+            "compact_bytes_per_write": 9423.883907637655,
+            "compact_output_bytes": 530564664.0,
+            "total_throughput": 6587.225,
+            "write_ops": 56300.0,
+            "write_p999_us": 170883.5125399645,
+            "write_p99_us": 6130.194849023091,
+            "write_throughput": 351.875
+          },
+          "mid": {
+            "compact_bytes_per_write": 4567.01975495649,
+            "compact_output_bytes": 2315533820.0,
+            "total_throughput": 6971.275,
+            "write_ops": 507012.0,
+            "write_p999_us": 49339.591173384455,
+            "write_p99_us": 10853.333076929146,
+            "write_throughput": 3168.825
+          }
+        },
+        "static": {
+          "all": {
+            "compact_bytes_per_write": 4795.94302601717,
+            "compact_output_bytes": 4465209999.0,
+            "total_throughput": 16652.0,
+            "write_ops": 931039.0,
+            "write_p999_us": 60400.92790312758,
+            "write_p99_us": 16338.316126392128,
+            "write_throughput": 5818.99375
+          },
+          "high": {
+            "compact_bytes_per_write": 3401.4806775524817,
+            "compact_output_bytes": 1349241530.0,
+            "total_throughput": 3464.99375,
+            "write_ops": 396663.0,
+            "write_p999_us": 44362.51342071229,
+            "write_p99_us": 18341.98815367201,
+            "write_throughput": 2479.14375
+          },
+          "low": {
+            "compact_bytes_per_write": 17028.736389478607,
+            "compact_output_bytes": 946491226.0,
+            "total_throughput": 6575.45625,
+            "write_ops": 55582.0,
+            "write_p999_us": 270191.63867798925,
+            "write_p99_us": 11081.060541182398,
+            "write_throughput": 347.3875
+          },
+          "mid": {
+            "compact_bytes_per_write": 4531.128717151844,
+            "compact_output_bytes": 2169477243.0,
+            "total_throughput": 6611.55,
+            "write_ops": 478794.0,
+            "write_p999_us": 49334.07726913871,
+            "write_p99_us": 15288.65013763748,
+            "write_throughput": 2992.4625
+          }
+        }
+      },
+      "trial": "embedded_demand2f_16t_e"
+    }
+  ]
+}
