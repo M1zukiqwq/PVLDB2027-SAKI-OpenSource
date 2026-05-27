@@ -9,8 +9,6 @@ movement as design primitives~\cite{sarkar2021lsmspace}. Monkey and
 Dostoevsky optimize Bloom-filter memory, merge policy, and space-time
 tradeoffs~\cite{dayan2017monkey,dayan2018dostoevsky}; WiscKey and PebblesDB
 change value placement or merge structure~\cite{lu2016wisckey,raju2017pebblesdb}.
-bLSM, TRIAD, and Accordion improve write smoothing, logging, and memory
-organization~\cite{sears2012blsm,balmau2017triad,bortnikov2018accordion}.
 SILK schedules internal LSM I/O to reduce latency spikes, while ADOC, vLSM, and
 ArceKV tune dataflow, LSM shape, or compaction thresholds for a single engine
 or workload~\cite{balmau2019silk,yu2023adoc,xanthakis2024vlsm,liu2026arcekv}.
@@ -54,7 +52,5 @@ limiting~\cite{rocksdb,rocksdb_ratelimiter}. The auto-tuned rate limiter solves
 local adaptation within a ceiling; SAKI supplies the host-level rank-and-assign
 loop that places budgets across instances under a conserved aggregate budget.
 Public CacheLib and Baleen traces inform our trace-qualification audits, but
-cache admission, prefetching, or request-trace replay are separate from the
-fixed-budget RocksDB compaction-placement problem~\cite{cachelib_trace,
-baleen_fast24}. SAKI reallocates a conserved host budget across separate
-instances without changing the engine.
+cache admission, prefetching, and request-trace replay are separate from the
+fixed-budget compaction-placement problem~\cite{cachelib_trace,baleen_fast24}.

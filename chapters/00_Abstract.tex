@@ -11,7 +11,7 @@ SAKI is an external controller for this placement problem. In its conserved
 rank-and-assign framework, the controller observes per-tenant demand and
 pressure symptoms, ranks tenants without oracle labels or workload forecasts,
 and reallocates per-tenant background budgets while preserving the aggregate
-budget. A demand-observability model explains when demand-aware score instances
+budget. A demand-observability model explains when demand-aware ranking keys
 track bounded drift within one window and why pressure-only ranking can suffer
 stale-debt lag. SAKI requires no changes to \rocksdb's compaction algorithm or
 tenant application code. Across five
@@ -22,9 +22,9 @@ throughput roughly neutral. In a continuous embedded \rocksdb harness with
 long-running tenants and runtime actuation through \ratecall, SAKI reduces
 high-pressure write P99 by 27.0\%, reduces P999 by 47.1\%, raises
 high-pressure throughput by 26.1\%, and lowers normalized bytes/write by
-11.9\%. Stronger baselines, ranking replay, score-family perturbations, and
+11.9\%. Stronger baselines, ranking replay, ranking-key perturbations, and
 mechanism checks attribute these gains to online placement rather than extra
-capacity, static skew, score fragility, or unrelated throttling. Public-trace
+capacity, static skew, ranking-key fragility, or unrelated throttling. Public-trace
 audits identify what future production traces must preserve for controller
 validation. The results show that shared
 compaction budgeting is a practical host-level control point for multi-tenant

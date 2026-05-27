@@ -49,8 +49,12 @@ assigned service budget~\cite{dayan2017monkey,dayan2018dostoevsky,
 lu2016wisckey,raju2017pebblesdb,balmau2019silk}. SAKI asks where a fixed host
 budget should be placed across independent engines.
 
-CaaS-LSM treats compaction as a service and DFlush offloads flush work to
-DPUs~\cite{yu2024caaslsm,ding2025dflush}. SAKI shares the resource-management
-view, but targets co-located RocksDB instances on one host, standard runtime
-controls, and a conserved aggregate budget. The next section formalizes that
-host-level allocation question.
+Closest multi-tenant directions still leave the host-level placement question
+open. Lower-layer storage controllers enforce shares elsewhere, while recent
+LSM-oriented systems move admission, fairness, compaction, or flush work into a
+different engine boundary or service location~\cite{gulati2010mclock,
+thereska2013ioflow,wang2026flexengine,griggs2026deltafairsharing,
+yu2024caaslsm,ding2025dflush}. SAKI studies the remaining case: a controller
+that observes tenant-local LSM demand and maintenance symptoms and reallocates
+a conserved budget across separate unmodified RocksDB instances through
+per-instance runtime knobs.

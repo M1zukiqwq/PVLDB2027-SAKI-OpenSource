@@ -1,16 +1,13 @@
 \section{Implementation}
 \label{sec:implementation}
 
-SAKI is implemented as an external Python controller plus two experiment
-harnesses around unmodified \rocksdb instances. The implementation separates
-the paper's two control questions and realizes the conserved rank-and-assign
-framework from Section~\ref{sec:saki-design}. The epoch harness asks whether a
-fixed budget can be placed better between workload phases; the continuous
-harness asks whether the same placement loop can actuate a live RocksDB rate
-limiter while tenants keep running. In both paths, the controller chooses high,
-mid, and low budget assignments, the harness applies them through ordinary
-RocksDB-facing APIs, and the measurement path records per-tenant behavior at
-the same granularity used by the controller.
+SAKI is an external Python controller plus two experiment harnesses around
+unmodified \rocksdb instances. The epoch harness tests fixed-budget placement
+between workload phases; the continuous harness tests the same loop through a
+live RocksDB rate limiter while tenants keep running. In both paths, the
+controller chooses high/mid/low assignments, the harness applies them through
+ordinary RocksDB-facing APIs, and measurements are recorded at the controller's
+granularity.
 
 \subsection{Epoch Harness}
 
@@ -26,29 +23,20 @@ that the resulting job and rate-limit settings match the static fair-share
 budget before launch.
 
 The parser extracts per-tenant runtime, exit status, operation rate, latency
-histograms where available, compaction read/write bytes, flush bytes, keys and
-bytes written, and compaction CPU time. It stores these rows with the epoch,
-workload tier, assigned budget tier, background-job count, rate limit, and
-workload parameters. This path gives clean mechanism evidence for budget
-placement under drift because all policies run comparable foreground work under
-the same aggregate budget. It does not by itself prove in-process runtime
-control; that is the role of the continuous harness.
+histograms where available, maintenance bytes, keys and bytes written, and
+compaction CPU time. These rows give clean mechanism evidence because all
+policies run comparable foreground work under the same aggregate budget; runtime
+control is tested by the continuous harness.
 
 \subsection{Continuous Harness}
 
 The continuous path is a custom C++ embedded RocksDB harness. Each tenant is a
-long-running process linked against RocksDB. The Python driver writes one
-control file per tenant, advances through fixed-length windows, computes the
-current workload tier and policy assignment, validates the aggregate byte
-budget, and atomically updates the control file. Tenant processes keep running
-while their offered write/read rates, hot-key range, reported workload tier,
-assigned budget tier, and byte budget are refreshed. Before each refresh the
-driver checks that the next assignment preserves the aggregate byte budget.
-Control files are written atomically, and a tenant keeps using its last
-installed budget until it observes a newer value. Thus a missed or delayed
-update does not create extra host budget in the harness; a production
-controller would additionally fall back to all-mid allocation when tenant
-inventory or metrics are incomplete.
+long-running process linked against RocksDB. The Python driver advances through
+fixed windows, computes workload tiers and policy assignments, validates the
+aggregate byte budget, and atomically refreshes one control file per tenant.
+Tenants keep using the last installed budget until a newer value appears, so a
+missed update cannot create extra host budget; production controllers would
+also fall back to all-mid allocation when inventory or metrics are incomplete.
 
 Runtime actuation uses RocksDB's rate limiter. At startup, each tenant creates
 a \texttt{NewGenericRateLimiter} with the initial budget and installs it before
@@ -59,35 +47,23 @@ for the tenant process. Diagnostic userspace throttling exists in the harness
 but is not the mechanism used for the reported continuous result.
 
 The rate limiter is a RocksDB-facing background-I/O control rather than an
-application-level admission throttle. In the reported setup it is installed as
-the database rate limiter and therefore shapes the I/O issued by flush and
-compaction work that uses RocksDB's rate-limited paths. SAKI does not directly
-sleep foreground write calls or read calls. Foreground write latency changes
-indirectly because background service changes the accumulation and draining of
-LSM maintenance work. This distinction makes the continuous result a
-maintenance-placement result rather than a foreground-throttling result:
-SAKI changes the maintenance budget available to each tenant, not the offered
-foreground workload. In the five main continuous trials, rate-limiter,
+application-level admission throttle. It shapes flush and compaction paths;
+SAKI does not directly sleep foreground reads or writes. Foreground latency
+changes indirectly through LSM maintenance service, making the continuous
+result a maintenance-placement result. In the five main trials, limiter,
 compaction, and flush byte deltas are larger in high-budget windows than in
-low-budget windows. As an internal-validity check on this actuation path, we
-also ran a homogeneous four-tenant static microstudy that sweeps the per-tenant
-limiter budget \(B \in \{1,3,6,11\}\)\,MB/s with three seeds per point.
-Dropping the first window, measured rate-limiter traffic is monotone in \(B\):
-1.00, 2.96, 5.70, and 7.28\,MB/s. Compact-plus-flush output moves with the
-limiter (coverage ratio 0.99--1.02); the 11\,MB/s point saturates at about
-7.3\,MB/s because this workload cannot generate more maintenance I/O. A
-two-seed no-rate-limiter sanity run reports zero limiter bytes while
-background maintenance continues near 8\,MB/s. The microstudy shows that the
-continuous knob controls background-maintenance I/O rather than foreground
-throttling.
+low-budget windows. A homogeneous four-tenant microstudy sweeping
+\(B \in \{1,3,6,11\}\)\,MB/s confirms the path: measured limiter traffic is
+monotone (1.00, 2.96, 5.70, 7.28\,MB/s), compact-plus-flush output tracks it
+(coverage 0.99--1.02), and a no-limiter sanity run reports zero limiter bytes
+while maintenance continues.
 
 The embedded harness records per-window write and read operation counts,
 throughput, and latency percentiles. A custom \texttt{EventListener} accumulates
-compaction input/output bytes, compaction CPU time, compaction count, flush
-bytes, and flush count. At window boundaries the harness emits deltas, together
-with RocksDB properties such as pending compaction bytes, L0 files, memtable
+compaction and flush counters. At window boundaries the harness emits deltas
+and RocksDB properties such as pending compaction bytes, L0 files, memtable
 bytes, delayed-write rate, and write-stop status. These measurements feed both
-the online score and the post-run analysis.
+the online ranking key and the post-run analysis.
 
 \subsection{Analysis}
 

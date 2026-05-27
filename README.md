@@ -23,6 +23,12 @@ families named in the manuscript and the scripts under `remote/`. Host logs,
 database directories, compiled binaries, backup files, private operator notes,
 and external trace corpora are not included.
 
+`remote-results/agent_8plus/` contains supplemental stress artifacts collected
+after the main artifact snapshot, including 32/64-tenant larger-inventory runs.
+Those runs are documented there as liveness/tracking checks, not scale-out
+performance claims, because the fixed 80-core host introduces CPU, scheduling,
+and device-contention confounds at that density.
+
 ## Quick Check
 
 From this directory:

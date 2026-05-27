@@ -1,46 +1,39 @@
 \section{SAKI Design}
 \label{sec:saki-design}
 
-\begin{figure*}[!t]
+\begin{figure*}[t]
   \centering
-  \includegraphics[width=0.95\textwidth]{fig1_saki_framework.pdf}
-  \caption{SAKI conserved rank-and-assign loop. Each window, the external
-  controller scores tenants from previous-window demand and pressure signals,
-  ranks them, assigns high/mid/low budget tiers, checks that the aggregate
-  host budget is preserved, and pushes runtime rate-limit updates. The shown
-  $4{:}8{:}4$ split at $11{:}6{:}1$\,MB/s is the main continuous setting.}
-  \Description{Architecture diagram of SAKI. An external controller box at the
-  top contains four pipeline steps: Score (rate each tenant from demand and
-  pressure signals), Rank (sort by score), Assign budget tier (HIGH/MID/LOW
-  at 11/6/1 MB/s), and Check and actuate (verify total budget conserved, push
-  per-tenant rate limit). A closed loop runs every control window:
-  observations flow up from the tenant pool to the controller, and budget
-  updates flow down via the runtime rate limiter. The tenant pool at the
-  bottom is one outer frame containing three tier cards, each with a labeled
-  dashed sub-frame holding mini cylindrical RocksDB engine icons: four engines
-  in the HIGH-budget tier, eight in the MID-budget tier, and four in the
-  LOW-budget tier.}
+  \includegraphics[width=0.88\textwidth]{fig1_saki_framework.pdf}
+  \caption{SAKI conserved rank-and-assign loop. The external controller ranks
+  tenants from previous-window demand and pressure signals, assigns
+  high/mid/low budget tiers, checks aggregate-budget conservation, and actuates
+  per-tenant runtime rate limits.}
+  \Description{Architecture diagram of SAKI. An external controller observes
+  tenant-local demand and pressure signals from co-located RocksDB instances,
+  computes a ranking key, ranks tenants, assigns high, mid, and low budget
+  tiers, checks that the total budget is conserved, and pushes runtime
+  rate-limit updates back to the tenant pool.}
   \label{fig:saki-framework}
 \end{figure*}
 
 SAKI is a host-level closed-loop controller that implements a conserved
-rank-and-assign framework, sketched in Figure~\ref{fig:saki-framework}. The
-framework is the method contribution: it preserves a fixed-budget invariant
-and assignment template while allowing different observable score instances
-to rank tenants. SAKI sits outside RocksDB, observes each tenant over window
-\(w\), assigns budget tiers for window \(w+1\), and validates that the
-aggregate budget is unchanged. The one-window delay is intentional: signals
-from window \(w\) must remain informative for window \(w+1\).
+rank-and-assign framework (Figure~\ref{fig:saki-framework}). The framework is
+the method contribution: it preserves a fixed-budget invariant and assignment
+template while allowing different observable ranking keys to order tenants.
+Each window, SAKI observes each tenant's demand and pressure signals from
+window \(w\), ranks tenants from those observations, assigns high/mid/low
+budget tiers for window \(w+1\), and verifies conservation before actuating.
+The one-window delay is intentional: signals from window \(w\) must remain
+informative for window \(w+1\).
 
 \subsection{Conserved Rank-and-Assign Framework}
 
-The framework decouples a budget-conserving assignment template from the score
-instance used to rank tenants. The control loop, illustrated by the four
-pipeline steps in Figure~\ref{fig:saki-framework}, is intentionally compact:
+The framework decouples a budget-conserving assignment template from the
+ranking key used to order tenants. The control loop is intentionally compact:
 \[
 \begin{array}{ll}
 \textbf{Input:} & \{x_i(w)\}_{i=1}^{N},\; B,\; b_H,b_M,b_L,\; H,L \\
-\textbf{Score:} & s_i(w) \leftarrow \mathrm{score}(x_i(w)) \\
+\textbf{Key:} & s_i(w) \leftarrow k(x_i(w)) \\
 \textbf{Rank:} & \text{sort tenants by descending } s_i(w) \\
 \textbf{Assign:} & \text{top }H\rightarrow b_H,\; \text{bottom }L\rightarrow b_L,\;
 \text{others}\rightarrow b_M \\
@@ -57,12 +50,13 @@ sixteen all-mid tenants. Other tier counts or continuous allocations can use
 the same rule; we fix auditable tierings to isolate the placement mechanism
 within each experiment family.
 
-The score instance instantiates the framework; it is not the framework itself.
-This separation lets the paper make a framework claim and then test a small
-family of auditable instances under the same conserved assignment rule. The
-reference instance below is intentionally simple so the evaluation attributes
-gains to online placement under conservation, not to an opaque learner or extra
-capacity.
+The ranking key only chooses the ordering used by the framework; it is not
+the mechanism contribution by itself. This separation keeps the paper's claim
+on fixed-budget online placement: the assignment template conserves the host
+budget, and the ranking key provides an auditable way to decide where that
+conserved budget goes next. The reference key below is intentionally simple so
+the evaluation attributes gains to placement under conservation, not to an
+opaque learner, hidden tuning process, or extra capacity.
 
 \subsection{Observations and Labels}
 
@@ -79,18 +73,20 @@ controller does not read that tier, a future phase identifier, or the next
 high-pressure set. Offered write demand is an observed admission-side signal
 from the previous window, rather than a prediction.
 
-\subsection{Reference Score Instance and Family}
+\subsection{Reference Ranking Key and Family}
 
-SAKI supports several score instances for ablation studies. The main continuous
-policy uses a demand-aware reference instance. Let \(D_i\) be offered write
-QPS, \(C_i\) completed write QPS, \(G_i=\max(0,D_i-C_i)\) the completion gap,
-\(B_i\) the compaction output in MB, \(P_i\) pending compaction bytes in MB,
-and \(L_i\) the number of L0 files capped at 6. The bounded tail term is
+The controller needs a ranking key to instantiate the conserved assignment
+template. We use a demand-aware reference key, not a learned optimizer. Its role
+is to expose the placement mechanism with measurements that an operator can
+inspect and replay. Let \(D_i\) be offered write QPS, \(C_i\) completed write
+QPS, \(G_i=\max(0,D_i-C_i)\) the completion gap, \(B_i\) the compaction output
+in MB, \(P_i\) pending compaction bytes in MB, and \(L_i\) the number of L0
+files capped at 6. The bounded tail term is
 \[
 T_i=\min(\mathrm{P99}_i/1000,80)+\min(\mathrm{P999}_i/5000,40),
 \]
-where latency is measured in microseconds. In demand mode, SAKI scores tenant
-\(i\) as
+where latency is measured in microseconds. In demand mode, SAKI assigns tenant
+\(i\) the key
 \[
 s_i =
 6.00 D_i/1000
@@ -100,33 +96,32 @@ s_i =
 +0.02 P_i
 +0.30 L_i .
 \]
-The coefficients reflect a design choice, not a universal optimum. Offered
-write demand anchors active high-pressure tenants, while bounded residual
-terms---completion gap, tail latency, compaction output, pending bytes, and L0
-pressure---refine near-boundary tenants. This division targets two failures:
-pressure-only scores can chase stale debt after demand moves, while demand-only
-scores lack a maintenance signal for tenants that have just left a high-demand
-phase. Residuals should not overturn a clearly separated demand signal, but
-can stabilize rankings when margins are small. The evaluation tests this with
-offline decision replay and online coefficient perturbations; in the main
-continuous workload, replaying all 35 post-warmup decisions shows that the
-demand term alone reproduces the full reference score's top-four assignment.
+The constants in this reference key are not a universal optimum. They encode one
+auditable ordering in which offered write demand is the anchor and bounded
+maintenance symptoms---completion gap, tail latency, compaction output,
+pending bytes, and L0 pressure---break ties or refine near-boundary tenants.
+The intended invariant is ordering margin, not exact numeric weights:
+residual terms should not overturn a clearly separated demand signal. The
+evaluation treats ranking-key perturbations as placement-family robustness
+checks; in the main continuous workload, the demand term alone reproduces the
+reference key's top-four assignment in all 35 post-warmup decisions.
 
-The score is fixed and auditable, but SAKI remains online: observations,
-ranking, and assignment are recomputed every window. Keeping the rule fixed
-separates the placement question from learning coefficients under delayed,
-partially counterfactual feedback. The relevant design space is a family of
-demand-aware instances whose primary term is offered write demand and whose
-secondary pressure terms are bounded refinements. Section~\ref{sec:evaluation}
-therefore tests demand-only replay, online anchor-scaled, residual-scaled, and
-anchor-only instances, along with pressure-only negative controls, under the
-same rank-and-assign template. This design yields two falsifiable predictions:
-demand-aware instances should track moving pressure with high overlap and low
-lag, while pressure-only instances should expose stale-debt lag. The
-coefficients are not portable constants; deployments could add normalization or
-policy layers while preserving budget conservation and demand observability.
+For portability, a deployment should fix the conserved tier template first,
+normalize observable signals, and bound residual terms so they refine
+near-boundary tenants rather than overturn a declared offered-demand
+separation.
 
-The epoch harness uses a coarser, pressure-oriented score because each epoch
+The ranking key is fixed and auditable, but SAKI remains online: observations,
+ranking, and assignment are recomputed every window. Keeping the key fixed
+separates the placement question from learning a ranking policy under delayed,
+partially counterfactual feedback. The relevant design space is therefore a
+family of demand-aware ranking keys whose primary term is offered write demand
+and whose secondary pressure terms are bounded refinements. Section~\ref{sec:evaluation}
+tests demand-only replay, perturbed demand-aware keys, and pressure-only
+negative controls under the same template to distinguish tracking from
+stale-debt lag.
+
+The epoch harness uses a coarser, pressure-oriented key because each epoch
 exposes clearer symptoms. The continuous harness is stricter: decisions are made
 every short window while tenants stay active. Demand mode is the main
 continuous policy; pressure and hybrid modes serve as ablations.
@@ -139,23 +134,23 @@ each tenant active and adjust only the runtime rate-limiter budget; \maxbgjobs
 remains fixed at process launch. Section~\ref{sec:implementation} gives the
 specific runtime API.
 
-SAKI's framework-level stability rests on budget conservation, bounded score
+SAKI's framework-level stability rests on budget conservation, bounded residual
 terms, tiered assignment, a low-tier floor, and one-window updates. We evaluate
 this envelope through high-set overlap, adaptation lag, total throughput,
 bytes/write, and tier-level collateral effects. Production deployments could
 add hysteresis, cooldowns, minimum-dwell rules, or SLO-weighted floors.
 Per window, the controller aggregates \(N\) tenant observations, sorts tenants
-by score, validates the conserved budget, and issues \(N\) budget updates. The
-control-plane work is \(O(N\log N)\) and stays outside the foreground write
-path. The paper does not include an overhead-scaling sweep at larger tenant
-counts.
+by key, validates the conserved budget, and issues \(N\) budget updates. The
+control-plane work is \(O(N\log N)\) per window and stays outside the foreground
+write path; Section~\ref{sec:evaluation} includes larger-inventory liveness
+runs that isolate this scaling question from the headline performance claim.
 
 \subsection{Analytical Motivation}
 \label{sec:analysis}
 
 The design choices in the preceding subsections are motivated by a simple
-analytical model. The model is not an optimizer for the coefficients; instead,
-it isolates the tracking condition that the score family must satisfy and
+analytical model. The model is not an optimizer for ranking constants; instead,
+it isolates the tracking condition that a ranking key must satisfy and
 explains the experimental divergence between demand-mode and pressure-mode
 controllers reported in Section~\ref{sec:evaluation}.
 
@@ -178,7 +173,7 @@ SLO violation occurs. This is the baseline problem: equal sharing allocates the
 fixed budget without regard to which tenants are currently creating debt.
 
 \emph{Proposition 1 (demand-aware one-window tracking).}
-Consider a score instance in the rank-and-assign framework whose ordering can
+Consider a ranking key in the rank-and-assign framework whose ordering can
 be written as \(s_i=\alpha D_i(w)+\rho_i(w)\), where \(D_i(w)\) is the
 observed offered demand and the residual term \(\rho_i(w)\) is computed from
 bounded pressure and maintenance signals. Suppose the high-pressure set to be
@@ -197,12 +192,12 @@ contains the high-pressure set. The one-window delay is unavoidable because the
 controller only observes \(D_i(w)\) after window \(w\) completes. The condition
 is sufficient, not universal: in the continuous main trials, offline replay
 shows that the demand term alone produces the same top-four assignment as the
-reference score in all 35 post-warmup decisions.
+reference ranking key in all 35 post-warmup decisions.
 
 \emph{Proposition 2 (stale-debt lag for pressure-only ranking).}
-Consider a monotone pressure-only instance that ranks tenants by backlog or
+Consider a monotone pressure-only key that ranks tenants by backlog or
 maintenance signals but does not observe offered demand. Immediately after a
-workload drift, the instance cannot distinguish an exiting tenant with
+workload drift, the key cannot distinguish an exiting tenant with
 historical debt from an entering tenant whose current demand is forming fresh
 debt. If the exiting tenant starts the post-drift period with residual pressure
 equivalent to \(q\) writes above the entrant, and the extra drain rate gained
@@ -211,9 +206,9 @@ the stale high-budget assignment can persist for
 \(\Omega(q/(T\Delta c))\) windows under a monotone backlog-priority rule.
 
 This is not a convergence theorem for all controllers; it is a structural
-ambiguity in the pressure-only family. It predicts the measured divergence
-between score instances: demand mode tracks with overlap \(3.00/4\) and zero
+ambiguity in the pressure-only ranking family. It predicts the measured divergence
+between ranking keys: demand mode tracks with overlap \(3.00/4\) and zero
 max lag, while pressure-only mode has overlap \(1.86/4\) and max lag 5
-windows. The coefficients remain a deployment choice, but the
+windows. The constants remain a deployment choice, but the
 demand-observability condition is the mechanism that separates tracking from
 stale-debt chasing.

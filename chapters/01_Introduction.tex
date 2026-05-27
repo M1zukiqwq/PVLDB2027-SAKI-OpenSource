@@ -22,13 +22,23 @@ labels, workload forecasts, or extra host capacity? The question is
 not whether more compaction capacity helps, but whether the same capacity can
 be placed better than fixed fair sharing.
 
+Several close directions leave this placement point open. General
+multi-tenant storage controllers enforce lower-layer I/O shares or SLOs, while
+recent LSM-oriented systems either change a single engine, move flush or
+compaction into a disaggregated service or DPU path, or build isolation into a
+different multi-tenant engine boundary~\cite{gulati2010mclock,
+thereska2013ioflow,yu2024caaslsm,ding2025dflush,wang2026flexengine,
+griggs2026deltafairsharing}. SAKI instead targets a common operational shape:
+many separate, unmodified \rocksdb instances on one host, with only a conserved
+background budget to place across them as demand drifts.
+
 SAKI is an external controller for this placement problem. It observes each
 tenant over a control window, ranks tenants using offered write demand and
 compaction-pressure symptoms, and applies the next-window budget assignment
 while conserving the aggregate budget. This conserved rank-and-assign framework
-separates the placement invariant from the score instance. Its key condition is
+separates the placement invariant from the ranking key. Its key condition is
 demand observability: when offered demand separates currently high-pressure
-tenants from the rest, a demand-aware score family tracks bounded drift within
+tenants from the rest, demand-aware ranking keys track bounded drift within
 one control window, while pressure-only ranking can chase stale debt. SAKI sits
 outside RocksDB; in the continuous harness, it changes runtime rate-limiter
 budgets through \ratecall.
@@ -38,7 +48,7 @@ the target tenants under the same aggregate budget, using both epoch-level and
 continuous \rocksdb experiments. It then tests alternative explanations,
 including static skew, tenant-local autotuning, stale-debt scoring, lower-layer
 I/O weights, and foreground throttling. Finally, ranking-margin replay,
-score-family perturbations, workload-matrix experiments, collateral measurements,
+ranking-key perturbations, workload-matrix experiments, collateral measurements,
 liveness checks, and public-trace audits define where the evidence applies.
 
 In a 16-tenant epoch-level workload, five trials show that SAKI reduces
@@ -52,20 +62,20 @@ lower-pressure tenants may absorb part of the cost, so SAKI is a targeted
 reallocation policy.
 
 The paper makes five contributions:
-\begin{enumerate}[leftmargin=1.2em]
+\begin{enumerate}[leftmargin=1.2em,itemsep=0pt,topsep=2pt]
 \item It frames multi-tenant \rocksdb compaction as a fixed-budget host-level
 reallocation problem, distinct from single-instance compaction-policy design.
 \item It presents SAKI, a conserved rank-and-assign controller that sets
 per-tenant runtime budgets from previous-window observations without oracle
 labels, workload forecasts, or tenant application changes.
 \item It identifies the demand-observability condition that lets a
-demand-aware score family track bounded drift, and contrasts it with the
+demand-aware ranking key track bounded drift, and contrasts it with the
 stale-debt lag of pressure-only ranking.
 \item It provides epoch-level and continuous evidence that online reallocation
 improves high-pressure write latency and throughput under bounded drift while
 keeping total throughput close to static allocation.
 \item It separates SAKI's effect from fixed skew, per-instance local autotuning,
-score-instance choice, workload variation, and lower-layer I/O control, while
+ranking-key choice, workload variation, and lower-layer I/O control, while
 making collateral costs and validation boundaries explicit.
 \end{enumerate}
 
